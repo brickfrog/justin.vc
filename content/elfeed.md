@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2022-07-22T00:42:43-04:00
+lastmod = 2022-07-22T18:34:36-04:00
 draft = false
 +++
 
@@ -19,8 +19,6 @@ should be kept pretty much to date.
 Also, low priority, but I'd like to eventually add an export rule that transforms the
 links from their feeds to just links to the websites. For now, I trust the
 reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
-
-{{% sidenote f1  "Hello" %}}  "Yeah boiiiii" {{% /sidenote %}}
 
 
 ## Links {#links}

@@ -81,6 +81,11 @@ menu:
       name: Links
       url: /elfeed/
       weight: 15
+    - identifier: Zettel
+      name: Zettelkasten
+      url: https://zk.justin.vc
+      params:
+        external: true
        
 markup:
     goldmark:
