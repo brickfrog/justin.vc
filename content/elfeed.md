@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2022-07-22T18:34:36-04:00
+lastmod = 2022-07-22T21:39:07-04:00
 draft = false
 +++
 
@@ -85,6 +85,14 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
             <!--list-separator-->
 
             -  <https://emacsredux.com/atom.xml>
+
+        <!--list-separator-->
+
+        -  General
+
+            <!--list-separator-->
+
+            -  <https://hackaday.com/blog/feed/>
 
     <!--list-separator-->
 
