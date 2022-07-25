@@ -22,7 +22,8 @@ wandered into here randomly, hoo-boy do I have a fun rabbit hole for you:
 <a href="https:www.youtube.com/watch?v=rCMh7srOqvw">Getting started with Emacs Doom</a>.</p>
 <h2 id="okay-but-why">Okay, But Why?</h2>
 <p><em>High-level: I really like emacs and writing notes in org-roam, and didn&rsquo;t want
-to introduce mental overhead by writing things elsewhere.</em></p>
+to introduce mental overhead by writing things elsewhere. But I -also- don&rsquo;t
+like how the default mode in ox-hugo is a monolithic org file.</em></p>
 <p>For the longest (okay, not -that- long) I tried to use
 <a href="https://www.tiddlywiki.com">TiddlyWiki</a> for most of my writing, both long and short form. This works well for
 <a href="https://zettelkasten.de/posts/overview/">Zettelkasten</a> style notes, but I felt like it didn&rsquo;t work out that well for
@@ -228,12 +229,16 @@ snippet.</p>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sidenote-checkbox&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ .Get 0 }}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sidenote-content sidenote-right&#34;</span><span class="p">&gt;</span>{{ .Inner }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>The html for the sidenotes.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">(setq org-export-global-macros &#39;(
-</span></span><span class="line"><span class="cl">  (&#34;sidenote&#34; . &#34;@@html:{ {% sidenote $1 $2 %} } $3 { {% /sidenote %} }@@&#34;)
-</span></span><span class="line"><span class="cl">        ))
-</span></span></code></pre></div><p>This is how you would add a macro at the global level. *Replace the spacing in
-the brackets to the respective {{}}. Hugo didn&rsquo;t like me replicating shortcode
+</span></span></code></pre></div><p>The <span class="sidenote">
+<label class="sidenote-label" for="f3">html for the sidenotes.</label>
+<input class="sidenote-checkbox" type="checkbox" id="f3"></input>
+<span class="sidenote-content sidenote-right">  Note that the html is 0 indexed, and the macro in org is 1 indexed. This threw me off for a bit. </span>
+</span></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">org-export-global-macros</span> <span class="o">&#39;</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="s">&#34;sidenote&#34;</span> <span class="o">.</span> <span class="s">&#34;@@html:{ {% sidenote $1 $2 %} } $3 { {% /sidenote %} }@@&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">))</span>
+</span></span></code></pre></div><p>This is how you would add a macro at the global level. <strong><strong>Replace the spacing in
+the brackets to the respective {{}}.</strong></strong> Hugo didn&rsquo;t like me replicating shortcode
 for example purposes.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># -*- mode: snippet -*-
 </span></span><span class="line"><span class="cl"># name: sidenote creation
@@ -257,7 +262,8 @@ iterations of work.</p>
 <p>Post-Update Notes:</p>
 <ul>
 <li><a href="https://scripter.co/sidenotes-using-only-css/">https://scripter.co/sidenotes-using-only-css/</a>, read this after I wrote my own.
-Also a good way of making sidenotes and how to use ox-hugo.</li>
+Also a good way of making sidenotes and how to use ox-hugo. (This is ox-hugo&rsquo;s
+creator)</li>
 </ul>
 <div class="footnotes" role="doc-endnotes">
 <hr>
