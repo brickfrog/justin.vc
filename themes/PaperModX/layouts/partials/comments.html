@@ -19,6 +19,12 @@
   {{- end -}}
   {{- end -}}
 
+  {{- if $pageCommentSystems.utterances -}}
+  {{- with .utterances -}}
+    {{- partial "utterances.html" . }}
+  {{- end -}}
+  {{- end -}}
+  
   {{- if $pageCommentSystems.disqus -}}
   {{- with .disqus -}}
     {{- partial "disqus.html" (dict "page" $page "ctx" .) }}
