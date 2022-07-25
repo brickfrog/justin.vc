@@ -2,7 +2,7 @@
 title = "Using ox-hugo and Org-roam for Writing"
 author = ["Justin"]
 date = 2022-07-16T02:31:00-04:00
-lastmod = 2022-07-22T01:36:51-04:00
+lastmod = 2022-07-24T17:58:50-04:00
 tags = ["hugo", "org", "orgroam"]
 draft = false
 +++
@@ -18,7 +18,8 @@ wandered into here randomly, hoo-boy do I have a fun rabbit hole for you:
 ## Okay, But Why? {#okay-but-why}
 
 _High-level: I really like emacs and writing notes in org-roam, and didn't want
-to introduce mental overhead by writing things elsewhere._
+to introduce mental overhead by writing things elsewhere. But I -also- don't
+like how the default mode in ox-hugo is a monolithic org file._
 
 For the longest (okay, not -that- long) I tried to use
 [TiddlyWiki](https://www.tiddlywiki.com) for most of my writing, both long and short form. This works well for
@@ -208,16 +209,16 @@ snippet.
 </span>
 ```
 
-The html for the sidenotes.
+The {{% sidenote "f3"  "html for the sidenotes." %}}  Note that the html is 0 indexed, and the macro in org is 1 indexed. This threw me off for a bit. {{% /sidenote %}}
 
-```text
+```elisp
 (setq org-export-global-macros '(
   ("sidenote" . "@@html:{ {% sidenote $1 $2 %} } $3 { {% /sidenote %} }@@")
         ))
 ```
 
-This is how you would add a macro at the global level. \*Replace the spacing in
-the brackets to the respective {{}}. Hugo didn't like me replicating shortcode
+This is how you would add a macro at the global level. ****Replace the spacing in
+the brackets to the respective {{}}.**** Hugo didn't like me replicating shortcode
 for example purposes.
 
 ```text
@@ -252,7 +253,8 @@ iterations of work.
 Post-Update Notes:
 
 -   <https://scripter.co/sidenotes-using-only-css/>, read this after I wrote my own.
-    Also a good way of making sidenotes and how to use ox-hugo.
+    Also a good way of making sidenotes and how to use ox-hugo. (This is ox-hugo's
+    creator)
 
 [^fn:1]: Hello! This is a footnote. Yay. In other topics I'll probably try to limit
     footnotes to actual citations with `citar` or the like.
