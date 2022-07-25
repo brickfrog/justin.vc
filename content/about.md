@@ -2,11 +2,12 @@
 title = "About Me"
 author = ["Justin"]
 date = 2022-07-15T23:35:00-04:00
-lastmod = 2022-07-21T19:29:41-04:00
+lastmod = 2022-07-25T01:32:40-04:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
 ShowShareButtons = false
+comments = false
 +++
 
 ## About {#about}

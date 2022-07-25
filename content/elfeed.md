@@ -2,8 +2,12 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2022-07-22T21:39:07-04:00
+lastmod = 2022-07-25T01:39:34-04:00
 draft = false
+ShowReadingTime = false
+ShowWordCount = false
+ShowShareButtons = false
+comments = false
 +++
 
 Org-mode nodes represent topics parsed into the RSS reader (elfeed),
