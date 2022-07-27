@@ -2,8 +2,8 @@
 title = "Using ox-hugo and Org-roam for Writing"
 author = ["Justin"]
 date = 2022-07-16T02:31:00-04:00
-lastmod = 2022-07-24T17:58:50-04:00
-tags = ["hugo", "org", "orgroam"]
+lastmod = 2022-07-26T23:24:46-04:00
+tags = ["hugo", "org", "orgroam", "emacs"]
 draft = false
 +++
 
@@ -35,13 +35,13 @@ for my zettelkasten, but I wanted something nicer for my tutorials, portfolios,
 {{% sidenote "f1"  articles %}}  What articles? Rude. {{% /sidenote %}}, and such.
 
 I was aware of
-[Org-roam](https:www.orgroam.com) due to sheer popularity / stars on github and I decided to try it out.
+[Org-roam](https://www.orgroam.com) due to sheer popularity / stars on github and I decided to try it out.
 I'm (as of writing) not currently using anything super fancy, I've basically
-adapted Jethro Kuan's [guide](https:jethrokuan.github.io/org-roam-guide) on taking notes. I figured that since he created the
+adapted Jethro Kuan's [guide](https://jethrokuan.github.io/org-roam-guide) on taking notes. I figured that since he created the
 thing, he'd be a good template to follow. I reccomend skimming his article for
 the basics if you're new to this.
 
-The second key part of this is [ox-hugo](https:ox-hugo.scripter.co/), which can export .org files into
+The second key part of this is [ox-hugo](https://ox-hugo.scripter.co/), which can export .org files into
 markdown, which are served by hugo, a popular static-site generator. I'm
 not entirely sure if there's any other options, but ox-hugo is by far the most
 popular that I could find, with easy setup and theming.
@@ -56,7 +56,7 @@ stuff I liked from TiddyWiki is pretty replicatable out-of-the-box depending on 
 
 ## Getting Started {#getting-started}
 
-I use [Doom Emacs](https:doomemacs.org), which makes setup easy. You simply need to enable the
+I use [Doom Emacs](https://doomemacs.org), which makes setup easy. You simply need to enable the
 appropriate sections in doom's `init.el`. It shouldn't be too difficult to do this
 in vanilla emacs, but I leave that as an exercise to the reader.
 
@@ -116,7 +116,7 @@ utilize ox-hugo. [article](#org-coderef--ed0192-21) is where it starts, as I pri
 "articles" as my hugo pages.
 
 `HUGO_BASE_DIR` - So, this is where you put your hugo site. In this case, it's a
-folder for my website, [justin.vc](https:justin.vc). If you're new to hugo, you can download hugo
+folder for my website, [justin.vc](https://justin.vc). If you're new to hugo, you can download hugo
 and create a new site in a folder of your choosing with `hugo new site
 /path/to/site`, then simply choose said folder in your template.
 
@@ -160,11 +160,11 @@ tags, and poof.
 ## Tips {#tips}
 
 1.  Theming is really easy! I really, really, really loathe javascript and
-    even I found it simple to mess with. I personally like [PaperModX](https:reorx.github.io/hugo-PaperModX/), a fork
+    even I found it simple to mess with. I personally like [PaperModX](https://reorx.github.io/hugo-PaperModX/), a fork
     of PaperMod that feels a bit nicer.
 2.  There's nothing stopping you from doing other .org files. You simply
     change the appropriate headers. For example, my
-    blog roll link is simply an export of my [elfeed-org](https:github.com/remyhonig/elfeed-org) file that I use for
+    blog roll link is simply an export of my [elfeed-org](https://github.com/remyhonig/elfeed-org) file that I use for
     my RSS feed.
 3.  I know I mentioned this is geared towards individual org-notes, but I
     believe there's nothing stopping from mixing and matching! I plan on
