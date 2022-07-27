@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>orgroam on justin.vc</title>
-    <link>https://justin.vc/tags/orgroam/</link>
-    <description>Recent content in orgroam on justin.vc</description>
+    <title>emacs on justin.vc</title>
+    <link>https://justin.vc/tags/emacs/</link>
+    <description>Recent content in emacs on justin.vc</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 16 Jul 2022 02:31:00 -0400</lastBuildDate><atom:link href="https://justin.vc/tags/orgroam/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Jul 2022 02:31:00 -0400</lastBuildDate><atom:link href="https://justin.vc/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using ox-hugo and Org-roam for Writing</title>
       <link>https://justin.vc/posts/ox-hugo-and-org-roam/</link>

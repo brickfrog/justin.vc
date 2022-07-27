@@ -2,26 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://justin.vc/tags/emacs/</loc>
+    <lastmod>2022-07-26T23:24:46-04:00</lastmod>
+  </url><url>
     <loc>https://justin.vc/tags/hugo/</loc>
-    <lastmod>2022-07-24T17:58:50-04:00</lastmod>
+    <lastmod>2022-07-26T23:24:46-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/</loc>
-    <lastmod>2022-07-24T17:58:50-04:00</lastmod>
+    <lastmod>2022-07-26T23:24:46-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/org/</loc>
-    <lastmod>2022-07-24T17:58:50-04:00</lastmod>
+    <lastmod>2022-07-26T23:24:46-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/orgroam/</loc>
-    <lastmod>2022-07-24T17:58:50-04:00</lastmod>
+    <lastmod>2022-07-26T23:24:46-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/posts/</loc>
-    <lastmod>2022-07-24T17:58:50-04:00</lastmod>
+    <lastmod>2022-07-26T23:24:46-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/</loc>
-    <lastmod>2022-07-24T17:58:50-04:00</lastmod>
+    <lastmod>2022-07-26T23:24:46-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/posts/ox-hugo-and-org-roam/</loc>
-    <lastmod>2022-07-24T17:58:50-04:00</lastmod>
+    <lastmod>2022-07-26T23:24:46-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/about/</loc>
     <lastmod>2022-07-25T01:32:40-04:00</lastmod>
