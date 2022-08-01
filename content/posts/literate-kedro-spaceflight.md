@@ -2,8 +2,9 @@
 title = "Literate Kedro: Using Org-mode for Data Science"
 author = ["Justin"]
 date = 2022-07-25T01:43:00-04:00
-lastmod = 2022-08-01T05:25:34-04:00
+lastmod = 2022-08-01T05:41:48-04:00
 tags = ["org", "kedro", "python", "data-science", "emacs"]
+categories = ["literate-data-science"]
 draft = false
 +++
 
@@ -11,7 +12,7 @@ draft = false
 
 This is both a general(ish) explainer and template(s) for usage in data science,
 specifically utilizing (formerly) Quantum Black's now open-source (Linux
-Foundation) framework for creating {{% sidenote "f1"  "reproducible, maintainable, and modular data science code." %}}  What does that mean? At its most simple it basically ties things into \"nodes\" and \"pipelines\", allowing for steps to be easily repeated. DAGs, they're all the rage. {{% /sidenote %}}
+Foundation) framework for creating {{% sidenote "f1"  "reproducible, maintainable, and modular data science code." %}}  What does that mean? At its most simple it basically ties things into \"nodes\" and \"pipelines\", where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated. DAGs, they're all the rage. {{% /sidenote %}}
 Make sure to read their tutorial if you're not
 familiar with it, it's good (and I won't be covering nearly as much as there,
 it's under the assumption you've skimmed it):
@@ -623,5 +624,5 @@ cp ./literate-kedro-spaceflight.org ~/code/justin.vc/static/org/literate-kedro-s
 ```
 
 This copies the file when I export, which allows you to see the
-[file:original org file]({{< relref "literate-kedro-spaceflight" >}}) if curious. That specifically includes how I tangled the files to the
+[original org file](https://raw.githubusercontent.com/brickfrog/justin.vc/master/static/org/literate-kedro-spaceflight.org) if curious. That specifically includes how I tangled the files to the
 correct places. (And, once again, input welcome if I there's better ways to do it).
