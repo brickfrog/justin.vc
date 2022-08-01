@@ -5,13 +5,53 @@
     <link>https://justin.vc/tags/</link>
     <description>Recent content in Tags on justin.vc</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 16 Jul 2022 02:31:00 -0400</lastBuildDate><atom:link href="https://justin.vc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jul 2022 01:43:00 -0400</lastBuildDate><atom:link href="https://justin.vc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>data-science</title>
+      <link>https://justin.vc/tags/data-science/</link>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/data-science/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>emacs</title>
       <link>https://justin.vc/tags/emacs/</link>
-      <pubDate>Sat, 16 Jul 2022 02:31:00 -0400</pubDate>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
       
       <guid>https://justin.vc/tags/emacs/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>kedro</title>
+      <link>https://justin.vc/tags/kedro/</link>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/kedro/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>org</title>
+      <link>https://justin.vc/tags/org/</link>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/org/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://justin.vc/tags/python/</link>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/python/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -27,21 +67,11 @@
     </item>
     
     <item>
-      <title>org</title>
-      <link>https://justin.vc/tags/org/</link>
+      <title>org-roam</title>
+      <link>https://justin.vc/tags/org-roam/</link>
       <pubDate>Sat, 16 Jul 2022 02:31:00 -0400</pubDate>
       
-      <guid>https://justin.vc/tags/org/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>orgroam</title>
-      <link>https://justin.vc/tags/orgroam/</link>
-      <pubDate>Sat, 16 Jul 2022 02:31:00 -0400</pubDate>
-      
-      <guid>https://justin.vc/tags/orgroam/</guid>
+      <guid>https://justin.vc/tags/org-roam/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

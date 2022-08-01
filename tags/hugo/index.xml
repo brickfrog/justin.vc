@@ -35,10 +35,10 @@ to like glamming things up with javascript (other people&rsquo;s javascript), bu
 tinker with emacs configs. I still plan on using TiddlyWiki as display
 for my zettelkasten, but I wanted something nicer for my tutorials, portfolios,
 <span class="sidenote">
-<label class="sidenote-label" for="f1">articles</label>
+<label class="sidenote-label" for="f1">articles, and such.</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
 <span class="sidenote-content sidenote-right">  What articles? Rude. </span>
-</span>, and such.</p>
+</span></p>
 <p>I was aware of
 <a href="https://www.orgroam.com">Org-roam</a> due to sheer popularity / stars on github and I decided to try it out.
 I&rsquo;m (as of writing) not currently using anything super fancy, I&rsquo;ve basically
