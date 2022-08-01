@@ -2,8 +2,8 @@
 title = "Using ox-hugo and Org-roam for Writing"
 author = ["Justin"]
 date = 2022-07-16T02:31:00-04:00
-lastmod = 2022-07-26T23:24:46-04:00
-tags = ["hugo", "org", "orgroam", "emacs"]
+lastmod = 2022-08-01T04:56:08-04:00
+tags = ["hugo", "org", "org-roam", "emacs"]
 draft = false
 +++
 
@@ -32,7 +32,7 @@ I'm not a strict FOSS purist, so I still tend
 to like glamming things up with javascript (other people's javascript), but I just love how fun it is to
 tinker with emacs configs. I still plan on using TiddlyWiki as display
 for my zettelkasten, but I wanted something nicer for my tutorials, portfolios,
-{{% sidenote "f1"  articles %}}  What articles? Rude. {{% /sidenote %}}, and such.
+{{% sidenote "f1"  "articles, and such." %}}  What articles? Rude. {{% /sidenote %}}
 
 I was aware of
 [Org-roam](https://www.orgroam.com) due to sheer popularity / stars on github and I decided to try it out.
