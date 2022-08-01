@@ -4,6 +4,17 @@
     <title>Categories on justin.vc</title>
     <link>https://justin.vc/categories/</link>
     <description>Recent content in Categories on justin.vc</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://justin.vc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 Jul 2022 01:43:00 -0400</lastBuildDate><atom:link href="https://justin.vc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>literate-data-science</title>
+      <link>https://justin.vc/categories/literate-data-science/</link>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/categories/literate-data-science/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
   </channel>
 </rss>

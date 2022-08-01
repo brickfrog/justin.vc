@@ -12,14 +12,14 @@
       <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
       
       <guid>https://justin.vc/posts/literate-kedro-spaceflight/</guid>
-      <description>Summary This is both a general(ish) explainer and template(s) for usage in data science, specifically utilizing (formerly) Quantum Black&amp;rsquo;s now open-source (Linux Foundation) framework for creating reproducible, maintainable, and modular data science code. What does that mean? At its most simple it basically ties things into &amp;quot;nodes&amp;quot; and &amp;quot;pipelines&amp;quot;, allowing for steps to be easily repeated. DAGs, they&amp;rsquo;re all the rage. Make sure to read their tutorial if you&amp;rsquo;re not familiar with it, it&amp;rsquo;s good (and I won&amp;rsquo;t be covering nearly as much as there, it&amp;rsquo;s under the assumption you&amp;rsquo;ve skimmed it):</description>
+      <description>Summary This is both a general(ish) explainer and template(s) for usage in data science, specifically utilizing (formerly) Quantum Black&amp;rsquo;s now open-source (Linux Foundation) framework for creating reproducible, maintainable, and modular data science code. What does that mean? At its most simple it basically ties things into &amp;quot;nodes&amp;quot; and &amp;quot;pipelines&amp;quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated.</description>
       <content:encoded><![CDATA[<h2 id="summary">Summary</h2>
 <p>This is both a general(ish) explainer and template(s) for usage in data science,
 specifically utilizing (formerly) Quantum Black&rsquo;s now open-source (Linux
 Foundation) framework for creating <span class="sidenote">
 <label class="sidenote-label" for="f1">reproducible, maintainable, and modular data science code.</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
-<span class="sidenote-content sidenote-right">  What does that mean? At its most simple it basically ties things into &quot;nodes&quot; and &quot;pipelines&quot;, allowing for steps to be easily repeated. DAGs, they&rsquo;re all the rage. </span>
+<span class="sidenote-content sidenote-right">  What does that mean? At its most simple it basically ties things into &quot;nodes&quot; and &quot;pipelines&quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated. DAGs, they&rsquo;re all the rage. </span>
 </span>
 Make sure to read their tutorial if you&rsquo;re not
 familiar with it, it&rsquo;s good (and I won&rsquo;t be covering nearly as much as there,
@@ -574,7 +574,7 @@ into exploratory analysis that ignores the code depending on audience.</li>
 in the future.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">cp ./literate-kedro-spaceflight.org ~/code/justin.vc/static/org/literate-kedro-spaceflight.org
 </span></span></code></pre></div><p>This copies the file when I export, which allows you to see the
-<a href="/posts/literate-kedro-spaceflight/">file:original org file</a> if curious. That specifically includes how I tangled the files to the
+<a href="https://raw.githubusercontent.com/brickfrog/justin.vc/master/static/org/literate-kedro-spaceflight.org">original org file</a> if curious. That specifically includes how I tangled the files to the
 correct places. (And, once again, input welcome if I there&rsquo;s better ways to do it).</p>
 ]]></content:encoded>
     </item>

@@ -2,32 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://justin.vc/categories/</loc>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
+  </url><url>
     <loc>https://justin.vc/tags/data-science/</loc>
-    <lastmod>2022-08-01T05:25:34-04:00</lastmod>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/emacs/</loc>
-    <lastmod>2022-08-01T05:25:34-04:00</lastmod>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/</loc>
-    <lastmod>2022-08-01T05:25:34-04:00</lastmod>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/kedro/</loc>
-    <lastmod>2022-08-01T05:25:34-04:00</lastmod>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/posts/literate-kedro-spaceflight/</loc>
-    <lastmod>2022-08-01T05:25:34-04:00</lastmod>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
+  </url><url>
+    <loc>https://justin.vc/categories/literate-data-science/</loc>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/org/</loc>
-    <lastmod>2022-08-01T05:25:34-04:00</lastmod>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/posts/</loc>
-    <lastmod>2022-08-01T05:25:34-04:00</lastmod>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/python/</loc>
-    <lastmod>2022-08-01T05:25:34-04:00</lastmod>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/</loc>
-    <lastmod>2022-08-01T05:25:34-04:00</lastmod>
+    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/hugo/</loc>
     <lastmod>2022-08-01T04:56:08-04:00</lastmod>
@@ -45,8 +51,6 @@
     <lastmod>2022-07-25T01:39:34-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/archives/</loc>
-  </url><url>
-    <loc>https://justin.vc/categories/</loc>
   </url><url>
     <loc>https://justin.vc/search/</loc>
   </url>
