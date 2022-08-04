@@ -1,0 +1,3 @@
+[submodule "themes/PaperModulo"]
+	path = themes/PaperModulo
+	url = https://github.com/brickfrog/hugo-PaperModulo
