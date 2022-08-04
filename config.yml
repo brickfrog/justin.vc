@@ -1,6 +1,6 @@
 baseURL: "https://justin.vc/"
 title: justin.vc
-theme: PaperModX
+theme: PaperModulo
 paginate: 5
 enableRobotsTXT: true
 
