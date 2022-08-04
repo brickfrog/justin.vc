@@ -6,6 +6,7 @@
     margin: auto;
     padding: var(--gap);
     padding-bottom: 0;
+    background-color: var(--entry);
 }
 
 .mark-line {

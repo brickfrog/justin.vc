@@ -3,17 +3,17 @@ $maximum-width: 97em;
 $sidenote-offset: 1.5rem;
 
 .sidenote:hover .sidenote-label {
-    background-color: #7851a9;
+    background-color: var(--link-hover-color);
     color: #fff;
 }
 .sidenote:hover .sidenote-content {
     border-width: 0.2rem; 
     border-style: ridge hidden groove hidden;
     padding: 0.275rem;
-    border-color: #7851a9;
+    border-color: var(--link-hover-color);
 }
 .sidenote-label {
-    border-bottom: 0.2rem dashed #7851a9;
+    border-bottom: 0.15rem dashed var(--link-hover-color);
 }
 .sidenote-checkbox {
     display: none;

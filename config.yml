@@ -48,10 +48,6 @@ params:
   tocopen: true
   showModifiedDate: true
 
-  homeInfoParams:
-      Content: >
-        *Contemplare et contemplata aliis tradere.*
-
   socialIcons:
     - name: rss
       url: "index.xml"

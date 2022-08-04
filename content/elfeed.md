@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2022-07-25T01:39:34-04:00
+lastmod = 2022-08-04T07:31:55-04:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -13,7 +13,7 @@ comments = false
 Org-mode nodes represent topics parsed into the RSS reader (elfeed),
 with feeds assigned tags by their parent headings. I'm also including my
 favorite articles by a specific post with lists that aren't parsed (in no
-particular order).
+particular order - assuming I remember to do this).
 
 Right now I am additionally exporting this as my "blog roll" section of my main
 site. I could probably stand to clean this up, but still it shows the stuff I

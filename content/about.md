@@ -2,15 +2,14 @@
 title = "About Me"
 author = ["Justin"]
 date = 2022-07-15T23:35:00-04:00
-lastmod = 2022-07-25T01:32:40-04:00
+lastmod = 2022-08-04T07:30:59-04:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
 ShowShareButtons = false
 comments = false
+hideMeta = true
 +++
-
-## About {#about}
 
 Hello! I'm Justin! I'm just a run-of-the-mill data scientist/software
  engineer who likes learning things in his free time. Specifically, my interests
@@ -32,10 +31,12 @@ I plan to focus more on general notes and learnings. I would like to venture
 into longform writing more, but that remains a future goal.
 
 
-## Other Links {#other-links}
+## Personal Links {#personal-links}
 
 
 ### Books/Reading {#books-reading}
+
+I like to read.
 
 -   [Goodreads](https://www.goodreads.com/brickfrog) - I try to keep books I read up to date / suggestions, etc. All
     reviews/notes will be here, but I find the Goodreads API useful for marking
@@ -44,10 +45,13 @@ into longform writing more, but that remains a future goal.
 
 ### Media/Watching {#media-watching}
 
+I like to watch things. I usually try to watch anything thats critically
+acclaimed in some way.
+
 -   [Trakt](https://trakt.tv/users/justinvc) - television/movies watched,
     programatically updated/scrobbled. May duplicate things if I fall asleep
     watching them, and I tend to watch things at x2-4 speed unless
-    high-art/prestige so don't let the sheer amount of content I watch scare you.
+    high-art/prestige.
 -   [Anilist](https://anilist.co/user/brickfrog/) - similar to Trakt, but anime/manga, programatically updated for
     anime. Might make a myanimelist also to sync between later. Truthfully only
     chose one over the other because there was easier syncing for the former.
@@ -55,8 +59,7 @@ into longform writing more, but that remains a future goal.
 
 ### Music/Listening {#music-listening}
 
-I scale pretty high on the aphantasia scale so music doesn't really tend to do
-much for me unless paired with visuals I can see. Trying to get more into it,
+Music doesn't really tend to do much for me unless paired with visuals I can see. Trying to get more into it,
 but I generally only use music as a distraction in noisy environments.
 
 -   [last.fm](https://www.last.fm/user/justinvc) - music scrobbled from Spotify

@@ -6,10 +6,15 @@
     margin-inline-start: auto;
     margin-inline-end: auto;
     line-height: var(--header-height);
+    border-bottom: 0.5px solid var(--link-hover-color);
 }
 .nav ul {
     margin: 0;
     padding: 0;
+}
+
+.header {
+    background-color: var(--theme);
 }
 
 .logo a {

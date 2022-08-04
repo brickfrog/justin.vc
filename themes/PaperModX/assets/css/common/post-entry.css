@@ -49,9 +49,8 @@
     position: relative;
     margin-bottom: var(--gap);
     padding: var(--gap);
-    background: var(--entry);
+    background: var(--theme);
     border-radius: var(--radius);
-    border: 1px solid var(--border);
 }
 .post-entry:hover .entry-header h2 {
     color: var(--link-hover-color);

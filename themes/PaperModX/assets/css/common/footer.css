@@ -10,6 +10,7 @@
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
     text-align: center;
     line-height: 24px;
+    border-top: 0.5px solid var(--link-hover-color);
 }
 
 .footer span {
