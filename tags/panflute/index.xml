@@ -33,20 +33,20 @@ Header / Strings, and use a filter to change them. My use case was kind of weird
 where I wanted to edit the text wholecloth in some cases.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="org-coderef--e1bcfb-1"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-1"> 1</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-2"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-2"> 2</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-3"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-3"> 3</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-4"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-4"> 4</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-5"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-5"> 5</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-6"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-6"> 6</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-7"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-7"> 7</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-8"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-8"> 8</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-9"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-9"> 9</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-10"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-10">10</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-11"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-11">11</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-12"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-12">12</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-13"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-13">13</a>
-</span><span class="lnt" id="org-coderef--e1bcfb-14"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--e1bcfb-14">14</a>
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="org-coderef--e1bcfb-1"><a class="lnlinks" href="#org-coderef--e1bcfb-1"> 1</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-2"><a class="lnlinks" href="#org-coderef--e1bcfb-2"> 2</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-3"><a class="lnlinks" href="#org-coderef--e1bcfb-3"> 3</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-4"><a class="lnlinks" href="#org-coderef--e1bcfb-4"> 4</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-5"><a class="lnlinks" href="#org-coderef--e1bcfb-5"> 5</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-6"><a class="lnlinks" href="#org-coderef--e1bcfb-6"> 6</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-7"><a class="lnlinks" href="#org-coderef--e1bcfb-7"> 7</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-8"><a class="lnlinks" href="#org-coderef--e1bcfb-8"> 8</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-9"><a class="lnlinks" href="#org-coderef--e1bcfb-9"> 9</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-10"><a class="lnlinks" href="#org-coderef--e1bcfb-10">10</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-11"><a class="lnlinks" href="#org-coderef--e1bcfb-11">11</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-12"><a class="lnlinks" href="#org-coderef--e1bcfb-12">12</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-13"><a class="lnlinks" href="#org-coderef--e1bcfb-13">13</a>
+</span><span class="lnt" id="org-coderef--e1bcfb-14"><a class="lnlinks" href="#org-coderef--e1bcfb-14">14</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">panflute</span> <span class="kn">import</span> <span class="o">*</span>
@@ -178,44 +178,44 @@ pretty sure this is not a good way to do it, it works.</p>
 uses =&rsquo;s.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="org-coderef--8846f0-1"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-1"> 1</a>
-</span><span class="lnt" id="org-coderef--8846f0-2"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-2"> 2</a>
-</span><span class="lnt" id="org-coderef--8846f0-3"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-3"> 3</a>
-</span><span class="lnt" id="org-coderef--8846f0-4"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-4"> 4</a>
-</span><span class="lnt" id="org-coderef--8846f0-5"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-5"> 5</a>
-</span><span class="lnt" id="org-coderef--8846f0-6"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-6"> 6</a>
-</span><span class="lnt" id="org-coderef--8846f0-7"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-7"> 7</a>
-</span><span class="lnt" id="org-coderef--8846f0-8"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-8"> 8</a>
-</span><span class="lnt" id="org-coderef--8846f0-9"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-9"> 9</a>
-</span><span class="lnt" id="org-coderef--8846f0-10"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-10">10</a>
-</span><span class="lnt" id="org-coderef--8846f0-11"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-11">11</a>
-</span><span class="lnt" id="org-coderef--8846f0-12"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-12">12</a>
-</span><span class="lnt" id="org-coderef--8846f0-13"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-13">13</a>
-</span><span class="lnt" id="org-coderef--8846f0-14"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-14">14</a>
-</span><span class="lnt" id="org-coderef--8846f0-15"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-15">15</a>
-</span><span class="lnt" id="org-coderef--8846f0-16"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-16">16</a>
-</span><span class="lnt" id="org-coderef--8846f0-17"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-17">17</a>
-</span><span class="lnt" id="org-coderef--8846f0-18"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-18">18</a>
-</span><span class="lnt" id="org-coderef--8846f0-19"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-19">19</a>
-</span><span class="lnt" id="org-coderef--8846f0-20"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-20">20</a>
-</span><span class="lnt" id="org-coderef--8846f0-21"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-21">21</a>
-</span><span class="lnt" id="org-coderef--8846f0-22"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-22">22</a>
-</span><span class="lnt" id="org-coderef--8846f0-23"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-23">23</a>
-</span><span class="lnt" id="org-coderef--8846f0-24"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-24">24</a>
-</span><span class="lnt" id="org-coderef--8846f0-25"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-25">25</a>
-</span><span class="lnt" id="org-coderef--8846f0-26"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-26">26</a>
-</span><span class="lnt" id="org-coderef--8846f0-27"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-27">27</a>
-</span><span class="lnt" id="org-coderef--8846f0-28"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-28">28</a>
-</span><span class="lnt" id="org-coderef--8846f0-29"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-29">29</a>
-</span><span class="lnt" id="org-coderef--8846f0-30"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-30">30</a>
-</span><span class="lnt" id="org-coderef--8846f0-31"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-31">31</a>
-</span><span class="lnt" id="org-coderef--8846f0-32"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-32">32</a>
-</span><span class="lnt" id="org-coderef--8846f0-33"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-33">33</a>
-</span><span class="lnt" id="org-coderef--8846f0-34"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-34">34</a>
-</span><span class="lnt" id="org-coderef--8846f0-35"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-35">35</a>
-</span><span class="lnt" id="org-coderef--8846f0-36"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-36">36</a>
-</span><span class="lnt" id="org-coderef--8846f0-37"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-37">37</a>
-</span><span class="lnt" id="org-coderef--8846f0-38"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--8846f0-38">38</a>
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="org-coderef--8846f0-1"><a class="lnlinks" href="#org-coderef--8846f0-1"> 1</a>
+</span><span class="lnt" id="org-coderef--8846f0-2"><a class="lnlinks" href="#org-coderef--8846f0-2"> 2</a>
+</span><span class="lnt" id="org-coderef--8846f0-3"><a class="lnlinks" href="#org-coderef--8846f0-3"> 3</a>
+</span><span class="lnt" id="org-coderef--8846f0-4"><a class="lnlinks" href="#org-coderef--8846f0-4"> 4</a>
+</span><span class="lnt" id="org-coderef--8846f0-5"><a class="lnlinks" href="#org-coderef--8846f0-5"> 5</a>
+</span><span class="lnt" id="org-coderef--8846f0-6"><a class="lnlinks" href="#org-coderef--8846f0-6"> 6</a>
+</span><span class="lnt" id="org-coderef--8846f0-7"><a class="lnlinks" href="#org-coderef--8846f0-7"> 7</a>
+</span><span class="lnt" id="org-coderef--8846f0-8"><a class="lnlinks" href="#org-coderef--8846f0-8"> 8</a>
+</span><span class="lnt" id="org-coderef--8846f0-9"><a class="lnlinks" href="#org-coderef--8846f0-9"> 9</a>
+</span><span class="lnt" id="org-coderef--8846f0-10"><a class="lnlinks" href="#org-coderef--8846f0-10">10</a>
+</span><span class="lnt" id="org-coderef--8846f0-11"><a class="lnlinks" href="#org-coderef--8846f0-11">11</a>
+</span><span class="lnt" id="org-coderef--8846f0-12"><a class="lnlinks" href="#org-coderef--8846f0-12">12</a>
+</span><span class="lnt" id="org-coderef--8846f0-13"><a class="lnlinks" href="#org-coderef--8846f0-13">13</a>
+</span><span class="lnt" id="org-coderef--8846f0-14"><a class="lnlinks" href="#org-coderef--8846f0-14">14</a>
+</span><span class="lnt" id="org-coderef--8846f0-15"><a class="lnlinks" href="#org-coderef--8846f0-15">15</a>
+</span><span class="lnt" id="org-coderef--8846f0-16"><a class="lnlinks" href="#org-coderef--8846f0-16">16</a>
+</span><span class="lnt" id="org-coderef--8846f0-17"><a class="lnlinks" href="#org-coderef--8846f0-17">17</a>
+</span><span class="lnt" id="org-coderef--8846f0-18"><a class="lnlinks" href="#org-coderef--8846f0-18">18</a>
+</span><span class="lnt" id="org-coderef--8846f0-19"><a class="lnlinks" href="#org-coderef--8846f0-19">19</a>
+</span><span class="lnt" id="org-coderef--8846f0-20"><a class="lnlinks" href="#org-coderef--8846f0-20">20</a>
+</span><span class="lnt" id="org-coderef--8846f0-21"><a class="lnlinks" href="#org-coderef--8846f0-21">21</a>
+</span><span class="lnt" id="org-coderef--8846f0-22"><a class="lnlinks" href="#org-coderef--8846f0-22">22</a>
+</span><span class="lnt" id="org-coderef--8846f0-23"><a class="lnlinks" href="#org-coderef--8846f0-23">23</a>
+</span><span class="lnt" id="org-coderef--8846f0-24"><a class="lnlinks" href="#org-coderef--8846f0-24">24</a>
+</span><span class="lnt" id="org-coderef--8846f0-25"><a class="lnlinks" href="#org-coderef--8846f0-25">25</a>
+</span><span class="lnt" id="org-coderef--8846f0-26"><a class="lnlinks" href="#org-coderef--8846f0-26">26</a>
+</span><span class="lnt" id="org-coderef--8846f0-27"><a class="lnlinks" href="#org-coderef--8846f0-27">27</a>
+</span><span class="lnt" id="org-coderef--8846f0-28"><a class="lnlinks" href="#org-coderef--8846f0-28">28</a>
+</span><span class="lnt" id="org-coderef--8846f0-29"><a class="lnlinks" href="#org-coderef--8846f0-29">29</a>
+</span><span class="lnt" id="org-coderef--8846f0-30"><a class="lnlinks" href="#org-coderef--8846f0-30">30</a>
+</span><span class="lnt" id="org-coderef--8846f0-31"><a class="lnlinks" href="#org-coderef--8846f0-31">31</a>
+</span><span class="lnt" id="org-coderef--8846f0-32"><a class="lnlinks" href="#org-coderef--8846f0-32">32</a>
+</span><span class="lnt" id="org-coderef--8846f0-33"><a class="lnlinks" href="#org-coderef--8846f0-33">33</a>
+</span><span class="lnt" id="org-coderef--8846f0-34"><a class="lnlinks" href="#org-coderef--8846f0-34">34</a>
+</span><span class="lnt" id="org-coderef--8846f0-35"><a class="lnlinks" href="#org-coderef--8846f0-35">35</a>
+</span><span class="lnt" id="org-coderef--8846f0-36"><a class="lnlinks" href="#org-coderef--8846f0-36">36</a>
+</span><span class="lnt" id="org-coderef--8846f0-37"><a class="lnlinks" href="#org-coderef--8846f0-37">37</a>
+</span><span class="lnt" id="org-coderef--8846f0-38"><a class="lnlinks" href="#org-coderef--8846f0-38">38</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">

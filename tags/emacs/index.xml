@@ -649,39 +649,39 @@ to capture the needed tags. (And most of the benefits of monolith aren&rsquo;t a
 helpful unless writing successions of articles where inheriting headers is important.)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt" id="org-coderef--ed0192-1"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-1"> 1</a>
-</span><span class="lnt" id="org-coderef--ed0192-2"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-2"> 2</a>
-</span><span class="lnt" id="org-coderef--ed0192-3"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-3"> 3</a>
-</span><span class="lnt" id="org-coderef--ed0192-4"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-4"> 4</a>
-</span><span class="lnt" id="org-coderef--ed0192-5"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-5"> 5</a>
-</span><span class="lnt" id="org-coderef--ed0192-6"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-6"> 6</a>
-</span><span class="lnt" id="org-coderef--ed0192-7"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-7"> 7</a>
-</span><span class="lnt" id="org-coderef--ed0192-8"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-8"> 8</a>
-</span><span class="lnt" id="org-coderef--ed0192-9"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-9"> 9</a>
-</span><span class="lnt" id="org-coderef--ed0192-10"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-10">10</a>
-</span><span class="lnt" id="org-coderef--ed0192-11"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-11">11</a>
-</span><span class="lnt" id="org-coderef--ed0192-12"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-12">12</a>
-</span><span class="lnt" id="org-coderef--ed0192-13"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-13">13</a>
-</span><span class="lnt" id="org-coderef--ed0192-14"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-14">14</a>
-</span><span class="lnt" id="org-coderef--ed0192-15"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-15">15</a>
-</span><span class="lnt" id="org-coderef--ed0192-16"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-16">16</a>
-</span><span class="lnt" id="org-coderef--ed0192-17"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-17">17</a>
-</span><span class="lnt" id="org-coderef--ed0192-18"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-18">18</a>
-</span><span class="lnt" id="org-coderef--ed0192-19"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-19">19</a>
-</span><span class="lnt" id="org-coderef--ed0192-20"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-20">20</a>
-</span><span class="lnt" id="org-coderef--ed0192-21"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-21">21</a>
-</span><span class="lnt" id="org-coderef--ed0192-22"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-22">22</a>
-</span><span class="lnt" id="org-coderef--ed0192-23"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-23">23</a>
-</span><span class="lnt" id="org-coderef--ed0192-24"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-24">24</a>
-</span><span class="lnt" id="org-coderef--ed0192-25"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-25">25</a>
-</span><span class="lnt" id="org-coderef--ed0192-26"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-26">26</a>
-</span><span class="lnt" id="org-coderef--ed0192-27"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-27">27</a>
-</span><span class="lnt" id="org-coderef--ed0192-28"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-28">28</a>
-</span><span class="lnt" id="org-coderef--ed0192-29"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-29">29</a>
-</span><span class="lnt" id="org-coderef--ed0192-30"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-30">30</a>
-</span><span class="lnt" id="org-coderef--ed0192-31"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-31">31</a>
-</span><span class="lnt" id="org-coderef--ed0192-32"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-32">32</a>
-</span><span class="lnt" id="org-coderef--ed0192-33"><a style="outline: none; text-decoration:none; color:inherit" href="#org-coderef--ed0192-33">33</a>
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="org-coderef--ed0192-1"><a class="lnlinks" href="#org-coderef--ed0192-1"> 1</a>
+</span><span class="lnt" id="org-coderef--ed0192-2"><a class="lnlinks" href="#org-coderef--ed0192-2"> 2</a>
+</span><span class="lnt" id="org-coderef--ed0192-3"><a class="lnlinks" href="#org-coderef--ed0192-3"> 3</a>
+</span><span class="lnt" id="org-coderef--ed0192-4"><a class="lnlinks" href="#org-coderef--ed0192-4"> 4</a>
+</span><span class="lnt" id="org-coderef--ed0192-5"><a class="lnlinks" href="#org-coderef--ed0192-5"> 5</a>
+</span><span class="lnt" id="org-coderef--ed0192-6"><a class="lnlinks" href="#org-coderef--ed0192-6"> 6</a>
+</span><span class="lnt" id="org-coderef--ed0192-7"><a class="lnlinks" href="#org-coderef--ed0192-7"> 7</a>
+</span><span class="lnt" id="org-coderef--ed0192-8"><a class="lnlinks" href="#org-coderef--ed0192-8"> 8</a>
+</span><span class="lnt" id="org-coderef--ed0192-9"><a class="lnlinks" href="#org-coderef--ed0192-9"> 9</a>
+</span><span class="lnt" id="org-coderef--ed0192-10"><a class="lnlinks" href="#org-coderef--ed0192-10">10</a>
+</span><span class="lnt" id="org-coderef--ed0192-11"><a class="lnlinks" href="#org-coderef--ed0192-11">11</a>
+</span><span class="lnt" id="org-coderef--ed0192-12"><a class="lnlinks" href="#org-coderef--ed0192-12">12</a>
+</span><span class="lnt" id="org-coderef--ed0192-13"><a class="lnlinks" href="#org-coderef--ed0192-13">13</a>
+</span><span class="lnt" id="org-coderef--ed0192-14"><a class="lnlinks" href="#org-coderef--ed0192-14">14</a>
+</span><span class="lnt" id="org-coderef--ed0192-15"><a class="lnlinks" href="#org-coderef--ed0192-15">15</a>
+</span><span class="lnt" id="org-coderef--ed0192-16"><a class="lnlinks" href="#org-coderef--ed0192-16">16</a>
+</span><span class="lnt" id="org-coderef--ed0192-17"><a class="lnlinks" href="#org-coderef--ed0192-17">17</a>
+</span><span class="lnt" id="org-coderef--ed0192-18"><a class="lnlinks" href="#org-coderef--ed0192-18">18</a>
+</span><span class="lnt" id="org-coderef--ed0192-19"><a class="lnlinks" href="#org-coderef--ed0192-19">19</a>
+</span><span class="lnt" id="org-coderef--ed0192-20"><a class="lnlinks" href="#org-coderef--ed0192-20">20</a>
+</span><span class="lnt" id="org-coderef--ed0192-21"><a class="lnlinks" href="#org-coderef--ed0192-21">21</a>
+</span><span class="lnt" id="org-coderef--ed0192-22"><a class="lnlinks" href="#org-coderef--ed0192-22">22</a>
+</span><span class="lnt" id="org-coderef--ed0192-23"><a class="lnlinks" href="#org-coderef--ed0192-23">23</a>
+</span><span class="lnt" id="org-coderef--ed0192-24"><a class="lnlinks" href="#org-coderef--ed0192-24">24</a>
+</span><span class="lnt" id="org-coderef--ed0192-25"><a class="lnlinks" href="#org-coderef--ed0192-25">25</a>
+</span><span class="lnt" id="org-coderef--ed0192-26"><a class="lnlinks" href="#org-coderef--ed0192-26">26</a>
+</span><span class="lnt" id="org-coderef--ed0192-27"><a class="lnlinks" href="#org-coderef--ed0192-27">27</a>
+</span><span class="lnt" id="org-coderef--ed0192-28"><a class="lnlinks" href="#org-coderef--ed0192-28">28</a>
+</span><span class="lnt" id="org-coderef--ed0192-29"><a class="lnlinks" href="#org-coderef--ed0192-29">29</a>
+</span><span class="lnt" id="org-coderef--ed0192-30"><a class="lnlinks" href="#org-coderef--ed0192-30">30</a>
+</span><span class="lnt" id="org-coderef--ed0192-31"><a class="lnlinks" href="#org-coderef--ed0192-31">31</a>
+</span><span class="lnt" id="org-coderef--ed0192-32"><a class="lnlinks" href="#org-coderef--ed0192-32">32</a>
+</span><span class="lnt" id="org-coderef--ed0192-33"><a class="lnlinks" href="#org-coderef--ed0192-33">33</a>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="c1">;; config.el, setting templates for org-roam</span>
