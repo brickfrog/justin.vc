@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2022-08-04T07:31:55-04:00
+lastmod = 2022-12-20T23:19:16-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -10,19 +10,19 @@ ShowShareButtons = false
 comments = false
 +++
 
-Org-mode nodes represent topics parsed into the RSS reader (elfeed),
-with feeds assigned tags by their parent headings. I'm also including my
-favorite articles by a specific post with lists that aren't parsed (in no
-particular order - assuming I remember to do this).
-
-Right now I am additionally exporting this as my "blog roll" section of my main
+Right now I am exporting this as my "blog roll" section of my main
 site. I could probably stand to clean this up, but still it shows the stuff I
-deem important enough to watch in my reader. It exports when I save, so it
-should be kept pretty much to date.
+watch in my reader. It exports when I save, so it should be kept pretty much to
+date.
 
 Also, low priority, but I'd like to eventually add an export rule that transforms the
 links from their feeds to just links to the websites. For now, I trust the
 reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
+
+I'm also including my favorite articles by a specific post with lists that
+aren't parsed (in no particular order - assuming I remember to do this).Feel
+free to borrow / use as a base for your own readers, the .org file for this can
+simply be copied to your own elfeed-org config.
 
 
 ## Links {#links}
@@ -66,6 +66,12 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
             -  entry-title: \\(python\\)
 
+            <!--list-separator-->
+
+            -  <https://snarky.ca/rss/>
+
+                Lots of neat python implementation posts.
+
         <!--list-separator-->
 
         -  Rust
@@ -104,135 +110,153 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
         <!--list-separator-->
 
-        -  Catholicism
+        -  Christianity
 
             <!--list-separator-->
 
-            -  <https://www.dominicanajournal.org>
-
-                I like the posts here, but they don't have RSS feeds that I can tell.
-
-<!--list-separator-->
-
--  Person Based
-
-    Blogs centered around a specific writer/group.
-
-    <!--list-separator-->
-
-    -  Ingroup
-
-        This is more people that are in the same intellectual spheres and such. Or at
-        least quasi-adjacent. May not be heterodox.
-
-        <!--list-separator-->
-
-        -  <http://www.aaronsw.com/weblog/index.xml>
-
-        <!--list-separator-->
-
-        -  <https://danwang.co/feed/>
-
-        <!--list-separator-->
-
-        -  <https://slatestarcodex.com/feed/>
-
-        <!--list-separator-->
-
-        -  <https://zerohplovecraft.wordpress.com/feed/>
-
-        <!--list-separator-->
-
-        -  <http://feeds.feedburner.com/thelastpsychiatrist/fLMy?format=xml>
-
-        <!--list-separator-->
-
-        -  <https://feeds.feedblitz.com/marginalrevolution&x=1>
-
-        <!--list-separator-->
-
-        -  <https://fantasticanachronism.com/atom.xml>
-
-        <!--list-separator-->
-
-        -  <https://nintil.com/rss.xml>
-
-        <!--list-separator-->
-
-        -  <https://danluu.com/atom.xml>
-
-        <!--list-separator-->
-
-        -  <https://www.ribbonfarm.com/feed/>
-
-        <!--list-separator-->
-
-        -  <https://hotelconcierge.tumblr.com/rss>
-
-        <!--list-separator-->
-
-        -  Substack
-
-            <!--list-separator-->
-
-            -  <https://astralcodexten.substack.com/feed>
+            -  Catholicism
 
                 <!--list-separator-->
 
-                -  ****Recommended Reading****
+                -  <https://www.dominicanajournal.org/feed/>
 
-                    <!--list-separator-->
+                <!--list-separator-->
 
-                    -  [Heuristics that Almost Always Work](https://astralcodexten.substack.com/p/heuristics-that-almost-always-work)
-
-            <!--list-separator-->
-
-            -  <https://freddiedeboer.substack.com/feed>
+                -  <https://thejesuitpost.org/feed/>
 
             <!--list-separator-->
 
-            -  <https://sashachapin.substack.com/feed>
+            -  Evangelical
+
+                <!--list-separator-->
+
+                -  <https://www.proginosko.com/feed/>
 
             <!--list-separator-->
 
-            -  <https://www.strangeloopcanon.com/feed>
+            -  [The ILIAD Forum](https://www.iliadforum.com/blog-feed.xml)
 
-            <!--list-separator-->
+                Database of questions about Christianity.
 
-            -  <https://erikhoel.substack.com/feed>
+<!--list-separator-->
 
-            <!--list-separator-->
+-  Person / Group Based
 
-            -  <https://www.blockedandreported.org/feed>
-
-                This is a podcast, but it's sometimes there's supplementary info that's in the posts.
-
-            <!--list-separator-->
-
-            -  <https://www.piratewires.com/feed>
+    Blogs centered around a specific writer/group. Mostly things I've wandered into,
+    and liked at least one article/story, may not align with all views, blah, blah, etc.
 
     <!--list-separator-->
 
-    -  Other
+    -  <http://www.aaronsw.com/weblog/index.xml>
+
+    <!--list-separator-->
+
+    -  <https://danwang.co/feed/>
+
+    <!--list-separator-->
+
+    -  <https://slatestarcodex.com/feed/>
+
+    <!--list-separator-->
+
+    -  <https://zerohplovecraft.wordpress.com/feed/>
+
+    <!--list-separator-->
+
+    -  <http://feeds.feedburner.com/thelastpsychiatrist/fLMy?format=xml>
+
+    <!--list-separator-->
+
+    -  <https://feeds.feedblitz.com/marginalrevolution&x=1>
+
+    <!--list-separator-->
+
+    -  <https://fantasticanachronism.com/atom.xml>
+
+    <!--list-separator-->
+
+    -  <https://nintil.com/rss.xml>
+
+    <!--list-separator-->
+
+    -  <https://danluu.com/atom.xml>
+
+    <!--list-separator-->
+
+    -  <https://www.ribbonfarm.com/feed/>
+
+    <!--list-separator-->
+
+    -  <https://hotelconcierge.tumblr.com/rss>
+
+    <!--list-separator-->
+
+    -  <https://www.piratewires.com/feed>
+
+    <!--list-separator-->
+
+    -  <http://boston.conman.org/bostondiaries.rss>
+
+        A blog I found while reading about the gemini protocol. Seems a bit catankerous
+        but I dig the vibe.
+
+    <!--list-separator-->
+
+    -  <https://reorx.com/feed.xml>
+
+        Reorx, person who wrote PaperModX.
+
+    <!--list-separator-->
+
+    -  <https://borretti.me/feed.xml>
+
+    <!--list-separator-->
+
+    -  Substack
 
         <!--list-separator-->
 
-        -  <http://boston.conman.org/bostondiaries.rss>
+        -  <https://astralcodexten.substack.com/feed>
 
-            A blog I found while reading about the gemini protocol. Seems a bit catankerous
-            but I dig the vibe.
+            <!--list-separator-->
+
+            -  ****Recommended Reading****
+
+                <!--list-separator-->
+
+                -  [Heuristics that Almost Always Work](https://astralcodexten.substack.com/p/heuristics-that-almost-always-work)
 
         <!--list-separator-->
 
-        -  <https://reorx.com/feed.xml>
+        -  <https://freddiedeboer.substack.com/feed>
 
-            Reorx, person who wrote PaperModX.
+        <!--list-separator-->
+
+        -  <https://samkriss.substack.com/feed>
+
+        <!--list-separator-->
+
+        -  <https://sashachapin.substack.com/feed>
+
+        <!--list-separator-->
+
+        -  <https://www.strangeloopcanon.com/feed>
+
+        <!--list-separator-->
+
+        -  <https://erikhoel.substack.com/feed>
+
+        <!--list-separator-->
+
+        -  <https://www.blockedandreported.org/feed>
+
+            This is a podcast, but it's sometimes there's supplementary info that's in the posts.
 
 
 ### News {#news}
 
 The news is probably a  [waste of time](http://www.aaronsw.com/weblog/hatethenews). Limiting it down to specific publications
-relevant to my interest/career.
+relevant to my interest/career. Keeping this section open just-in-case.
 
 <!--list-separator-->
 
@@ -244,6 +268,8 @@ relevant to my interest/career.
 
 
 ### Webcomics {#webcomics}
+
+I like comics. Need to read mores.
 
 <!--list-separator-->
 
