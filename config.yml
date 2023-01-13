@@ -1,8 +1,9 @@
 baseURL: "https://justin.vc/"
 title: justin.vc
 theme: PaperModulo
-paginate: 5
+
 enableRobotsTXT: true
+paginate: 3
 
 buildDrafts: false
 buildFuture: false
@@ -13,15 +14,15 @@ minify:
   minifyOutput: true
 
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: justin.vc
-  description: "Justin's random writing on code and such."
+  description: "Justin's random writing(s)."
   keywords: [Blog, Portfolio, PaperMod]
   author: Justin Malloy
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -29,9 +30,9 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false
   EnableInstantClick: false
-  TocSide: 'left'
+  TocSide: "left" # due to sidenotes - need to make interchangeable
 
-  ShowReadingTime: true
+  ShowReadingTime: false
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
@@ -43,7 +44,7 @@ params:
   disableScrollToTop: false
   comments: true
   hidemeta: false
-  hideSummary: true
+  hideSummary: false
   showtoc: true
   tocopen: true
   showModifiedDate: true
@@ -53,53 +54,82 @@ params:
       url: "index.xml"
     - name: github
       url: "https://www.github.com/brickfrog"
+    - name: omg
+      url: "https://jt.omg.lol"
+    - name: micro-blog
+      url: "https://jtm.micro.blog"
+
+  defaultCommentSystems:
+    utterances: true
 
   commentSystems:
     utterances:
       repo: brickfrog/justin.vc
       issue: pathname
-      label: comment 
+      label: comment
       theme: preferred-color-scheme
 
-  defaultCommentSystems:
-    utterances: true
+  profileMode:
+    enabled: false
+
+  homeInfoParams:
+    Title: "justin's musings"
+    Subtitle: "code, ranting, and miscellanea"
+    Omg: # for status.omg.lol on homepage
+      Name: "jt"
+    MicroBlog: # for showing micro-blog posts on homepage
+      Url: "https://micro.justin.vc/feed.json"
+      Title: "latest-ish from micro.blog"
+      Subtitle: "just the most recent, visit the main site for more"
+    Content: >
+      Hello! This is my site, (mostly) written/published with GNU Emacs/Hugo,
+      and hosted on Github Pages for the main portion. The blogging section
+      is hosted by micro.blog / omg.lol. It's primarily just a compilation of 
+      blogging / tutorials I'm into. Feel free to check the about page 
+      for more details.
 
 menu:
   main:
+    - identifier: posts
+      name: Posts
+      url: /posts
+      weight: 1
     - identifier: about
       name: About
       url: /about/
-      weight: 1
+      weight: 2
     - identifier: archives
       name: Archive
       url: /archives/
       weight: 5
-    - name: Search
-      url: search/
-      weight: 10
     - identifier: tags
       name: Tags
       url: /tags/
-      weight: 7 
       weight: 10
+    - name: Search
+      url: search/
+      weight: 13
     - identifier: links
       name: Links
       url: /elfeed/
       weight: 15
-    - identifier: Zettel
-      name: Zettelkasten
-      url: https://zk.justin.vc
-      params:
-        external: true
-       
+
+assets:
+  disableHLJS: true
+#     favicon: "<link / abs url>"
+#     favicon16x16: "<link / abs url>"
+#     favicon32x32: "<link / abs url>"
+#     apple_touch_icon: "<link / abs url>"
+#     safari_pinned_tab: "<link / abs url>"
+
 markup:
-    goldmark:
-        renderer:
-            unsafe: true
-    highlight:
-        noClasses: false
-        lineNos: false
-        style: dracula
-        # anchorLineNos: true
-        # codeFences: true
-        # guessSyntax: true
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    lineNos: false
+    style: dracula
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
