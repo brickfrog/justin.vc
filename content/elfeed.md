@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2022-12-20T23:19:16-05:00
+lastmod = 2023-01-17T21:43:25-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -12,17 +12,12 @@ comments = false
 
 Right now I am exporting this as my "blog roll" section of my main
 site. I could probably stand to clean this up, but still it shows the stuff I
-watch in my reader. It exports when I save, so it should be kept pretty much to
+watch in my reader. It exports when I save, so it should be pretty much to
 date.
 
 Also, low priority, but I'd like to eventually add an export rule that transforms the
 links from their feeds to just links to the websites. For now, I trust the
 reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
-
-I'm also including my favorite articles by a specific post with lists that
-aren't parsed (in no particular order - assuming I remember to do this).Feel
-free to borrow / use as a base for your own readers, the .org file for this can
-simply be copied to your own elfeed-org config.
 
 
 ## Links {#links}
@@ -68,7 +63,7 @@ simply be copied to your own elfeed-org config.
 
             <!--list-separator-->
 
-            -  <https://snarky.ca/rss/>
+            -  <https://snarky.ca/rss>
 
                 Lots of neat python implementation posts.
 
@@ -102,7 +97,7 @@ simply be copied to your own elfeed-org config.
 
             <!--list-separator-->
 
-            -  <https://hackaday.com/blog/feed/>
+            -  <https://hackaday.com/blog/feed>
 
     <!--list-separator-->
 
@@ -118,11 +113,11 @@ simply be copied to your own elfeed-org config.
 
                 <!--list-separator-->
 
-                -  <https://www.dominicanajournal.org/feed/>
+                -  <https://www.dominicanajournal.org/feed>
 
                 <!--list-separator-->
 
-                -  <https://thejesuitpost.org/feed/>
+                -  <https://thejesuitpost.org/feed>
 
             <!--list-separator-->
 
@@ -130,7 +125,7 @@ simply be copied to your own elfeed-org config.
 
                 <!--list-separator-->
 
-                -  <https://www.proginosko.com/feed/>
+                -  <https://www.proginosko.com/feed>
 
             <!--list-separator-->
 
@@ -151,15 +146,15 @@ simply be copied to your own elfeed-org config.
 
     <!--list-separator-->
 
-    -  <https://danwang.co/feed/>
+    -  <https://danwang.co/feed>
 
     <!--list-separator-->
 
-    -  <https://slatestarcodex.com/feed/>
+    -  <https://slatestarcodex.com/feed>
 
     <!--list-separator-->
 
-    -  <https://zerohplovecraft.wordpress.com/feed/>
+    -  <https://zerohplovecraft.wordpress.com/feed>
 
     <!--list-separator-->
 
@@ -183,7 +178,7 @@ simply be copied to your own elfeed-org config.
 
     <!--list-separator-->
 
-    -  <https://www.ribbonfarm.com/feed/>
+    -  <https://www.ribbonfarm.com/feed>
 
     <!--list-separator-->
 
@@ -264,7 +259,7 @@ relevant to my interest/career. Keeping this section open just-in-case.
 
     <!--list-separator-->
 
-    -  [FiveThirtyEight](https://fivethirtyeight.com/features/feed/)
+    -  [FiveThirtyEight](https://fivethirtyeight.com/features/feed)
 
 
 ### Webcomics {#webcomics}
@@ -276,36 +271,13 @@ I like comics. Need to read mores.
 -  <https://www.smbc-comics.com/comic/rss>
 
 
-### Video {#video}
-
-
-#### YouTube {#youtube}
-
-Note that it doesn't naturally parse, and you need to enter the XML for
-elfeed-tube to pick it up. I've been using  <https://rssbox.herokuapp.com> to get
-the links.
-
-<!--list-separator-->
-
--  Gaming
-
-<!--list-separator-->
-
--  Linux
-
-    <!--list-separator-->
-
-    -  [DistroTube](https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg)
-
-
 ### Audio {#audio}
 
 
 #### Podcasts {#podcasts}
 
 I've seen workflows that allow for mpd/mpc and emms to listen to podcasts inside
-emacs but it seemed fiddly. I plan to list podcasts that have
-ancillary content here, otherwise I'll use a dedicated podcasting app.
+emacs but it seemed fiddly
 
 <!--list-separator-->
 
