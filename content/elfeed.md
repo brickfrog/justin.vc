@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-01-17T21:43:25-05:00
+lastmod = 2023-01-20T00:48:35-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -15,9 +15,10 @@ site. I could probably stand to clean this up, but still it shows the stuff I
 watch in my reader. It exports when I save, so it should be pretty much to
 date.
 
-Also, low priority, but I'd like to eventually add an export rule that transforms the
-links from their feeds to just links to the websites. For now, I trust the
-reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
+Because this is primarily for , most of the links are to feeds. However,
+I wrote  a little regex that converts (most of) the feeds into their
+respective main sites - for those I miss you can simply remove the
+_blahblah.xml_, etc.
 
 
 ## Links {#links}
@@ -34,11 +35,11 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
     <!--list-separator-->
 
-    -  <https://lobste.rs/rss>
+    -  <https://lobste.rs/>
 
     <!--list-separator-->
 
-    -  <https://news.ycombinator.com/rss>
+    -  <https://news.ycombinator.com/>
 
 
 ### Blogs {#blogs}
@@ -63,7 +64,7 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
             <!--list-separator-->
 
-            -  <https://snarky.ca/rss>
+            -  <https://snarky.ca/>
 
                 Lots of neat python implementation posts.
 
@@ -77,7 +78,7 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
             <!--list-separator-->
 
-            -  [This Week in Rust](https://this-week-in-rust.org/rss.xml)
+            -  <https://this-week-in-rust.org/.xml>
 
         <!--list-separator-->
 
@@ -89,7 +90,7 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
             <!--list-separator-->
 
-            -  <https://emacsredux.com/atom.xml>
+            -  <https://emacsredux.com/>
 
         <!--list-separator-->
 
@@ -113,11 +114,11 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
                 <!--list-separator-->
 
-                -  <https://www.dominicanajournal.org/feed>
+                -  <https://www.dominicanajournal.org>
 
                 <!--list-separator-->
 
-                -  <https://thejesuitpost.org/feed>
+                -  <https://thejesuitpost.org>
 
             <!--list-separator-->
 
@@ -125,11 +126,11 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
                 <!--list-separator-->
 
-                -  <https://www.proginosko.com/feed>
+                -  <https://www.proginosko.com>
 
             <!--list-separator-->
 
-            -  [The ILIAD Forum](https://www.iliadforum.com/blog-feed.xml)
+            -  <https://www.iliadforum.com/>
 
                 Database of questions about Christianity.
 
@@ -142,19 +143,19 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
     <!--list-separator-->
 
-    -  <http://www.aaronsw.com/weblog/index.xml>
+    -  <http://www.aaronsw.com/weblog/>
 
     <!--list-separator-->
 
-    -  <https://danwang.co/feed>
+    -  <https://danwang.co>
 
     <!--list-separator-->
 
-    -  <https://slatestarcodex.com/feed>
+    -  <https://slatestarcodex.com>
 
     <!--list-separator-->
 
-    -  <https://zerohplovecraft.wordpress.com/feed>
+    -  <https://zerohplovecraft.wordpress.com>
 
     <!--list-separator-->
 
@@ -166,44 +167,42 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
     <!--list-separator-->
 
-    -  <https://fantasticanachronism.com/atom.xml>
+    -  <https://fantasticanachronism.com/>
 
     <!--list-separator-->
 
-    -  <https://nintil.com/rss.xml>
+    -  <https://nintil.com/.xml>
 
     <!--list-separator-->
 
-    -  <https://danluu.com/atom.xml>
+    -  <https://danluu.com/>
 
     <!--list-separator-->
 
-    -  <https://www.ribbonfarm.com/feed>
+    -  <https://www.ribbonfarm.com>
 
     <!--list-separator-->
 
-    -  <https://hotelconcierge.tumblr.com/rss>
+    -  <https://hotelconcierge.tumblr.com/>
 
     <!--list-separator-->
 
-    -  <https://www.piratewires.com/feed>
+    -  <https://www.piratewires.com>
 
     <!--list-separator-->
 
-    -  <http://boston.conman.org/bostondiaries.rss>
+    -  <http://boston.conman.org/bostondiaries>.
 
         A blog I found while reading about the gemini protocol. Seems a bit catankerous
         but I dig the vibe.
 
     <!--list-separator-->
 
-    -  <https://reorx.com/feed.xml>
-
-        Reorx, person who wrote PaperModX.
+    -  <https://reorx.com/>
 
     <!--list-separator-->
 
-    -  <https://borretti.me/feed.xml>
+    -  <https://borretti.me/>
 
     <!--list-separator-->
 
@@ -211,7 +210,7 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
         <!--list-separator-->
 
-        -  <https://astralcodexten.substack.com/feed>
+        -  <https://astralcodexten.substack.com>
 
             <!--list-separator-->
 
@@ -223,27 +222,27 @@ reader is smart enough to just remove the `/feed`, `/rss`, etc. from the link.
 
         <!--list-separator-->
 
-        -  <https://freddiedeboer.substack.com/feed>
+        -  <https://freddiedeboer.substack.com>
 
         <!--list-separator-->
 
-        -  <https://samkriss.substack.com/feed>
+        -  <https://samkriss.substack.com>
 
         <!--list-separator-->
 
-        -  <https://sashachapin.substack.com/feed>
+        -  <https://sashachapin.substack.com>
 
         <!--list-separator-->
 
-        -  <https://www.strangeloopcanon.com/feed>
+        -  <https://www.strangeloopcanon.com>
 
         <!--list-separator-->
 
-        -  <https://erikhoel.substack.com/feed>
+        -  <https://erikhoel.substack.com>
 
         <!--list-separator-->
 
-        -  <https://www.blockedandreported.org/feed>
+        -  <https://www.blockedandreported.org>
 
             This is a podcast, but it's sometimes there's supplementary info that's in the posts.
 
@@ -259,7 +258,7 @@ relevant to my interest/career. Keeping this section open just-in-case.
 
     <!--list-separator-->
 
-    -  [FiveThirtyEight](https://fivethirtyeight.com/features/feed)
+    -  <https://fivethirtyeight.com/features/feed>
 
 
 ### Webcomics {#webcomics}
@@ -268,7 +267,7 @@ I like comics. Need to read mores.
 
 <!--list-separator-->
 
--  <https://www.smbc-comics.com/comic/rss>
+-  <https://www.smbc-comics.com/comic/>
 
 
 ### Audio {#audio}
@@ -277,8 +276,8 @@ I like comics. Need to read mores.
 #### Podcasts {#podcasts}
 
 I've seen workflows that allow for mpd/mpc and emms to listen to podcasts inside
-emacs but it seemed fiddly
+emacs but it seemed fiddly.
 
 <!--list-separator-->
 
--  <https://talkpython.fm/episodes/rss>
+-  <https://talkpython.fm/episodes/>

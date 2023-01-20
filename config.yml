@@ -47,7 +47,6 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: true
-  showModifiedDate: true
 
   socialIcons:
     - name: rss
@@ -98,6 +97,10 @@ menu:
       name: About
       url: /about/
       weight: 2
+    - identifier: now
+      name: Now
+      url: /now/
+      weight: 3
     - identifier: archives
       name: Archive
       url: /archives/
