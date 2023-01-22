@@ -24,6 +24,10 @@ like to eventually move to a more walkable urban environment as the
 kick-in-the-pants to be (more) social. Difficult to want to do things when you
 have to drive 30 minutes.
 
+## Doing
+
+Working on this site, an excuse to learn more javascript and CSS and HTML, etc. etc. Additionally working on reading data science / statistics content - have to get back into the 'ole grind eventually. Additionally want to somehow automate my "daily" notes in org-roam into a weekly post, think Marginal Revolution's Weekly Roundup.
+
 ## Reading
 
 I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfrog). I know, evil Amazon, but the API  is pretty good. I try to backup my data but I'm not sure what other good alternatives are. Feel free to suggest some.
@@ -44,16 +48,18 @@ There's a neat extension called [Quotebacks](https://quotebacks.net/) for chrome
 
 ## Watching
 
-I'm not a moderately big TV watcher. I probably -should- cut it back a bit. I usually have a single show I use as my "going to bed" show, and then high art/prestige I'll binge assuming they're available all at once. I'm currently watching:
+I probably -should- cut it back a bit on media consumption. I usually have a single show I use as my "going to bed" show, and then high art/prestige I'll binge assuming they're available all at once. I'm currently watching:
 
 <a target="_blank" href="https://trakt.tv/users/justinvc"><img width="500" height="281" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/fanart2@2x.jpg" /></a>
 
 
 - [anilist](https://anilist.co/user/brickfrog/) - This counts a bit as reading/watching since I use it to track my anime and manga. I don't really use the social features but scrobble to it from apps.
+- [letterboxd](https://letterboxd.com/) - TODO - make a letterboxd?
+
 
 ## Listening
 
-I don't listen to a tun of music, feel free to check my recently played tracks on last.fm at [brickfrog](https://www.last.fm/user/justinvc).
+I don't listen to a lot of music, feel free to check my recently played tracks on last.fm at [brickfrog](https://www.last.fm/user/justinvc).
 
 The embed is a spotify playlist that I've been listening to recently on [spotify](https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw?si=9f1a873775c44bb6):
 

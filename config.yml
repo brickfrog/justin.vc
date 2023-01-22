@@ -22,7 +22,7 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: justin.vc
-  description: "Justin's random writing(s)."
+  description: "Justin's writing(s)."
   keywords: [Blog, Portfolio, PaperMod]
   author: Justin Malloy
   images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -47,6 +47,7 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: true
+  favicon: "JVC.png"
 
   socialIcons:
     - name: rss
@@ -68,6 +69,10 @@ params:
       label: comment
       theme: preferred-color-scheme
 
+  logo:
+    text: "justin.vc"
+    icon: "JVC.png"
+
   profileMode:
     enabled: false
 
@@ -75,6 +80,7 @@ params:
     Title: "justin's musings"
     Subtitle: "code, ranting, and miscellanea"
     Omg: # for status.omg.lol on homepage
+      Enabled: true # wanted to be explicit due to external calls / elsewhere use
       Name: "jt"
     MicroBlog: # for showing micro-blog posts on homepage
       Url: "https://micro.justin.vc/feed.json"

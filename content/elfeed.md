@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-01-20T00:48:35-05:00
+lastmod = 2023-01-21T15:42:10-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -19,6 +19,10 @@ Because this is primarily for , most of the links are to feeds. However,
 I wrote  a little regex that converts (most of) the feeds into their
 respective main sites - for those I miss you can simply remove the
 _blahblah.xml_, etc.
+
+Also preface that I don't / haven't read nor agree with everything published, some may be
+problematic, etc. etc., don't try to bring back the
+[Index Librorum Prohibitorum](https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum).
 
 
 ## Links {#links}
