@@ -30,6 +30,7 @@ Working on this site, an excuse to learn more javascript and CSS and HTML, etc. 
 
 ## Reading
 
+
 I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfrog). I know, evil Amazon, but the API  is pretty good. I try to backup my data but I'm not sure what other good alternatives are. Feel free to suggest some.
 
 <div class="now-content-box">
@@ -48,10 +49,12 @@ There's a neat extension called [Quotebacks](https://quotebacks.net/) for chrome
 
 ## Watching
 
-I probably -should- cut it back a bit on media consumption. I usually have a single show I use as my "going to bed" show, and then high art/prestige I'll binge assuming they're available all at once. I'm currently watching:
+I probably -should- cut it back a bit on media consumption. I usually have a single show I use as my "going to bed" show, and then high art/prestige I'll binge assuming they're available all at once. I last [watched](trakt.tv/users/justinvc) ( show / movie respectively):
 
-<a target="_blank" href="https://trakt.tv/users/justinvc"><img width="500" height="281" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/fanart2@2x.jpg" /></a>
-
+<div name="movie_container">
+<img width="245" height="400" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=episode" />
+<img width="245" height="400" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=movie" />
+</div>
 
 - [anilist](https://anilist.co/user/brickfrog/) - This counts a bit as reading/watching since I use it to track my anime and manga. I don't really use the social features but scrobble to it from apps.
 - [letterboxd](https://letterboxd.com/) - TODO - make a letterboxd?
@@ -86,5 +89,10 @@ The embed is a spotify playlist that I've been listening to recently on [spotify
           overflow: hidden;
           padding: 0px 0px;
         }
+
+img {
+          display: inline-block;
+          margin-right: 10px;
+}
 
 </style>

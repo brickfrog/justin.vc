@@ -26,6 +26,7 @@ params:
   keywords: [Blog, Portfolio, PaperMod]
   author: Justin Malloy
   images: ["<link or path of image for opengraph, twitter-cards>"]
+  favicon: "JVC.png"
   DateFormat: "2006/01/02"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -47,7 +48,6 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: true
-  favicon: "JVC.png"
 
   socialIcons:
     - name: rss
@@ -71,7 +71,7 @@ params:
 
   logo:
     text: "justin.vc"
-    icon: "JVC.png"
+    #icon: "JVC.png"
 
   profileMode:
     enabled: false
@@ -85,7 +85,8 @@ params:
     MicroBlog: # for showing micro-blog posts on homepage
       Url: "https://micro.justin.vc/feed.json"
       Title: "latest-ish from micro.blog"
-      Subtitle: "just the most recent, visit the main site for more"
+      Subtitle: >
+        just the most recent, visit the micro.blog for more
     Content: >
       Hello! This is my site, (mostly) written/published with GNU Emacs/Hugo,
       and hosted on Github Pages for the main portion. The blogging section
