@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-01-21T15:42:10-05:00
+lastmod = 2023-01-24T19:20:56-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -20,9 +20,9 @@ I wrote  a little regex that converts (most of) the feeds into their
 respective main sites - for those I miss you can simply remove the
 _blahblah.xml_, etc.
 
-Also preface that I don't / haven't read nor agree with everything published, some may be
-problematic, etc. etc., don't try to bring back the
-[Index Librorum Prohibitorum](https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum).
+I would note that because it's , it's things I might not read 100% of the
+time, or involve people I disagree with but still am curious to see what they're
+saying. I am a big proponent of not treating outgroup as a [Index Librorum Prohibitorum](https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum).
 
 
 ## Links {#links}
@@ -142,8 +142,8 @@ problematic, etc. etc., don't try to bring back the
 
 -  Person / Group Based
 
-    Blogs centered around a specific writer/group. Mostly things I've wandered into,
-    and liked at least one article/story, may not align with all views, blah, blah, etc.
+    Blogs centered around a specific writer/group. Things I've wandered into,
+    and liked at least one article/story.
 
     <!--list-separator-->
 
@@ -197,7 +197,7 @@ problematic, etc. etc., don't try to bring back the
 
     -  <http://boston.conman.org/bostondiaries>.
 
-        A blog I found while reading about the gemini protocol. Seems a bit catankerous
+        A blog I found while reading about the gemini protocol. Seems a bit cantankerous
         but I dig the vibe.
 
     <!--list-separator-->
@@ -207,6 +207,10 @@ problematic, etc. etc., don't try to bring back the
     <!--list-separator-->
 
     -  <https://borretti.me/>
+
+    <!--list-separator-->
+
+    -  <https://sachachua.com/blog/feed/>
 
     <!--list-separator-->
 
