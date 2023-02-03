@@ -59,8 +59,6 @@ params:
       url: "https://jt.omg.lol"
     - name: micro-blog
       url: "https://jtm.micro.blog"
-    - name: mastodon
-      url: "https://social.lol/@jt"
 
   defaultCommentSystems:
     utterances: true
@@ -95,7 +93,7 @@ params:
       and hosted on Github Pages for the main portion. The blogging section
       is hosted by micro.blog / omg.lol. It's primarily just a compilation of 
       blogging / tutorials I'm into. Feel free to check the about page 
-      for more details. <a rel="me" href="https://social.lol/@jt"></a>
+      for more details.
 
 menu:
   main:
