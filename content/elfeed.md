@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-01-24T19:20:56-05:00
+lastmod = 2023-01-24T19:33:57-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -15,14 +15,18 @@ site. I could probably stand to clean this up, but still it shows the stuff I
 watch in my reader. It exports when I save, so it should be pretty much to
 date.
 
-Because this is primarily for , most of the links are to feeds. However,
+Because this is primarily for feed-reading, most of the links are to feeds. However,
 I wrote  a little regex that converts (most of) the feeds into their
 respective main sites - for those I miss you can simply remove the
 _blahblah.xml_, etc.
 
-I would note that because it's , it's things I might not read 100% of the
+I would note that because it's for feed-readers, it's things I might not read 100% of the
 time, or involve people I disagree with but still am curious to see what they're
-saying. I am a big proponent of not treating outgroup as a [Index Librorum Prohibitorum](https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum).
+saying. I am a big proponent of not treating outgroup as a [Index Librorum
+Prohibitorum](https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum).  {{% sidenote f1  "At least, most of them, I think." %}}  Like, feel free to call it out if they're the violent kind. {{% /sidenote %}}
+
+I would also note that it's in no particular order. Future goal is to organize
+better, but eh.
 
 
 ## Links {#links}
