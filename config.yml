@@ -81,13 +81,15 @@ params:
     Title: "justin's musings"
     Subtitle: "code, ranting, and miscellanea"
     Omg: # for status.omg.lol on homepage
-      Enabled: true # wanted to be explicit due to external calls / elsewhere use
       Name: "jt"
+      Status: true # wanted to be explicit due to external calls / elsewhere use
+      StatusFlavor: "plain" # mint, banana, strawberry, plain, peanut
+      Weblog: true
     MicroBlog: # for showing micro-blog posts on homepage
-      Url: "https://micro.justin.vc/feed.json"
-      Title: "latest-ish from micro.blog"
+      Url: "https://micro.justin.vc/" # micro.blog posts - enabled if filled
+      Title: "latest-ish short-form posts"
       Subtitle: >
-        just the most recent, visit the micro.blog for more
+        just the most recent, visit micro.blog for more
     Content: >
       Hello! This is my site, (mostly) written/published with GNU Emacs/Hugo,
       and hosted on Github Pages for the main portion. The blogging section

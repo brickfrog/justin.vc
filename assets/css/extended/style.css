@@ -1,0 +1,13 @@
+#top:not(.dark) {
+    background-image: url('/images/onett.png');
+    backdrop-filter: blur(4px) brightness(0.50);
+    background-position: center center;
+    background-size: cover;
+}
+
+#top.dark {
+    background-image: url('/images/threed.jpg');
+    backdrop-filter: blur(4px) brightness(0.25);
+    background-position: center center;
+    background-size: cover;
+}
