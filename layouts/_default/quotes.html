@@ -1,5 +1,5 @@
 {{- define "main" }}
-{{ $quotes := getJSON "/static/quotes.json" }}
+{{ $quotes := getJSON "/static/modified_quotes.json" }}
 
 <header class="page-header">
     <h1>{{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
