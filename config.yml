@@ -26,7 +26,7 @@ params:
   keywords: [Blog, Portfolio, PaperMod]
   author: Justin Malloy
   images: ["<link or path of image for opengraph, twitter-cards>"]
-  favicon: "JVC.png"
+  favicon: earthbound-globe.png
   DateFormat: "2006/01/02"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -72,30 +72,26 @@ params:
 
   logo:
     text: "justin.vc"
-    #icon: "JVC.png"
+    icon: "earthbound-globe.png"
 
   profileMode:
     enabled: false
 
   homeInfoParams:
-    Title: "justin's musings"
-    Subtitle: "code, ranting, and miscellanea"
+    Title: justin.vc
+    Subtitle: "emacs, data, media, and miscellany"
     Omg: # for status.omg.lol on homepage
       Name: "jt"
       Status: true # wanted to be explicit due to external calls / elsewhere use
-      StatusFlavor: "plain" # mint, banana, strawberry, plain, peanut
+      StatusTitle: "status.omg.lol" # mint, banana, strawberry, plain, peanut
       Weblog: true
     MicroBlog: # for showing micro-blog posts on homepage
       Url: "https://micro.justin.vc/" # micro.blog posts - enabled if filled
-      Title: "latest-ish short-form posts"
-      Subtitle: >
-        just the most recent, visit micro.blog for more
+      Title: "micro.justin.vc"
+      Subtitle:  last 10 posts from micro.blog
     Content: >
-      Hello! This is my site, (mostly) written/published with GNU Emacs/Hugo,
-      and hosted on Github Pages for the main portion. The blogging section
-      is hosted by micro.blog / omg.lol. It's primarily just a compilation of 
-      blogging / tutorials I'm into. Feel free to check the about page 
-      for more details.
+      Hello! This is my site (blog?), it's a compilation of things I track and thoughts.
+      Essentially a nexus of sorts. See the [<u>about</u>](/about/) page for more info.
 
 menu:
   main:
@@ -111,6 +107,10 @@ menu:
       name: Now
       url: /now/
       weight: 3
+    - identifier: quotes
+      name: Quotes
+      url: /quotes
+      weight: 4
     - identifier: archives
       name: Archive
       url: /archives/
@@ -129,7 +129,7 @@ menu:
 
 assets:
   disableHLJS: true
-#     favicon: "<link / abs url>"
+  favicon: "earthbound-globe.png"
 #     favicon16x16: "<link / abs url>"
 #     favicon32x32: "<link / abs url>"
 #     apple_touch_icon: "<link / abs url>"

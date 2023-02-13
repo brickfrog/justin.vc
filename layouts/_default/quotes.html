@@ -1,0 +1,198 @@
+{{- define "main" }}
+{{ $quotes := getJSON "/static/quotes.json" }}
+
+<header class="page-header">
+    <h1>{{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+        {{- partial "translation_list.html" . -}}
+    </div>
+    {{- end }}
+</header>
+
+<div>
+{{ .Content }}
+<br>
+<button id="jump-button">Random Quote</button>
+</div>
+
+<table id="table-id">
+  <tr>
+    <th onclick="sortTable(0)">Title</th>
+    <th onclick="sortTable(1)">Date</th>
+    <th onclick="sortTable(2)">Quote</th>
+  </tr>
+  {{ $quotes := getJSON "/static/quotes.json" }}
+  {{ $quotes := (sort $quotes "last_update" "desc") }}
+  {{ range $quote := $quotes }}
+  {{ range $quote.quotes }}
+  {{ $title := $quote.title }}
+  <tr>
+    <td><a href="{{ $quote.url }}"><b class="url">{{ $quote.title }}</b></a></td>
+    <td class="date">{{ div .date 1000 | int | dateFormat "06/01/02" }}</td>
+    <td class="quote">{{ safeHTML .text }}</td>
+  </tr>
+  {{ end }}
+  {{ end }}
+</table>
+
+<script>
+  const headers = document.querySelectorAll("th");
+  const table = document.getElementById("table-id");
+  const tbody = table.getElementsByTagName("tbody")[0];
+  const rows = tbody.getElementsByTagName("tr");
+  const jumpButton = document.getElementById("jump-button");
+
+  headers.forEach(header => {
+    header.addEventListener("click", e => {
+      header.classList.add("clicked");
+      setTimeout(() => header.classList.remove("clicked"), 1000);
+    });
+  });
+
+  jumpButton.addEventListener("click", function() {
+    const randomRow = rows[Math.floor(Math.random() * rows.length)];
+    randomRow.scrollIntoView({behavior: "smooth", block: "start"});
+  });
+
+  function sortTable(n) {
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("table-id");
+    switching = true;
+    // Set the sorting direction to ascending:
+    dir = "asc"; 
+    /* Make a loop that will continue until
+    no switching has been done: */
+    while (switching) {
+      // Start by saying: no switching is done:
+      switching = false;
+      rows = table.getElementsByTagName("TR");
+      /* Loop through all table rows (except the
+      first, which contains table headers): */
+      for (i = 1; i < (rows.length - 1); i++) {
+        // Start by saying there should be no switching:
+        shouldSwitch = false;
+        /* Get the two elements you want to compare,
+        one from current row and one from the next: */
+        x = rows[i].getElementsByTagName("TD")[n];
+        y = rows[i + 1].getElementsByTagName("TD")[n];
+        /* Check if the two rows should switch place,
+        based on the direction, asc or desc: */
+        if (dir == "asc") {
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            // If so, mark as a switch and break the loop:
+            shouldSwitch= true;
+            break;
+          }
+        } else if (dir == "desc") {
+          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            // If so, mark as a switch and break the loop:
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+      if (shouldSwitch) {
+        /* If a switch has been marked, make the switch
+        and mark that a switch has been done: */
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+        // Each time a switch is done, increase this count by 1:
+        switchcount ++; 
+      } else {
+        /* If no switching has been done AND the direction is "asc",
+        set the direction to "desc" and run the while loop again. */
+        if (switchcount == 0 && dir == "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
+    }
+  }
+
+</script>
+
+
+<style>
+
+button#jump-button {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color:var(--theme);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+button#jump-button:hover {
+    background-color: var(--entry);
+  }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.85em;
+}
+
+th {
+  background-color: var(--theme);
+}
+
+th:hover {
+  cursor: pointer;
+}
+
+th.clicked {
+  background-color: var(--primary);
+  animation: flash 1s;
+}
+
+@keyframes flash {
+  0% {
+    background-color: var(--primary);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+td.quote {
+  width: 80%;
+}
+
+td.date {
+  padding-right: 2em;
+}
+
+/* for post page */
+.main.post {
+    max-width: 950px;
+}
+
+td.quote:hover {
+  background-color: var(--code-bg);
+}
+
+b.url:hover {
+  color: var(--link-hover-color);
+}
+
+</style>
+
+
+{{- end }}{{/* end main */}}

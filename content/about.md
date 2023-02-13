@@ -2,7 +2,7 @@
 title = "About"
 author = ["Justin"]
 date = 2022-07-15T23:35:00-04:00
-lastmod = 2023-01-19T23:35:00-05:00
+lastmod = 2023-02-09T23:39:23-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -68,8 +68,10 @@ that having -everything- as org mode documents makes it easier to write in
 general, since I use org-mode for my agenda/todo lists, reading (org-noter +
 pdf-tools) and {{% sidenote "f4"  coding. %}}  Okay, sometimes I still use Jupyter and VSCode. Sue me. {{% /sidenote %}}
 
-<div class="collapse">
+<details>
+<summary>Beep.</summary>
+<div class="details">
 
 Beep. Beep. Future TODO, show rig, details on toolings, etc.
-
 </div>
+</details>

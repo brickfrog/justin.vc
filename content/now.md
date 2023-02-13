@@ -1,4 +1,5 @@
 +++
+title = "Now"
 author = ["Justin"]
 lastmod = 2023-01-18T11:30:47-05:00
 draft = false
@@ -8,11 +9,8 @@ ShowShareButtons = false
 ShowBreadCrumbs = false
 comments = false
 hideMeta = true
-showtoc = false
+showtoc = true
 +++
-
-
-# Now?
 
 This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). It allows a seperation of the "what I'm doing" from the "who I am" and "what I've done".
 
@@ -24,11 +22,11 @@ like to eventually move to a more walkable urban environment as the
 kick-in-the-pants to be (more) social. Difficult to want to do things when you
 have to drive 30 minutes.
 
-## Doing
+### Doing
 
 Working on this site, an excuse to learn more javascript and CSS and HTML, etc. etc. Additionally working on reading data science / statistics content - have to get back into the 'ole grind eventually. Additionally want to somehow automate my "daily" notes in org-roam into a weekly post, think Marginal Revolution's Weekly Roundup.
 
-## Reading
+### Reading
 
 
 I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfrog). I know, evil Amazon, but the API  is pretty good. I try to backup my data but I'm not sure what other good alternatives are. Feel free to suggest some.
@@ -37,17 +35,7 @@ I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfr
 <script src="https://www.goodreads.com/review/grid_widget/46714580.Justin's%20bookshelf:%20currently-reading?cover_size=medium&hide_link=true&hide_title=true&num_books=25&order=d&shelf=currently-reading&sort=date_read&widget_id=1674169459" type="text/javascript"></script>
 </div><br>
 
-#### QuoteBacks
-
-There's a neat extension called [Quotebacks](https://quotebacks.net/) for chrome/firefox that lets you record snippets of text. It's useful for display, but it also saves things as JSON, which I parse and just toss into this [site](https://quotes.justin.vc).
-
-<div>
-<iframe src="https://quotes.justin.vc" width="100%" height="600"></iframe>
-</div>
-
-* https://justin.vc/elfeed includes all the various sites I keep in my RSS reader.
-
-## Watching
+### Watching
 
 I probably -should- cut it back a bit on media consumption. I usually have a single show I use as my "going to bed" show, and then high art/prestige I'll binge assuming they're available all at once. I last [watched](trakt.tv/users/justinvc) ( show / movie respectively):
 
@@ -60,7 +48,7 @@ I probably -should- cut it back a bit on media consumption. I usually have a sin
 - [letterboxd](https://letterboxd.com/) - TODO - make a letterboxd?
 
 
-## Listening
+### Listening
 
 I don't listen to a lot of music, feel free to check my recently played tracks on last.fm at [brickfrog](https://www.last.fm/user/justinvc).
 

@@ -1,13 +1,42 @@
+
+@media not all and (max-width: 767px) {
+  #top {
+    animation: scroll 600s ease infinite;
+    background: url('/images/dolores.jpg'),
+    #111111;
+}
+
 #top:not(.dark) {
-    background-image: url('/images/onett.png');
-    backdrop-filter: blur(4px) brightness(0.50);
-    background-position: center center;
-    background-size: cover;
+  backdrop-filter: blur(5px) brightness(0.75);
 }
 
 #top.dark {
-    background-image: url('/images/threed.jpg');
-    backdrop-filter: blur(4px) brightness(0.25);
-    background-position: center center;
-    background-size: cover;
+  backdrop-filter: blur(5px) brightness(0.25);
+}
+
+@keyframes scroll {
+ 100%{
+  background-position:0px -3000px;
+}
+}
+
+@media (prefers-reduced-motion) {
+.wrapper {
+  animation: scroll 200s linear infinite;
+}
+}
+
+@media (min-width: 670px) {
+.title {
+  font-size: 5rem;
+}
+}
+}
+
+.dark {
+  --icon-filter: invert(14%) sepia(23%) saturate(553%) hue-rotate(209deg) brightness(94%) contrast(97%);
+}
+
+root {
+  --icon-filter: invert(93%) sepia(32%) saturate(406%) hue-rotate(175deg) brightness(96%) contrast(103%);
 }
