@@ -1,5 +1,4 @@
 {{- define "main" }}
-{{ $quotes := getJSON "/static/modified_quotes.json" }}
 
 <header class="page-header">
     <h1>{{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
@@ -28,7 +27,7 @@
     <th onclick="sortTable(1)">Date</th>
     <th onclick="sortTable(2)">Quote</th>
   </tr>
-  {{ $quotes := getJSON "/static/quotes.json" }}
+  {{ $quotes := getJSON "/static/modified_quotes.json" }}
   {{ $quotes := (sort $quotes "last_update" "desc") }}
   {{ range $quote := $quotes }}
   {{ range $quote.quotes }}
