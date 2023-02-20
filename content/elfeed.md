@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-02-13T11:22:26-05:00
+lastmod = 2023-02-20T17:00:11-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -23,7 +23,7 @@ respective main sites - for those I miss you can simply remove the
 I would note that because it's for feed-readers, it's things I might not read 100% of the
 time, or involve people I disagree with but still am curious to see what they're
 saying. I am a big proponent of not treating outgroup as a [Index Librorum
-Prohibitorum](https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum).  {{% sidenote f1  "At least, most of them, I think." %}}  {{% /sidenote %}}
+Prohibitorum](https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum).
 
 I would also note that it's in no particular order. I basically just toss them
 into the RSS if I find or two posts I think are neat. Future goal is to organize
@@ -45,11 +45,11 @@ better, but eh.
 
     <!--list-separator-->
 
-    -  <https://lobste.rs/rss>
+    -  <https://lobste.rs>
 
     <!--list-separator-->
 
-    -  <https://news.ycombinator.com/rss>
+    -  <https://news.ycombinator.com>
 
 
 ### Blogs {#blogs}
@@ -70,21 +70,13 @@ better, but eh.
 
             <!--list-separator-->
 
-            -  entry-title: \\(python\\)
-
-            <!--list-separator-->
-
-            -  <https://snarky.ca/rss>
+            -  <https://snarky.ca>
 
                 Lots of neat python implementation posts.
 
         <!--list-separator-->
 
         -  Rust
-
-            <!--list-separator-->
-
-            -  entry-title: \\(rust\\)
 
             <!--list-separator-->
 
@@ -96,19 +88,11 @@ better, but eh.
 
             <!--list-separator-->
 
-            -  entry-title: \\(emacs\\|org-mode\\)
-
-            <!--list-separator-->
-
-            -  <https://emacsredux.com/atom.xml>
+            -  <https://emacsredux.com>
 
         <!--list-separator-->
 
         -  Machine Learning
-
-            <!--list-separator-->
-
-            -  entry-title: \\(chatgpt\\)
 
         <!--list-separator-->
 
@@ -127,7 +111,7 @@ better, but eh.
 
             <!--list-separator-->
 
-            -  <https://motherduck.com/rss.xml>
+            -  <https://motherduck.com>
 
                 Looks to be the blog/site associated with enterprise duckdb. Pretty neat.
 
@@ -137,7 +121,7 @@ better, but eh.
 
         <!--list-separator-->
 
-        -  <https://statisticsbyjim.com/feed/>
+        -  <https://statisticsbyjim.com>
 
             Moderately rudimentary stuff, but I think it's worth a refresher every now and then.
 
@@ -155,11 +139,11 @@ better, but eh.
 
                 <!--list-separator-->
 
-                -  <https://www.dominicanajournal.org/feed>
+                -  <https://www.dominicanajournal.org>
 
                 <!--list-separator-->
 
-                -  <https://thejesuitpost.org/feed>
+                -  <https://thejesuitpost.org>
 
                 <!--list-separator-->
 
@@ -171,11 +155,11 @@ better, but eh.
 
                 <!--list-separator-->
 
-                -  <https://www.proginosko.com/feed>
+                -  <https://www.proginosko.com>
 
             <!--list-separator-->
 
-            -  <https://www.iliadforum.com/blog-feed.xml>
+            -  <https://www.iliadforum.com>
 
                 Database of questions about Christianity.
 
@@ -195,7 +179,7 @@ better, but eh.
 
     <!--list-separator-->
 
-    -  <https://danwang.co/feed>
+    -  <https://danwang.co>
 
     <!--list-separator-->
 
@@ -211,7 +195,7 @@ better, but eh.
 
     <!--list-separator-->
 
-    -  <https://zerohplovecraft.wordpress.com/feed>
+    -  <https://zerohplovecraft.wordpress.com>
 
     <!--list-separator-->
 
@@ -223,19 +207,19 @@ better, but eh.
 
     <!--list-separator-->
 
-    -  <https://fantasticanachronism.com/atom.xml>
+    -  <https://fantasticanachronism.com>
 
     <!--list-separator-->
 
-    -  <https://nintil.com/rss.xml>
+    -  <https://nintil.com>
 
     <!--list-separator-->
 
-    -  <https://danluu.com/atom.xml>
+    -  <https://danluu.com>
 
     <!--list-separator-->
 
-    -  <https://www.ribbonfarm.com/feed>
+    -  <https://www.ribbonfarm.com>
 
     <!--list-separator-->
 
@@ -243,7 +227,7 @@ better, but eh.
 
     <!--list-separator-->
 
-    -  <https://www.piratewires.com/feed>
+    -  <https://www.piratewires.com>
 
     <!--list-separator-->
 
@@ -254,7 +238,7 @@ better, but eh.
 
     <!--list-separator-->
 
-    -  <https://milkyeggs.com/feed/>
+    -  <https://milkyeggs.com>
 
     <!--list-separator-->
 
@@ -262,7 +246,7 @@ better, but eh.
 
     <!--list-separator-->
 
-    -  <https://borretti.me/feed.xml>
+    -  <https://borretti.me>
 
     <!--list-separator-->
 
@@ -274,7 +258,7 @@ better, but eh.
 
         <!--list-separator-->
 
-        -  <https://astralcodexten.substack.com/feed>
+        -  <https://astralcodexten.substack.com>
 
             <!--list-separator-->
 
@@ -286,7 +270,7 @@ better, but eh.
 
         <!--list-separator-->
 
-        -  <https://freddiedeboer.substack.com/feed>
+        -  <https://freddiedeboer.substack.com>
 
             <!--list-separator-->
 
@@ -298,29 +282,33 @@ better, but eh.
 
         <!--list-separator-->
 
-        -  <https://samkriss.substack.com/feed>
+        -  <https://samkriss.substack.com>
 
         <!--list-separator-->
 
-        -  <https://sashachapin.substack.com/feed>
+        -  <https://sashachapin.substack.com>
 
         <!--list-separator-->
 
-        -  <https://www.strangeloopcanon.com/feed>
+        -  <https://www.strangeloopcanon.com>
 
         <!--list-separator-->
 
-        -  <https://erikhoel.substack.com/feed>
+        -  <https://erikhoel.substack.com>
 
         <!--list-separator-->
 
-        -  <https://octal.substack.com/feed>
+        -  <https://octal.substack.com>
 
         <!--list-separator-->
 
-        -  <https://www.blockedandreported.org/feed>
+        -  <https://www.blockedandreported.org>
 
             This is a podcast, but it's sometimes there's supplementary info that's in the posts.
+
+        <!--list-separator-->
+
+        -  <https://www.slowboring.com>
 
 
 ### News {#news}
@@ -343,13 +331,13 @@ I like comics. Need to read mores.
 
 <!--list-separator-->
 
--  <https://www.smbc-comics.com/comic/rss>
+-  <https://www.smbc-comics.com/comic>
 
 
 ### Zines {#zines}
 
 
-#### <https://www.surfaces.cx/feed> {#https-www-dot-surfaces-dot-cx-feed}
+#### <https://www.surfaces.cx> {#https-www-dot-surfaces-dot-cx}
 
 An "open literary arts platform"
 
