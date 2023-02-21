@@ -2,25 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://justin.vc/posts/reminder-check-doom-defaults-agenda/</loc>
+    <lastmod>2023-02-21T14:38:40-05:00</lastmod>
+  </url><url>
+    <loc>https://justin.vc/tags/doom-emacs/</loc>
+    <lastmod>2023-02-21T14:38:40-05:00</lastmod>
+  </url><url>
+    <loc>https://justin.vc/tags/emacs/</loc>
+    <lastmod>2023-02-21T14:38:40-05:00</lastmod>
+  </url><url>
+    <loc>https://justin.vc/</loc>
+    <lastmod>2023-02-21T14:38:40-05:00</lastmod>
+  </url><url>
+    <loc>https://justin.vc/tags/org/</loc>
+    <lastmod>2023-02-21T14:38:40-05:00</lastmod>
+  </url><url>
+    <loc>https://justin.vc/tags/org-agenda/</loc>
+    <lastmod>2023-02-21T14:38:40-05:00</lastmod>
+  </url><url>
+    <loc>https://justin.vc/posts/</loc>
+    <lastmod>2023-02-21T14:38:40-05:00</lastmod>
+  </url><url>
+    <loc>https://justin.vc/tags/</loc>
+    <lastmod>2023-02-21T14:38:40-05:00</lastmod>
+  </url><url>
     <loc>https://justin.vc/now/</loc>
     <lastmod>2023-01-18T11:30:47-05:00</lastmod>
   </url><url>
     <loc>https://justin.vc/posts/brute-forcing-pandoc-with-panflute/</loc>
     <lastmod>2022-08-08T16:28:51-04:00</lastmod>
   </url><url>
-    <loc>https://justin.vc/</loc>
-    <lastmod>2022-08-08T16:28:51-04:00</lastmod>
-  </url><url>
     <loc>https://justin.vc/tags/pandoc/</loc>
     <lastmod>2022-08-08T16:28:51-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/panflute/</loc>
-    <lastmod>2022-08-08T16:28:51-04:00</lastmod>
-  </url><url>
-    <loc>https://justin.vc/posts/</loc>
-    <lastmod>2022-08-08T16:28:51-04:00</lastmod>
-  </url><url>
-    <loc>https://justin.vc/tags/</loc>
     <lastmod>2022-08-08T16:28:51-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/tiddlywiki/</loc>
@@ -32,9 +47,6 @@
     <loc>https://justin.vc/tags/data-science/</loc>
     <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
-    <loc>https://justin.vc/tags/emacs/</loc>
-    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
-  </url><url>
     <loc>https://justin.vc/tags/kedro/</loc>
     <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
@@ -42,9 +54,6 @@
     <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/categories/literate-data-science/</loc>
-    <lastmod>2022-08-01T05:41:48-04:00</lastmod>
-  </url><url>
-    <loc>https://justin.vc/tags/org/</loc>
     <lastmod>2022-08-01T05:41:48-04:00</lastmod>
   </url><url>
     <loc>https://justin.vc/tags/python/</loc>
