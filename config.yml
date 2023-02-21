@@ -3,7 +3,7 @@ title: justin.vc
 theme: PaperModulo
 
 enableRobotsTXT: true
-paginate: 3
+paginate: 10
 
 buildDrafts: false
 buildFuture: false
