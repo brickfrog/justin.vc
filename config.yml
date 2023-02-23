@@ -8,6 +8,7 @@ paginate: 10
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+pluralizelisttitles: false
 
 minify:
   disableXML: true
@@ -113,10 +114,14 @@ menu:
       name: Quotes
       url: /quotes
       weight: 4
+    - identifier: exobrain
+      name: Exobrain
+      url: /exobrain/
+      weight: 5
     - identifier: archives
       name: Archive
       url: /archives/
-      weight: 5
+      weight: 7
     - identifier: tags
       name: Tags
       url: /tags/

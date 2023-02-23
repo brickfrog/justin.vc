@@ -2,7 +2,7 @@
 title = "About"
 author = ["Justin"]
 date = 2022-07-15T23:35:00-04:00
-lastmod = 2023-02-09T23:39:23-05:00
+lastmod = 2023-02-22T14:20:10-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -11,6 +11,8 @@ comments = false
 hideMeta = true
 ShowBreadCrumbs = false
 +++
+
+<t class="outline-1nil">
 
 ## Background {#background}
 
@@ -31,6 +33,7 @@ I write the better I get about it. I was good at writing papers in
 college, but that was when I -had- to. Those skills have kind of lapsed a decade
 later.
 
+<div class="outline-2nil">
 
 ### Technical {#technical}
 
@@ -52,6 +55,9 @@ only so much you can cover in two years. I primarily focused on optimization and
 information systems at that time with my "capstone" focus on education system
 turnouts in Bolivia.
 
+</div>
+
+<div class="outline-2nil">
 
 ### Using {#using}
 
@@ -75,3 +81,7 @@ pdf-tools) and {{% sidenote "f4"  coding. %}}  Okay, sometimes I still use Jupyt
 Beep. Beep. Future TODO, show rig, details on toolings, etc.
 </div>
 </details>
+
+</div>
+
+</t>

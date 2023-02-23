@@ -1,3 +1,4 @@
+/* Background Image, Scrolling, etc. */
 
 @media not all and (max-width: 767px) {
   #top {
@@ -39,4 +40,94 @@
 
 root {
   --icon-filter: invert(93%) sepia(32%) saturate(406%) hue-rotate(175deg) brightness(96%) contrast(103%);
+}
+
+/* Changing Meta on Posts */
+
+.meta-item .post-tags a:not(:last-of-type) {
+  margin-inline-end: 0.75em;
+}
+
+/* Changing header indentation */
+
+div.outline-2nil p, summary {
+  margin-left: 0.5em;
+}
+
+div.outline-2nil :is(h1, h2, h3, h4, h5, h6) {
+  margin-left: 0.5em;
+}
+
+div[class^="outline-"] {
+  padding-right: 0.5em;
+  border-left-width: 3px;
+  border-left-style: dotted;
+  border-left-color: transparent;
+  padding-right: 0.5em;
+}
+
+div[class^="outline-"]:hover {
+  border-left: 3px dotted var(--primary-opaque);
+  opacity: 0.99;
+}
+
+div.outline-1nil {
+  margin-left: 1em;
+}
+
+div.outline-2nil {
+  margin-left: 1em;
+
+}
+
+div.outline-3nil {
+  margin-left: 1.5em;
+
+}
+
+div.outline-4nil {
+  margin-left: 2em;
+
+}
+
+div.outline-5nil {
+  margin-left: 2.5em;
+}
+
+/* Org-Mode */
+
+.org-todo {
+  display: inline-block;
+  padding: 0 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.org-todo.todo.TODO, .org-todo.todo.IDEA {
+  background: #B9DC87;
+  color: #000000;
+}
+
+.org-todo.todo.PROJ {
+  background: #939ED2;
+  color: #000000;
+}
+
+.org-todo.todo.WAIT, .org-todo.todo.STRT {
+  background: #F0C674;
+  color: #000000;
+}
+
+.org-todo.done.DONE {
+  background: #303132;
+  color: #FFFFFF;
+}
+
+.org-todo.done.KILL, .org-todo.done.NO {
+  background: #F07178;
+  color: #FFFFFF;
 }
