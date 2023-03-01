@@ -17,4 +17,3 @@ At a glance, some neat stuff I've noticed:
 -   f-strings like python, essentially converting them into CONCAT
 -   integration with prefect
 -   DuckDB integration (I have no clue what this is as of writing - lookup?)
--   [dbt]({{< relref "dbt.md" >}}) integration
