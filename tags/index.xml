@@ -5,17 +5,37 @@
     <link>https://justin.vc/tags/</link>
     <description>Recent content in Tags on justin.vc</description>
     <image>
-      <url>https://justin.vc/earthbound-globe.png</url>
-      <link>https://justin.vc/earthbound-globe.png</link>
+      <url>https://justin.vc/</url>
+      <link>https://justin.vc/</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 22 Feb 2023 16:28:15 -0500</lastBuildDate><atom:link href="https://justin.vc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Feb 2023 23:17:09 -0500</lastBuildDate><atom:link href="https://justin.vc/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>draft</title>
-      <link>https://justin.vc/tags/draft/</link>
-      <pubDate>Wed, 22 Feb 2023 16:28:15 -0500</pubDate>
+      <title>coordination</title>
+      <link>https://justin.vc/tags/coordination/</link>
+      <pubDate>Tue, 28 Feb 2023 23:17:09 -0500</pubDate>
       
-      <guid>https://justin.vc/tags/draft/</guid>
+      <guid>https://justin.vc/tags/coordination/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>game-theory</title>
+      <link>https://justin.vc/tags/game-theory/</link>
+      <pubDate>Tue, 28 Feb 2023 23:17:09 -0500</pubDate>
+      
+      <guid>https://justin.vc/tags/game-theory/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>precommitment</title>
+      <link>https://justin.vc/tags/precommitment/</link>
+      <pubDate>Tue, 28 Feb 2023 23:17:09 -0500</pubDate>
+      
+      <guid>https://justin.vc/tags/precommitment/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -136,6 +156,46 @@
       <pubDate>Sat, 16 Jul 2022 02:31:00 -0400</pubDate>
       
       <guid>https://justin.vc/tags/org-roam/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>economics</title>
+      <link>https://justin.vc/tags/economics/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://justin.vc/tags/economics/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>libertarianism</title>
+      <link>https://justin.vc/tags/libertarianism/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://justin.vc/tags/libertarianism/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>person</title>
+      <link>https://justin.vc/tags/person/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://justin.vc/tags/person/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>philosophy</title>
+      <link>https://justin.vc/tags/philosophy/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://justin.vc/tags/philosophy/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

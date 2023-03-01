@@ -8,7 +8,6 @@
                      #+TITLE: Literate Kedro: Using Org-mode for Data Science
                      #+DATE: [2022-07-25 Mon 01:43]
                      #+HUGO_TAGS: org kedro python data-science emacs
-#+HUGO_CATEGORIES: literate-data-science
                      #+HUGO_DRAFT: false
 #+BIND: org-export-use-babel nil
 

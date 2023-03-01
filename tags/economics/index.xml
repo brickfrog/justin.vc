@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>economics on justin.vc</title>
+    <link>https://justin.vc/tags/economics/</link>
+    <description>Recent content in economics on justin.vc</description>
+    <image>
+      <url>https://justin.vc/</url>
+      <link>https://justin.vc/</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 27 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://justin.vc/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bryan Caplan</title>
+      <link>https://justin.vc/notes/bryan_caplan/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://justin.vc/notes/bryan_caplan/</guid>
+      <description>Summary Bryan Caplan is an American economist and a libertarian. He is a professor of economics at George Mason University and a researcher for the Mercatus Center, a market-oriented think tank. He is best known for his work on public economics and political philosophy, particularly in the areas of immigration, education, and voter behavior. https://betonit.substack.com - blogs at </description>
+      <content:encoded><![CDATA[<h2 id="summary">Summary</h2>
+<ul>
+<li>Bryan Caplan is an American economist and a libertarian. He is a professor of economics at George Mason University and a researcher for the Mercatus Center, a market-oriented think tank. He is best known for his work on public economics and political philosophy, particularly in the areas of immigration, education, and voter behavior.</li>
+<li><a href="https://betonit.substack.com">https://betonit.substack.com</a> - blogs at</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

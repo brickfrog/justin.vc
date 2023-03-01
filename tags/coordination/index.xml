@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>coordination on justin.vc</title>
+    <link>https://justin.vc/tags/coordination/</link>
+    <description>Recent content in coordination on justin.vc</description>
+    <image>
+      <url>https://justin.vc/</url>
+      <link>https://justin.vc/</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 Feb 2023 23:17:09 -0500</lastBuildDate><atom:link href="https://justin.vc/tags/coordination/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Schelling Fence</title>
+      <link>https://justin.vc/notes/schelling_fence/</link>
+      <pubDate>Tue, 28 Feb 2023 23:17:09 -0500</pubDate>
+      
+      <guid>https://justin.vc/notes/schelling_fence/</guid>
+      <description>Summary it seems that the concept of a &amp;ldquo;Schelling fence&amp;rdquo; is used in the context of precommitment and avoiding slippery slopes.
+In game theory and decision theory, a precommitment is a strategy or action that an individual or group takes in advance to limit their future options or to signal their future behavior to others. A slippery slope refers to a situation where taking one action can lead to a series of increasingly negative outcomes or consequences.</description>
+      <content:encoded><![CDATA[<h2 id="summary">Summary</h2>
+<p>it seems that the concept of a &ldquo;Schelling fence&rdquo; is used in the context of
+precommitment and avoiding slippery slopes.</p>
+<p>In game theory and decision theory, a precommitment is a strategy or action that
+an individual or group takes in advance to limit their future options or to
+signal their future behavior to others. A slippery slope refers to a situation
+where taking one action can lead to a series of increasingly negative outcomes
+or consequences.</p>
+<p>In the context of a Schelling fence, it appears that establishing a clear and
+credible point of agreement or coordination among different interest groups can
+help prevent a slippery slope by limiting the range of acceptable outcomes. This
+could involve setting a clear boundary or rule that all parties agree to defend
+in order to prevent more extreme or harmful outcomes from occurring.</p>
+<p>Overall, the concept of a Schelling fence appears to be related to the idea of
+establishing a focal point or point of agreement among individuals or groups to
+guide their behavior and prevent undesirable outcomes.</p>
+<h2 id="references">References</h2>
+<h3 id="https-www-dot-lesswrong-dot-com-posts-kbm6qnjv9dgwsphqp-schelling-fences-on-slippery-slopes"><a href="https://www.lesswrong.com/posts/Kbm6QnJv9dgWsPHQP/schelling-fences-on-slippery-slopes">https://www.lesswrong.com/posts/Kbm6QnJv9dgWsPHQP/schelling-fences-on-slippery-slopes</a></h3>
+<p>Scott Alexander&rsquo;s post.</p>
+<p>Slippery slopes can sometimes be avoided by establishing a &ldquo;Schelling fence&rdquo; - a
+Schelling point that the various interest groups involved - or yourself across
+different values and times - make a credible precommitment to defend.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
