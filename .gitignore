@@ -14,3 +14,7 @@ hugo.linux
 
 # Quote files
 /static/quotes.json
+
+# Build Files
+build.ninja
+.ninja_log

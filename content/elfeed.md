@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-02-20T17:00:11-05:00
+lastmod = 2023-02-28T18:54:48-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -18,7 +18,7 @@ date.
 Because this is primarily for feed-reading, most of the links are to feeds. However,
 I wrote  a little regex that converts (most of) the feeds into their
 respective main sites - for those I miss you can simply remove the
-/blahblah.xml/rss, etc.
+/blahblah.xml/rss, etc. - I'm not -great- at regex.
 
 I would note that because it's for feed-readers, it's things I might not read 100% of the
 time, or involve people I disagree with but still am curious to see what they're
@@ -334,12 +334,26 @@ I like comics. Need to read mores.
 -  <https://www.smbc-comics.com/comic>
 
 
-### Zines {#zines}
+### Literary {#literary}
+
+As opposed to blog this would be collective works, literary criticism sites,
+etc. etc. - differentiating profit/mainstream with the magazine vs. zine distinction.
 
 
-#### <https://www.surfaces.cx> {#https-www-dot-surfaces-dot-cx}
+#### Magazine {#magazine}
 
-An "open literary arts platform"
+<!--list-separator-->
+
+-  <https://www.nplusonemag.com>
+
+
+#### Zines {#zines}
+
+<!--list-separator-->
+
+-  <https://www.surfaces.cx>
+
+    An "open literary arts platform"
 
 
 ### Audio {#audio}

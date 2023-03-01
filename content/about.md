@@ -2,7 +2,7 @@
 title = "About"
 author = ["Justin"]
 date = 2022-07-15T23:35:00-04:00
-lastmod = 2023-02-22T14:20:10-05:00
+lastmod = 2023-02-26T12:07:59-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -10,6 +10,7 @@ ShowShareButtons = false
 comments = false
 hideMeta = true
 ShowBreadCrumbs = false
+backlinks = false
 +++
 
 <t class="outline-1nil">

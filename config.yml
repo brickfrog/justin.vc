@@ -3,7 +3,8 @@ title: justin.vc
 theme: PaperModulo
 
 enableRobotsTXT: true
-paginate: 10
+paginate: 10 # main content
+paginate_notes: 3 # notes
 
 buildDrafts: false
 buildFuture: false
@@ -51,6 +52,22 @@ params:
   showtoc: true
   tocopen: true
 
+  single_template: "single2.html"
+
+  mainSections:
+    - posts # main section for posts, ignoring notes
+
+  taxonomies:
+    category: "categories"
+
+  contentTypes:
+  - name: "notes"
+    description: "Notes"
+    singular: "note"
+    plural: "notes"
+    icon: "note"
+    layout: "single2.html"
+  
   socialIcons:
     - name: rss
       url: "index.xml"
@@ -75,7 +92,6 @@ params:
 
   logo:
     text: "justin.vc"
-    icon: "earthbound-globe.png"
 
   profileMode:
     enabled: false
@@ -116,7 +132,7 @@ menu:
       weight: 4
     - identifier: exobrain
       name: Exobrain
-      url: /exobrain/
+      url: /notes/
       weight: 5
     - identifier: archives
       name: Archive

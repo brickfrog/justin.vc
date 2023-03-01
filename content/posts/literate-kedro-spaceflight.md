@@ -4,7 +4,6 @@ author = ["Justin"]
 date = 2022-07-25T01:43:00-04:00
 lastmod = 2022-08-01T05:41:48-04:00
 tags = ["org", "kedro", "python", "data-science", "emacs"]
-categories = ["literate-data-science"]
 draft = false
 +++
 
