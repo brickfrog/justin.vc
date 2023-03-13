@@ -130,8 +130,8 @@ menu:
       name: Quotes
       url: /quotes
       weight: 4
-    - identifier: exobrain
-      name: Exobrain
+    - identifier: notes
+      name: Notes
       url: /notes/
       weight: 5
     - identifier: archives
