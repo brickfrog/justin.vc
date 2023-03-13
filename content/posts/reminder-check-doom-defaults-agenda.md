@@ -2,7 +2,7 @@
 title = "A Reminder to Check on Doom Defaults: Org-Agenda"
 author = ["Justin"]
 date = 2023-02-21T12:33:00-05:00
-lastmod = 2023-02-21T14:38:40-05:00
+lastmod = 2023-03-05T22:48:18-05:00
 tags = ["emacs", "org-agenda", "org", "doom-emacs"]
 draft = false
 +++
@@ -40,7 +40,7 @@ where "org-agenda-start-day" seemed to default to "-3d", which, in effect would 
 org-super-agenda to show the wrong date (three days before). No matter what I did it seemed to
 default back, which set me on a bit of a "I will figure this out out of spite!"
 path. I spent an hour randomly looking through my own literate config and
-config.el, nothing semed to work except for manually running the block which
+config.el, nothing seemed to work except for manually running the block which
 would set things correctly until I next restarted the emacs server / client.
 
 I ended up getting annoyed and asking for help on
