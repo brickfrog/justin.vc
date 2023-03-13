@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-02-28T18:54:48-05:00
+lastmod = 2023-03-13T01:34:41-04:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -93,6 +93,13 @@ better, but eh.
         <!--list-separator-->
 
         -  Machine Learning
+
+            <!--list-separator-->
+
+            -  <https://txt.cohere.ai/rss/>
+
+                Company based blog - has their own product, but seems to have decent amounts of
+                discussion and linking to ML papers that are relevant.
 
         <!--list-separator-->
 
@@ -251,6 +258,13 @@ better, but eh.
     <!--list-separator-->
 
     -  <https://sachachua.com/blog/feed/>
+
+    <!--list-separator-->
+
+    -  <https://prog21.dadgum.com/atom.xml>
+
+        "Programming" / thoughts-on tech blog that I like, it's no longer updated but
+        there's some gems.
 
     <!--list-separator-->
 
