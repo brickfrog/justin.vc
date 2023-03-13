@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>sqlite on justin.vc</title>
+    <link>https://justin.vc/tags/sqlite/</link>
+    <description>Recent content in sqlite on justin.vc</description>
+    <image>
+      <url>https://justin.vc/</url>
+      <link>https://justin.vc/</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Mar 2023 23:52:00 -0400</lastBuildDate><atom:link href="https://justin.vc/tags/sqlite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Embedded SQL in Hugo with sqlime</title>
+      <link>https://justin.vc/posts/embedded-sql-hugo/</link>
+      <pubDate>Sun, 12 Mar 2023 23:52:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/posts/embedded-sql-hugo/</guid>
+      <description>Another short(-ish) post. I found a neat tutorial/example page at: https://sqlime.org/examples.html. It shows an embedded sqlite database, using web assembly and javascript to run interactive SQL examples without needing to hit a third-party hosted script (assuming you&amp;rsquo;re hosting it yourself).
+This lets you do something like:
+SELECT rank() over w as &#34;rank&#34;, name, department, salary FROM employees WINDOW W as (order by salary desc) ORDER BY &#34;rank&#34;, id LIMIT 15 To run this SQL statement, please enable javascript.</description>
+      <content:encoded><![CDATA[<p>Another short(-ish) post. I found a neat tutorial/example page at:
+<a href="https://sqlime.org/examples.html">https://sqlime.org/examples.html</a>. It shows an embedded sqlite database, using
+web assembly and javascript to run interactive SQL examples without needing to
+hit a third-party hosted script (assuming you&rsquo;re hosting it yourself).</p>
+<p>This lets you do something like:</p>
+
+
+
+
+<script>
+
+    const scriptPaths = [
+        "/js/sqlite3.js",
+        "/js/sqlime-db.js",
+        "/js/sqlime-examples.js"
+      ];
+      
+      function loadScript(src) {
+        var script = document.createElement("script");
+        script.src = src;
+        document.head.appendChild(script);
+      }
+      
+      scriptPaths.forEach(function(path) {
+        if (!document.querySelector(`script[src="${path}"]`)) {
+          loadScript(path);
+        }
+      });
+
+</script>
+
+<div class="bordered">
+    <div class="code">
+    <pre class="sqlime">
+SELECT
+  rank() over w as "rank",
+  name, department, salary
+FROM employees
+WINDOW W as (order by salary desc)
+ORDER BY "rank", id
+LIMIT 15
+</pre></div>
+    <noscript><p> To run this SQL statement, please enable javascript.</p></noscript>  
+</div>
+
+
+  <sqlime-db name="employees" path="/data/employees.sql"></sqlime-db>
+
+  <sqlime-examples db="employees" selector="pre.sqlime" editable></sqlime-examples>
+
+<p>This is fully interactable sqlite data - feel free to <code>SELECT * FROM EMPLOYEES;</code>,
+it&rsquo;s only 20 rows. Also feel free to try some badly formatted SQL to see the
+resulting errors.</p>
+<p>I thought it&rsquo;d be neat to be able to quickly use this example for posts about
+SQL, so I edited the example code a bit, making it a bit easier to futz with the
+CSS, and then created a hugo shortcode, <code>sqlime.html</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $db_name := .Get &#34;db&#34; }}
+</span></span><span class="line"><span class="cl">{{ $db_path := .Get &#34;path&#34; }}
+</span></span><span class="line"><span class="cl">{{ $editable := .Get &#34;editable&#34; | default true }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">scriptPaths</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;/js/sqlite3.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;/js/sqlime-db.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;/js/sqlime-examples.js&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="kd">function</span> <span class="nx">loadScript</span><span class="p">(</span><span class="nx">src</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;script&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">src</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="nx">scriptPaths</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="sb">`script[src=&#34;</span><span class="si">${</span><span class="nx">path</span><span class="si">}</span><span class="sb">&#34;]`</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">loadScript</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bordered&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;code&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sqlime&#34;</span><span class="p">&gt;</span>{{- .Inner -}}<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">noscript</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span> To run this SQL statement, please enable javascript.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">noscript</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">sqlime-db</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;{{ $db_name }}&#34;</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;{{ $db_path }}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">sqlime-db</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ if (eq $editable true) }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">sqlime-examples</span> <span class="na">db</span><span class="o">=</span><span class="s">&#34;{{ $db_name }}&#34;</span> <span class="na">selector</span><span class="o">=</span><span class="s">&#34;pre.sqlime&#34;</span> <span class="na">editable</span><span class="p">&gt;&lt;/</span><span class="nt">sqlime-examples</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ else }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">sqlime-examples</span> <span class="na">db</span><span class="o">=</span><span class="s">&#34;{{ $db_name }}&#34;</span> <span class="na">selector</span><span class="o">=</span><span class="s">&#34;pre.sqlime&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">sqlime-examples</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></div><p>I host the script files in <code>/static/js/*</code> as the static
+folder is the default storage. As seen below I put the actual data in <code>/static/data</code>
+Which can then be used in your site, via standard shortcode methods:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">sqlime</span> <span class="na">db</span><span class="o">=</span><span class="s">&#34;employees&#34;</span> <span class="na">path</span><span class="o">=</span><span class="s">&#34;/data/employees.sql&#34;</span> <span class="na">editable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">SELECT
+</span></span><span class="line"><span class="cl">  rank() over w as &#34;rank&#34;,
+</span></span><span class="line"><span class="cl">  name, department, salary
+</span></span><span class="line"><span class="cl">FROM employees
+</span></span><span class="line"><span class="cl">WINDOW W as (order by salary desc)
+</span></span><span class="line"><span class="cl">ORDER BY &#34;rank&#34;, id
+</span></span><span class="line"><span class="cl">LIMIT 15
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">sqlime</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></div><p>And for you ox-hugo / org-mode users out there, with
+<code>#+hugo_paired_shortcodes: sqlime</code>
+in your top-level (or property in a sub-tree):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-org" data-lang="org"><span class="line"><span class="cl"><span class="cs">#+attr_shortcode</span><span class="c">: :db employees :path /data/employees.sql</span>
+</span></span><span class="line"><span class="cl"><span class="c">#+begin_sqlime</span>
+</span></span><span class="line"><span class="cl">SELECT
+</span></span><span class="line"><span class="cl">  rank() over w as &#34;rank&#34;,
+</span></span><span class="line"><span class="cl">  name, department, salary
+</span></span><span class="line"><span class="cl">FROM employees
+</span></span><span class="line"><span class="cl">WINDOW W as (order by salary desc)
+</span></span><span class="line"><span class="cl">ORDER BY &#34;rank&#34;, id
+</span></span><span class="line"><span class="cl">LIMIT 15
+</span></span><span class="line"><span class="cl"><span class="c">#+end_sqlime</span>
+</span></span></code></pre></div><p>The one gotcha for ox-hugo is I believe it likes to auto-escape *&rsquo;s, so if your
+SQL statement has a SELECT * then you will need to remove the \.</p>
+<p>I would like to note that most of the code available for this will be on the
+github for my <a href="https://www.github.com/brickfrog/justin.vc">site</a> if you&rsquo;re curious. I know it&rsquo;s not a &ldquo;best practice&rdquo; - but I
+un-minified the javascript, so feel free to grab my copy of it.</p>
+<p>In summation, I would like to thank the people at <a href="https://sqlime.org">https://sqlime.org</a> for doing
+the hard work of assembling the javascript to interact with the sqlite WASM.
+Hopefully this gives more people with static sites ideas around interactive SQL
+demos. As a data scientist, I think SQL will be one of those skills that sticks
+around for a long while and there&rsquo;s never enough demos.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

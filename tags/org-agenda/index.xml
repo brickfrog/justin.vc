@@ -46,7 +46,7 @@ where &ldquo;org-agenda-start-day&rdquo; seemed to default to &ldquo;-3d&rdquo;,
 org-super-agenda to show the wrong date (three days before). No matter what I did it seemed to
 default back, which set me on a bit of a &ldquo;I will figure this out out of spite!&rdquo;
 path. I spent an hour randomly looking through my own literate config and
-config.el, nothing semed to work except for manually running the block which
+config.el, nothing seemed to work except for manually running the block which
 would set things correctly until I next restarted the emacs server / client.</p>
 <p>I ended up getting annoyed and asking for help on
 <span class="sidenote">

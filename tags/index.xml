@@ -9,7 +9,37 @@
       <link>https://justin.vc/</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 28 Feb 2023 23:17:09 -0500</lastBuildDate><atom:link href="https://justin.vc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Mar 2023 23:52:00 -0400</lastBuildDate><atom:link href="https://justin.vc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo</title>
+      <link>https://justin.vc/tags/hugo/</link>
+      <pubDate>Sun, 12 Mar 2023 23:52:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/hugo/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>https://justin.vc/tags/sql/</link>
+      <pubDate>Sun, 12 Mar 2023 23:52:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/sql/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>sqlite</title>
+      <link>https://justin.vc/tags/sqlite/</link>
+      <pubDate>Sun, 12 Mar 2023 23:52:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/sqlite/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>coordination</title>
       <link>https://justin.vc/tags/coordination/</link>
@@ -136,16 +166,6 @@
       <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
       
       <guid>https://justin.vc/tags/python/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://justin.vc/tags/hugo/</link>
-      <pubDate>Sat, 16 Jul 2022 02:31:00 -0400</pubDate>
-      
-      <guid>https://justin.vc/tags/hugo/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
