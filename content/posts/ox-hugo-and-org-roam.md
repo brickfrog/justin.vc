@@ -2,7 +2,7 @@
 title = "Using ox-hugo and Org-roam for Writing"
 author = ["Justin"]
 date = 2022-07-16T02:31:00-04:00
-lastmod = 2022-08-01T04:56:08-04:00
+lastmod = 2023-03-20T01:26:06-04:00
 tags = ["hugo", "org", "org-roam", "emacs"]
 draft = false
 +++

@@ -2,7 +2,7 @@
 title = "About"
 author = ["Justin"]
 date = 2022-07-15T23:35:00-04:00
-lastmod = 2023-02-26T12:07:59-05:00
+lastmod = 2023-03-20T02:40:34-04:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -13,16 +13,16 @@ ShowBreadCrumbs = false
 backlinks = false
 +++
 
-<t class="outline-1nil">
-
-## Background {#background}
-
 Hello! I'm Justin! I'm just a run-of-the-mill data scientist/software
 engineer who likes learning things in his free time. Specifically, my interests
 generally fall into Open source/emacs, applied mathematics/statistics,
 programming language design, Catholic history, poetry, and general
 pop-culture/anime/manga/-inserty nerdy thing here-.  I would also note that I'm
 not a venture capitalist, despite said domain name. {{% sidenote "f1"  "Why justin.vc then?" %}}  I dunno, thought it sounded neat. I'm honestly baffled that Justin Kan didn't own the domain. But if you wander into this and you're a VC who's hiring, I wouldn't be opposed, just 'sayin {{% /sidenote %}}
+
+<t class="outline-1nil">
+
+## Background {#background}
 
 I draw inspiration from [Gwern](https://gwern.net), in design, not content (mostly, I'm not
 rewriting this into Haskell), but maybe I'll grow the writing chops eventually, but I also do not necessarily have

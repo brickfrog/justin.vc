@@ -2,7 +2,7 @@
 title = "Embedded SQL in Hugo with sqlime"
 author = ["Justin"]
 date = 2023-03-12T23:52:00-04:00
-lastmod = 2023-03-13T01:29:41-04:00
+lastmod = 2023-03-13T18:58:23-04:00
 tags = ["sql", "sqlite", "hugo"]
 draft = false
 +++
@@ -11,6 +11,19 @@ Another short(-ish) post. I found a neat tutorial/example page at:
 <https://sqlime.org/examples.html>. It shows an embedded sqlite database, using
 web assembly and javascript to run interactive SQL examples without needing to
 hit a third-party hosted script (assuming you're hosting it yourself).
+
+<div class="alert-primary alert">
+
+<div class="alert-heading">
+
+Note
+
+</div>
+
+The SQL may give an error if it hasn't loaded all the way - try refreshing in
+that case.
+
+</div>
 
 This lets you do something like:
 
