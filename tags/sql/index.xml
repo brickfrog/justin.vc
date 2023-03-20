@@ -17,12 +17,21 @@
       
       <guid>https://justin.vc/posts/embedded-sql-hugo/</guid>
       <description>Another short(-ish) post. I found a neat tutorial/example page at: https://sqlime.org/examples.html. It shows an embedded sqlite database, using web assembly and javascript to run interactive SQL examples without needing to hit a third-party hosted script (assuming you&amp;rsquo;re hosting it yourself).
+Note
+The SQL may give an error if it hasn&amp;rsquo;t loaded all the way - try refreshing in that case.
 This lets you do something like:
-SELECT rank() over w as &#34;rank&#34;, name, department, salary FROM employees WINDOW W as (order by salary desc) ORDER BY &#34;rank&#34;, id LIMIT 15 To run this SQL statement, please enable javascript.</description>
+SELECT rank() over w as &#34;</description>
       <content:encoded><![CDATA[<p>Another short(-ish) post. I found a neat tutorial/example page at:
 <a href="https://sqlime.org/examples.html">https://sqlime.org/examples.html</a>. It shows an embedded sqlite database, using
 web assembly and javascript to run interactive SQL examples without needing to
 hit a third-party hosted script (assuming you&rsquo;re hosting it yourself).</p>
+<div class="alert-primary alert">
+<div class="alert-heading">
+<p>Note</p>
+</div>
+<p>The SQL may give an error if it hasn&rsquo;t loaded all the way - try refreshing in
+that case.</p>
+</div>
 <p>This lets you do something like:</p>
 
 

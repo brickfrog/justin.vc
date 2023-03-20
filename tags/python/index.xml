@@ -23,7 +23,8 @@ specifically utilizing (formerly) Quantum Black&rsquo;s now open-source (Linux
 Foundation) framework for creating <span class="sidenote">
 <label class="sidenote-label" for="f1">reproducible, maintainable, and modular data science code.</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
-<span class="sidenote-content sidenote-right">  What does that mean? At its most simple it basically ties things into &quot;nodes&quot; and &quot;pipelines&quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated. DAGs, they&rsquo;re all the rage. </span>
+<span class="sidenote-content
+sidenote-right">  What does that mean? At its most simple it basically ties things into &quot;nodes&quot; and &quot;pipelines&quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated. DAGs, they&rsquo;re all the rage. </span>
 </span>
 Make sure to read their tutorial if you&rsquo;re not
 familiar with it, it&rsquo;s good (and I won&rsquo;t be covering nearly as much as there,

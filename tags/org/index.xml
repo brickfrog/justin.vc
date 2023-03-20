@@ -52,7 +52,8 @@ would set things correctly until I next restarted the emacs server / client.</p>
 <span class="sidenote">
 <label class="sidenote-label" for="f1">Mastodon</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
-<span class="sidenote-content sidenote-right">  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. </span>
+<span class="sidenote-content
+sidenote-right">  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. </span>
 </span>
 (<a href="https://emacs.ch">https://emacs.ch</a>).
 where a helpful person by the name of Sylvain Soliman
@@ -87,7 +88,8 @@ specifically utilizing (formerly) Quantum Black&rsquo;s now open-source (Linux
 Foundation) framework for creating <span class="sidenote">
 <label class="sidenote-label" for="f1">reproducible, maintainable, and modular data science code.</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
-<span class="sidenote-content sidenote-right">  What does that mean? At its most simple it basically ties things into &quot;nodes&quot; and &quot;pipelines&quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated. DAGs, they&rsquo;re all the rage. </span>
+<span class="sidenote-content
+sidenote-right">  What does that mean? At its most simple it basically ties things into &quot;nodes&quot; and &quot;pipelines&quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated. DAGs, they&rsquo;re all the rage. </span>
 </span>
 Make sure to read their tutorial if you&rsquo;re not
 familiar with it, it&rsquo;s good (and I won&rsquo;t be covering nearly as much as there,
@@ -678,7 +680,8 @@ for my zettelkasten, but I wanted something nicer for my tutorials, portfolios,
 <span class="sidenote">
 <label class="sidenote-label" for="f1">articles, and such.</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
-<span class="sidenote-content sidenote-right">  What articles? Rude. </span>
+<span class="sidenote-content
+sidenote-right">  What articles? Rude. </span>
 </span></p>
 <p>I was aware of
 <a href="https://www.orgroam.com">Org-roam</a> due to sheer popularity / stars on github and I decided to try it out.
@@ -856,7 +859,8 @@ issues.</p>
 <p>For example, to <span class="sidenote">
 <label class="sidenote-label" for="f2">implement sidenotes</label>
 <input class="sidenote-checkbox" type="checkbox" id="f2"></input>
-<span class="sidenote-content sidenote-right">  Such as this. It gets finnicky around ,&rsquo;s since those are used to seperate the arguments. But it&rsquo;s still pretty nifty. I -think- you can also do LaTeX in this. Thanks to <a href="https://danilafe.com/blog/sidenotes">Danilafe&rsquo;s blog</a> for figuring this out in pure CSS. I tried to do it with javascript but hugo didn&rsquo;t like it. </span>
+<span class="sidenote-content
+sidenote-right">  Such as this. It gets finnicky around ,&rsquo;s since those are used to seperate the arguments. But it&rsquo;s still pretty nifty. I -think- you can also do LaTeX in this. Thanks to <a href="https://danilafe.com/blog/sidenotes">Danilafe&rsquo;s blog</a> for figuring this out in pure CSS. I tried to do it with javascript but hugo didn&rsquo;t like it. </span>
 </span>
 I had to make an org-mode macro, and it requires everytime I want to make one,
 to use syntax such as:</p>
@@ -873,7 +877,8 @@ snippet.</p>
 </span></span></code></pre></div><p>The <span class="sidenote">
 <label class="sidenote-label" for="f3">html for the sidenotes.</label>
 <input class="sidenote-checkbox" type="checkbox" id="f3"></input>
-<span class="sidenote-content sidenote-right">  Note that the html is 0 indexed, and the macro in org is 1 indexed. This threw me off for a bit. </span>
+<span class="sidenote-content
+sidenote-right">  Note that the html is 0 indexed, and the macro in org is 1 indexed. This threw me off for a bit. </span>
 </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">org-export-global-macros</span> <span class="o">&#39;</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="s">&#34;sidenote&#34;</span> <span class="o">.</span> <span class="s">&#34;@@html:{ {% sidenote $1 $2 %} } $3 { {% /sidenote %} }@@&#34;</span><span class="p">)</span>

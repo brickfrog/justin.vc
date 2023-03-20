@@ -17,12 +17,21 @@
       
       <guid>https://justin.vc/posts/embedded-sql-hugo/</guid>
       <description>Another short(-ish) post. I found a neat tutorial/example page at: https://sqlime.org/examples.html. It shows an embedded sqlite database, using web assembly and javascript to run interactive SQL examples without needing to hit a third-party hosted script (assuming you&amp;rsquo;re hosting it yourself).
+Note
+The SQL may give an error if it hasn&amp;rsquo;t loaded all the way - try refreshing in that case.
 This lets you do something like:
-SELECT rank() over w as &#34;rank&#34;, name, department, salary FROM employees WINDOW W as (order by salary desc) ORDER BY &#34;rank&#34;, id LIMIT 15 To run this SQL statement, please enable javascript.</description>
+SELECT rank() over w as &#34;</description>
       <content:encoded><![CDATA[<p>Another short(-ish) post. I found a neat tutorial/example page at:
 <a href="https://sqlime.org/examples.html">https://sqlime.org/examples.html</a>. It shows an embedded sqlite database, using
 web assembly and javascript to run interactive SQL examples without needing to
 hit a third-party hosted script (assuming you&rsquo;re hosting it yourself).</p>
+<div class="alert-primary alert">
+<div class="alert-heading">
+<p>Note</p>
+</div>
+<p>The SQL may give an error if it hasn&rsquo;t loaded all the way - try refreshing in
+that case.</p>
+</div>
 <p>This lets you do something like:</p>
 
 
@@ -183,7 +192,8 @@ for my zettelkasten, but I wanted something nicer for my tutorials, portfolios,
 <span class="sidenote">
 <label class="sidenote-label" for="f1">articles, and such.</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
-<span class="sidenote-content sidenote-right">  What articles? Rude. </span>
+<span class="sidenote-content
+sidenote-right">  What articles? Rude. </span>
 </span></p>
 <p>I was aware of
 <a href="https://www.orgroam.com">Org-roam</a> due to sheer popularity / stars on github and I decided to try it out.
@@ -361,7 +371,8 @@ issues.</p>
 <p>For example, to <span class="sidenote">
 <label class="sidenote-label" for="f2">implement sidenotes</label>
 <input class="sidenote-checkbox" type="checkbox" id="f2"></input>
-<span class="sidenote-content sidenote-right">  Such as this. It gets finnicky around ,&rsquo;s since those are used to seperate the arguments. But it&rsquo;s still pretty nifty. I -think- you can also do LaTeX in this. Thanks to <a href="https://danilafe.com/blog/sidenotes">Danilafe&rsquo;s blog</a> for figuring this out in pure CSS. I tried to do it with javascript but hugo didn&rsquo;t like it. </span>
+<span class="sidenote-content
+sidenote-right">  Such as this. It gets finnicky around ,&rsquo;s since those are used to seperate the arguments. But it&rsquo;s still pretty nifty. I -think- you can also do LaTeX in this. Thanks to <a href="https://danilafe.com/blog/sidenotes">Danilafe&rsquo;s blog</a> for figuring this out in pure CSS. I tried to do it with javascript but hugo didn&rsquo;t like it. </span>
 </span>
 I had to make an org-mode macro, and it requires everytime I want to make one,
 to use syntax such as:</p>
@@ -378,7 +389,8 @@ snippet.</p>
 </span></span></code></pre></div><p>The <span class="sidenote">
 <label class="sidenote-label" for="f3">html for the sidenotes.</label>
 <input class="sidenote-checkbox" type="checkbox" id="f3"></input>
-<span class="sidenote-content sidenote-right">  Note that the html is 0 indexed, and the macro in org is 1 indexed. This threw me off for a bit. </span>
+<span class="sidenote-content
+sidenote-right">  Note that the html is 0 indexed, and the macro in org is 1 indexed. This threw me off for a bit. </span>
 </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">org-export-global-macros</span> <span class="o">&#39;</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="s">&#34;sidenote&#34;</span> <span class="o">.</span> <span class="s">&#34;@@html:{ {% sidenote $1 $2 %} } $3 { {% /sidenote %} }@@&#34;</span><span class="p">)</span>
