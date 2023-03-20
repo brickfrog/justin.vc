@@ -32,8 +32,8 @@ params:
   DateFormat: "2006/01/02"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
-  EnableInstantClick: false
-  TocSide: "left" # due to sidenotes - need to make interchangeable
+  #EnableInstantClick: false - TODO: not using / breaks things?
+  TocSide: "left" # note that this switches sidenotes to opposite of toc
 
   ShowReadingTime: false
   ShowShareButtons: true
@@ -43,7 +43,7 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   showModifiedDate: true
-  UseHugoToc: true
+  UseHugoToc: false
   disableSpecial1stPost: true
   disableScrollToTop: false
   comments: true
@@ -75,8 +75,8 @@ params:
       url: "https://www.github.com/brickfrog"
     - name: omg
       url: "https://jt.omg.lol"
-    - name: micro-blog
-      url: "https://jtm.micro.blog"
+    #- name: micro-blog
+    #  url: "https://jtm.micro.blog"
     - name: mastodon
       url: "https://emacs.ch/@justin"
 
@@ -103,14 +103,26 @@ params:
       Name: "jt"
       Status: true # wanted to be explicit due to external calls / elsewhere use
       StatusTitle: "status.omg.lol" # mint, banana, strawberry, plain, peanut
-      Weblog: true
-    MicroBlog: # for showing micro-blog posts on homepage
-      Url: "https://micro.justin.vc/" # micro.blog posts - enabled if filled
-      Title: "micro.justin.vc"
-      Subtitle:  last 10 posts from micro.blog
+      Weblog: false # not added yet
+    # MicroBlog: # for showing micro-blog posts on homepage
+    #  Url: "https://micro.justin.vc/" # micro.blog posts - enabled if filled
+    #  Title: "micro.justin.vc"
+    #  Subtitle:  last 10 posts from micro.blog
     Content: >
       Hello! This is my site (blog?), it's a compilation of things I track and thoughts.
       Essentially a nexus of sorts. See the [<u>about</u>](/about/) page for more info.
+
+  fuseOpts:
+      isCaseSensitive: false
+      shouldSort: true
+      includeScore: true
+      includeMatches: true
+      location: 500
+      distance: 2500
+      threshold: 0.6
+      ignoreLocation: true # this will ignore location and distance, turn off when lots of articles
+      minMatchCharLength: 3
+      keys: ["title", "permalink", "summary", "content"]
 
 menu:
   main:
@@ -166,6 +178,6 @@ markup:
     noClasses: false
     lineNos: false
     style: dracula
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
