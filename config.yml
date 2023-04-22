@@ -30,9 +30,9 @@ params:
   images: ["<link or path of image for opengraph, twitter-cards>"]
   favicon: earthbound-globe.png
   DateFormat: "2006/01/02"
-  defaultTheme: auto # dark, light
+  defaultTheme: dark # dark, light
   disableThemeToggle: false
-  #EnableInstantClick: false - TODO: not using / breaks things?
+  EnableInstantClick: false # TODO: not using / breaks things?
   TocSide: "left" # note that this switches sidenotes to opposite of toc
 
   ShowReadingTime: false
@@ -51,6 +51,7 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: true
+  showsidelinks: true # shows the search, reader mode, etc. to right
 
   single_template: "single2.html"
 
@@ -75,10 +76,12 @@ params:
       url: "https://www.github.com/brickfrog"
     - name: omg
       url: "https://jt.omg.lol"
-    #- name: micro-blog
-    #  url: "https://jtm.micro.blog"
     - name: mastodon
       url: "https://emacs.ch/@justin"
+    - name: discord
+      url: "https://discordapp.com/users/1077750615045836835"
+    - name: bluesky
+      url: "https://staging.bsky.app/profile/jvc.bsky.social"
 
   defaultCommentSystems:
     utterances: true
@@ -95,10 +98,13 @@ params:
 
   profileMode:
     enabled: false
+    subtitle: "emacs, data, media, and miscellany"
 
   homeInfoParams:
-    Title: justin.vc
-    Subtitle: "emacs, data, media, and miscellany"
+    Title: "_thoughts n' ideas_"
+    Subtitle: "on emacs, media, and miscellany"
+    Columns:
+      enabled: true
     Omg: # for status.omg.lol on homepage
       Name: "jt"
       Status: true # wanted to be explicit due to external calls / elsewhere use
@@ -109,8 +115,8 @@ params:
     #  Title: "micro.justin.vc"
     #  Subtitle:  last 10 posts from micro.blog
     Content: >
-      Hello! This is my site (blog?), it's a compilation of things I track and thoughts.
-      Essentially a nexus of sorts. See the [<u>about</u>](/about/) page for more info.
+      Hello! I'm Justin.This is my site (blog?), it's a compilation of things I track 
+      and other thoughts. Essentially a nexus of sorts. See the [<u>about</u>](/about/) page for more info.
 
   fuseOpts:
       isCaseSensitive: false
@@ -126,10 +132,6 @@ params:
 
 menu:
   main:
-    - identifier: posts
-      name: Posts
-      url: /posts
-      weight: 1
     - identifier: about
       name: About
       url: /about/
@@ -138,25 +140,6 @@ menu:
       name: Now
       url: /now/
       weight: 3
-    - identifier: quotes
-      name: Quotes
-      url: /quotes
-      weight: 4
-    - identifier: notes
-      name: Notes
-      url: /notes/
-      weight: 5
-    - identifier: archives
-      name: Archive
-      url: /archives/
-      weight: 7
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 10
-    - name: Search
-      url: search/
-      weight: 13
     - identifier: links
       name: Links
       url: /elfeed/
