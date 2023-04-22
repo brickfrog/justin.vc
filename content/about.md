@@ -9,7 +9,7 @@ ShowWordCount = false
 ShowShareButtons = false
 comments = false
 hideMeta = true
-ShowBreadCrumbs = false
+ShowBreadCrumbs = true
 backlinks = false
 +++
 
@@ -17,8 +17,8 @@ Hello! I'm Justin! I'm just a run-of-the-mill data scientist/software
 engineer who likes learning things in his free time. Specifically, my interests
 generally fall into Open source/emacs, applied mathematics/statistics,
 programming language design, Catholic history, poetry, and general
-pop-culture/anime/manga/-inserty nerdy thing here-.  I would also note that I'm
-not a venture capitalist, despite said domain name. {{% sidenote "f1"  "Why justin.vc then?" %}}  I dunno, thought it sounded neat. I'm honestly baffled that Justin Kan didn't own the domain. But if you wander into this and you're a VC who's hiring, I wouldn't be opposed, just 'sayin {{% /sidenote %}}
+pop-culture/anime/manga/-inserty nerdy thing here-. I would also note that I'm
+not a venture capitalist, despite said domain name. {{% sidenote "f1"  "Why justin.vc then?" %}} I dunno, thought it sounded neat. I'm honestly baffled that Justin Kan didn't own the domain. But if you wander into this and you're a VC who's hiring, I wouldn't be opposed, just 'sayin {{% /sidenote %}}
 
 <t class="outline-1nil">
 
@@ -64,7 +64,7 @@ turnouts in Bolivia.
 
 I have my own little battlestation that I do my work on, I've never been a big
 laptop person. This is probably (one of the many reasons) I'd do poorly as a
-consultant. I like using Linux because {{% sidenote "f5"  "tiling window managers are neat." %}}  See my [dotfiles](https://github.com/brickfrog/.dotfiles). {{% /sidenote %}} Outside
+consultant. I like using Linux because {{% sidenote "f5"  "tiling window managers are neat." %}} See my [dotfiles](https://github.com/brickfrog/.dotfiles). {{% /sidenote %}} Outside
 of not being able to (easily) do VR, I don't particularly miss Windows, and I've
 never been a fan of MacOS. I'm just waiting for the day they put Asahi Linux on
 the ARM chips.
@@ -73,13 +73,14 @@ This site is created with a fork of [PaperModX](https://www.github.com/reorx/hug
 Everything is written as org-mode documents that I parse with ox-hugo. Hoping
 that having -everything- as org mode documents makes it easier to write in
 general, since I use org-mode for my agenda/todo lists, reading (org-noter +
-pdf-tools) and {{% sidenote "f4"  coding. %}}  Okay, sometimes I still use Jupyter and VSCode. Sue me. {{% /sidenote %}}
+pdf-tools) and {{% sidenote "f4"  coding. %}} Okay, sometimes I still use Jupyter and VSCode. Sue me. {{% /sidenote %}}
 
 <details>
 <summary>Beep.</summary>
 <div class="details">
 
 Beep. Beep. Future TODO, show rig, details on toolings, etc.
+
 </div>
 </details>
 
