@@ -1,6 +1,10 @@
 {{- define "main" }}
 
-<header class="page-header">
+<article class="post-single">
+<header class="post-header">
+  <div class="breadcrumbs">
+    <a href="/">Home</a>
+  </div>
     <h1>{{- (printf "%s&nbsp;" .Title ) | htmlUnescape -}}
     </h1>
     {{- if .Description }}
@@ -40,6 +44,7 @@
   {{ end }}
   {{ end }}
 </table>
+</article>
 
 <script>
   const headers = document.querySelectorAll("th");
@@ -180,7 +185,7 @@ td.date {
 
 /* for post page */
 .main.post {
-    max-width: 950px;
+    max-width: 90%;
 }
 
 td.quote:hover {
