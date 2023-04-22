@@ -75,6 +75,20 @@
     "url": "http://www.paulgraham.com/makersschedule.html"
   },
   {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://www.tinyrevolution.com/mt/archives/001705.html&sz=64",
+    "last_update": 1677508320786,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677508320786,
+        "text": "The Iron Law of Institutions is: the people who control institutions care first and foremost about their power within the institution rather than the power of the institution itself. Thus, they would rather the institution \"fail\" while they remain in power within the institution than for the institution to \"succeed\" if that requires them to lose power within the institution."
+      }
+    ],
+    "title": "A Tiny Revolution: Democrats And The Iron Law Of Institutions",
+    "url": "http://www.tinyrevolution.com/mt/archives/001705.html"
+  },
+  {
     "author": "Scott Alexander",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/book-review-san-fransicko&sz=64",
     "last_update": 1656598983537,
@@ -342,6 +356,34 @@
   },
   {
     "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://catholicworker.org/at-90-years-where-is-the-catholic-worker-movement-going/&sz=64",
+    "last_update": 1680804476397,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1680804476397,
+        "text": "If we lose the vision, we become merely philanthropists, doling out palliatives"
+      }
+    ],
+    "title": "At 90 Years, Where is the Catholic Worker Movement Going? – Catholic Worker Movement",
+    "url": "https://catholicworker.org/at-90-years-where-is-the-catholic-worker-movement-going/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://ccel.org/meditate?date=03-05&ning=pm&sz=64",
+    "last_update": 1677997241014,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677997241014,
+        "text": "If David doubted, I need not conclude that I \n      am no Christian because I have doubts."
+      }
+    ],
+    "title": "Meditate - Christian Classics Ethereal Library",
+    "url": "https://ccel.org/meditate?date=03-05&ning=pm"
+  },
+  {
+    "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://cerebralarcade.com/2014/11/09/how-to-argue-responsibly/&sz=64",
     "last_update": 1659660085033,
     "quotes": [
@@ -399,6 +441,20 @@
     ],
     "title": "walk backward into hell",
     "url": "https://eigenrobot.substack.com/p/walk-backward-into-hell"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://emacs.ch/@leigh@ottawa.place/109866997891172121&sz=64",
+    "last_update": 1676460474142,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676460474143,
+        "text": "Unfortunately it turns out that the problems of content moderation in a federated ecosystem are isomorphic to the problems of coexisting in a society together"
+      }
+    ],
+    "title": "Emacs.ch",
+    "url": "https://emacs.ch/@leigh@ottawa.place/109866997891172121"
   },
   {
     "author": "",
@@ -529,6 +585,20 @@
     ],
     "title": "Nobody Walks Around Feeling \"Valid\"",
     "url": "https://freddiedeboer.substack.com/p/nobody-walks-around-feeling-valid"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/of-course-you-know-what-woke-means&sz=64",
+    "last_update": 1678934023053,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1678934023053,
+        "text": "<p>1. Always remember to keep your eye on the money. </p><p>2. Never forget to keep your eye on the money.</p><p>3. Always remember to never forget to keep your eye on the money.</p><p>4. Never forget to always remember to keep your eye on the money.</p><p>Everything else is smoke and mirrors designed to get you to violate one or more of above-listed tenets and dissipate your energy into something harmless.</p>"
+      }
+    ],
+    "title": "Of Course You Know What \"Woke\" Means",
+    "url": "https://freddiedeboer.substack.com/p/of-course-you-know-what-woke-means"
   },
   {
     "author": "Freddie deBoer",
@@ -711,6 +781,20 @@
     "url": "https://hplusmagazine.com/2009/09/02/virtual-life-actual-death/"
   },
   {
+    "author": "@idlewords",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://idlewords.com/2023/1/why_not_mars.htm&sz=64",
+    "last_update": 1676459624836,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676459624836,
+        "text": "When you hold on to a belief so strongly that neither facts nor reason can change it, what you are doing is no longer science, but religion."
+      }
+    ],
+    "title": "Why Not Mars",
+    "url": "https://idlewords.com/2023/1/why_not_mars.htm"
+  },
+  {
     "author": "Jesse Singal",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://jessesingal.substack.com/p/if-you-disagree-with-me-you-want&sz=64",
     "last_update": 1666994306109,
@@ -750,6 +834,20 @@
     ],
     "title": "Data Analytics in the World of Bullshit Jobs",
     "url": "https://klauskinski.substack.com/p/data-analytics-in-the-world-of-bullshit?utm_source=substack"
+  },
+  {
+    "author": "Arist",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://lparchive.org/Disco-Elysium/Update%2029/&sz=64",
+    "last_update": 1677551033947,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677551033947,
+        "text": "Capital has the ability to subsume all critiques into itself. Even those who would *critique* capital end up *reinforcing* it instead"
+      }
+    ],
+    "title": "Disco Elysium Part #29 - 22:46-1:28: Karaoke For Spirits",
+    "url": "https://lparchive.org/Disco-Elysium/Update%2029/"
   },
   {
     "author": "@martinfowler",
@@ -828,6 +926,20 @@
   },
   {
     "author": "@0xfbifemboy",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://milkyeggs.com/society/a-response-to-tyler-cowens-classical-liberalism-vs-the-new-right/&sz=64",
+    "last_update": 1680539216930,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1680539216930,
+        "text": "However, my fear is that there is a fundamental rot in American governance (which the New Right is fairly good at diagnosing) that we are “papering over” with the riches of the previous century."
+      }
+    ],
+    "title": "A response to Tyler Cowen's \"Classical liberalism vs. The New Right\"",
+    "url": "https://milkyeggs.com/society/a-response-to-tyler-cowens-classical-liberalism-vs-the-new-right/"
+  },
+  {
+    "author": "@0xfbifemboy",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://milkyeggs.com/society/beware-of-gell-mann-amnesia-about-government-quality/&sz=64",
     "last_update": 1674950113842,
     "quotes": [
@@ -839,6 +951,20 @@
     ],
     "title": "Beware of Gell-Mann amnesia about government quality",
     "url": "https://milkyeggs.com/society/beware-of-gell-mann-amnesia-about-government-quality/"
+  },
+  {
+    "author": "@0xfbifemboy",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://milkyeggs.com/society/new-yorks-subway-construction-is-strangled-by-government-bloat/&sz=64",
+    "last_update": 1677794075038,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677794075038,
+        "text": "well-intentioned rule-making which attempts to rein in what superficially appear to be wasteful excesses but in fact end up counterproductively introducing deeply harmful frictions that clog the entire state apparatus and sabotage its ability to contract out work in an efficient manner"
+      }
+    ],
+    "title": "New York's subway construction is strangled by government bloat",
+    "url": "https://milkyeggs.com/society/new-yorks-subway-construction-is-strangled-by-government-bloat/"
   },
   {
     "author": "MotherDuck",
@@ -915,6 +1041,34 @@
     "url": "https://perverseincentives.substack.com/p/the-fungible-brush?utm_campaign=post_embed"
   },
   {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://prog21.dadgum.com/154.html&sz=64",
+    "last_update": 1677861607132,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677861607132,
+        "text": "<p>To me, there's an innate frustration in programming. It doesn't stem from having to work out the solutions to difficult problems. That takes careful thought, but it's the same kind of thought a novelist uses to organize a story or to write dialog that rings true. That kind of problem-solving is satisfying, even fun.</p><p>But that, unfortunately, is not what most programming is about. It's about trying to come up with a working solution in a problem domain that you don't fully understand and don't have time to understand.</p>"
+      }
+    ],
+    "title": "Do You Really Want to be Doing This When You're 50?",
+    "url": "https://prog21.dadgum.com/154.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://prog21.dadgum.com/177.html&sz=64",
+    "last_update": 1677861726467,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677861726467,
+        "text": "When it comes to writing code, the number one most important skill is how to keep a tangle of features from collapsing under the weight of its own complexity. "
+      }
+    ],
+    "title": "Organizational Skills Beat Algorithmic Wizardry",
+    "url": "https://prog21.dadgum.com/177.html"
+  },
+  {
     "author": "Rob Henderson",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://robkhenderson.substack.com/p/people-spend-too-much-time-on-decisions?utm_medium=reader2&sz=64",
     "last_update": 1660097733376,
@@ -960,6 +1114,20 @@
   },
   {
     "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2013/02/12/youre-probably-wondering-why-ive-called-you-here-today/&sz=64",
+    "last_update": 1676800539791,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676800539792,
+        "text": "<p>Absurdity is the natural human tendency to dismiss anything you disagree with as so stupid it doesn’t even deserve consideration. In fact, you are virtuous for not considering it, maybe even heroic! You’re refusing to dignify the evil peddlers of bunkum by acknowledging them as legitimate debate partners.</p>\n<p>Charity is the ability to override that response. To assume that if you don’t understand how someone could possibly believe something as stupid as they do, that this is more likely a failure of understanding on your part than a failure of reason on theirs.</p>"
+      }
+    ],
+    "title": "You’re probably wondering why I’ve called you here today",
+    "url": "https://slatestarcodex.com/2013/02/12/youre-probably-wondering-why-ive-called-you-here-today/"
+  },
+  {
+    "author": "@slatestarcodex",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2013/05/02/if-its-worth-doing-its-worth-doing-with-made-up-statistics/&sz=64",
     "last_update": 1671117447233,
     "quotes": [
@@ -971,6 +1139,25 @@
     ],
     "title": "If It’s Worth Doing, It’s Worth Doing With Made-Up Statistics",
     "url": "https://slatestarcodex.com/2013/05/02/if-its-worth-doing-its-worth-doing-with-made-up-statistics/"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2014/02/23/in-favor-of-niceness-community-and-civilization/&sz=64",
+    "last_update": 1676805409767,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676805409767,
+        "text": "Hey, you do think I would ever have learned to write things this long and bombastic if I had never read Moldbug? 😛"
+      },
+      {
+        "comment": "",
+        "date": 1676805271306,
+        "text": "Liberalism does not conquer by fire and sword. Liberalism conquers by communities of people who agree to play by the rules, slowly growing until eventually an equilibrium is disturbed. Its battle cry is not “Death to the unbelievers!” but “If you’re nice, you can join our cuddle pile!”"
+      }
+    ],
+    "title": "In Favor of Niceness, Community, and Civilization",
+    "url": "https://slatestarcodex.com/2014/02/23/in-favor-of-niceness-community-and-civilization/"
   },
   {
     "author": "@slatestarcodex",
@@ -1099,6 +1286,23 @@
     ],
     "title": "Star Wars Knights of the Old Republic II: The Sith Lords/G0-T0",
     "url": "https://strategywiki.org/wiki/Star_Wars_Knights_of_the_Old_Republic_II:_The_Sith_Lords/G0-T0#Questions"
+  },
+  {
+    "author": "Substack",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://substack.com/inbox&sz=64",
+    "last_update": 1676656793307,
+    "quotes": [
+      {
+        "date": 1676656793307,
+        "text": "But if EA is going to remain a distinct force that has something new and significant to contribute to the future of humanity, rather than doing a bit of good on the margin, it’s going to have to figure out how to address the problems that have made other movements so stupid."
+      },
+      {
+        "date": 1676650190283,
+        "text": "The normie both worships rationality and is repulsed by it. He needs to believe that his views are consistent with reason, but knows that if he follows reason too far it will intrude on certain sacred values."
+      }
+    ],
+    "title": "Why EA Will Be Anti-Woke or Die",
+    "url": "https://substack.com/inbox"
   },
   {
     "author": "",
@@ -1544,6 +1748,20 @@
     ],
     "title": "visakan veerasamy on Twitter",
     "url": "https://twitter.com/visakanv/status/1471275450882478080"
+  },
+  {
+    "author": "Curtis Yarvin",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://urbit.org/blog/a-founders-farewell&sz=64",
+    "last_update": 1676556054084,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676556054084,
+        "text": "There are three kinds of problems: problems you can't solve now, problems you don't have to solve now, and hard problems."
+      }
+    ],
+    "title": "A Founder's Farewell",
+    "url": "https://urbit.org/blog/a-founders-farewell"
   },
   {
     "author": "",
@@ -2144,6 +2362,25 @@
     "url": "https://www.slowboring.com/p/the-best-way-to-end-mass-incarceration"
   },
   {
+    "author": "Matthew Yglesias",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.slowboring.com/p/why-you-cant-trust-the-media&sz=64",
+    "last_update": 1676464443433,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676464443433,
+        "text": "most journalism isn’t written for people who have some actual stake in obtaining tedious-but-true facts about the world."
+      },
+      {
+        "comment": "",
+        "date": 1676464061353,
+        "text": "I think the basic story about declining trust in media is that the media industry became a lot more competitive to the point where it’s pretty hard to say what exactly people are referring to when they talk about “the media.”"
+      }
+    ],
+    "title": "Why you can't trust the media",
+    "url": "https://www.slowboring.com/p/why-you-cant-trust-the-media"
+  },
+  {
     "author": "@CircumlocutionO",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.thecircumlocutionoffice.com/bleakhouse/charles-dickens-telescopic-philanthropy/&sz=64",
     "last_update": 1672099829859,
@@ -2298,6 +2535,20 @@
     ],
     "title": "Git Flow Is A Bad Idea • Dave Farley • GOTO 2021 - YouTube",
     "url": "https://www.youtube.com/watch?v=JOr4QeIjyW4"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=_-u1Pjce4Lg&sz=64",
+    "last_update": 1677240608779,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677240608780,
+        "text": "Imperialism used to come through tanks. Now it comes through banks"
+      }
+    ],
+    "title": "France secretly owns 14 countries - YouTube",
+    "url": "https://www.youtube.com/watch?v=_-u1Pjce4Lg"
   },
   {
     "author": "@youtube",
