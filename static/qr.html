@@ -103,11 +103,14 @@
         function replaceContent() {
           const container = document.querySelector(".container");
           container.innerHTML = '<p class="meme">( ◜◡༎ຶ)⟡</p>';
-      }
+        }
+      function redirectToVideo() {
+          window.location.href = 'https://youtu.be/NocXEwsJGOQ?t=29';
+        }        
     </script>
 </head>
-<body onload="fetchIP(); setTimeout(invertColors, 2500); setTimeout(glitchText, 2600); setTimeout(replaceContent, 5000);">
-  <div class="container">
+<body onload="fetchIP(); setTimeout(invertColors, 2500); setTimeout(glitchText, 2600); setTimeout(replaceContent, 5000); setTimeout(redirectToVideo, 7000);">
+    <div class="container">
       <div class="img-container">
           <img src="/whoishe.jpg" alt="Original Image">
           <img src="/whoishe.jpg" class="glitch-img" alt="Glitch Image 1">
