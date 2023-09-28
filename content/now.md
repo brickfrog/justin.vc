@@ -14,19 +14,13 @@ showtoc = true
 
 This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). It allows a seperation of the "what I'm doing" from the "who I am" and "what I've done".
 
-Right now I'm basically vibing in the rural United States, having been on
-sabbatical for a year. I mean, I call it a sabbatical but it's more of a weird
-covid break combined with wanting to randomly tinker around with other things.
-Dealing with corporate dashboards gets a bit soul draining after awhile. Would
-like to eventually move to a more walkable urban environment as the
-kick-in-the-pants to be (more) social. Difficult to want to do things when you
-have to drive 30 minutes.
-
 <img src="https://discord.c99.nl/widget/theme-3/1077750615045836835.png"></img>
 
 ### Doing
 
-Working on this site, an excuse to learn more javascript and CSS and HTML, etc. etc. Additionally working on reading data science / statistics content - have to get back into the 'ole grind eventually. Additionally want to somehow automate my "daily" notes in org-roam into a weekly post, think Marginal Revolution's Weekly Roundup.
+Right now I'm vibing in Taipei, Taiwan. Working for a startup, getting
+to tinker around with eye data. Pretty fun. Also working a bit on my Chinese. Heisig's
+method, yo.
 
 ### Reading
 

@@ -17,46 +17,47 @@ async function fetchAniListProfile() {
   }
 
   const query = `
-        {
-            User (name: "brickfrog") { # Insert our variables into the query arguments (id) (type: ANIME is hard-coded in the query)
-                id
-                name
-                mediaListOptions {
-                                scoreFormat
-                            }
-              }
-              animeList: Page (page: 1, perPage: 1) {
-                mediaList(userName: "brickfrog", type: ANIME, sort: UPDATED_TIME_DESC, status: CURRENT) {
-                    media {
-                        id
-                        title {
-                            userPreferred
-                        }
-                        coverImage {
-                          medium
-                        }
-                      averageScore
-                      popularity
-                    }
-                }
-              }
-              mangaList: Page (page: 1, perPage: 1) {
-                mediaList(userName: "brickfrog", type: MANGA, sort: UPDATED_TIME_DESC, status: CURRENT) {
-                    media {
-                        id
-                        title {
-                            userPreferred
-                        }
-                        coverImage {
-                            medium
-                          }
-                      averageScore
-                      popularity
-            
-                    }
-                }
-              }
-            }
+  {
+    User(name: "brickfrog") {
+      id
+      name
+      mediaListOptions {
+        scoreFormat
+      }
+    }
+    animeList: Page(page: 1, perPage: 1) {
+      mediaList(userName: "brickfrog", type: ANIME, sort: UPDATED_TIME_DESC, status: CURRENT) {
+        media {
+          id
+          title {
+            userPreferred
+          }
+          coverImage {
+            medium
+          }
+          averageScore
+          popularity
+          
+        }
+      }
+    }
+    mangaList: Page(page: 1, perPage: 1) {
+      mediaList(userName: "brickfrog", type: MANGA, sort: UPDATED_TIME_DESC, status: CURRENT) {
+        media {
+          id
+          title {
+            userPreferred
+          }
+          coverImage {
+            medium
+          }
+          averageScore
+          popularity
+          
+        }
+      }
+    }
+  }
     `;
 
   try {
@@ -93,20 +94,40 @@ async function fetchAniListProfile() {
 }
 
 async function displayAniListCard() {
-  const data = await fetchAniListProfile();
+  try {
+    const data = await fetchAniListProfile();
+    if (!data || !data.User || !data.animeList || !data.mangaList) {
+      throw new Error("Incomplete data received from AniList");
+    }
 
-  if (data && data.User && data.animeList && data.mangaList) {
-    const user = data.User;
-    const lastAnime = data.animeList.mediaList[0].media;
-    const lastManga = data.mangaList.mediaList[0].media;
+    const { User: user, animeList, mangaList } = data;
+
+    if (
+      !(
+        animeList.mediaList &&
+        animeList.mediaList[0] &&
+        animeList.mediaList[0].media
+      ) ||
+      !(
+        mangaList.mediaList &&
+        mangaList.mediaList[0] &&
+        mangaList.mediaList[0].media
+      )
+    ) {
+      throw new Error("Incomplete media list data");
+    }
+
+    const lastAnime = animeList.mediaList[0].media;
+    const lastManga = mangaList.mediaList[0].media;
+    const animeUrl = "https://anilist.co/anime/" + lastAnime.id;
+    const mangaUrl = "https://anilist.co/manga/" + lastManga.id;
 
     const cardHtml = `
-    <div class="anilist-card">
         <div class="media-container">
             <div>
                 <h3>Anime:</h3>
                 <div class="media-entry">
-                    <img src="${lastAnime.coverImage.medium}" alt="${lastAnime.title.userPreferred}">
+                    <a href="${animeUrl}"><img src="${lastAnime.coverImage.medium}" alt="${lastAnime.title.userPreferred}"></a>
                     <div class="media-details">
                         <h4>${lastAnime.title.userPreferred}</h4>
                         <p>Average Score: ${lastAnime.averageScore}</p>
@@ -117,7 +138,7 @@ async function displayAniListCard() {
             <div>
                 <h3>Manga:</h3>
                 <div class="media-entry">
-                    <img src="${lastManga.coverImage.medium}" alt="${lastManga.title.userPreferred}">
+                    <a href="${mangaUrl}"><img src="${lastManga.coverImage.medium}" alt="${lastManga.title.userPreferred}"></a>
                     <div class="media-details">
                         <h4>${lastManga.title.userPreferred}</h4>
                         <p>Average Score: ${lastManga.averageScore}</p>
@@ -126,13 +147,12 @@ async function displayAniListCard() {
                 </div>
             </div>
         </div>
-    </div>
     `;
 
     const container = document.getElementById("anilist-card-container");
     container.innerHTML = cardHtml;
-  } else {
-    console.error("AniList profile not found");
+  } catch (error) {
+    console.error(`AniList profile not found: ${error.message}`);
   }
 }
 
