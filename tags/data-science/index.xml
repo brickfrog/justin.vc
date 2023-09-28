@@ -9,6 +9,7 @@
       <link>https://justin.vc/</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Mon, 25 Jul 2022 01:43:00 -0400</lastBuildDate><atom:link href="https://justin.vc/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Literate Kedro: Using Org-mode for Data Science</title>
