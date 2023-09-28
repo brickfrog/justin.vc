@@ -242,7 +242,8 @@ font-family: 'Didot CBS';
 }
 
 .media-entry {
-  padding-right: 50px;
+  padding-right: 0px;
+  max-width: 50%;
 }
 
 .gr_grid_book_container {
