@@ -1,6 +1,34 @@
 [
   {
     "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://concurrencyfreaks.blogspot.com/&sz=64",
+    "last_update": 1693491951475,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1693491951475,
+        "text": "Most\npeople are capable of having ideas, but most\nideas are useless, either because they have already been discovered, or\nbecause they are wrong, or because they lack understanding of important\ndetails. "
+      }
+    ],
+    "title": "Concurrency Freaks",
+    "url": "http://concurrencyfreaks.blogspot.com/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://n-gate.com/software/2017/07/12/0/&sz=64",
+    "last_update": 1696194618374,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1696194618374,
+        "text": "I do not give a shit about SEO and I fervently wish for the speedy retirement of everyone who does.  SEO shitbags rank with email spammers as the absolute lowest pigshit dirtfuck dregs of humanity. "
+      }
+    ],
+    "title": "n-gate.com. we can't both be right.",
+    "url": "http://n-gate.com/software/2017/07/12/0/"
+  },
+  {
+    "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://wiki.c2.com/?GreenspunsTenthRuleOfProgramming&sz=64",
     "last_update": 1657016804004,
     "quotes": [
@@ -285,6 +313,19 @@
     "url": "https://betonit.substack.com/p/how-immigrants-became-democrats"
   },
   {
+    "author": "Bryan Caplan",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://betonit.substack.com/p/law-is-hell?utm_medium=email&sz=64",
+    "last_update": 1689499685857,
+    "quotes": [
+      {
+        "date": 1689499685857,
+        "text": "Which raises an obvious question: Why do people tolerate – and even energetically defend – a system of justice that virtually everyone thinks would hellishly mistreat them if they were innocent?"
+      }
+    ],
+    "title": "Law is Hell",
+    "url": "https://betonit.substack.com/p/law-is-hell?utm_medium=email"
+  },
+  {
     "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://blog.jfo.click/hello-hello-world/&sz=64",
     "last_update": 1652486376230,
@@ -297,6 +338,25 @@
     ],
     "title": "Hello \"Hello world!\"",
     "url": "https://blog.jfo.click/hello-hello-world/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://blog.samaltman.com/productivity&sz=64",
+    "last_update": 1687786172998,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1687786172998,
+        "text": "And I generally try to\navoid people and situations that put me in bad moods, which is good advice\nwhether you care about productivity or not."
+      },
+      {
+        "comment": "",
+        "date": 1687784527540,
+        "text": "The most\nimpressive people I know have strong beliefs about the world, which is rare in\nthe general population. &nbsp;If you find yourself always agreeing with whomever\nyou last spoke with, that’s bad."
+      }
+    ],
+    "title": "Productivity",
+    "url": "https://blog.samaltman.com/productivity"
   },
   {
     "author": "Fernando Borretti",
@@ -414,6 +474,34 @@
     ],
     "title": "Kingdom of Conscience - Disco Elysium Wiki",
     "url": "https://discoelysium.fandom.com/wiki/Kingdom_of_Conscience"
+  },
+  {
+    "author": "Ezra Berger",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://doordash.news/company/tips-for-building-high-quality-django-apps-at-scale/&sz=64",
+    "last_update": 1687782616911,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1687782616911,
+        "text": "Your database is more important, more long-lived, and harder to change after the fact than your application."
+      }
+    ],
+    "title": "Tips for Building High-Quality Django Apps at Scale - DoorDash Newsroom",
+    "url": "https://doordash.news/company/tips-for-building-high-quality-django-apps-at-scale/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://drewdevault.com/2023/07/04/Dont-sign-a-CLA-2.html&sz=64",
+    "last_update": 1688501481379,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1688501481379,
+        "text": "A CLA is a promise that software will one day become non-free"
+      }
+    ],
+    "title": "Seriously, don't sign a CLA",
+    "url": "https://drewdevault.com/2023/07/04/Dont-sign-a-CLA-2.html"
   },
   {
     "author": "eigenrobot",
@@ -951,6 +1039,20 @@
     ],
     "title": "Beware of Gell-Mann amnesia about government quality",
     "url": "https://milkyeggs.com/society/beware-of-gell-mann-amnesia-about-government-quality/"
+  },
+  {
+    "author": "@0xfbifemboy",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://milkyeggs.com/society/fukuyama-winning-isnt-necessarily-a-good-thing/&sz=64",
+    "last_update": 1688247946764,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1688247946764,
+        "text": " it seems concerning that the mass populace of essentially every liberalized nation is so profoundly bored with the course of their lives that they are visibly excited by the idea of a coup in a faraway nation about which they know next to nothing whatsoever and to which they generally have zero material connection!"
+      }
+    ],
+    "title": "Fukuyama winning isn't necessarily a good thing",
+    "url": "https://milkyeggs.com/society/fukuyama-winning-isnt-necessarily-a-good-thing/"
   },
   {
     "author": "@0xfbifemboy",
@@ -1496,6 +1598,20 @@
     ],
     "title": "Brian Lui on Twitter",
     "url": "https://twitter.com/brianluidog/status/1524652851544297474"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/eigenrobot/status/1186474781278781442&sz=64",
+    "last_update": 1694727983328,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1694727983329,
+        "text": "people live in their own stories. a deeply-felt compliment will be one that lets them tell a better story about themselves."
+      }
+    ],
+    "title": "eigenrobot on X",
+    "url": "https://twitter.com/eigenrobot/status/1186474781278781442"
   },
   {
     "author": "",
@@ -2199,6 +2315,20 @@
     ],
     "title": "Asahi Linux May Pursue Writing Apple Silicon GPU Driver In Rust - Phoronix Forums",
     "url": "https://www.phoronix.com/forums/forum/linux-graphics-x-org-drivers/x-org-drm/1340093-asahi-linux-may-pursue-writing-apple-silicon-gpu-driver-in-rust"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.poetryloverspage.com/poets/kipling/dane_geld.html&sz=64",
+    "last_update": 1689475318520,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1689475318520,
+        "text": "\"We never pay any-one Dane-geld,\n  No matter how trifling the cost;\nFor the end of that game is oppression and shame,\n  And the nation that pays it is lost!\""
+      }
+    ],
+    "title": "Poetry Lovers' Page - Rudyard Kipling: Dane-Geld",
+    "url": "https://www.poetryloverspage.com/poets/kipling/dane_geld.html"
   },
   {
     "author": "Hirsh Chitkara",
