@@ -18,9 +18,7 @@ This is a now page, a page that I update every so often to let you know what I'm
 
 ### Doing
 
-Right now I'm vibing in Taipei, Taiwan. Working for a startup, getting
-to tinker around with eye data. Pretty fun. Also working a bit on my Chinese. Heisig's
-method, yo.
+Working for a startup, tinkering around with computer vision. I should figure out how to maintain a seperate .plan file and have to read to this page or something.
 
 ### Reading
 
