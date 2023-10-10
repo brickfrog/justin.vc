@@ -1,0 +1,33 @@
+<div class="horizontal-links">
+    ⤷ 
+    <a href="/posts">All Posts</a>
+    <a href="/tag/longform/">Long</a>
+    <a href="/tag/shortform/">Short</a>
+    <a href="/notes">Notes</a>
+    <a href="/quotes">Quotes</a>
+    <a href="/tags">Tags</a>
+    <a href="/archives">Archive</a>
+</div>
+
+<style>
+    .horizontal-links {
+        display: flex-start;
+        font-weight: bold;
+        flex-wrap: wrap;  /* This line enables wrapping */
+        justify-content: space-around;
+        padding: 0;
+        font-size: small;
+        list-style-type: none;
+    }
+
+    .horizontal-links a {
+        color: var(--primary);
+        text-decoration: underline;
+        margin: 0 10px 5px 0; /* Updated margin to include bottom margin for wrapping */
+        white-space: nowrap; /* This line prevents breaking inside links */
+    }
+
+    .horizontal-links a:hover {
+        color: var(--link-hover-color);
+    }
+</style>

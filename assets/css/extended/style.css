@@ -10,7 +10,7 @@ root {
 /* Changing Meta on Posts */
 
 .meta-item .post-tags a:not(:last-of-type) {
-  margin-inline-end: 0.75em;
+  margin-inline-end: 0.50em;
 }
 
 /* Changing header indentation */

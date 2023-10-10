@@ -3,7 +3,7 @@ title: justin.vc
 theme: PaperModulo
 
 enableRobotsTXT: true
-paginate: 10 # main content
+paginate: 25 # main content
 paginate_notes: 3 # notes
 
 buildDrafts: false
@@ -47,12 +47,14 @@ params:
   disableSpecial1stPost: true
   disableScrollToTop: false
   comments: true
-  hidemeta: false
+  hideMeta: false
+  hideMetaList: false
   hideSummary: false
+  summaryLength: 100
   showtoc: true
   tocopen: true
   showsidelinks: true # shows the search, reader mode, etc. to right
-
+  
   single_template: "single2.html"
 
   mainSections:
@@ -80,6 +82,8 @@ params:
       url: "https://emacs.ch/@justin"
     - name: discord
       url: "https://discordapp.com/users/1077750615045836835"
+    - name: email
+      url: "mailto:contact@justin.vc"
 
   defaultCommentSystems:
     utterances: true
@@ -102,9 +106,11 @@ params:
     Title: "_thoughts n' ideas_"
     Subtitle: "on emacs, media, and miscellany"
     Subsubtitle: "(or help me I don't know what to title this)"
-    
-    Columns:
+
+    Horizontal:
       enabled: true
+    Columns:
+      enabled: false
     Omg: # for status.omg.lol on homepage
       Name: "jt"
       Status: true # wanted to be explicit due to external calls / elsewhere use
@@ -115,7 +121,7 @@ params:
     #  Title: "micro.justin.vc"
     #  Subtitle:  last 10 posts from micro.blog
     Content: >
-      Hello! I'm Justin.This is my site (blog?). In all seriousness, it's just a place 
+      Hello! I'm Justin.This is my site (blog?). It's just a place 
       for me to randomly try things out re: writing, aesthetics in webdev, and 
       PKM (personal knowledge management). Essentially a nexus of sorts.
       See the [<u>about</u>](/about/) page for more info.  
@@ -156,7 +162,7 @@ menu:
       url: /now/
       weight: 3
     - identifier: links
-      name: Links
+      name: External
       url: /elfeed/
       weight: 15
 

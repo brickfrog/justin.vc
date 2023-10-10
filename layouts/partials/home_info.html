@@ -5,12 +5,15 @@
     <h5>{{ .Subtitle | markdownify }}</h6>
     <h6>{{ .Subsubtitle | markdownify }}</h6>
   </header>
-  <section class="entry-content">
-    {{- trim .Content "\n" | markdownify -}}
-  </section>
   <section class="entry-footer">
     {{- partial "social_icons.html" (dict "icons" site.Params.socialIcons "svg" $.Site.Data.svg "MaskedEmail"
     site.Params.MaskedEmail "Email" site.Params.Email) -}}
+  </section>
+  {{- if .Horizontal.Enabled }}
+  {{- partial "home_info_horizontal.html" -}}
+  {{- end -}}
+  <section class="entry-content">
+    {{- trim .Content "\n" | markdownify -}}
   </section>
   <section>
     {{- if ( .Omg.Status ) | default false }}
@@ -26,6 +29,4 @@
 {{- partial "micro_feed.html" -}}
 {{ else }}
 {{- partial "plan.html" -}}
-<h2> Posts </h2>
-<hr class="homeinfo-divider">
 {{- end -}}
