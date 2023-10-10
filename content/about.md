@@ -18,7 +18,7 @@ engineer who likes learning things in his free time. Specifically, my interests
 generally fall into Open source/emacs, applied mathematics/statistics,
 programming language design, Catholic history, poetry, and general
 pop-culture/anime/manga/-inserty nerdy thing here-. I would also note that I'm
-not a venture capitalist, despite said domain name. {{% sidenote "f1"  "Why justin.vc then?" %}} I dunno, thought it sounded neat. I'm honestly baffled that Justin Kan didn't own the domain. But if you wander into this and you're a VC who's hiring, I wouldn't be opposed, just 'sayin {{% /sidenote %}}
+not a venture capitalist (or from Saint Vincent), despite said domain name. {{% sidenote "f1"  "Why justin.vc then?" %}} I dunno, thought it sounded neat. I'm honestly baffled that Justin Kan didn't own the domain. But if you wander into this and you're a VC who's hiring, I wouldn't be opposed, just 'sayin {{% /sidenote %}}
 
 <t class="outline-1nil">
 
@@ -79,7 +79,7 @@ pdf-tools) and {{% sidenote "f4"  coding. %}} Okay, sometimes I still use Jupyte
 <summary>Beep.</summary>
 <div class="details">
 
-Beep. Beep. Future TODO, show rig, details on toolings, etc.
+Beep. Beep. Future TODO, show rig, details on toolings, etc. Still need to do this. Slacking. Sorry.
 
 </div>
 </details>

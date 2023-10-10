@@ -239,11 +239,14 @@ font-family: 'Didot CBS';
 .media-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;  /* Allows items to wrap onto the next line on smaller screens */
 }
 
 .media-entry {
-  padding-right: 0px;
-  max-width: 50%;
+  flex: 1 1 auto;  /* Allows items to grow and shrink while auto-adjusting the base size */
+  padding-right: 25px;
+  max-width: 75%;
+  margin: 10px;  /* Optional: Adds some spacing between items */
 }
 
 .gr_grid_book_container {
@@ -260,3 +263,12 @@ font-family: 'Didot CBS';
           overflow: hidden;
           padding: 0px 0px;
         }
+
+/* .PLAN IFRAME */
+
+.gdoc {
+  width: 95%;
+  height: 400px;
+  border-style: none;
+  margin-bottom: 25px;
+}
