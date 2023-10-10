@@ -12,15 +12,21 @@ hideMeta = true
 showtoc = true
 +++
 
-This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). It allows a seperation of the "what I'm doing" from the "who I am" and "what I've done".
+This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). It allows a seperation of the "what I'm doing" from the "who I am" and "what I've done". For a more general overview of me, check out the [about](/about) page.
 
 <img src="https://discord.c99.nl/widget/theme-3/1077750615045836835.png"></img>
 
 ### Doing
 
-Working for a startup, tinkering around with computer vision. I should figure out how to maintain a seperate .plan file and have to read to this page or something.
+<hr class="now-divider">
+
+<div class="iframe-container">
+    <iframe class="gdoc" src="https://docs.google.com/document/d/e/2PACX-1vSYaHbsHx8WdrcE8qTC2D48hZ-qfSj1LSRP8ukDFgHz7YTdfe4rWe9fv9iEdPpKWY-QeH7LQguNOaAg/pub?embedded=true"></iframe>
+</div>
 
 ### Reading
+
+<hr class="now-divider">
 
 I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfrog). I know, evil Amazon, but the API is pretty good. I try to backup my data but I'm not sure what other good alternatives are. Feel free to suggest some.
 
@@ -29,6 +35,8 @@ I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfr
 </div><br>
 
 ### Watching
+
+<hr class="now-divider">
 
 I last [watched](trakt.tv/users/justinvc) (show/movie respectively) via Trakt.tv:
 
@@ -45,6 +53,8 @@ once you get used to it. (read: salty that brickfrog was taken on MAL)
 <div id="anilist-card-container"></div>
 
 ### Listening
+
+<hr class="now-divider">
 
 I don't listen to a lot of music, feel free to check my recently played tracks on [last.fm](https://www.last.fm/user/justinvc). The embed is a spotify playlist that I've been listening to recently on [spotify](https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw?si=9f1a873775c44bb6):
 
