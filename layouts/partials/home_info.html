@@ -2,7 +2,8 @@
 <article class="first-entry home-info">
   <header class="entry-header">
     <h3>{{ .Title | markdownify }}</h3>
-    <h6>{{ .Subtitle | markdownify }}</h6>
+    <h5>{{ .Subtitle | markdownify }}</h6>
+    <h6>{{ .Subsubtitle | markdownify }}</h6>
   </header>
   <section class="entry-content">
     {{- trim .Content "\n" | markdownify -}}
