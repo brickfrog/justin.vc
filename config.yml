@@ -101,6 +101,8 @@ params:
   homeInfoParams:
     Title: "_thoughts n' ideas_"
     Subtitle: "on emacs, media, and miscellany"
+    Subsubtitle: "(or help me I don't know what to title this)"
+    
     Columns:
       enabled: true
     Omg: # for status.omg.lol on homepage
