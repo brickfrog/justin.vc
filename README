@@ -1,3 +1,13 @@
 justin.vc
 
 Hugo-site for blog.
+
+.idea 
+
+* reader mode should expand out the sidelinks so no clicking necessary
+* think about how footnotes will look - need to write more stuff
+* figure out TODO blah blah blah etc from emacs
+* maybe dropdown for sidebar like gwern's cog thingy
+* cloudflare worker google doc embed
+* TOC too far off to left, hug closer to body
+* dark/light mode on sidebar too
