@@ -83,7 +83,7 @@ params:
     - name: discord
       url: "https://discordapp.com/users/1077750615045836835"
     - name: email
-      url: "mailto:contact@justin.vc"
+      url: "mailto:contact+home@justin.vc"
 
   defaultCommentSystems:
     utterances: true
