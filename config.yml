@@ -76,12 +76,22 @@ params:
       url: "index.xml"
     - name: github
       url: "https://www.github.com/brickfrog"
+    - name: goodreads
+      url: "https://www.goodreads.com/user/show/46714580-justin"
+    - name: lastfm
+      url: "https://www.last.fm/user/justinvc"
+    - name: rateyourmusic
+      url: "https://rateyourmusic.com/~justinvc"
+    - name: spotify
+      url: "https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw"
     - name: omg
       url: "https://jt.omg.lol"
     - name: mastodon
       url: "https://emacs.ch/@justin"
     - name: discord
       url: "https://discordapp.com/users/1077750615045836835"
+    - name: anilist
+      url: "https://anilist.co/user/brickfrog"
     - name: email
       url: "mailto:contact+home@justin.vc"
 
