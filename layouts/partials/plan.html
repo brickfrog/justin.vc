@@ -1,8 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #google-doc-container {
+      background-color: var(--tertiary-bg);
+      margin-bottom: 25px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
 <body>
-<h3> <a href="https://docs.google.com/document/d/e/2PACX-1vSYaHbsHx8WdrcE8qTC2D48hZ-qfSj1LSRP8ukDFgHz7YTdfe4rWe9fv9iEdPpKWY-QeH7LQguNOaAg/pub?embedded=true">.plan</a></h2>
-<div class="iframe-container">
-    <iframe class="gdoc" src="https://docs.google.com/document/d/e/2PACX-1vSYaHbsHx8WdrcE8qTC2D48hZ-qfSj1LSRP8ukDFgHz7YTdfe4rWe9fv9iEdPpKWY-QeH7LQguNOaAg/pub?embedded=true" 
-    scrolling="yes">
-    </iframe>
-</div>
+  <div id="google-doc-container"></div>
 </body>
+<script>
+  async function fetchAndInsertGoogleDocHTML() {
+    const localStorageData = JSON.parse(localStorage.getItem('googleDocHTML') || '{}');
+    const { content, etag, timestamp } = localStorageData;
+
+    // Check if data is recent (within the last 2 hours)
+    if (content && timestamp && Date.now() - timestamp < 2 * 60 * 60 * 1000) {
+      insertHTML(content);
+      return;
+    }
+
+    const headers = new Headers();
+    if (etag) {
+      headers.append('If-None-Match', etag);
+    }
+
+    const response = await fetch('https://cloudflare_workers.justin-t-malloy4095.workers.dev/', { headers });
+
+    if (response.status === 304) {
+      // Content has not changed
+      insertHTML(content);
+      return;
+    }
+
+    const newEtag = response.headers.get('ETag');
+    const newContent = await response.text();
+
+    localStorage.setItem('googleDocHTML', JSON.stringify({
+      content: newContent,
+      etag: newEtag,
+      timestamp: Date.now()
+    }));
+
+    insertHTML(newContent);
+  }
+
+  function insertHTML(htmlContent) {
+    const container = document.getElementById('google-doc-container');
+    const shadowRoot = container.attachShadow({ mode: 'open' });
+    shadowRoot.innerHTML = htmlContent;
+
+    const newStyle = document.createElement('style');
+    newStyle.textContent = `
+      * {
+        color: var(--primary-text) !important;
+        font-size: 14px !important;
+      }
+    `;
+    shadowRoot.appendChild(newStyle);
+  }
+
+  // Call the function on page load
+  window.addEventListener('DOMContentLoaded', fetchAndInsertGoogleDocHTML);
+</script>
+</html>

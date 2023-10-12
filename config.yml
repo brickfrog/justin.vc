@@ -104,7 +104,7 @@ params:
 
   homeInfoParams:
     Title: "technofutzin'"
-    Subtitle: "thoughts on emacs, media, and miscellany"
+    Subtitle: "emacs, media, and miscellany"
     Subsubtitle: "(or help me I don't know what to title this)"
 
     Horizontal:
