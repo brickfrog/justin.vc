@@ -12,17 +12,13 @@ hideMeta = true
 showtoc = true
 +++
 
-This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). It allows a seperation of the "what I'm doing" from the "who I am" and "what I've done". For a more general overview of me, check out the [about](/about) page.
+This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). Incidentally, there's some overlap with my .plan file, and I'm pondering how to reconcile it all. I still like this for keeping up with my reading/watching, etc. etc.
 
 <img src="https://discord.c99.nl/widget/theme-3/1077750615045836835.png"></img>
 
 ### Doing
 
-<hr class="now-divider">
-
-<div class="iframe-container">
-    <iframe class="gdoc" src="https://docs.google.com/document/d/e/2PACX-1vSYaHbsHx8WdrcE8qTC2D48hZ-qfSj1LSRP8ukDFgHz7YTdfe4rWe9fv9iEdPpKWY-QeH7LQguNOaAg/pub?embedded=true"></iframe>
-</div>
+{{< injectPlan >}}
 
 ### Reading
 

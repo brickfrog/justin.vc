@@ -264,11 +264,8 @@ font-family: 'Didot CBS';
           padding: 0px 0px;
         }
 
-/* .PLAN IFRAME */
+/* .PLAN */
 
-.gdoc {
-  width: 95%;
-  height: 400px;
-  border-style: none;
-  margin-bottom: 25px;
+.google-doc-container {
+  background-color: #F07178;
 }
