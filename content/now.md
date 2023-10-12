@@ -18,6 +18,8 @@ This is a now page, a page that I update every so often to let you know what I'm
 
 ### Doing
 
+<hr class="now-divider">
+
 {{< injectPlan >}}
 
 ### Reading
