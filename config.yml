@@ -110,7 +110,7 @@ params:
 
   profileMode:
     enabled: false
-    subtitle: "emacs, data, media, and miscellany"
+    subtitle: "emacs, media, and miscellany"
 
   homeInfoParams:
     Title: "technofutzin'"
