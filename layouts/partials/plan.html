@@ -1,14 +1,23 @@
+{{ $stripImages := .stripImages }}
+
 <!DOCTYPE html>
 <html>
+
 <head>
   <style>
     #google-doc-container {
       background-color: var(--tertiary-bg);
       margin-bottom: 25px;
-      margin-top: 10px;
+      margin-top: 25px;
+      padding: 20px;
+    }
+
+    #google-doc-container img {
+      margin-left: 50px;
     }
   </style>
 </head>
+
 <body>
   <div id="google-doc-container"></div>
 </body>
@@ -17,8 +26,7 @@
     const localStorageData = JSON.parse(localStorage.getItem('googleDocHTML') || '{}');
     const { content, etag, timestamp } = localStorageData;
 
-    // Check if data is recent (within the last 2 hours)
-    if (content && timestamp && Date.now() - timestamp < 2 * 60 * 60 * 1000) {
+    if (content && timestamp && Date.now() - timestamp < 30 * 60 * 1000) {
       insertHTML(content);
       return;
     }
@@ -51,19 +59,43 @@
   function insertHTML(htmlContent) {
     const container = document.getElementById('google-doc-container');
     const shadowRoot = container.attachShadow({ mode: 'open' });
+
+    // Conditionally strip 'images' if stripImages flag is set
+    // technically it's a table but the table I store the image in so eh
+    if ("{{ $stripImages }}" === "true") {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlContent, "text/html");
+      const tables = doc.querySelectorAll("img");
+      for (let i = 0; i < tables.length - 0; i++) {
+        tables[i].remove();
+      }
+      htmlContent = new XMLSerializer().serializeToString(doc);
+    }
+
     shadowRoot.innerHTML = htmlContent;
 
     const newStyle = document.createElement('style');
     newStyle.textContent = `
       * {
         color: var(--primary-text) !important;
-        font-size: 14px !important;
+        font-size: 13px !important;
+        line-height: 1.5em !important;
+      }
+      span {
+        width: 100% !important;
+        height: 100% !important;
+      }
+      img {
+        width: 100% !important;
+        height: 100% !important;
       }
     `;
     shadowRoot.appendChild(newStyle);
   }
 
+
   // Call the function on page load
   window.addEventListener('DOMContentLoaded', fetchAndInsertGoogleDocHTML);
 </script>
+
 </html>

@@ -1,1 +1,2 @@
-{{ partial "plan.html" . }}
+{{ $stripImages := .Get "stripImages" | default false }}
+{{ partial "plan.html" (dict "context" . "stripImages" $stripImages) }}

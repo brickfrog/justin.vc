@@ -15,12 +15,14 @@ showtoc = true
 This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). Incidentally, there's some overlap with my .plan file, and I'm pondering how to reconcile it all. I still like this for keeping up with my reading/watching, etc. etc.
 
 <img src="https://discord.c99.nl/widget/theme-3/1077750615045836835.png"></img>
+<p style="font-size:12px;"> * I have more than one discord account but this is the one I use for programming language support, blah blah etc. @ me for others.</p>
 
 ### Doing
-
 <hr class="now-divider">
 
-{{< injectPlan >}}
+Copy of my dot plan from the homepage with the image removed. A google doc that I try to keep somewhat relevant.
+
+{{< injectPlan stripImages=true >}}
 
 ### Reading
 
@@ -68,4 +70,7 @@ img {
           align-items: center;
 }
 
+#google-doc-container .table {
+    display: none;
+}
 </style>
