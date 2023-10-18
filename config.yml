@@ -171,6 +171,10 @@ menu:
       name: Now
       url: /now/
       weight: 3
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 4
     - identifier: links
       name: External
       url: /elfeed/

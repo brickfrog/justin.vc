@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-03-13T01:34:41-04:00
+lastmod = 2023-10-18T10:12:49-04:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -100,6 +100,12 @@ better, but eh.
 
                 Company based blog - has their own product, but seems to have decent amounts of
                 discussion and linking to ML papers that are relevant.
+
+            <!--list-separator-->
+
+            -  <https://developer.nvidia.com/blog/tag/technical-walkthrough/feed/>
+
+                NVIDIA's "technical blog" which is primarily hands-on and examples.
 
         <!--list-separator-->
 
@@ -247,6 +253,8 @@ better, but eh.
 
     -  <https://milkyeggs.com>
 
+        fbifemboy's blog ( don't ask )
+
     <!--list-separator-->
 
     -  <https://reorx.com/feed.xml>
@@ -265,6 +273,26 @@ better, but eh.
 
         "Programming" / thoughts-on tech blog that I like, it's no longer updated but
         there's some gems.
+
+    <!--list-separator-->
+
+    -  <https://dusted.dk>
+
+        no RSS(? - I think, I didn't look too hard) - broken up into different sections,
+        still neat.
+
+    <!--list-separator-->
+
+    -  <https://ludic.mataroa.blog>
+
+        saw their rant on agile via another site I read - good!
+
+    <!--list-separator-->
+
+    -  <https://blog.dornea.nu>
+
+        another emacs blogger - remember running into his blog several times while I was
+        doing elfeed config edits
 
     <!--list-separator-->
 
