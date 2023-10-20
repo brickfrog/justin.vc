@@ -34,6 +34,7 @@ params:
   disableThemeToggle: false
   EnableInstantClick: false # TODO: not using / breaks things?
   TocSide: "left" # note that this switches sidenotes to opposite of toc
+  noHeaderTitle: true # if you don't want a title in the header / replace with manual
 
   ShowReadingTime: false
   ShowShareButtons: true
@@ -110,7 +111,7 @@ params:
 
   profileMode:
     enabled: false
-    subtitle: "emacs, media, and miscellany"
+    subtitle: ""
 
   homeInfoParams:
     Title: "technofutzin'"

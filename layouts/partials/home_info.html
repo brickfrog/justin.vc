@@ -1,9 +1,6 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
   <header class="entry-header">
-    <h3>{{ .Title | markdownify }}</h3>
-    <h5>{{ .Subtitle | markdownify }}</h6>
-    <h6>{{ .Subsubtitle | markdownify }}</h6>
   </header>
   <section class="entry-footer">
     {{- partial "social_icons.html" (dict "icons" site.Params.socialIcons "svg" $.Site.Data.svg "MaskedEmail"
