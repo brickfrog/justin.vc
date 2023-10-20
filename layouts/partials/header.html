@@ -1,0 +1,77 @@
+<header class="header">
+    <nav class="nav">
+        {{- if site.Params.noHeaderTitle -}}
+        <div class="text-container">
+            <i class="fas fa-palette"></i>
+            <a href="/">
+                <pre>
+ (_)_   _ ___| |_(_)_ __ __   _____ 
+ | | | | / __| __| | '_ \\ \ / / __|
+ | | |_| \__ \ |_| | | | |\ V / (__ 
+_/ |\__,_|___/\__|_|_| |_(_)_/ \___|
+|__/</pre>
+            </a>
+        </div>
+        {{ else }}
+        <div class="logo">
+            {{- $label_text := (site.Params.logo.text | default site.Title) }}
+            {{- if site.Title }}
+            <a href="{{ "" | absURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+                {{- if site.Params.logo.icon }}
+                {{- $img := resources.Get site.Params.logo.icon }}
+                {{- if $img }}
+                {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+                {{- if hugo.IsExtended -}}
+                {{- $processableFormats = $processableFormats | append "webp" -}}
+                {{- end -}}
+                {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+                {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+                {{- if site.Params.logo.iconHeight }}
+                {{- $img = $img.Resize (printf "x%d" site.Params.logo.iconHeight) }}
+                {{ else }}
+                {{- $img = $img.Resize "x30" }}
+                {{- end }}
+                {{- end }}
+                <img src="{{ $img.Permalink }}" alt="logo" aria-label="logo"
+                    height="{{- site.Params.logo.iconHeight | default " 30" -}}">
+                {{- else }}
+                <img src="{{- site.Params.logo.icon | absURL -}}" alt="logo" aria-label="logo"
+                    height="{{- site.Params.logo.iconHeight | default " 30" -}}">
+                {{- end -}}
+                {{- end -}}
+                {{- $label_text -}}
+            </a>
+            {{- end }}
+        </div>
+        {{- end }}
+        {{- $currentPage := . }}
+        <ul id="menu">
+            {{- range site.Menus.main }}
+            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absURL }}
+            {{- $page_url:= $currentPage.Permalink }}
+            {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
+            <li>
+                <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" |
+                    safeHTMLAttr) ("" | safeHTMLAttr ) }}" {{- if $is_search -}}data-no-instant{{- end -}} {{- cond
+                    $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }} {{- if eq $menu_item_url
+                    $page_url }} class="active" {{- end }} {{- if .Params.External }} target="_blank" {{- end }}>
+                    {{- .Pre }}
+                    {{- .Name -}}
+                    {{ .Post -}}
+                    {{- if .Params.External }}<span class="external-link">{{ safeHTML (index $.Site.Data.svg
+                        "external-link") }}</span>{{- end }}
+                </a>
+            </li>
+            {{- end }}
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header pre {
+        font-size: 9px;
+        line-height: 0.9;
+        margin: 0;
+        /* Values less than 1 will reduce the spacing between lines */
+    }
+</style>
