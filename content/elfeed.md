@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-10-18T10:12:49-04:00
+lastmod = 2023-10-27T09:49:31-04:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -15,19 +15,10 @@ site. I could probably stand to clean this up, but still it shows the stuff I
 watch in my reader. It exports when I save, so it should be pretty much to
 date.
 
-Because this is primarily for feed-reading, most of the links are to feeds. However,
-I wrote  a little regex that converts (most of) the feeds into their
-respective main sites - for those I miss you can simply remove the
-/blahblah.xml/rss, etc. - I'm not -great- at regex.
-
-I would note that because it's for feed-readers, it's things I might not read 100% of the
-time, or involve people I disagree with but still am curious to see what they're
-saying. I am a big proponent of not treating outgroup as a [Index Librorum
-Prohibitorum](https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum).
-
-I would also note that it's in no particular order. I basically just toss them
-into the RSS if I find or two posts I think are neat. Future goal is to organize
-better, but eh.
+Because this is primarily for feed-reading, most of the links are to feeds
+that I (tried) to regex back itno normal links. I would also note that it's in no
+particular order. I basically just toss them into the RSS if I find or two posts
+I think are neat. Future goal is to organize better, but eh.
 
 
 ## Links {#links}
@@ -244,7 +235,7 @@ better, but eh.
 
     <!--list-separator-->
 
-    -  <http://boston.conman.org/bostondiaries.rss>
+    -  <http://boston.conman.org/index.atom>
 
         A blog I found while reading about the gemini protocol. Seems a bit cantankerous
         but I dig the vibe.
@@ -296,61 +287,79 @@ better, but eh.
 
     <!--list-separator-->
 
-    -  Substack
+    -  <https://nonint.com/feed/>
+
+        James Betker's blog, of Google/OpenAI(?)- mostly posts on machine learning.
+
+<!--list-separator-->
+
+-  Substack
+
+    <!--list-separator-->
+
+    -  <https://astralcodexten.substack.com>
 
         <!--list-separator-->
 
-        -  <https://astralcodexten.substack.com>
+        -  ****Recommended****
 
             <!--list-separator-->
 
-            -  ****Recommended****
+            -  [Heuristics that Almost Always Work](https://astralcodexten.substack.com/p/heuristics-that-almost-always-work)
 
-                <!--list-separator-->
+    <!--list-separator-->
 
-                -  [Heuristics that Almost Always Work](https://astralcodexten.substack.com/p/heuristics-that-almost-always-work)
+    -  <https://freddiedeboer.substack.com>
 
         <!--list-separator-->
 
-        -  <https://freddiedeboer.substack.com>
+        -  ****Recommended****
 
             <!--list-separator-->
 
-            -  ****Recommended****
+            -  <https://freddiedeboer.substack.com/p/planet-of-cops>
 
-                <!--list-separator-->
+    <!--list-separator-->
 
-                -  <https://freddiedeboer.substack.com/p/planet-of-cops>
+    -  <https://samkriss.substack.com>
 
-        <!--list-separator-->
+    <!--list-separator-->
 
-        -  <https://samkriss.substack.com>
+    -  <https://sashachapin.substack.com>
 
-        <!--list-separator-->
+    <!--list-separator-->
 
-        -  <https://sashachapin.substack.com>
+    -  <https://www.strangeloopcanon.com>
 
-        <!--list-separator-->
+    <!--list-separator-->
 
-        -  <https://www.strangeloopcanon.com>
+    -  <https://erikhoel.substack.com>
 
-        <!--list-separator-->
+    <!--list-separator-->
 
-        -  <https://erikhoel.substack.com>
+    -  <https://octal.substack.com>
 
-        <!--list-separator-->
+    <!--list-separator-->
 
-        -  <https://octal.substack.com>
+    -  <https://www.blockedandreported.org>
 
-        <!--list-separator-->
+        This is a podcast, but it's sometimes there's supplementary info that's in the posts.
 
-        -  <https://www.blockedandreported.org>
+    <!--list-separator-->
 
-            This is a podcast, but it's sometimes there's supplementary info that's in the posts.
+    -  <https://www.slowboring.com>
 
-        <!--list-separator-->
+    <!--list-separator-->
 
-        -  <https://www.slowboring.com>
+    -  <https://www.infinitescroll.us>
+
+        Jeremiah Johnson's substack, familiar with him via the Neoliberal project.
+
+    <!--list-separator-->
+
+    -  <https://www.fromthenew.world>
+
+        Brian Chau's writing
 
 
 ### News {#news}
@@ -358,18 +367,10 @@ better, but eh.
 The news is probably a  [waste of time](http://www.aaronsw.com/weblog/hatethenews). Limiting it down to specific publications
 relevant to my interest/career. Keeping this section open just-in-case.
 
-<!--list-separator-->
 
--  Politics
+### Comics {#comics}
 
-    <!--list-separator-->
-
-    -  <https://fivethirtyeight.com/features/feed>
-
-
-### Webcomics {#webcomics}
-
-I like comics. Need to read mores.
+I like comics. Need to read more.
 
 <!--list-separator-->
 
