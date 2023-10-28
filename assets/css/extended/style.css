@@ -195,27 +195,32 @@ p.timestamp-wrapper {
 /* Fonts & Dropcap */
 
 @font-face {
-  font-family: "Proxima Nova";
-  src: url(/fonts/proxima_nova_regular.woff) format("woff");
+  font-family: "JosefinSans Bold";
+  src: url(/fonts/JosefinSans-Bold.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "Didot CBS";
-  src: url(/fonts/OPTIDidotCBS-Special.woff) format("woff");
+  font-family: "Geist";
+  src: url(/fonts/Geist-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url(/fonts/GeistMono-Regular.otf) format("opentype");
 }
 
 body {
-  /* font-family: -apple-system, BlinkMacSystemFont, Helvetica, 'Helvetica Neue', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif; */
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 18px;
-  line-height: 1.34em;
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
   word-break: break-word;
   background: var(--theme);
 }
 
 .post-content > p:first-of-type::first-letter {
-font-family: 'Didot CBS';
+  font-family: 'JosefinSans Bold', sans-serif;
+  font-size: 3.14em;
+  font-weight: 900;
 }
 
 /* Now! */
@@ -268,4 +273,10 @@ font-family: 'Didot CBS';
 
 .google-doc-container {
   background-color: #F07178;
+}
+
+/* Font change for coe blocks */
+
+code {
+  font-family: 'Geist Mono', monospace;
 }
