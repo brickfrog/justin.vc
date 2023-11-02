@@ -5,19 +5,121 @@
 
 <head>
   <style>
-    #google-doc-container {
-      background-color: var(--tertiary-bg);
-      margin-bottom: 25px;
-      margin-top: 25px;
-      padding: 20px;
-    }
+    .custom-aside {
+  background-color: var(--tertiary-bg); /* bg-gray-900 */
+  color: var(--primary); /* text-green-400 */
+  padding: 1.5rem; /* p-6 */
+  margin: 1rem; /* m-4 */
+  border-radius: 0.5rem; /* rounded-lg */
+  width: 100%; /* w-full */
+  max-width: 32rem; /* max-w-lg */
+  font-family: monospace; /* font-mono */;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 6px 20px rgba(0, 0, 0, 0.13); /* Horizontal offset, Vertical offset, Blur radius, Spread radius, Color */
+}
+
+.custom-aside:hover {
+transform: scale(1.01)
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem; /* space-x-2 */
+}
+
+.dot {
+  width: 0.75rem; /* w-3 */
+  height: 0.75rem; /* h-3 */
+  border-radius: 9999px; /* rounded-full */
+}
+
+.green-dot {
+  background-color: #48bb78; /* bg-green-500 */
+}
+
+.yellow-dot {
+  background-color: #eab308; /* bg-yellow-500 */
+}
+
+.red-dot {
+  background-color: #f56565; /* bg-red-500 */
+}
+
+.red-dot:hover {
+  cursor: pointer;
+}
+
+.appname {
+  font-size: 0.875rem; /* text-sm */
+}
+
+.command-container {
+  margin-top: 1rem; /* mt-4 */
+}
+
+.bash {
+  color: var(--link-hover-color); /* text-green-400 */
+}
+
+.command {
+  color: var(--link-hover-color); /* text-white */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem; /* mt-4 */
+}
+
+.quit {
+  font-size: 0.875rem; /* text-sm */
+  color: var(--link-hover-color);
+}
+
   </style>
 </head>
 
 <body>
-  <div id="google-doc-container"></div>
+  <div class="parent-container" id="parentContainer">
+    <aside class="custom-aside">
+    <div class="flex-container">
+      <div class="dots">
+        <a href="https://justin.vc"><div class="dot green-dot"></div></a>
+        <div class="dot yellow-dot"></div>
+        <div class="dot red-dot" onclick="hideParentContainer()"></div>
+      </div>
+      <p class="appname">doom-emacs</p>
+    </div>
+    <div class="command-container">      
+      <!-- Google Doc Embed Here -->
+      <div id="google-doc-container"></div>
+    </div>
+    <div class="footer-container">
+      <p class="quit">:wq</p>
+      <p class="quit">~/.org/plan.org</p>
+    </div>
+  </aside>
+  </div>
+
 </body>
 <script>
+
+function hideParentContainer() {
+    const container = document.getElementById('parentContainer');
+    container.style.display = 'none';
+}
+
   async function fetchAndInsertGoogleDocHTML() {
     const localStorageData = JSON.parse(localStorage.getItem('googleDocHTML') || '{}');
     const { content, etag, timestamp } = localStorageData;
