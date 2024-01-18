@@ -124,7 +124,7 @@ params:
       enabled: false
     Omg: # for status.omg.lol on homepage
       Name: "jt"
-      Status: true # wanted to be explicit due to external calls / elsewhere use
+      Status: false # wanted to be explicit due to external calls / elsewhere use
       StatusTitle: "status.omg.lol"
       Weblog: false # not added yet
     # MicroBlog: # for showing micro-blog posts on homepage

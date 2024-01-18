@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2023-10-27T09:49:31-04:00
+lastmod = 2024-01-18T03:31:42-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -20,9 +20,11 @@ that I (tried) to regex back itno normal links. I would also note that it's in n
 particular order. I basically just toss them into the RSS if I find or two posts
 I think are neat. Future goal is to organize better, but eh.
 
+<div class="outline-1nil">
 
 ## Links {#links}
 
+<div class="outline-2nil">
 
 ### Aggregators {#aggregators}
 
@@ -42,6 +44,9 @@ I think are neat. Future goal is to organize better, but eh.
 
     -  <https://news.ycombinator.com>
 
+</div>
+
+<div class="outline-2nil">
 
 ### Blogs {#blogs}
 
@@ -291,6 +296,13 @@ I think are neat. Future goal is to organize better, but eh.
 
         James Betker's blog, of Google/OpenAI(?)- mostly posts on machine learning.
 
+    <!--list-separator-->
+
+    -  <https://journal.stuffwithstuff.com/rss.xml>
+
+        Wrote an (apparently - I need to read it) on programming language design /
+        interpreters.
+
 <!--list-separator-->
 
 -  Substack
@@ -361,12 +373,18 @@ I think are neat. Future goal is to organize better, but eh.
 
         Brian Chau's writing
 
+</div>
+
+<div class="outline-2nil">
 
 ### News {#news}
 
 The news is probably a  [waste of time](http://www.aaronsw.com/weblog/hatethenews). Limiting it down to specific publications
 relevant to my interest/career. Keeping this section open just-in-case.
 
+</div>
+
+<div class="outline-2nil">
 
 ### Comics {#comics}
 
@@ -376,12 +394,16 @@ I like comics. Need to read more.
 
 -  <https://www.smbc-comics.com/comic>
 
+</div>
+
+<div class="outline-2nil">
 
 ### Literary {#literary}
 
 As opposed to blog this would be collective works, literary criticism sites,
 etc. etc. - differentiating profit/mainstream with the magazine vs. zine distinction.
 
+<div class="outline-3nil">
 
 #### Magazine {#magazine}
 
@@ -389,6 +411,9 @@ etc. etc. - differentiating profit/mainstream with the magazine vs. zine distinc
 
 -  <https://www.nplusonemag.com>
 
+</div>
+
+<div class="outline-3nil">
 
 #### Zines {#zines}
 
@@ -398,9 +423,15 @@ etc. etc. - differentiating profit/mainstream with the magazine vs. zine distinc
 
     An "open literary arts platform"
 
+</div>
+
+</div>
+
+<div class="outline-2nil">
 
 ### Audio {#audio}
 
+<div class="outline-3nil">
 
 #### Podcasts {#podcasts}
 
@@ -410,3 +441,9 @@ emacs but it seemed fiddly.
 <!--list-separator-->
 
 -  <https://talkpython.fm/episodes/rss>
+
+</div>
+
+</div>
+
+</div>

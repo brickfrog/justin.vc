@@ -15,16 +15,18 @@ showtoc = true
 This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). Incidentally, there's some overlap with my .plan file, and I'm pondering how to reconcile it all. I still like this for keeping up with my reading/watching, etc. etc.
 
 <img src="https://discord.c99.nl/widget/theme-3/1077750615045836835.png"></img>
+
 <p style="font-size:12px;"> * I have more than one discord account but this is the one I use for programming language support, blah blah etc. @ me for others.</p>
 
-### Doing
+## Doing
+
 <hr class="now-divider">
 
 Copy of my dot plan from the homepage with the image removed. A google doc that I try to keep somewhat relevant.
 
 {{< injectPlan stripImages=true >}}
 
-### Reading
+## Reading
 
 <hr class="now-divider">
 
@@ -34,7 +36,7 @@ I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfr
 <script src="https://www.goodreads.com/review/grid_widget/46714580.Justin's%20bookshelf:%20currently-reading?cover_size=medium&hide_link=true&hide_title=true&num_books=25&order=d&shelf=currently-reading&sort=date_read&widget_id=1674169459" type="text/javascript"></script>
 </div><br>
 
-### Watching
+## Watching
 
 <hr class="now-divider">
 
@@ -52,7 +54,7 @@ once you get used to it. (read: salty that brickfrog was taken on MAL)
 <script src="/js/anilist-card.js"></script>
 <div id="anilist-card-container"></div>
 
-### Listening
+## Listening
 
 <hr class="now-divider">
 

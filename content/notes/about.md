@@ -2,7 +2,7 @@
 title = "About"
 author = ["Justin"]
 date = 2022-07-15T23:35:00-04:00
-lastmod = 2024-01-18T03:40:01-05:00
+lastmod = 2024-01-18T03:26:53-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -13,12 +13,13 @@ ShowBreadCrumbs = false
 backlinks = false
 +++
 
+:ID:       cb6df8aa-e358-4cca-a11f-6cd90f426ab1
+
 Hello! I'm Justin! I'm just a data scientist/software engineer who likes
 learning things in his free time. Specifically, my interests generally fall into
 Open source/emacs, applied mathematics/statistics, Catholic history, poetry, and general
 pop-culture/anime/manga/-insert nerdy thing here-.
 
-<section class="outline-1nil">
 
 ## Background {#background}
 
@@ -32,7 +33,6 @@ I write the better I get about it. I was good at writing papers in
 college, but that was when I -had- to. Those skills have kind of lapsed a decade
 later.
 
-<div class="outline-2nil">
 
 ### Technical {#technical}
 
@@ -54,7 +54,6 @@ only so much you can cover in two years. I primarily focused on optimization and
 information systems at that time with my "capstone" focus on education system
 turnouts in Bolivia.
 
-<div class="outline-3nil">
 
 #### This site {#this-site}
 
@@ -65,9 +64,6 @@ general, since I use org-mode for my agenda/todo lists, reading (org-noter +
 pdf-tools) and {{% sidenote "f4"  coding. %}}  Okay, sometimes I still use Jupyter and VSCode. Sue me. {{% /sidenote %}} There's also some usage of Google docs for things I need there to be
 less friction on (e.g. - what I'm doing)
 
-</div>
-
-<div class="outline-3nil">
 
 #### Using {#using}
 
@@ -87,9 +83,3 @@ Beep. Beep. Future TODO, show rig, details on toolings, etc.
 Still need to do this. Sorry.
 </div>
 </details>
-
-</div>
-
-</div>
-
-</section>
