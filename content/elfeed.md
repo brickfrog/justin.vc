@@ -2,7 +2,7 @@
 title = "Blog Roll"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2024-01-18T03:31:42-05:00
+lastmod = 2024-01-28T07:13:22-05:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -16,7 +16,7 @@ watch in my reader. It exports when I save, so it should be pretty much to
 date.
 
 Because this is primarily for feed-reading, most of the links are to feeds
-that I (tried) to regex back itno normal links. I would also note that it's in no
+that I (tried) to regex back into normal links. I would also note that it's in no
 particular order. I basically just toss them into the RSS if I find or two posts
 I think are neat. Future goal is to organize better, but eh.
 
