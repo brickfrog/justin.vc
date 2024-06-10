@@ -1,1 +1,127 @@
-/home/justin/.doom.d/elfeed.opml
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>Elfeed-Org Export</title>
+  </head>
+  <body>
+      <outline title="Aggregators">
+          <outline title="Dev / Software">
+            <outline title="Lobsters" xmlUrl="https://lobste.rs/rss"/>
+            <outline title="Hacker News" xmlUrl="https://news.ycombinator.com/rss"/>
+          </outline>
+          <outline title="Unknown" xmlUrl="https://getpocket.com/users/justinvc/feed/unread"/>
+      </outline>
+      <outline title="Blogs">
+          <outline title="Topic Based">
+            <outline title="Software / Programming">
+              <outline title="Python">
+                <outline title="Tall, Snarky Canadian" xmlUrl="https://snarky.ca/rss"/>
+              </outline>
+              <outline title="Rust">
+                <outline title="This Week in Rust" xmlUrl="https://this-week-in-rust.org/rss.xml"/>
+              </outline>
+              <outline title="Emacs">
+                <outline title="Emacs Redux" xmlUrl="https://emacsredux.com/atom.xml"/>
+              </outline>
+              <outline title="Machine Learning">
+                <outline title="Context by Cohere" xmlUrl="https://txt.cohere.ai/rss/"/>
+                <outline title="Technical Walkthrough – NVIDIA Technical Blog" xmlUrl="https://developer.nvidia.com/blog/tag/technical-walkthrough/feed/"/>
+              </outline>
+              <outline title="General">
+                <outline title="Blog – Hackaday" xmlUrl="https://hackaday.com/blog/feed"/>
+              </outline>
+              <outline title="Data">
+                <outline title="Blog posts | RSS Feed" xmlUrl="https://motherduck.com/rss.xml"/>
+              </outline>
+            </outline>
+            <outline title="Statistics">
+              <outline title="Statistics By Jim" xmlUrl="https://statisticsbyjim.com/feed/"/>
+            </outline>
+            <outline title="Religion">
+              <outline title="Christianity">
+                <outline title="Catholicism">
+                  <outline title="Dominicana" xmlUrl="https://www.dominicanajournal.org/feed"/>
+                  <outline title="The Jesuit Post" xmlUrl="https://thejesuitpost.org/feed"/>
+                  <outline title="Word of the day" xmlUrl="https://www.vaticannews.va/en/word-of-the-day.rss.xml"/>
+                </outline>
+                <outline title="Evangelical">
+                  <outline title="Analogical Thoughts" xmlUrl="https://www.proginosko.com/feed"/>
+                </outline>
+                <outline title="The ILIAD Forum" xmlUrl="https://www.iliadforum.com/blog-feed.xml"/>
+              </outline>
+            </outline>
+          </outline>
+          <outline title="Person / Group Based">
+            <outline title="Raw Thought (from Aaron Swartz)" xmlUrl="http://www.aaronsw.com/weblog/index.xml"/>
+            <outline title="Dan Wang" xmlUrl="https://danwang.co/feed"/>
+            <outline title="Slate Star Codex" xmlUrl="https://slatestarcodex.com/feed"/>
+              <outline title="**Recommended**">
+                <outline title="Unknown" xmlUrl="https://slatestarcodex.com/2014/07/30/meditations-on-moloch/"/>
+              </outline>
+            <outline title="Unknown" xmlUrl="https://zerohplovecraft.wordpress.com/feed"/>
+            <outline title="The Last Psychiatrist" xmlUrl="http://feeds.feedburner.com/thelastpsychiatrist/fLMy?format=xml"/>
+            <outline title="Marginal Revolution" xmlUrl="https://feeds.feedblitz.com/marginalrevolution&amp;x=1"/>
+            <outline title="Fantastic Anachronism" xmlUrl="https://fantasticanachronism.com/atom.xml"/>
+            <outline title="Nintil" xmlUrl="https://nintil.com/rss.xml"/>
+            <outline title="" xmlUrl="https://danluu.com/atom.xml"/>
+            <outline title="ribbonfarm" xmlUrl="https://www.ribbonfarm.com/feed"/>
+            <outline title="Hotel Concierge" xmlUrl="https://hotelconcierge.tumblr.com/rss"/>
+            <outline title="Pirate Wires" xmlUrl="https://www.piratewires.com/feed"/>
+            <outline title="The Boston Diaries" xmlUrl="http://boston.conman.org/bostondiaries.rss"/>
+            <outline title="Milky Eggs" xmlUrl="https://milkyeggs.com/feed/"/>
+            <outline title="Reorx’s Forge" xmlUrl="https://reorx.com/feed.xml"/>
+            <outline title="Fernando Borretti" xmlUrl="https://borretti.me/feed.xml"/>
+            <outline title="Sacha Chua" xmlUrl="https://sachachua.com/blog/feed/"/>
+            <outline title="Unknown" xmlUrl="https://prog21.dadgum.com/atom.xml"/>
+            <outline title="Unknown" xmlUrl="https://dusted.dk"/>
+            <outline title="Substack">
+              <outline title="Astral Codex Ten" xmlUrl="https://astralcodexten.substack.com/feed"/>
+                <outline title="**Recommended**">
+                  <outline title="Heuristics that Almost Always Work" xmlUrl="https://astralcodexten.substack.com/p/heuristics-that-almost-always-work"/>
+                </outline>
+              <outline title="Freddie deBoer" xmlUrl="https://freddiedeboer.substack.com/feed"/>
+                <outline title="**Recommended**">
+                  <outline title="Unknown" xmlUrl="https://freddiedeboer.substack.com/p/planet-of-cops"/>
+                </outline>
+              <outline title="Numb at the Lodge" xmlUrl="https://samkriss.substack.com/feed"/>
+              <outline title="Sasha&apos;s &apos;Newsletter&apos;" xmlUrl="https://sashachapin.substack.com/feed"/>
+              <outline title="Strange Loop Canon" xmlUrl="https://www.strangeloopcanon.com/feed"/>
+              <outline title="The Intrinsic Perspective" xmlUrl="https://erikhoel.substack.com/feed"/>
+              <outline title="Cypherpunk Adventures" xmlUrl="https://octal.substack.com/feed"/>
+              <outline title="Blocked and Reported" xmlUrl="https://www.blockedandreported.org/feed"/>
+              <outline title="Slow Boring" xmlUrl="https://www.slowboring.com/feed"/>
+            </outline>
+          </outline>
+      </outline>
+      <outline title="News">
+          <outline title="Politics">
+            <outline title="Features – FiveThirtyEight" xmlUrl="https://fivethirtyeight.com/features/feed"/>
+          </outline>
+      </outline>
+      <outline title="Webcomics">
+          <outline title="Saturday Morning Breakfast Cereal" xmlUrl="https://www.smbc-comics.com/comic/rss"/>
+      </outline>
+      <outline title="Literary">
+        <outline title="Magazine">
+          <outline title="n+1Articles – n+1" xmlUrl="https://www.nplusonemag.com/feed"/>
+        </outline>
+        <outline title="Zines">
+          <outline title="" xmlUrl="https://www.surfaces.cx/feed"/>
+        </outline>
+      </outline>
+      <outline title="Video">
+        <outline title="YouTube">
+          <outline title="Gaming">
+          </outline>
+          <outline title="Linux">
+            <outline title="DistroTube" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg"/>
+          </outline>
+        </outline>
+      </outline>
+      <outline title="Audio">
+        <outline title="Podcasts">
+          <outline title="Talk Python To Me" xmlUrl="https://talkpython.fm/episodes/rss"/>
+        </outline>
+      </outline>
+  </body>
+</opml>
