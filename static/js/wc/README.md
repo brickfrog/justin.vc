@@ -1,1 +1,0 @@
-Spot for web components
