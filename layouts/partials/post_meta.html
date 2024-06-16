@@ -1,21 +1,35 @@
+{{- if not .Date.IsZero -}}
+<span class="meta-item">
+  <span class="post-date">
+    &#160;{{ .Date | time.Format (default "January 2, 2006" site.Params.DateFormat) }}
+    {{- if (.Param "showModifiedDate") -}}
+    &#160;
+    <b><a href="https://github.com/{{ .Site.Params.githubRepo }}/commits/master/content/{{ .File.Path }}">⟹</a></b>
+    &#160;<u><a href="https://raw.githubusercontent.com/{{ .Site.Params.githubRepo }}/master/content/{{ .File.Path }}">{{ .Lastmod | time.Format (default "January 2, 2006" site.Params.DateFormat) }}</a></u>
+    
+    {{- end }}
+  </span>
+</span>
+{{- end }}
+
 {{- if .Params.tags -}}
-<div class="meta-item">
+<span class="meta-item">
   <span class="post-tags">
     &#160;{{- range ($.GetTerms "tags") -}}
     <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
     {{- end -}}
-  </span></div>
-  <br> 
+  </span>
+</span>
 {{- end }}
 
-{{- if not .Date.IsZero -}}
+{{- if .Params.categories -}}
 <span class="meta-item">
-  <span>
-    &#160;{{ .Date | time.Format (default "January 2, 2006" site.Params.DateFormat) }}
-    {{- if (.Param "showModifiedDate") -}}
-    &#160;–&#160;{{ .Lastmod | time.Format (default "January 2, 2006" site.Params.DateFormat) }}
-    {{- end }}
-    </span></span>
+  <span class="post-categories">
+    &#160;{{- range ($.GetTerms "categories") -}}
+    <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+    {{- end -}}
+  </span>
+</span>
 {{- end }}
 
 {{- if (.Param "ShowWordCount") -}}

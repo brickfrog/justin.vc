@@ -56,7 +56,7 @@ transform: scale(1.01)
   background-color: #f56565; /* bg-red-500 */
 }
 
-.red-dot:hover {
+.red-dot:hover, .yellow-dot:hover {
   cursor: pointer;
 }
 
@@ -88,38 +88,70 @@ transform: scale(1.01)
   color: var(--link-hover-color);
 }
 
-  </style>
+.collapsed {
+  max-height: 20px; /* Adjust as needed for a visible indicator */
+  overflow: hidden;
+  opacity: 0.5; /* Make it semi-transparent */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.indicator {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.collapsed .indicator {
+  content: " ▼"; 
+}
+
+.expanded .indicator {
+  content: " ▲"; 
+}
+
+</style>
 </head>
 
 <body>
   <div class="parent-container" id="parentContainer">
     <aside class="custom-aside">
-    <div class="flex-container">
-      <div class="dots">
-        <a href="https://justin.vc"><div class="dot green-dot"></div></a>
-        <div class="dot yellow-dot"></div>
-        <div class="dot red-dot" onclick="hideParentContainer()"></div>
+      <div class="flex-container">
+        <div class="dots">
+          <div class="dot green-dot"></div>
+          <div class="dot yellow-dot" onclick="toggleCollapse()"></div>
+          <div class="dot red-dot" onclick="hideParentContainer()"></div>
+        </div>
+        <p class="appname">doom-emacs<span class="indicator"></span></p>
       </div>
-      <p class="appname">doom-emacs</p>
-    </div>
-    <div class="command-container">      
-      <!-- Google Doc Embed Here -->
-      <div id="google-doc-container"></div>
-    </div>
-    <div class="footer-container">
-      <p class="quit">:wq</p>
-      <p class="quit">~/.org/plan.org</p>
-    </div>
-  </aside>
-  </div>
-
+      <div class="command-container" id="collapsibleContent">
+        <!-- Google Doc Embed Here -->
+        <div id="google-doc-container"></div>
+      </div>
+      <div class="footer-container">
+        <p class="quit">:wq</p>
+        <p class="quit">~/.org/plan.org</p>
+      </div>
+    </aside>
+  </div>  
 </body>
-<script>
 
-function hideParentContainer() {
+<script>
+  function toggleCollapse() {
+    const content = document.getElementById('collapsibleContent');
+    if (content.classList.contains('collapsed')) {
+      content.classList.remove('collapsed');
+      content.classList.add('expanded');
+    } else {
+      content.classList.remove('expanded');
+      content.classList.add('collapsed');
+    }
+  }
+
+  function hideParentContainer() {
     const container = document.getElementById('parentContainer');
     container.style.display = 'none';
-}
+  }
 
   async function fetchAndInsertGoogleDocHTML() {
     const localStorageData = JSON.parse(localStorage.getItem('googleDocHTML') || '{}');
@@ -196,9 +228,10 @@ function hideParentContainer() {
     shadowRoot.appendChild(newStyle);
   }
 
-
   // Call the function on page load
   window.addEventListener('DOMContentLoaded', fetchAndInsertGoogleDocHTML);
 </script>
+
+
 
 </html>
