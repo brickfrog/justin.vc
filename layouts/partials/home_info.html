@@ -1,7 +1,5 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
-  <header class="entry-header">
-  </header>
   <section class="entry-footer">
     {{- partial "social_icons.html" (dict "icons" site.Params.socialIcons "svg" $.Site.Data.svg "MaskedEmail"
     site.Params.MaskedEmail "Email" site.Params.Email) -}}
