@@ -1,8 +1,8 @@
 +++
-title = "Blog Roll"
+title = "Links"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2024-01-28T07:13:22-05:00
+lastmod = 2024-06-15T19:22:19-04:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -15,10 +15,12 @@ site. I could probably stand to clean this up, but still it shows the stuff I
 watch in my reader. It exports when I save, so it should be pretty much to
 date.
 
-Because this is primarily for feed-reading, most of the links are to feeds
-that I (tried) to regex back into normal links. I would also note that it's in no
-particular order. I basically just toss them into the RSS if I find or two posts
-I think are neat. Future goal is to organize better, but eh.
+I'm also (trying to) put a blurb or such on how I found the blog or add the
+context for why I added it. Because this is primarily for feed-reading, most of
+the links are to feeds that I tried to regex back into normal links.
+
+If for some reason you're interested in subsuming my feeds, I keep a copy of the
+[.opml file](<https://github.com/brickfrog/justin.vc/blob/master/static/feed.opml>) on github.
 
 <div class="outline-1nil">
 
@@ -32,9 +34,8 @@ I think are neat. Future goal is to organize better, but eh.
 
 -  Dev / Software
 
-    Love hate relationships with these sites, but the gems I wander into from them
-    are worth the 95% of self-aggrandizing. I usually put them in their own topic so they
-    don't clutter up my feeds.
+    Love hate relationships with these sites, but the gems are worth it. Avoid the
+    comments (mostly).
 
     <!--list-separator-->
 
@@ -68,7 +69,7 @@ I think are neat. Future goal is to organize better, but eh.
 
             -  <https://snarky.ca>
 
-                Lots of neat python implementation posts.
+                -   Lots of neat python implementation posts.
 
         <!--list-separator-->
 
@@ -94,14 +95,14 @@ I think are neat. Future goal is to organize better, but eh.
 
             -  <https://txt.cohere.ai/rss/>
 
-                Company based blog - has their own product, but seems to have decent amounts of
-                discussion and linking to ML papers that are relevant.
+                -   Company based blog - has their own product, but seems to have decent amounts
+                    of discussion and linking to ML papers that are relevant.
 
             <!--list-separator-->
 
             -  <https://developer.nvidia.com/blog/tag/technical-walkthrough/feed/>
 
-                NVIDIA's "technical blog" which is primarily hands-on and examples.
+                -   NVIDIA's "technical blog" which is primarily hands-on and examples.
 
         <!--list-separator-->
 
@@ -115,14 +116,13 @@ I think are neat. Future goal is to organize better, but eh.
 
         -  Data
 
-            This topic is more of a catchall for analytics and general data topics. Be it discussion
-            on databases or just general analytics topics such as SQL / OLAP queries, etc.
+            -   This topic is more of a catchall for analytics and general data topics. Be it discussion on databases or just general analytics topics such as SQL / OLAP queries, etc.
 
             <!--list-separator-->
 
             -  <https://motherduck.com>
 
-                Looks to be the blog/site associated with enterprise duckdb. Pretty neat.
+                -   Looks to be the blog/site associated with enterprise duckdb. Pretty neat.
 
     <!--list-separator-->
 
@@ -132,7 +132,7 @@ I think are neat. Future goal is to organize better, but eh.
 
         -  <https://statisticsbyjim.com>
 
-            Moderately rudimentary stuff, but I think it's worth a refresher every now and then.
+            -   Moderately rudimentary stuff, but I think it's worth a refresher every now and then.
 
     <!--list-separator-->
 
@@ -170,11 +170,11 @@ I think are neat. Future goal is to organize better, but eh.
 
             -  <https://www.iliadforum.com>
 
-                Database of questions about Christianity.
+                -   Database of questions about Christianity.
 
 <!--list-separator-->
 
--  Person / Group Based
+-  Person
 
     Blogs centered around a specific writer/group. Things I've wandered into
     and liked at least one article/story.
@@ -183,12 +183,25 @@ I think are neat. Future goal is to organize better, but eh.
 
     -  <http://www.aaronsw.com/weblog/index.xml>
 
-        Aaron Swartz's old blog. (RIP) - even though it's not updated, I like keeping it around
-        on my reader. I sometimes go back to read his old posts.
+        -   Aaron Swartz's old blog. (RIP) - even though it's not updated, I like keeping
+            it around on my reader. I sometimes go back to read his old posts.
+
+    <!--list-separator-->
+
+    -  <https://www.cam.fyi>
+
+        -   Cam. I played on their minecraft server one time.
 
     <!--list-separator-->
 
     -  <https://danwang.co>
+
+    <!--list-separator-->
+
+    -  <http://bactra.org/notebooks/index.rss>
+
+        -   Cosma. I think I found via one of Rao's links. Physics professor. Good link
+            jumping point due to recommended / not links.
 
     <!--list-separator-->
 
@@ -242,14 +255,15 @@ I think are neat. Future goal is to organize better, but eh.
 
     -  <http://boston.conman.org/index.atom>
 
-        A blog I found while reading about the gemini protocol. Seems a bit cantankerous
+        -   A blog I found while reading about the gemini protocol. Seems a bit cantankerous
+
         but I dig the vibe.
 
     <!--list-separator-->
 
     -  <https://milkyeggs.com>
 
-        fbifemboy's blog ( don't ask )
+        -   fbifemboy's blog, stopped updating, I think
 
     <!--list-separator-->
 
@@ -267,41 +281,41 @@ I think are neat. Future goal is to organize better, but eh.
 
     -  <https://prog21.dadgum.com/atom.xml>
 
-        "Programming" / thoughts-on tech blog that I like, it's no longer updated but
+        -   "Programming" / thoughts-on tech blog that I like, it's no longer updated but
+
         there's some gems.
 
     <!--list-separator-->
 
     -  <https://dusted.dk>
 
-        no RSS(? - I think, I didn't look too hard) - broken up into different sections,
-        still neat.
+        -   no RSS(? - I think, I didn't look too hard) - broken up into different
+            sections, still neat.
 
     <!--list-separator-->
 
     -  <https://ludic.mataroa.blog>
 
-        saw their rant on agile via another site I read - good!
+        -   saw their rant on agile via another site I read - good!
 
     <!--list-separator-->
 
     -  <https://blog.dornea.nu>
 
-        another emacs blogger - remember running into his blog several times while I was
-        doing elfeed config edits
+        -   another emacs blogger - remember running into his blog several times while I
+            was doing elfeed config edits
 
     <!--list-separator-->
 
     -  <https://nonint.com/feed/>
 
-        James Betker's blog, of Google/OpenAI(?)- mostly posts on machine learning.
+        -   James Betker's blog, of Google/OpenAI(?)- mostly posts on machine learning.
 
     <!--list-separator-->
 
     -  <https://journal.stuffwithstuff.com/rss.xml>
 
-        Wrote an (apparently - I need to read it) on programming language design /
-        interpreters.
+        -   Wrote an (apparently - I need to read it) on programming language design / interpreters.
 
 <!--list-separator-->
 
@@ -355,7 +369,7 @@ I think are neat. Future goal is to organize better, but eh.
 
     -  <https://www.blockedandreported.org>
 
-        This is a podcast, but it's sometimes there's supplementary info that's in the posts.
+        -   This is a podcast, but it's sometimes there's supplementary info that's in the posts.
 
     <!--list-separator-->
 
@@ -365,13 +379,13 @@ I think are neat. Future goal is to organize better, but eh.
 
     -  <https://www.infinitescroll.us>
 
-        Jeremiah Johnson's substack, familiar with him via the Neoliberal project.
+        -   Jeremiah Johnson's substack, familiar with him via the Neoliberal project.
 
     <!--list-separator-->
 
     -  <https://www.fromthenew.world>
 
-        Brian Chau's writing
+        -   Brian Chau's writing
 
 </div>
 
@@ -421,7 +435,7 @@ etc. etc. - differentiating profit/mainstream with the magazine vs. zine distinc
 
 -  <https://www.surfaces.cx>
 
-    An "open literary arts platform"
+    -   An "open literary arts platform"
 
 </div>
 
@@ -445,5 +459,17 @@ emacs but it seemed fiddly.
 </div>
 
 </div>
+
+</div>
+
+<div class="outline-1nil">
+
+## Other {#other}
+
+These are not necessarily feeds, but listings of things I've read that might be
+worth keeping track of for others / things I've deemed important enough to read
+more than once but don't have a feed associated.
+
+1.  <https://equilibriabook.com>
 
 </div>
