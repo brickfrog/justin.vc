@@ -186,7 +186,7 @@ p.timestamp-wrapper {
   margin-right: 0.5em;
 }
 
-/* EOF */
+/* Dingbat & EOF */
 
 .post-content::after {
   content: "EOF";
@@ -197,6 +197,15 @@ p.timestamp-wrapper {
   display: block;
   text-align: center;
   padding-top: 0.5em;
+}
+
+.dingbat {
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #666;
+  display: block;
+  text-align: center;
+  padding: 0.5em;
 }
 
 

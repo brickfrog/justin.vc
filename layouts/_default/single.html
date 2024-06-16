@@ -18,6 +18,10 @@
       {{/* partial "edit_post.html" . */}}
       {{/* partial "post_canonical.html" . */}}
     </div>
+
+    {{- if (.Param "ShowDingbat") -}}
+    <div class="dingbat">🙞</div>
+    {{- end -}}
     {{- end }}
   {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
