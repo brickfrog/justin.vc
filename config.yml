@@ -37,6 +37,7 @@ params:
   TocSide: "left" # note that this switches sidenotes to opposite of toc
   noHeaderTitle: true # if you don't want a title in the header / replace with manual
 
+  ShowDingbat: true
   ShowReadingTime: false
   ShowShareButtons: true
   ShowPostNavLinks: true
