@@ -2,7 +2,7 @@
 title = "Links"
 author = ["Justin"]
 date = 2022-06-19
-lastmod = 2024-06-15T19:22:19-04:00
+lastmod = 2024-06-17T06:57:38-04:00
 draft = false
 ShowReadingTime = false
 ShowWordCount = false
@@ -53,13 +53,52 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
 
 <!--list-separator-->
 
--  Topic Based
+-  Topic
 
     Self-explanatory, sites that are less person-focused and more on the topic.
+    Generally has multiple authors or a company site.
 
     <!--list-separator-->
 
     -  Software / Programming
+
+        <!--list-separator-->
+
+        -  Data
+
+            -   This topic is more of a catchall for analytics and general data topics. Be it discussion on databases or just general analytics topics such as SQL / OLAP queries, etc.
+
+            <!--list-separator-->
+
+            -  <https://motherduck.com>
+
+                -   Looks to be the blog/site associated with enterprise duckdb. Pretty neat.
+
+        <!--list-separator-->
+
+        -  Emacs
+
+            <!--list-separator-->
+
+            -  <https://emacsredux.com>
+
+        <!--list-separator-->
+
+        -  General
+
+            <!--list-separator-->
+
+            -  <https://hackaday.com/blog/feed>
+
+        <!--list-separator-->
+
+        -  Machine Learning
+
+            <!--list-separator-->
+
+            -  <https://developer.nvidia.com/blog/tag/technical-walkthrough/feed/>
+
+                -   NVIDIA's "technical blog" which is primarily hands-on and examples.
 
         <!--list-separator-->
 
@@ -78,51 +117,6 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
             <!--list-separator-->
 
             -  <https://this-week-in-rust.org/rss.xml>
-
-        <!--list-separator-->
-
-        -  Emacs
-
-            <!--list-separator-->
-
-            -  <https://emacsredux.com>
-
-        <!--list-separator-->
-
-        -  Machine Learning
-
-            <!--list-separator-->
-
-            -  <https://txt.cohere.ai/rss/>
-
-                -   Company based blog - has their own product, but seems to have decent amounts
-                    of discussion and linking to ML papers that are relevant.
-
-            <!--list-separator-->
-
-            -  <https://developer.nvidia.com/blog/tag/technical-walkthrough/feed/>
-
-                -   NVIDIA's "technical blog" which is primarily hands-on and examples.
-
-        <!--list-separator-->
-
-        -  General
-
-            <!--list-separator-->
-
-            -  <https://hackaday.com/blog/feed>
-
-        <!--list-separator-->
-
-        -  Data
-
-            -   This topic is more of a catchall for analytics and general data topics. Be it discussion on databases or just general analytics topics such as SQL / OLAP queries, etc.
-
-            <!--list-separator-->
-
-            -  <https://motherduck.com>
-
-                -   Looks to be the blog/site associated with enterprise duckdb. Pretty neat.
 
     <!--list-separator-->
 
@@ -166,6 +160,9 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
 
                 -  <https://www.proginosko.com>
 
+                    -   Creator of leechblock NG (not really realated to the content, but it's how I
+                        found his site.)
+
             <!--list-separator-->
 
             -  <https://www.iliadforum.com>
@@ -181,20 +178,10 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
 
     <!--list-separator-->
 
-    -  <http://www.aaronsw.com/weblog/index.xml>
+    -  <http://aaronsw.com/weblog/index.xml>
 
         -   Aaron Swartz's old blog. (RIP) - even though it's not updated, I like keeping
             it around on my reader. I sometimes go back to read his old posts.
-
-    <!--list-separator-->
-
-    -  <https://www.cam.fyi>
-
-        -   Cam. I played on their minecraft server one time.
-
-    <!--list-separator-->
-
-    -  <https://danwang.co>
 
     <!--list-separator-->
 
@@ -202,6 +189,120 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
 
         -   Cosma. I think I found via one of Rao's links. Physics professor. Good link
             jumping point due to recommended / not links.
+
+    <!--list-separator-->
+
+    -  <http://boston.conman.org/index.atom>
+
+        -   A blog I found while reading about the gemini protocol. Seems a bit cantankerous
+
+        but I dig the vibe.
+
+    <!--list-separator-->
+
+    -  <http://feeds.feedburner.com/thelastpsychiatrist/fLMy?format=xml>
+
+    <!--list-separator-->
+
+    -  <https://blog.dornea.nu>
+
+        -   another emacs blogger - remember running into his blog several times while I
+            was doing elfeed config edits
+
+    <!--list-separator-->
+
+    -  <https://borretti.me>
+
+    <!--list-separator-->
+
+    -  <https://cam.fyi>
+
+        -   Cam. I played on their minecraft server one time.
+
+    <!--list-separator-->
+
+    -  <https://cliffle.com/rss.xml>
+
+        -   Has some other things, but found via rust discussion on the typestate pattern.
+
+    <!--list-separator-->
+
+    -  <https://danluu.com>
+
+    <!--list-separator-->
+
+    -  <https://danwang.co>
+
+    <!--list-separator-->
+
+    -  <https://dusted.dk>
+
+        -   no RSS(? - I think, I didn't look too hard) - broken up into different
+            sections, still neat.
+
+    <!--list-separator-->
+
+    -  <https://fantasticanachronism.com>
+
+    <!--list-separator-->
+
+    -  <https://feeds.feedblitz.com/marginalrevolution&x=1>
+
+    <!--list-separator-->
+
+    -  <https://hotelconcierge.tumblr.com/rss>
+
+    <!--list-separator-->
+
+    -  <https://journal.stuffwithstuff.com/rss.xml>
+
+        -   Wrote an (apparently - I need to read it) on programming language design / interpreters.
+
+    <!--list-separator-->
+
+    -  <https://ludic.mataroa.blog>
+
+        -   saw their rant on agile via another site I read - good!
+
+    <!--list-separator-->
+
+    -  <https://milkyeggs.com>
+
+        -   fbifemboy's blog, stopped updating, I think
+
+    <!--list-separator-->
+
+    -  <https://nintil.com>
+
+    <!--list-separator-->
+
+    -  <https://nonint.com/feed/>
+
+        -   James Betker's blog, of Google/OpenAI(?)- mostly posts on machine learning.
+
+    <!--list-separator-->
+
+    -  <https://piratewires.com>
+
+    <!--list-separator-->
+
+    -  <https://prog21.dadgum.com/atom.xml>
+
+        -   "Programming" / thoughts-on tech blog that I like, it's no longer updated but
+
+        there's some gems.
+
+    <!--list-separator-->
+
+    -  <https://reorx.com/feed.xml>
+
+    <!--list-separator-->
+
+    -  <https://ribbonfarm.com>
+
+    <!--list-separator-->
+
+    -  <https://sachachua.com/blog/feed/>
 
     <!--list-separator-->
 
@@ -214,108 +315,6 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
             <!--list-separator-->
 
             -  <https://slatestarcodex.com/2014/07/30/meditations-on-moloch/>
-
-    <!--list-separator-->
-
-    -  <https://zerohplovecraft.wordpress.com>
-
-    <!--list-separator-->
-
-    -  <http://feeds.feedburner.com/thelastpsychiatrist/fLMy?format=xml>
-
-    <!--list-separator-->
-
-    -  <https://feeds.feedblitz.com/marginalrevolution&x=1>
-
-    <!--list-separator-->
-
-    -  <https://fantasticanachronism.com>
-
-    <!--list-separator-->
-
-    -  <https://nintil.com>
-
-    <!--list-separator-->
-
-    -  <https://danluu.com>
-
-    <!--list-separator-->
-
-    -  <https://www.ribbonfarm.com>
-
-    <!--list-separator-->
-
-    -  <https://hotelconcierge.tumblr.com/rss>
-
-    <!--list-separator-->
-
-    -  <https://www.piratewires.com>
-
-    <!--list-separator-->
-
-    -  <http://boston.conman.org/index.atom>
-
-        -   A blog I found while reading about the gemini protocol. Seems a bit cantankerous
-
-        but I dig the vibe.
-
-    <!--list-separator-->
-
-    -  <https://milkyeggs.com>
-
-        -   fbifemboy's blog, stopped updating, I think
-
-    <!--list-separator-->
-
-    -  <https://reorx.com/feed.xml>
-
-    <!--list-separator-->
-
-    -  <https://borretti.me>
-
-    <!--list-separator-->
-
-    -  <https://sachachua.com/blog/feed/>
-
-    <!--list-separator-->
-
-    -  <https://prog21.dadgum.com/atom.xml>
-
-        -   "Programming" / thoughts-on tech blog that I like, it's no longer updated but
-
-        there's some gems.
-
-    <!--list-separator-->
-
-    -  <https://dusted.dk>
-
-        -   no RSS(? - I think, I didn't look too hard) - broken up into different
-            sections, still neat.
-
-    <!--list-separator-->
-
-    -  <https://ludic.mataroa.blog>
-
-        -   saw their rant on agile via another site I read - good!
-
-    <!--list-separator-->
-
-    -  <https://blog.dornea.nu>
-
-        -   another emacs blogger - remember running into his blog several times while I
-            was doing elfeed config edits
-
-    <!--list-separator-->
-
-    -  <https://nonint.com/feed/>
-
-        -   James Betker's blog, of Google/OpenAI(?)- mostly posts on machine learning.
-
-    <!--list-separator-->
-
-    -  <https://journal.stuffwithstuff.com/rss.xml>
-
-        -   Wrote an (apparently - I need to read it) on programming language design / interpreters.
 
 <!--list-separator-->
 
@@ -335,6 +334,10 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
 
     <!--list-separator-->
 
+    -  <https://erikhoel.substack.com>
+
+    <!--list-separator-->
+
     -  <https://freddiedeboer.substack.com>
 
         <!--list-separator-->
@@ -347,23 +350,15 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
 
     <!--list-separator-->
 
+    -  <https://octal.substack.com>
+
+    <!--list-separator-->
+
     -  <https://samkriss.substack.com>
 
     <!--list-separator-->
 
     -  <https://sashachapin.substack.com>
-
-    <!--list-separator-->
-
-    -  <https://www.strangeloopcanon.com>
-
-    <!--list-separator-->
-
-    -  <https://erikhoel.substack.com>
-
-    <!--list-separator-->
-
-    -  <https://octal.substack.com>
 
     <!--list-separator-->
 
@@ -373,7 +368,9 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
 
     <!--list-separator-->
 
-    -  <https://www.slowboring.com>
+    -  <https://www.fromthenew.world>
+
+        -   Brian Chau's writing
 
     <!--list-separator-->
 
@@ -383,9 +380,11 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
 
     <!--list-separator-->
 
-    -  <https://www.fromthenew.world>
+    -  <https://www.slowboring.com>
 
-        -   Brian Chau's writing
+    <!--list-separator-->
+
+    -  <https://www.strangeloopcanon.com>
 
 </div>
 
