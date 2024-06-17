@@ -56,7 +56,7 @@ params:
   
   hideMeta: false
   hideMetaList: false
-  hideSummary: false
+  hideSummary: true
   
   summaryLength: 50
   
