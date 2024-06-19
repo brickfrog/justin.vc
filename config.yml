@@ -104,7 +104,7 @@ params:
       url: "mailto:contact+home@justin.vc"
 
   defaultCommentSystems:
-    utterances: true
+    giscus: true
 
   commentSystems:
     utterances:
@@ -112,6 +112,14 @@ params:
       issue: pathname
       label: comment
       theme: preferred-color-scheme
+    giscus:
+      repo: "brickfrog/justin.vc"
+      repoid: "R_kgDOHssjcQ"
+      category: "General"
+      categoryID: "DIC_kwDOHssjcc4CgLxH"
+      inputposition: "bottom"
+      theme: "https://justin.vc/themes/theme.css"
+      lang: "en"
 
   logo:
     text: "justin.vc"
