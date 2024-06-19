@@ -27,7 +27,7 @@ params:
   title: justin.vc
   description: "Justin's writing(s)."
   keywords: [Blog, Portfolio, PaperMod]
-  author: Justin Malloy
+  author: justin.vc
   images: ["<link or path of image for opengraph, twitter-cards>"]
   favicon: earthbound-globe.png
   DateFormat: "2006/01/02"
@@ -65,21 +65,13 @@ params:
   
   showsidelinks: true
   
-  single_template: "single2.html"
+  single_template: "single.html"
 
   mainSections:
     - posts # main section for posts, ignoring notes
 
   taxonomies:
     category: "categories"
-
-  contentTypes:
-  - name: "notes"
-    description: "Notes"
-    singular: "note"
-    plural: "notes"
-    icon: "note"
-    layout: "single2.html"
   
   socialIcons:
     - name: rss
@@ -147,11 +139,7 @@ params:
     #  Title: "micro.justin.vc"
     #  Subtitle:  last 10 posts from micro.blog
     Content: >
-      <div>Mostly for tinkering around. I'm not really good at <s>longform</s> writing so most of my
-      posts are about random technical things I've wandered into. With the rise of LLMs
-      most shallow things are (with some effort) solvable. An excuse to get into novel
-      domains, I suppose.</div><br>
-
+      <div>Mostly for tinkering around, technical things I've wandered into, and notes.</div><br>
       <div>我正在学习中文，很快可能会用中文发更多内容。</div>
 
       <p style="display: none;">

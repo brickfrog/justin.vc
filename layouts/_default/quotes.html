@@ -23,7 +23,8 @@
 <button id="jump-button" class="button">Random Quote</button>
 </div>
 
-<table id="table-id">
+<article class="post-content">
+<table id="table-id" class="post-content">
   <tr>
     <th onclick="sortTable(0)">Title</th>
     <th onclick="sortTable(1)">Date</th>
@@ -42,6 +43,7 @@
   {{ end }}
   {{ end }}
 </table>
+</article>
 </article>
 
 <script>
@@ -179,11 +181,6 @@ td.quote {
 
 td.date {
   padding-right: 2em;
-}
-
-/* for post page */
-.main.post {
-    max-width: 90%;
 }
 
 td.quote:hover {

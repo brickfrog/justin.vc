@@ -1,12 +1,12 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
+  {{- if .Horizontal.Enabled }}
+  {{- partial "home_info_horizontal.html" -}}
+  {{- end -}}
   <section class="entry-footer">
     {{- partial "social_icons.html" (dict "icons" site.Params.socialIcons "svg" $.Site.Data.svg "MaskedEmail"
     site.Params.MaskedEmail "Email" site.Params.Email) -}}
   </section>
-  {{- if .Horizontal.Enabled }}
-  {{- partial "home_info_horizontal.html" -}}
-  {{- end -}}
   <section class="entry-content">
     {{- trim .Content "\n" | markdownify -}}
   </section>
