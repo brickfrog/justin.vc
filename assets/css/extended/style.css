@@ -229,7 +229,7 @@ p.timestamp-wrapper {
 body {
   font-family: 'Geist', sans-serif;
   font-size: 15px;
-  line-height: 1.55em;
+  line-height: 1.6em;
   word-break: break-word;
   background: var(--theme);
 }
