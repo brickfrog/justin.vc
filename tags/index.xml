@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on justin.vc</title>
+    <link>https://justin.vc/tags/</link>
+    <description>Recent content in Tags on justin.vc</description>
+    <image>
+      <url>https://justin.vc/</url>
+      <link>https://justin.vc/</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://justin.vc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elfeed</title>
+      <link>https://justin.vc/tags/elfeed/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://justin.vc/tags/elfeed/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Emacs</title>
+      <link>https://justin.vc/tags/emacs/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://justin.vc/tags/emacs/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Youtube</title>
+      <link>https://justin.vc/tags/youtube/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://justin.vc/tags/youtube/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Doom-Emacs</title>
+      <link>https://justin.vc/tags/doom-emacs/</link>
+      <pubDate>Tue, 21 Feb 2023 12:33:00 -0500</pubDate>
+      
+      <guid>https://justin.vc/tags/doom-emacs/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Org</title>
+      <link>https://justin.vc/tags/org/</link>
+      <pubDate>Tue, 21 Feb 2023 12:33:00 -0500</pubDate>
+      
+      <guid>https://justin.vc/tags/org/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Org-Agenda</title>
+      <link>https://justin.vc/tags/org-agenda/</link>
+      <pubDate>Tue, 21 Feb 2023 12:33:00 -0500</pubDate>
+      
+      <guid>https://justin.vc/tags/org-agenda/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Pandoc</title>
+      <link>https://justin.vc/tags/pandoc/</link>
+      <pubDate>Mon, 08 Aug 2022 15:30:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/pandoc/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Panflute</title>
+      <link>https://justin.vc/tags/panflute/</link>
+      <pubDate>Mon, 08 Aug 2022 15:30:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/panflute/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Tiddlywiki</title>
+      <link>https://justin.vc/tags/tiddlywiki/</link>
+      <pubDate>Mon, 08 Aug 2022 15:30:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/tiddlywiki/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Data-Science</title>
+      <link>https://justin.vc/tags/data-science/</link>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/data-science/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Kedro</title>
+      <link>https://justin.vc/tags/kedro/</link>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/kedro/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://justin.vc/tags/python/</link>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/python/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://justin.vc/tags/hugo/</link>
+      <pubDate>Sat, 16 Jul 2022 02:31:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/hugo/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Org-Roam</title>
+      <link>https://justin.vc/tags/org-roam/</link>
+      <pubDate>Sat, 16 Jul 2022 02:31:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/tags/org-roam/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

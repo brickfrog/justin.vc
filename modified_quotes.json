@@ -1,0 +1,3362 @@
+[
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://concurrencyfreaks.blogspot.com/&sz=64",
+    "last_update": 1693491951475,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1693491951475,
+        "text": "Most\npeople are capable of having ideas, but most\nideas are useless, either because they have already been discovered, or\nbecause they are wrong, or because they lack understanding of important\ndetails. "
+      }
+    ],
+    "title": "Concurrency Freaks",
+    "url": "http://concurrencyfreaks.blogspot.com/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://hintjens.com/blog:125&sz=64",
+    "last_update": 1698426926321,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1698426926321,
+        "text": "It took me decades to realize that technology is a slave to personality. It doesn't matter how good the design, when there are unresolved problems in the organization."
+      }
+    ],
+    "title": "Confessions of a Necromancer - Hintjens.com",
+    "url": "http://hintjens.com/blog:125"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://n-gate.com/software/2017/07/12/0/&sz=64",
+    "last_update": 1696194618374,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1696194618374,
+        "text": "I do not give a shit about SEO and I fervently wish for the speedy retirement of everyone who does.  SEO shitbags rank with email spammers as the absolute lowest pigshit dirtfuck dregs of humanity. "
+      }
+    ],
+    "title": "n-gate.com. we can't both be right.",
+    "url": "http://n-gate.com/software/2017/07/12/0/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://wiki.c2.com/?GreenspunsTenthRuleOfProgramming&sz=64",
+    "last_update": 1657016804004,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1657016804004,
+        "text": "Every sufficiently complex application/language/tool will either have to use Lisp or reinvent it the hard way."
+      }
+    ],
+    "title": "Greenspuns Tenth Rule Of Programming",
+    "url": "http://wiki.c2.com/?GreenspunsTenthRuleOfProgramming"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://www.aaronsw.com/weblog/hatethenews&sz=64",
+    "last_update": 1673969616556,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1673969616556,
+        "text": "Most people’s major life changes don’t come from reading an article in the newspaper; they come from reading longer-form essays or thoughtful books, which are much more convincing and detailed."
+      },
+      {
+        "comment": "",
+        "date": 1665005685576,
+        "text": "There is voting, of course, but to become an informed voter all one needs to do is read a short guide about the candidates and issues before the election. There’s no need to have to suffer through the daily back-and-forth of allegations and counter-allegations, of scurrilous lies and their refutations. Indeed, reading a voter’s guide is much better: there’s no recency bias (where you only remember the crimes reported in the past couple months), you get to hear both sides of the story after the investigation has died down, you can actually think about the issues instead of worrying about the politics."
+      }
+    ],
+    "title": "I Hate the News (Aaron Swartz's Raw Thought)",
+    "url": "http://www.aaronsw.com/weblog/hatethenews"
+  },
+  {
+    "author": "Arne Babenhauserheide",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://www.draketo.de/proj/py2guile/&sz=64",
+    "last_update": 1657016562394,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1657016562395,
+        "text": "“All Turing-complete languages differ solely in syntactic sugar.” \n— Michele Simionato in <a href=\"http://www.phyast.pitt.edu/~micheles/scheme/\" target=\"_blank\" rel=\"noopener\">The Adventures of a Pythonista in Schemeland</a>"
+      }
+    ],
+    "title": "Going from Python to Guile Scheme",
+    "url": "http://www.draketo.de/proj/py2guile/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://www.paulgraham.com/cornpone.html&sz=64",
+    "last_update": 1666036473446,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1666036473446,
+        "text": "A political emergency brings out the corn-pone opinion in fine force in its two chief varieties -- the pocketbook variety, which has its origin in self-interest, and the bigger variety, the sentimental variety -- the one which can't bear to be outside the pale; can't bear to be in disfavor; can't endure the averted face and the cold shoulder; wants to stand well with his friends, wants to be smiled upon, wants to be welcome, wants to hear the precious words, \"He's on the right track!\" Uttered, perhaps by an ass, but still an ass of high degree, an ass whose approval is gold and diamonds to a smaller ass, and confers glory and honor and happiness, and membership in the herd. For these gauds many a man will dump his life-long principles into the street, and his conscience along with them. We have seen it happen. In some millions of instances."
+      }
+    ],
+    "title": "Mark Twain: Corn-pone Opinions",
+    "url": "http://www.paulgraham.com/cornpone.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://www.paulgraham.com/makersschedule.html&sz=64",
+    "last_update": 1675394684954,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1675394684954,
+        "text": "One reason programmers dislike meetings so much is that they're on\na different type of schedule from other people.  Meetings cost them\nmore."
+      }
+    ],
+    "title": "Maker's Schedule, Manager's Schedule",
+    "url": "http://www.paulgraham.com/makersschedule.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=http://www.tinyrevolution.com/mt/archives/001705.html&sz=64",
+    "last_update": 1677508320786,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677508320786,
+        "text": "The Iron Law of Institutions is: the people who control institutions care first and foremost about their power within the institution rather than the power of the institution itself. Thus, they would rather the institution \"fail\" while they remain in power within the institution than for the institution to \"succeed\" if that requires them to lose power within the institution."
+      }
+    ],
+    "title": "A Tiny Revolution: Democrats And The Iron Law Of Institutions",
+    "url": "http://www.tinyrevolution.com/mt/archives/001705.html"
+  },
+  {
+    "author": "@AniListco",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://anilist.co/review/16550&sz=64",
+    "last_update": 1712609914454,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1712609914455,
+        "text": "I saw one review on MAL mention that this manga was made for people who think \"im14andthisisdeep\" posts are actually deep, and they were saying that as a point of derision but also they were right. Yakedo is for 14 year old edgelords ,and I think that's great. Teenagers deserve to have their suffering taken seriously and edge deserves to be examined as any other narrative technique would be."
+      }
+    ],
+    "title": "Yakedo Shoujo Review",
+    "url": "https://anilist.co/review/16550"
+  },
+  {
+    "author": "@AniListco",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://anilist.co/review/16883&sz=64",
+    "last_update": 1705624503434,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1705624503434,
+        "text": "There are four Eva endings. They all push the same shit (it’s worth loving people even though they hurt you) (don’t run away from your problems) (probably best not to become fanta gloop) (just fucking go outside ok)."
+      }
+    ],
+    "title": "Neon Genesis Evangelion Review",
+    "url": "https://anilist.co/review/16883"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/book-review-san-fransicko&sz=64",
+    "last_update": 1656598983537,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1656598983537,
+        "text": "The old saying talks about the man who “uses statistics the way a drunk uses a streetlight; for support rather than illumination”."
+      },
+      {
+        "comment": "",
+        "date": 1656598851567,
+        "text": "  that most of the damage from urban dysfunction <em>isn’t</em> overt crime. It’s litter, graffiti, literal broken windows, parks that smell like marijuana and are strewn with used needles. People blasting loud music in public places or residential streets at all hours of the night. People staying away from mass transit transportation or public parks or any public spaces at all because they know they’ll be yelled at and harassed or just have to deal with a low-grade miasma of disgust over everything, preventing a real Jane-Jacobs-style civic life from ever taking shape. Class segregation, because anyone who can get out of the dysfunctional areas is desperate to do that. The fall of civic pride, because cities get hard to be proud of."
+      }
+    ],
+    "title": "Book Review: San Fransicko",
+    "url": "https://astralcodexten.substack.com/p/book-review-san-fransicko"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/book-review-the-man-from-the-future?utm_medium=reader2&sz=64",
+    "last_update": 1657675842649,
+    "quotes": [
+      {
+        "date": 1657675842649,
+        "text": "Finally and, I believe, most importantly, prohibition of technology (invention and development, which are hardly separable from underlying scientific inquiry), is contrary to the whole ethos of the industrial age. It is irreconcilable with a major mode of intellectuality as our age understands it. It is hard to imagine such a restraint successfully imposed in our civilization. Only if those disasters that we fear had already occurred, only if humanity were already completely disillusioned about technological civilization, could such a step be taken."
+      }
+    ],
+    "title": "Book Review: The Man From The Future",
+    "url": "https://astralcodexten.substack.com/p/book-review-the-man-from-the-future?utm_medium=reader2"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/contra-resident-contrarian-on-unfalsifiable&sz=64",
+    "last_update": 1668234113787,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668234113787,
+        "text": "Everything is a middle ground. The whole point of all this Bayes stuff is that “the middle ground” is wide and worth fighting over. We can have a non-absolute middle ground with 1% probability, a non-absolute middle ground with 99% probability, or anything in between. I’m not doing the morality/etiquette thing of <em>demanding</em> a <em>norm</em> that you believe people, I’m doing an epistemic thing of <em>providing justifications for</em> a <em>prior</em> that you believe people."
+      },
+      {
+        "comment": "",
+        "date": 1668233349789,
+        "text": "Also, everyone on TikTok is terrible and shouldn’t be considered a representative of their respective communities."
+      }
+    ],
+    "title": "Contra Resident Contrarian On Unfalsifiable Internal States",
+    "url": "https://astralcodexten.substack.com/p/contra-resident-contrarian-on-unfalsifiable"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/elk-and-the-problem-of-truthful-ai?utm_medium=email&sz=64",
+    "last_update": 1658824133208,
+    "quotes": [
+      {
+        "date": 1658824133209,
+        "text": "<strong>Language model answer </strong>(calculating what human is most likely to believe): All problems are caused by your outgroup."
+      }
+    ],
+    "title": "ELK And The Problem Of Truthful AI",
+    "url": "https://astralcodexten.substack.com/p/elk-and-the-problem-of-truthful-ai?utm_medium=email"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/heuristics-that-almost-always-work&sz=64",
+    "last_update": 1657501401655,
+    "quotes": [
+      {
+        "comment": "Comment by: https://substack.com/profile/795369-some-guyLadle, term from Terry Pratchett",
+        "date": 1657501401655,
+        "text": "I think of expertise as a “map of surprises” because otherwise any reasonably smart person could just figure out whatever the field is from first principles. No need to burn time unless being reasonably smart is the only criteria. A ladle is anything worth putting on the map. "
+      },
+      {
+        "date": 1657500824656,
+        "text": "<p>Whenever someone pooh-poohs rationality as unnecessary, or makes fun of rationalists for spending zillions of brain cycles on “obvious” questions, check how they’re making <em>their</em> decisions. 99.9% of the time, it’s Heuristics That Almost Always Works.</p><p>(but make sure to watch for the other 0.1%; those are the people you learn from!)</p>"
+      },
+      {
+        "date": 1644366728475,
+        "text": "You know what doesn’t need oxygen or water or food? A <a href=\"https://www.lesswrong.com/tag/absurdity-heuristic\" rel=\"noopener\" target=\"_blank\">rock</a> with the phrase “YOUR RIDICULOUS-SOUNDING CONTRARIAN IDEA IS WRONG” written on it."
+      }
+    ],
+    "title": "Heuristics That Almost Always Work",
+    "url": "https://astralcodexten.substack.com/p/heuristics-that-almost-always-work"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/highlights-from-the-comments-on-dont&sz=64",
+    "last_update": 1642011296891,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1642011296891,
+        "text": "P(A|B) = [P(A)*P(B|A)]/P(B), all the rest is commentary."
+      }
+    ],
+    "title": "Astral Codex Ten",
+    "url": "https://astralcodexten.substack.com/p/highlights-from-the-comments-on-dont"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/mantic-monday-twitter-chaos-edition&sz=64",
+    "last_update": 1669164249421,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1669164249421,
+        "text": "And I’m tired of bad things happening, and then learning there was a “whisper network” of people who knew about it all along but didn’t tell potential victims. It’s unreasonable to expect suspicious to come out and make controversial accusations about powerful people on limited evidence. But a prediction market seems like a good fit for this use case."
+      }
+    ],
+    "title": "Mantic Monday: Twitter Chaos Edition",
+    "url": "https://astralcodexten.substack.com/p/mantic-monday-twitter-chaos-edition"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/slightly-against-underpopulation&sz=64",
+    "last_update": 1659576303834,
+    "quotes": [
+      {
+        "date": 1659576303834,
+        "text": "Like, a 2.5 point decline in IQ could be pretty bad. But if we can’t genetic engineer superbabies with arbitrary IQs by 2100, we have failed so overwhelmingly as a civilization that we deserve whatever kind of terrible discourse our idiot grandchildren inflict on us. "
+      }
+    ],
+    "title": "Slightly Against Underpopulation Worries",
+    "url": "https://astralcodexten.substack.com/p/slightly-against-underpopulation"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://astralcodexten.substack.com/p/theres-a-time-for-everyone&sz=64",
+    "last_update": 1642010591699,
+    "quotes": [
+      {
+        "comment": "Beep.",
+        "date": 1642010591699,
+        "text": "<a href=\"https://colah.github.io/personal/micromarriages/\" rel=\"noopener\" target=\"_blank\">Micromarriages</a> come from this post by Chris Olah. They’re a riff on micromorts, a one-in-a-million chance of dying. Risk analysts use micromorts to compare how dangerous different things are: scuba diving is 5 micromorts per dive;  COVID is 2,500 micromorts per infection; climbing Mt. Everest is 30,000 micromorts per attempt. So by analogy, micromarriages are a one in a million chance of getting married. Maybe going to a party gets you 500 micromarriages, and signing up for a really good dating site gives you 10,000. If there’s a Mt. Everest equivalent, I don’t know about it."
+      }
+    ],
+    "title": "There's A Time For Everyone",
+    "url": "https://astralcodexten.substack.com/p/theres-a-time-for-everyone"
+  },
+  {
+    "author": "@patio11",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://bam.kalzumeus.com/archive/mortgages-are-a-manufactured-product/&sz=64",
+    "last_update": 1642189894247,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1642189894247,
+        "text": "Mortgage securitization, and secondary sales of loans, and other mechanisms cause mortgages to migrate from the banking sector to pools of capital which <em>are more structurally insulated against the interest rate cycle</em>."
+      }
+    ],
+    "title": "Mortgages are a manufactured product",
+    "url": "https://bam.kalzumeus.com/archive/mortgages-are-a-manufactured-product/"
+  },
+  {
+    "author": "@patio11",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://bam.kalzumeus.com/archive/the-alchemy-of-deposits/&sz=64",
+    "last_update": 1657216214332,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1657216214332,
+        "text": "It is underappreciated that consumer credit is, effectively, one of the largest welfare programs in the United States. Chargeoffs of e.g. credit card debt effectively transfer a private benefit to the defaulting consumer in return for a diffuse cost to the rest of the public, mediated by the financial industry; the net amount of them is almost as much as food stamps."
+      }
+    ],
+    "title": "The alchemy of deposits",
+    "url": "https://bam.kalzumeus.com/archive/the-alchemy-of-deposits/"
+  },
+  {
+    "author": "Bryan Caplan",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://betonit.substack.com/p/anti-woke-from-outrage-to-action?r=73ulk&utm_medium=web&sz=64",
+    "last_update": 1675353680669,
+    "quotes": [
+      {
+        "date": 1675353680669,
+        "text": "The world is so huge that it contains at least one outrageous example of X for every noteworthy X. Which allows the media to spread outrage about anything that it wishes."
+      }
+    ],
+    "title": "Anti-Woke: From Outrage to Action",
+    "url": "https://betonit.substack.com/p/anti-woke-from-outrage-to-action?r=73ulk&utm_medium=web"
+  },
+  {
+    "author": "Bryan Caplan",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://betonit.substack.com/p/how-immigrants-became-democrats&sz=64",
+    "last_update": 1662564282234,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1662564282234,
+        "text": "If people who ought to be on your side aren’t, you really ought to wonder why."
+      }
+    ],
+    "title": "How Immigrants Became Democrats",
+    "url": "https://betonit.substack.com/p/how-immigrants-became-democrats"
+  },
+  {
+    "author": "Bryan Caplan",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://betonit.substack.com/p/law-is-hell?utm_medium=email&sz=64",
+    "last_update": 1689499685857,
+    "quotes": [
+      {
+        "date": 1689499685857,
+        "text": "Which raises an obvious question: Why do people tolerate – and even energetically defend – a system of justice that virtually everyone thinks would hellishly mistreat them if they were innocent?"
+      }
+    ],
+    "title": "Law is Hell",
+    "url": "https://betonit.substack.com/p/law-is-hell?utm_medium=email"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://blog.jfo.click/hello-hello-world/&sz=64",
+    "last_update": 1652486376230,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1652486376230,
+        "text": "As programmers, our sharpest tool is abstraction, our strongest tool is\nabstraction, and our most useful tool is abstraction. It is in some sense the\nonly thing we really do: turn information and transformations upon\ninformation into other forms of meta information that we manipulate with even\nmore abstractions. The whole idea is that we deal with emergent complexity and\nthen tuck it neatly beneath an interface of some sort and then don't ever think\nabout it again until we have to. But it's still there, bubbling under the crust\nof the world we're continuously saying hello to, and it's worth it sometimes to\ndig down a little deeper and marvel at the gems."
+      }
+    ],
+    "title": "Hello \"Hello world!\"",
+    "url": "https://blog.jfo.click/hello-hello-world/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://blog.samaltman.com/productivity&sz=64",
+    "last_update": 1687786172998,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1687786172998,
+        "text": "And I generally try to\navoid people and situations that put me in bad moods, which is good advice\nwhether you care about productivity or not."
+      },
+      {
+        "comment": "",
+        "date": 1687784527540,
+        "text": "The most\nimpressive people I know have strong beliefs about the world, which is rare in\nthe general population. &nbsp;If you find yourself always agreeing with whomever\nyou last spoke with, that’s bad."
+      }
+    ],
+    "title": "Productivity",
+    "url": "https://blog.samaltman.com/productivity"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://blog.samaltman.com/the-strength-of-being-misunderstood&sz=64",
+    "last_update": 1696285071635,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1696285071635,
+        "text": "You should trade being short-term low-status for being long-term high-status, which most people seem unwilling to do. "
+      }
+    ],
+    "title": "The Strength of Being Misunderstood",
+    "url": "https://blog.samaltman.com/the-strength-of-being-misunderstood"
+  },
+  {
+    "author": "Fernando Borretti",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://borretti.me/article/youre-not-going-anywhere&sz=64",
+    "last_update": 1671499818344,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1671499818344,
+        "text": "You love Twitter <em>because</em> it is the latter-day Babylonian captivity: people from every distant corner of the world are gathered inside its walls, xenofeminist hackers and Habsburg irredentists and Chinese neolegalist poets are elbow to elbow, we are pressed together and undergo a phase transition. If it had a motto, it would be “<a href=\"https://en.wikipedia.org/wiki/Raph%C3%A8l_mai_am%C3%A8cche_zab%C3%AC_almi\" target=\"_blank\" rel=\"noopener\"><em>Raphèl mai amècche zabì almi</em></a>”."
+      }
+    ],
+    "title": "You’re Not Going Anywhere",
+    "url": "https://borretti.me/article/youre-not-going-anywhere"
+  },
+  {
+    "author": "@bluesky",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://bsky.app/profile/eigenrobot.bsky.social/post/3k2vv4bituo2w&sz=64",
+    "last_update": 1698219584390,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1698219584391,
+        "text": "one needn't accept nor even acknowledge the social frame that another attempts to impose on an interaction"
+      }
+    ],
+    "title": "Bluesky Social",
+    "url": "https://bsky.app/profile/eigenrobot.bsky.social/post/3k2vv4bituo2w"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://bsky.app/profile/temujin9.t9productions.com/post/3kpnmknoens2k&sz=64",
+    "last_update": 1713559761848,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1713559761849,
+        "text": "Some otherwise good companies have actively hostile hiring processes, like their job's a Duke's heir and you're a would-be suitor from a disgraced family."
+      }
+    ],
+    "title": "Bluesky",
+    "url": "https://bsky.app/profile/temujin9.t9productions.com/post/3kpnmknoens2k"
+  },
+  {
+    "author": "@bluesky",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://bsky.app/profile/vgr.bsky.social/post/3klpwhny5px2s&sz=64",
+    "last_update": 1708293760911,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1708293760911,
+        "text": "Trial-and-error is a bad mental model of experimentation for discovery. Most errors are systematic and process-related, and need analysis-based fixes via troubleshooting."
+      }
+    ],
+    "title": "Bluesky",
+    "url": "https://bsky.app/profile/vgr.bsky.social/post/3klpwhny5px2s"
+  },
+  {
+    "author": "@buttondown",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://buttondown.email/hillelwayne/archive/no-seriously-hate-your-tools/&sz=64",
+    "last_update": 1640984936842,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1640984936842,
+        "text": "We’re better at finding flaws in claims we <em>don’t</em> agree with than claims we <em>do</em>. It’s so easy to believe things that sound nice to us, even if they’re not true. It’s such a blatant cognitive bias. You don’t need to talk about availability heuristics or risk averseness or anything like that, it’s just “if you like something, you’ll be less diligent about evaluating it.”"
+      }
+    ],
+    "title": "No Seriously, Hate Your Tools",
+    "url": "https://buttondown.email/hillelwayne/archive/no-seriously-hate-your-tools/"
+  },
+  {
+    "author": "@buttondown",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://buttondown.email/hillelwayne/archive/principles-of-software-evangelism/&sz=64",
+    "last_update": 1640970424161,
+    "quotes": [
+      {
+        "comment": "This is a comment.",
+        "date": 1640970424161,
+        "text": "The more your life bends around a single topic, the more out-of-touch you become with the rest of software."
+      }
+    ],
+    "title": "Principles of Software Evangelism",
+    "url": "https://buttondown.email/hillelwayne/archive/principles-of-software-evangelism/"
+  },
+  {
+    "author": "Brian Chau",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://cactus.substack.com/p/year-end-review-of-things-pt-2&sz=64",
+    "last_update": 1674853734129,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674853734129,
+        "text": "People don’t care whether culture war stories are made up or not. They are fiat stories, made valuable solely by their usefulness."
+      }
+    ],
+    "title": "Year End Review of Things Pt 2",
+    "url": "https://cactus.substack.com/p/year-end-review-of-things-pt-2"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://catholicworker.org/at-90-years-where-is-the-catholic-worker-movement-going/&sz=64",
+    "last_update": 1680804476397,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1680804476397,
+        "text": "If we lose the vision, we become merely philanthropists, doling out palliatives"
+      }
+    ],
+    "title": "At 90 Years, Where is the Catholic Worker Movement Going? – Catholic Worker Movement",
+    "url": "https://catholicworker.org/at-90-years-where-is-the-catholic-worker-movement-going/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://ccel.org/meditate?date=03-05&ning=pm&sz=64",
+    "last_update": 1677997241014,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677997241014,
+        "text": "If David doubted, I need not conclude that I \n      am no Christian because I have doubts."
+      }
+    ],
+    "title": "Meditate - Christian Classics Ethereal Library",
+    "url": "https://ccel.org/meditate?date=03-05&ning=pm"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://cerebralarcade.com/2014/11/09/how-to-argue-responsibly/&sz=64",
+    "last_update": 1659660085033,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1659660085033,
+        "text": "Someone disagreeing does not make you a victim, and being a victim does not justify bad-faith tactics."
+      },
+      {
+        "comment": "",
+        "date": 1659659964735,
+        "text": "Remember that you do not have to engage in arguments if you doubt the sincerity of your opponent, but it’s courteous (and cathartic) to explain that you refuse to engage."
+      }
+    ],
+    "title": "How to Argue Responsibly | Cerebral Arcade",
+    "url": "https://cerebralarcade.com/2014/11/09/how-to-argue-responsibly/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://communitywiki.org/wiki/LimitsOfDemocracyOnline&sz=64",
+    "last_update": 1701437819893,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1701437819893,
+        "text": "I’ve also learned something else in 20 years of arguing on the net: Telling people things they don’t want to hear never works. It doesn’t matter how much you tell someone “If you touch that stove, you will get burned.” They have to learn it for themselves."
+      }
+    ],
+    "title": "CommunityWiki: Limits Of Democracy Online",
+    "url": "https://communitywiki.org/wiki/LimitsOfDemocracyOnline"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://danluu.com/postmortem-lessons/&sz=64",
+    "last_update": 1698071947530,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1698071947530,
+        "text": "<p>But humans are even more error prone than machines. Don't get me wrong, I like humans. Some of my best friends are human. But if you repeatedly put a human in a position where they can cause a catastrophic failure, you'll eventually get a catastrophe. And yet, the following pattern is still quite common:</p> <blockquote> <p>Oh, we're about to do a risky thing! Ok, let's have humans be VERY CAREFUL about executing the risky operation. Oops! We now have a global outage.</p></blockquote>"
+      }
+    ],
+    "title": "Reading postmortems",
+    "url": "https://danluu.com/postmortem-lessons/"
+  },
+  {
+    "author": "@getfandom",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://discoelysium.fandom.com/wiki/Kingdom_of_Conscience&sz=64",
+    "last_update": 1667862232347,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1667862232347,
+        "text": "Centrism isn't change -- not even incremental change. It is *control*. Over yourself and the world. Exercise it. Look up at the sky, at the dark shapes of Coalition airships hanging there. Ask yourself: is there something sinister in moralism? And then answer: no. God is in his heaven. Everything is normal on Earth."
+      }
+    ],
+    "title": "Kingdom of Conscience - Disco Elysium Wiki",
+    "url": "https://discoelysium.fandom.com/wiki/Kingdom_of_Conscience"
+  },
+  {
+    "author": "Ezra Berger",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://doordash.news/company/tips-for-building-high-quality-django-apps-at-scale/&sz=64",
+    "last_update": 1687782616911,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1687782616911,
+        "text": "Your database is more important, more long-lived, and harder to change after the fact than your application."
+      }
+    ],
+    "title": "Tips for Building High-Quality Django Apps at Scale - DoorDash Newsroom",
+    "url": "https://doordash.news/company/tips-for-building-high-quality-django-apps-at-scale/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://drewdevault.com/2023/07/04/Dont-sign-a-CLA-2.html&sz=64",
+    "last_update": 1688501481379,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1688501481379,
+        "text": "A CLA is a promise that software will one day become non-free"
+      }
+    ],
+    "title": "Seriously, don't sign a CLA",
+    "url": "https://drewdevault.com/2023/07/04/Dont-sign-a-CLA-2.html"
+  },
+  {
+    "author": "eigenrobot",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://eigenrobot.substack.com/p/advice-for-academic-refugees&sz=64",
+    "last_update": 1656023590095,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1656023590095,
+        "text": "People are not your professor or advisor. Just talk to them. Maybe they yell at you for impertinence but so what? They probably don’t have any power over you and the alternative is spending your entire life a wallflower."
+      }
+    ],
+    "title": "advice for academic refugees",
+    "url": "https://eigenrobot.substack.com/p/advice-for-academic-refugees"
+  },
+  {
+    "author": "eigenrobot",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://eigenrobot.substack.com/p/walk-backward-into-hell&sz=64",
+    "last_update": 1651080697788,
+    "quotes": [
+      {
+        "date": 1651080697788,
+        "text": "I see reciting one’s own political beliefs in another’s thread as the social equivalent of walking into a party and shitting on the floor"
+      }
+    ],
+    "title": "walk backward into hell",
+    "url": "https://eigenrobot.substack.com/p/walk-backward-into-hell"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://emacs.ch/@leigh@ottawa.place/109866997891172121&sz=64",
+    "last_update": 1676460474142,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676460474143,
+        "text": "Unfortunately it turns out that the problems of content moderation in a federated ecosystem are isomorphic to the problems of coexisting in a society together"
+      }
+    ],
+    "title": "Emacs.ch",
+    "url": "https://emacs.ch/@leigh@ottawa.place/109866997891172121"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/%C6%91/8_and_be_there&sz=64",
+    "last_update": 1674331636431,
+    "quotes": [
+      {
+        "date": 1674331636431,
+        "text": "\"<b>f/8 and be there</b>\" is an expression popularly used by photographers to indicate the importance of taking the opportunity for a picture rather than being too concerned about using the best technique."
+      }
+    ],
+    "title": "ƒ/8 and be there - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/%C6%91/8_and_be_there"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/Four_senses_of_Scripture&sz=64",
+    "last_update": 1670239257806,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1670239257806,
+        "text": "<p>The literal teaches history,\n</p><p>the allegorical, what you should believe,\n</p><p>the moral, what you should do,\n</p><p>\nthe anagogical, where you are going.</p>"
+      }
+    ],
+    "title": "Four senses of Scripture - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Four_senses_of_Scripture"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/Jonathan_Blow&sz=64",
+    "last_update": 1711568612040,
+    "quotes": [
+      {
+        "date": 1711568612040,
+        "text": "\"The job isn't to be in a community; the job is to make a good game.\""
+      }
+    ],
+    "title": "Jonathan Blow - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Jonathan_Blow"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/Joseph_Schumpeter&sz=64",
+    "last_update": 1716904286268,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1716904286268,
+        "text": "The growing number of people with higher education is a great advantage of capitalism, according to Schumpeter. Yet, unemployment and a lack of fulfilling work will lead to intellectual critique, discontent, and protests."
+      }
+    ],
+    "title": "Joseph Schumpeter - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Joseph_Schumpeter"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/Kino%27s_Journey&sz=64",
+    "last_update": 1708852057598,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1708852057599,
+        "text": "The world is not beautiful, therefore it is."
+      }
+    ],
+    "title": "Kino's Journey - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Kino%27s_Journey"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/Lusory_attitude&sz=64",
+    "last_update": 1697973120599,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1697973120599,
+        "text": "\"To play a game is to attempt to achieve a specific state of affairs [prelusory goal], using only means permitted by rules [lusory means], where the rules prohibit use of more efficient in favour of less efficient means [constitutive rules], and where the rules are accepted just because they make possible such activity [lusory attitude].\"<a href=\"https://en.wikipedia.org/wiki/Lusory_attitude#cite_note-suits-2\" target=\"_blank\" rel=\"noopener\">[2]</a>"
+      }
+    ],
+    "title": "Lusory attitude - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Lusory_attitude"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/The_Cock_and_the_Jewel&sz=64",
+    "last_update": 1716125110785,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1716125110786,
+        "text": "\"virtue loses not its worth by being slighted by the world, more than the pearl when the foolish cock preferred a barleycorn\""
+      }
+    ],
+    "title": "The Cock and the Jewel - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/The_Cock_and_the_Jewel"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/The_purpose_of_a_system_is_what_it_does&sz=64",
+    "last_update": 1668811958555,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668811958555,
+        "text": "<b>The purpose of a system is what it does</b> (<b>POSIWID</b>) is a <a href=\"https://en.wikipedia.org/wiki/Systems_thinking\" title=\"Systems thinking\" target=\"_blank\" rel=\"noopener\">systems thinking</a> <a href=\"https://en.wikipedia.org/wiki/Heuristic\" title=\"Heuristic\" target=\"_blank\" rel=\"noopener\">heuristic</a> coined by <a href=\"https://en.wikipedia.org/wiki/Stafford_Beer\" title=\"Stafford Beer\" target=\"_blank\" rel=\"noopener\">Stafford Beer</a>,<a href=\"https://en.wikipedia.org/wiki/The_purpose_of_a_system_is_what_it_does#cite_note-:0-1\" target=\"_blank\" rel=\"noopener\">[1]</a> who observed that there is \"no point in claiming that the purpose of a system is to do what it constantly fails to do.\"<a href=\"https://en.wikipedia.org/wiki/The_purpose_of_a_system_is_what_it_does#cite_note-2\" target=\"_blank\" rel=\"noopener\">[2]</a> The term is widely used by <a href=\"https://en.wikipedia.org/wiki/Systems_theory\" title=\"Systems theory\" target=\"_blank\" rel=\"noopener\">systems theorists</a>, and is generally invoked to counter the notion that the purpose of a system can be read from the intentions of those who <a href=\"https://en.wikipedia.org/wiki/Systems_design\" title=\"Systems design\" target=\"_blank\" rel=\"noopener\">design</a>, operate, or promote it. When a system's <a href=\"https://en.wikipedia.org/wiki/Side_effect\" title=\"Side effect\" target=\"_blank\" rel=\"noopener\">side effects</a> or <a href=\"https://en.wikipedia.org/wiki/Unintended_consequences\" title=\"Unintended consequences\" target=\"_blank\" rel=\"noopener\">unintended consequences</a> reveal that its behavior is poorly understood, then the POSIWID perspective can balance political understandings of system behavior with a more straightforwardly <a href=\"https://en.wikipedia.org/wiki/Descriptive\" class=\"mw-redirect\" title=\"Descriptive\" target=\"_blank\" rel=\"noopener\">descriptive</a> view."
+      }
+    ],
+    "title": "The purpose of a system is what it does - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/The_purpose_of_a_system_is_what_it_does"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikiquote.org/wiki/Sid_Meier%27s_Alpha_Centauri&sz=64",
+    "last_update": 1675219063272,
+    "quotes": [
+      {
+        "date": 1675219063272,
+        "text": "The righteous need not cower before the drumbeat of human progress. Though the song of yesterday fades into the challenge of tomorrow, God still watches and judges us. Evil lurks in the datalinks as it lurked in the streets of yesteryear. But it was never the streets that were evil."
+      }
+    ],
+    "title": "Sid Meier's Alpha Centauri - Wikiquote",
+    "url": "https://en.wikiquote.org/wiki/Sid_Meier%27s_Alpha_Centauri"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/it-seems-like-the-reckoning-has-become&sz=64",
+    "last_update": 1715689517674,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1715689517674,
+        "text": "And if you can’t talk about the past because people are busily erasing it, afraid to be embarrassed by how earnest they were about it all… how does anything ever get better?"
+      },
+      {
+        "comment": "",
+        "date": 1715689049750,
+        "text": "The anti-woke are finding it difficult (as everyone does) to realize that they aren’t truth-telling outsiders but rather represent a point of view that’s very useful to the powerful; so many of them have postured as rebels for so long that they can’t look around and see that, indeed, the vibe has shifted, and in their direction."
+      }
+    ],
+    "title": "It Seems Like \"The Reckoning\" Has Become Embarrassing",
+    "url": "https://freddiedeboer.substack.com/p/it-seems-like-the-reckoning-has-become"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/its-all-grift-its-all-brands&sz=64",
+    "last_update": 1651163658622,
+    "quotes": [
+      {
+        "date": 1651163658622,
+        "text": "you can choose to be an anticapitalist, but you’re still compelled to be a capitalist"
+      }
+    ],
+    "title": "It's All Grift, It's All Brands",
+    "url": "https://freddiedeboer.substack.com/p/its-all-grift-its-all-brands"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/mimetic-collapse-our-destiny&sz=64",
+    "last_update": 1697990312478,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1697990312478,
+        "text": "Some people will always like what you don’t and dislike what you do. That’s life. The fact that you think this is injustice reflects what a batshit era we find ourselves in. No one is actually forcing you to read <em>Infinite Jest</em>, least of all me, given that I’ve always found it an admirable attempt that nonetheless fails at most of what it attempts, for a thousand pages. But if you want to keep treating it as a hate object, you have to actually read it; you see, you can’t have an opinion on a book you have not read. Personally, I’m sure I’d hate your favorite <em>A Thing of Thing and Thing </em>YA horseshit, if I read it. But I’m not gonna, so I can’t comment on that. If I do, though, and I think it sucks, I’ll tell you, and I’ll also tell you that <em>The Brothers Karamazov </em>is a triumph of human possibility. I have that right. Art is subjective. Get over it."
+      }
+    ],
+    "title": "Mimetic Collapse, Our Destiny",
+    "url": "https://freddiedeboer.substack.com/p/mimetic-collapse-our-destiny"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/multiple-personality-disorder-probably/comments&sz=64",
+    "last_update": 1650825520487,
+    "quotes": [
+      {
+        "comment": "Bored kids on Tumblr, etc. - arguably the onus shouldn't be placed on said kids, but the adults reacting - All those goth and emo kids are (probably) productive adults now",
+        "date": 1650825520488,
+        "text": "So much of what we assume is cultural dysfunction is really just kids being bored online."
+      }
+    ],
+    "title": "\"Multiple Personality Disorder\" Probably Doesn't Exist, And There Certainly Hasn't Been an Explosion of It Among the Youth",
+    "url": "https://freddiedeboer.substack.com/p/multiple-personality-disorder-probably/comments"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/my-brief-brief-against-mental-illness/comment/7508059&sz=64",
+    "last_update": 1658853869382,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1658853869382,
+        "text": "Fact is, no system is better than the people running it."
+      }
+    ],
+    "title": "My Brief Brief Against \"Mental Illness is Just Capitalism, Man, the System\"",
+    "url": "https://freddiedeboer.substack.com/p/my-brief-brief-against-mental-illness/comment/7508059"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/no-we-have-not-proven-that-there/comments?utm_medium=email&sz=64",
+    "last_update": 1658854014283,
+    "quotes": [
+      {
+        "date": 1658854014283,
+        "text": "<p>\"please engage with the text\"</p><p>a more perfect exhortation to internet culture doesn't exist.</p>"
+      }
+    ],
+    "title": "No, We Have Not Proven That There is No Neurological or Physiological Influence on Depression",
+    "url": "https://freddiedeboer.substack.com/p/no-we-have-not-proven-that-there/comments?utm_medium=email"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/nobody-walks-around-feeling-valid&sz=64",
+    "last_update": 1651079633373,
+    "quotes": [
+      {
+        "comment": "Kathleen McCook, from the comments",
+        "date": 1651079633373,
+        "text": "I never worried about my validity while changing a diaper. I never worried about my validity when caring for an old dog. I never worried about my validity when planting flowers.  When these thoughts--about my validity-- arise in my brain I try to do a task for someone/something else."
+      },
+      {
+        "date": 1651079501530,
+        "text": "Even being a rock star can’t turn off the part of your mind that hates you and wants you to feel bad."
+      },
+      {
+        "date": 1651079451651,
+        "text": "Of all the toxic and disheartening elements of the internet era, the worst is the way that our concept of human value is so often seen as purely crowdsourced, I think. It’s resulted in an internet where a huge portion of the activity ultimately amounts to people begging strangers to approve of them."
+      }
+    ],
+    "title": "Nobody Walks Around Feeling \"Valid\"",
+    "url": "https://freddiedeboer.substack.com/p/nobody-walks-around-feeling-valid"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/of-course-you-know-what-woke-means&sz=64",
+    "last_update": 1678934023053,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1678934023053,
+        "text": "<p>1. Always remember to keep your eye on the money. </p><p>2. Never forget to keep your eye on the money.</p><p>3. Always remember to never forget to keep your eye on the money.</p><p>4. Never forget to always remember to keep your eye on the money.</p><p>Everything else is smoke and mirrors designed to get you to violate one or more of above-listed tenets and dissipate your energy into something harmless.</p>"
+      }
+    ],
+    "title": "Of Course You Know What \"Woke\" Means",
+    "url": "https://freddiedeboer.substack.com/p/of-course-you-know-what-woke-means"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/perhaps-liking-or-not-liking-taylor?post_id=141363999&r=4bpa5&sz=64",
+    "last_update": 1707141212066,
+    "quotes": [
+      {
+        "date": 1707141212066,
+        "text": "The world is a sad and broken place and I forgive people for wanting to invest meaningless symbols with great moral valence. I acknowledge that the collapse of meaning has been real and total and that such lofty celebrity can look, to the adolescent brain (literally or metaphorically adolescent) like a good place to park your beliefs, your need, your palpable longing. As with so many other parts of our culture, the question is whether we want to actively encourage perpetual adolescence."
+      },
+      {
+        "date": 1707141007144,
+        "text": "Where your morals leave your head and enter the physical world is precisely where politics begins."
+      },
+      {
+        "date": 1707140856252,
+        "text": "But it turns out that when you spend your time <a href=\"https://www.youtube.com/watch?v=4HXiymzxRVY\" rel=\"noopener\" target=\"_blank\">making fun</a> of the stupid nonsense conservatives are spending their time freaking out about, you are also spending your precious time on earth on stupid nonsense."
+      }
+    ],
+    "title": "Perhaps Taylor Swift Isn't the Defining Political Issue of Our Times",
+    "url": "https://freddiedeboer.substack.com/p/perhaps-liking-or-not-liking-taylor?post_id=141363999&r=4bpa5"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/please-just-fucking-tell-me-what&sz=64",
+    "last_update": 1666036718484,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1666036718485,
+        "text": "Well, sooner or later, guys, you have to actually give a shit about what people who aren’t a part of your movement think."
+      }
+    ],
+    "title": "Please Just Fucking Tell Me What Term I Am Allowed to Use for the Sweeping Social and Political Changes You Demand",
+    "url": "https://freddiedeboer.substack.com/p/please-just-fucking-tell-me-what"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/please-just-fucking-tell-me-what/comments&sz=64",
+    "last_update": 1666036929709,
+    "quotes": [
+      {
+        "comment": "Comments.",
+        "date": 1666036929709,
+        "text": "distrust social movements that call for more administrators"
+      }
+    ],
+    "title": "Please Just Fucking Tell Me What Term I Am Allowed to Use for the Sweeping Social and Political Changes You Demand",
+    "url": "https://freddiedeboer.substack.com/p/please-just-fucking-tell-me-what/comments"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/punching-up-and-punching-down-have?utm_medium=email&sz=64",
+    "last_update": 1664824067269,
+    "quotes": [
+      {
+        "date": 1664824067269,
+        "text": "What if - what if - “punching up vs. punching down” is a totally artificial construct that bends to accommodate whatever the person invoking it wants to believe? There is one rule: people I like are punching up, people I don’t are punching down. There is no deeper meaning to be had here. It’s just another tool for the overeducated and very online to dismiss stuff they don’t like."
+      },
+      {
+        "date": 1664823894207,
+        "text": "conveniently for me I’m not required by social or professional incentives to pretend that things offend me when they don’t"
+      }
+    ],
+    "title": "There is No Such Thing as \"Punching Up\" or \"Punching Down\"",
+    "url": "https://freddiedeboer.substack.com/p/punching-up-and-punching-down-have?utm_medium=email"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/remote-work-shifts-costs-from-management?publication_id=295937&isFreemail=true&sz=64",
+    "last_update": 1674574378354,
+    "quotes": [
+      {
+        "date": 1674574378354,
+        "text": "democracy requires that we think of other people than ourselves, including and especially people who we would never consciously choose to spend time with. We need to understand ourselves in a context with strangers, as part of a polis. "
+      }
+    ],
+    "title": "Remote Work Shifts Costs From Management Onto Employees",
+    "url": "https://freddiedeboer.substack.com/p/remote-work-shifts-costs-from-management?publication_id=295937&isFreemail=true"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/sometimes-you-just-have-to-take-a?utm_medium=email&sz=64",
+    "last_update": 1658981617439,
+    "quotes": [
+      {
+        "date": 1658981617439,
+        "text": "On the internet, when people like you, you can do no wrong. When people don't like you, you can do no right."
+      }
+    ],
+    "title": "Sometimes, You Just Have to Take a Fucking L",
+    "url": "https://freddiedeboer.substack.com/p/sometimes-you-just-have-to-take-a?utm_medium=email"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/the-good-white-man-roster&sz=64",
+    "last_update": 1657295826833,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1657295826833,
+        "text": "mindlessly lionizing abstract groups of people is not respecting them"
+      }
+    ],
+    "title": "The Good White Man Roster",
+    "url": "https://freddiedeboer.substack.com/p/the-good-white-man-roster"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/the-modern-curse-of-overoptimization&sz=64",
+    "last_update": 1715687471285,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1715687471285,
+        "text": "Humphrey Bogart wouldn’t have a mythical aura about him if he was sharing his lame thoughts about <em>Game of Thrones </em>with us on the internet."
+      }
+    ],
+    "title": "The Modern Curse of Overoptimization",
+    "url": "https://freddiedeboer.substack.com/p/the-modern-curse-of-overoptimization"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/the-politics-of-pure-affiliation&sz=64",
+    "last_update": 1650906670683,
+    "quotes": [
+      {
+        "date": 1650906670684,
+        "text": "Affiliation doesn't just replace principle, it preempts the possibility of principle."
+      }
+    ],
+    "title": "The Politics of Pure Affiliation Has Driven Everyone Absolutely Insane",
+    "url": "https://freddiedeboer.substack.com/p/the-politics-of-pure-affiliation"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/the-tribe-still-comes-first?publication_id=295937&isFreemail=true&sz=64",
+    "last_update": 1666036394136,
+    "quotes": [
+      {
+        "date": 1666036327731,
+        "text": "The saddest is when someone shares something, receives the mandatory social conditioning, and deletes the tweet in shame. I recognize the ritualistic quality of all of this and so I don’t take it personally; with my second book sold, my freelance credits what they are, and a comfortable income here, I certainly don’t need to. I do, however, feel bad for the people who have to live like that. It seems exhausting, and it doesn’t have to be this way."
+      }
+    ],
+    "title": "The Tribe Still Comes First",
+    "url": "https://freddiedeboer.substack.com/p/the-tribe-still-comes-first?publication_id=295937&isFreemail=true"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/we-cant-constructively-address-online?isFreemail=true&sz=64",
+    "last_update": 1664322673745,
+    "quotes": [
+      {
+        "date": 1664322673746,
+        "text": "What I can tell you for a fact is that <strong>society cannot possibly give special accommodation to everyone</strong>. This, more than anything else, is the project of social justice in 2022: the demand that more and more people be treated with special dispensations"
+      }
+    ],
+    "title": "We Can't Constructively Address Online Mental Health Culture Without Acknowledging That Some People Think They Have Disorders They Don't",
+    "url": "https://freddiedeboer.substack.com/p/we-cant-constructively-address-online?isFreemail=true"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/we-could-use-a-reinvigorated-skeptic/comments?utm_medium=email&sz=64",
+    "last_update": 1658252219303,
+    "quotes": [
+      {
+        "date": 1658252219303,
+        "text": "Our amazing brains do all sorts of things to cope; rationality is fantastic for some things, but not for art and not necessarily for comfort."
+      }
+    ],
+    "title": "We Could Use a Reinvigorated Skeptic Movement",
+    "url": "https://freddiedeboer.substack.com/p/we-could-use-a-reinvigorated-skeptic/comments?utm_medium=email"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/weird?post_id=139128692&r=4bpa5&sz=64",
+    "last_update": 1705826560048,
+    "quotes": [
+      {
+        "date": 1705826560048,
+        "text": "It all gets filtered through the lens of who people do and don’t like. There’s no principles with any of this shit. It’s all just jerry-rigging for what people already think."
+      },
+      {
+        "date": 1705826527004,
+        "text": "Ivy-educated members of the laptop class with high-income careers must be forgiven from any social censure because they have anxiety, while homeless people who have been broken by psychotic disorders must be denied any compassion when they say racial slurs in the midst of their raving. It’s magisterial in its cruelty."
+      },
+      {
+        "date": 1705806227547,
+        "text": "Height is so socially valuable and so utterly outside of our control that it feels like God invented it to demonstrate the folly of meritocracy."
+      }
+    ],
+    "title": "weird",
+    "url": "https://freddiedeboer.substack.com/p/weird?post_id=139128692&r=4bpa5"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/whats-left-for-tech?publication_id=295937&utm_campaign=email-post-title&r=4bpa5&sz=64",
+    "last_update": 1700990618059,
+    "quotes": [
+      {
+        "date": 1700990618059,
+        "text": "I think we all need to learn to appreciate what we have now, in the world as it exists, at the time in which we actually live."
+      }
+    ],
+    "title": "What's Left for Tech?",
+    "url": "https://freddiedeboer.substack.com/p/whats-left-for-tech?publication_id=295937&utm_campaign=email-post-title&r=4bpa5"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/why-does-taylor-swift-want-more?publication_id=295937&utm_campaign=email-post-title&r=4bpa5&sz=64",
+    "last_update": 1702108643564,
+    "quotes": [
+      {
+        "date": 1702108643564,
+        "text": "Personally, I think people are fixated on Swift in this way because they’re lonely and directionless and lack any source of transcendent meaning, and have tried to invest celebrity with the hopes that once accrued to God or country or the party, and I further think that this is bound to result in inevitable disillusionment and sadness."
+      }
+    ],
+    "title": "Why Does Taylor Swift Want More?",
+    "url": "https://freddiedeboer.substack.com/p/why-does-taylor-swift-want-more?publication_id=295937&utm_campaign=email-post-title&r=4bpa5"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://grugbrain.dev/&sz=64",
+    "last_update": 1698968527503,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1698968527503,
+        "text": "<em>you</em> say: complexity <em>very</em>, <em>very</em> bad"
+      },
+      {
+        "comment": "",
+        "date": 1665671850472,
+        "text": "note!  very good if senior grug willing to say publicly: \"hmmm, this too complex for grug\"!"
+      },
+      {
+        "comment": "",
+        "date": 1665671653885,
+        "text": "<p>grug wonder why big brain take hardest problem, factoring system correctly, and introduce network call too</p>\n<p>seem very confusing to grug</p>"
+      },
+      {
+        "comment": "",
+        "date": 1665671585157,
+        "text": "best weapon against complexity spirit demon is magic word: \"no\"<p>note, this good engineering advice but bad career advice: \"yes\" is magic word for more shiney rock and put in\ncharge of large tribe of developer</p>\n<p>sad but true: learn \"yes\" then learn blame other grugs when fail, ideal career advice</p>"
+      }
+    ],
+    "title": "The Grug Brained Developer",
+    "url": "https://grugbrain.dev/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://hplusmagazine.com/2009/09/02/virtual-life-actual-death/&sz=64",
+    "last_update": 1671233923304,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1671233923304,
+        "text": "their commodification had a long tail. Their inner personal lives would remain product for the platform owners long after they had passed on."
+      },
+      {
+        "comment": "",
+        "date": 1671233541795,
+        "text": "Indeed, the problem was not simply that people were mistaking the virtual for the real in their relationships, but that by playing out this drama on public chat boards, they were turning their emotional lives into product for the platform owner. They were commodifying themselves."
+      }
+    ],
+    "title": "A Virtual Life. An Actual Death – h+ Media",
+    "url": "https://hplusmagazine.com/2009/09/02/virtual-life-actual-death/"
+  },
+  {
+    "author": "@idlewords",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://idlewords.com/2023/1/why_not_mars.htm&sz=64",
+    "last_update": 1676459624836,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676459624836,
+        "text": "When you hold on to a belief so strongly that neither facts nor reason can change it, what you are doing is no longer science, but religion."
+      }
+    ],
+    "title": "Why Not Mars",
+    "url": "https://idlewords.com/2023/1/why_not_mars.htm"
+  },
+  {
+    "author": "Jesse Singal",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://jessesingal.substack.com/p/if-you-disagree-with-me-you-want&sz=64",
+    "last_update": 1666994306109,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1666994306109,
+        "text": "if your policy preferences are genuine and you actually want the world to be nudged in a certain direction, you can’t just shriek and cry and call your opponents murderers"
+      }
+    ],
+    "title": "“If You Disagree With Me, You Want People To Die” Is Not Going To Work On Normal Folks",
+    "url": "https://jessesingal.substack.com/p/if-you-disagree-with-me-you-want"
+  },
+  {
+    "author": "Julia Evans",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://jvns.ca/about/&sz=64",
+    "last_update": 1663505269881,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1663505269881,
+        "text": "I have one main opinion about programming, which is that deeply understanding the underlying systems\nyou use (the browser, the kernel, the operating system, the network layers, your database, HTTP,\nwhatever you’re running on top of) is essential if you want to do technically innovative work and be\nable to solve hard problems."
+      }
+    ],
+    "title": "About",
+    "url": "https://jvns.ca/about/"
+  },
+  {
+    "author": "Klaus Kinski",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://klauskinski.substack.com/p/data-analytics-in-the-world-of-bullshit?utm_source=substack&sz=64",
+    "last_update": 1659316383743,
+    "quotes": [
+      {
+        "date": 1659316383743,
+        "text": "The tradition keeper: These people produce reports because the company has always produced these reports. They maintain a dashboard that’s always been there. They analyze a certain metric because a company has always chosen that metric. Usually, people retroactively figure out they served this role. A manager suddenly leaves, a pipeline breaks, or someone forgets to update a report. Then, nothing happens, and the analyst realizes all the time spent on it was pointless.&nbsp;"
+      }
+    ],
+    "title": "Data Analytics in the World of Bullshit Jobs",
+    "url": "https://klauskinski.substack.com/p/data-analytics-in-the-world-of-bullshit?utm_source=substack"
+  },
+  {
+    "author": "Arist",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://lparchive.org/Disco-Elysium/Update%2029/&sz=64",
+    "last_update": 1677551033947,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677551033947,
+        "text": "Capital has the ability to subsume all critiques into itself. Even those who would *critique* capital end up *reinforcing* it instead"
+      }
+    ],
+    "title": "Disco Elysium Part #29 - 22:46-1:28: Karaoke For Spirits",
+    "url": "https://lparchive.org/Disco-Elysium/Update%2029/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://ludic.mataroa.blog/blog/i-will-fucking-haymaker-you-if-you-mention-agile-again/&sz=64",
+    "last_update": 1697637009078,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1697637009078,
+        "text": "<p>With God as my witness, the next son of a bitch to mention Agile is going to get hurled into the ground so hard that I'm going to publish a seismology paper in Nature with the data.</p>\n"
+      }
+    ],
+    "title": "I Will Fucking Haymaker You If You Mention Agile Again — Ludicity",
+    "url": "https://ludic.mataroa.blog/blog/i-will-fucking-haymaker-you-if-you-mention-agile-again/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://mangabrog.wordpress.com/2014/07/06/inio-asano-interview-reality-is-tough-so-read-this-manga-about-cute-girls-and-feel-better/&sz=64",
+    "last_update": 1712833764591,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1712833764591,
+        "text": "<p>Reality is tough, so read this manga about cute girls and feel better. I realized how important that is after watching <em>K-On!</em> (laugh) Girls having fun is cute, and cute is something that needs no explanation — that’s what’s so great about it. That’s all I need, I’ve decided.</p>\n"
+      },
+      {
+        "comment": "",
+        "date": 1712771757646,
+        "text": "It’s a bad habit of young people these days, I think, all this giving names to things so they can stick them together as a genre. It teaches them to read things very narrowly, and everyone’s opinions become skewed to one side. Another word I hear people throwing around a lot is “surreal”, which encompasses just about everything. I feel like they’re missing a lot that way."
+      }
+    ],
+    "title": "Inio Asano interview — “Reality is tough, so read this manga about cute girls and feel better”",
+    "url": "https://mangabrog.wordpress.com/2014/07/06/inio-asano-interview-reality-is-tough-so-read-this-manga-about-cute-girls-and-feel-better/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://marshmellowpastel.wordpress.com/2019/10/01/kanazawa-life-maturity/&sz=64",
+    "last_update": 1707510399239,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1707510399239,
+        "text": "“Even if it’s meaningless, sometimes nice things happen.”"
+      }
+    ],
+    "title": "Details in Girls’ Last Tour: Kanazawa’s view of life and maturity",
+    "url": "https://marshmellowpastel.wordpress.com/2019/10/01/kanazawa-life-maturity/"
+  },
+  {
+    "author": "@martinfowler",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://martinfowler.com/articles/branching-patterns.html#Git-flow&sz=64",
+    "last_update": 1668416356093,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668416356093,
+        "text": "remember Paracelsus's observation that the difference between a beneficial\n      drug and a poison is dosage."
+      }
+    ],
+    "title": "Patterns for Managing Source Code Branches",
+    "url": "https://martinfowler.com/articles/branching-patterns.html#Git-flow"
+  },
+  {
+    "author": "@martinfowler",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://martinfowler.com/articles/ship-show-ask.html&sz=64",
+    "last_update": 1668416631419,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668416631419,
+        "text": "“All changes must be approved” or “Every pull request needs 2\n        reviewers” are common policies, but they show a lack of trust in the\n        development team."
+      }
+    ],
+    "title": "Ship / Show / Ask",
+    "url": "https://martinfowler.com/articles/ship-show-ask.html"
+  },
+  {
+    "author": "@mcfunley",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://mcfunley.com/choose-boring-technology&sz=64",
+    "last_update": 1659659785792,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1659659785792,
+        "text": "Your job is keeping the company in business, god damn it. And the “best” tool is the one that occupies the “least worst” position for as many of your problems as possible."
+      },
+      {
+        "comment": "",
+        "date": 1659659740386,
+        "text": "<p>When choosing technology, you have both known unknowns and unknown unknowns <a ref=\"#f3\" href=\"https://mcfunley.com/choose-boring-technology#f3\" class=\"footnote\" target=\"_blank\" rel=\"noopener\">[3]</a>.</p>\n\n<ul>\n  <li>A known unknown is something like: <em>we don’t know what happens when this database hits 100% CPU.</em></li>\n  <li>An unknown unknown is something like: <em>geez it didn’t even occur to us that <a href=\"http://www.evanjones.ca/jvm-mmap-pause.html\" target=\"_blank\" rel=\"noopener\">writing stats would cause GC pauses</a>.</em></li>\n</ul>\n\n<p>Both sets are typically non-empty, even for tech that’s existed for decades. But for shiny new technology the magnitude of unknown unknowns is significantly larger, and this is important.</p>"
+      }
+    ],
+    "title": "Dan McKinley :: Choose Boring Technology",
+    "url": "https://mcfunley.com/choose-boring-technology"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://meaningness.com/geeks-mops-sociopaths&sz=64",
+    "last_update": 1700448475028,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1700448475029,
+        "text": "“Slightly evil” defense of a subculture requires realism: letting go of eternalist <a href=\"https://meaningness.com/hope\" target=\"_blank\" rel=\"noopener\">hope</a> and <a href=\"https://meaningness.com/faith\" target=\"_blank\" rel=\"noopener\">faith</a> in imaginary <a href=\"https://meaningness.com/certainty\" target=\"_blank\" rel=\"noopener\">guarantees</a> that the New Thing will triumph."
+      }
+    ],
+    "title": "Geeks, MOPs, and sociopaths in subculture evolution | Meaningness",
+    "url": "https://meaningness.com/geeks-mops-sociopaths"
+  },
+  {
+    "author": "M Carlisle",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://medium.com/@docintangible/racist-data-destruction-113e3eff54a8&sz=64",
+    "last_update": 1668032909161,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668032909162,
+        "text": "<article><blockquote class=\"ne\"><p id=\"068e\" class=\"nf ng ig bm nh ni nj nk nl nm nn lm cn\" data-selectable-paragraph=\"\"><em class=\"on\">Are you sure your data makes sense?</em></p></blockquote></article>"
+      }
+    ],
+    "title": "racist data destruction?",
+    "url": "https://medium.com/@docintangible/racist-data-destruction-113e3eff54a8"
+  },
+  {
+    "author": "Vaidehi Joshi",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://medium.com/basecs/whats-a-linked-list-anyway-part-2-131d96f71996&sz=64",
+    "last_update": 1637077337280,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1637077292713,
+        "text": "a linked list is usually efficient when it comes to adding and removing most elements, but can be very slow to search and find a single element."
+      }
+    ],
+    "title": "What’s a Linked List, Anyway? [Part 2]",
+    "url": "https://medium.com/basecs/whats-a-linked-list-anyway-part-2-131d96f71996"
+  },
+  {
+    "author": "@0xfbifemboy",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://milkyeggs.com/society/a-response-to-tyler-cowens-classical-liberalism-vs-the-new-right/&sz=64",
+    "last_update": 1680539216930,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1680539216930,
+        "text": "However, my fear is that there is a fundamental rot in American governance (which the New Right is fairly good at diagnosing) that we are “papering over” with the riches of the previous century."
+      }
+    ],
+    "title": "A response to Tyler Cowen's \"Classical liberalism vs. The New Right\"",
+    "url": "https://milkyeggs.com/society/a-response-to-tyler-cowens-classical-liberalism-vs-the-new-right/"
+  },
+  {
+    "author": "@0xfbifemboy",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://milkyeggs.com/society/beware-of-gell-mann-amnesia-about-government-quality/&sz=64",
+    "last_update": 1674950113842,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674950113842,
+        "text": "<p>By default, we should assume that <em>any given function of government</em> is grossly mismanaged in the absence of direct evidence to the contrary. I don’t just mean “inefficiently run” or “somewhat poorly setup” but, in fact, a level of misconduct that would warrant immediate termination in even the most bloated corporations.</p>\n\n\n\n<p>When interacting with government bureaucracies, therefore, we should not assume good will upon their part. Instead, the default assumption should be that you are interacting with the organ of an adversarial, even arguably <em>anti-human</em> behemoth.</p>"
+      }
+    ],
+    "title": "Beware of Gell-Mann amnesia about government quality",
+    "url": "https://milkyeggs.com/society/beware-of-gell-mann-amnesia-about-government-quality/"
+  },
+  {
+    "author": "@0xfbifemboy",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://milkyeggs.com/society/fukuyama-winning-isnt-necessarily-a-good-thing/&sz=64",
+    "last_update": 1688247946764,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1688247946764,
+        "text": " it seems concerning that the mass populace of essentially every liberalized nation is so profoundly bored with the course of their lives that they are visibly excited by the idea of a coup in a faraway nation about which they know next to nothing whatsoever and to which they generally have zero material connection!"
+      }
+    ],
+    "title": "Fukuyama winning isn't necessarily a good thing",
+    "url": "https://milkyeggs.com/society/fukuyama-winning-isnt-necessarily-a-good-thing/"
+  },
+  {
+    "author": "@0xfbifemboy",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://milkyeggs.com/society/new-yorks-subway-construction-is-strangled-by-government-bloat/&sz=64",
+    "last_update": 1677794075038,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677794075038,
+        "text": "well-intentioned rule-making which attempts to rein in what superficially appear to be wasteful excesses but in fact end up counterproductively introducing deeply harmful frictions that clog the entire state apparatus and sabotage its ability to contract out work in an efficient manner"
+      }
+    ],
+    "title": "New York's subway construction is strangled by government bloat",
+    "url": "https://milkyeggs.com/society/new-yorks-subway-construction-is-strangled-by-government-bloat/"
+  },
+  {
+    "author": "MotherDuck",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://motherduck.com/blog/big-data-is-dead/&sz=64",
+    "last_update": 1676001036837,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676001036837,
+        "text": "An alternate definition of Big Data is “when the cost of keeping data around is less than the cost of figuring out what to throw away.” "
+      },
+      {
+        "comment": "",
+        "date": 1675998324269,
+        "text": "The data cataclysm that had been predicted hasn’t come to pass."
+      }
+    ],
+    "title": "MotherDuck: Big Data is Dead",
+    "url": "https://motherduck.com/blog/big-data-is-dead/"
+  },
+  {
+    "author": "@fordhamnyc",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://news.fordham.edu/fordham-magazine/fordham-trustee-fellow-honored-by-the-vatican/&sz=64",
+    "last_update": 1670249634247,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1670249634247,
+        "text": "“I studied accounting and philosophy. I never practice accounting; I practice philosophy all the time.”"
+      }
+    ],
+    "title": "Fordham Trustee Fellow Honored by the Vatican",
+    "url": "https://news.fordham.edu/fordham-magazine/fordham-trustee-fellow-honored-by-the-vatican/"
+  },
+  {
+    "author": "Jose Luis Ricon",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://nintil.com/substack-milquetoast&sz=64",
+    "last_update": 1657465738141,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1657465738141,
+        "text": "The biggest risk to Substack isn’t that Gmail changes its algorithm or that readers set up automatic forwarding and share accounts. It’s that years from now, each author will have built up so much content that a reader can pay a 1 month subscription, download the archive, and be set on reading material."
+      }
+    ],
+    "title": "Nintil - [Guest post] How Substack Became Milquetoast",
+    "url": "https://nintil.com/substack-milquetoast"
+  },
+  {
+    "author": "Eric Schulte, Dan Davison, Tom Dye",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://orgmode.org/worg/org-contrib/babel/intro.html#literate-programming&sz=64",
+    "last_update": 1658734840828,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1658734840828,
+        "text": "<p>An article about computational science in a scientific publication is\nnot the scholarship itself, it is merely advertising of the\nscholarship. The actual scholarship is the complete software\ndevelopment environment and the complete set of instructions which\ngenerated the figures.\n</p>\n\n<p>\n– D. Donoho</p>"
+      }
+    ],
+    "title": "Introducing Babel",
+    "url": "https://orgmode.org/worg/org-contrib/babel/intro.html#literate-programming"
+  },
+  {
+    "author": "Sally Thurer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://perverseincentives.substack.com/p/the-fungible-brush?utm_campaign=post_embed&sz=64",
+    "last_update": 1659315840551,
+    "quotes": [
+      {
+        "date": 1659315840551,
+        "text": "NFTs are effectively collective delusions designed to produce irrational attachments in immature man-children. It's hypebeast fuckery with none of the drip!"
+      }
+    ],
+    "title": "The Fungible Brush",
+    "url": "https://perverseincentives.substack.com/p/the-fungible-brush?utm_campaign=post_embed"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://prog21.dadgum.com/154.html&sz=64",
+    "last_update": 1677861607132,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677861607132,
+        "text": "<p>To me, there's an innate frustration in programming. It doesn't stem from having to work out the solutions to difficult problems. That takes careful thought, but it's the same kind of thought a novelist uses to organize a story or to write dialog that rings true. That kind of problem-solving is satisfying, even fun.</p><p>But that, unfortunately, is not what most programming is about. It's about trying to come up with a working solution in a problem domain that you don't fully understand and don't have time to understand.</p>"
+      }
+    ],
+    "title": "Do You Really Want to be Doing This When You're 50?",
+    "url": "https://prog21.dadgum.com/154.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://prog21.dadgum.com/177.html&sz=64",
+    "last_update": 1677861726467,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677861726467,
+        "text": "When it comes to writing code, the number one most important skill is how to keep a tangle of features from collapsing under the weight of its own complexity. "
+      }
+    ],
+    "title": "Organizational Skills Beat Algorithmic Wizardry",
+    "url": "https://prog21.dadgum.com/177.html"
+  },
+  {
+    "author": "Rob Henderson",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://robkhenderson.substack.com/p/people-spend-too-much-time-on-decisions?utm_medium=reader2&sz=64",
+    "last_update": 1660097733376,
+    "quotes": [
+      {
+        "date": 1660097733376,
+        "text": "“When presented with two options, choose the one that brings about the greater amount of luck.”"
+      }
+    ],
+    "title": "People Spend Too Much Time On Decisions with Equally Satisfying Outcomes ",
+    "url": "https://robkhenderson.substack.com/p/people-spend-too-much-time-on-decisions?utm_medium=reader2"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://samkriss.com/2015/10/18/a-portrait-of-the-person-guy/&sz=64",
+    "last_update": 1697991017830,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1697991017831,
+        "text": "The Person-Guy is absolutely real."
+      }
+    ],
+    "title": "A portrait of the Person-Guy",
+    "url": "https://samkriss.com/2015/10/18/a-portrait-of-the-person-guy/"
+  },
+  {
+    "author": "shakoist",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://shakoist.substack.com/p/why-business-data-science-irritates?sd=pf&sz=64",
+    "last_update": 1671429035070,
+    "quotes": [
+      {
+        "date": 1671429035070,
+        "text": "For every one good story that approximates reality, you get a hundred fake stories of people finding shapes in clouds."
+      },
+      {
+        "date": 1671428930085,
+        "text": "Most scientific problems I’ve worked on could be solved by a correct representation of an empirical distribution in a histogram. The next largest group needed a linear regression. The final group needed a statistical model from the first chapter of a PhD textbook. When the scale of the project grew, it was never because the statistics got too difficult. It was because the scale of the software, the data intensiveness, the edge-case handling, ramped up."
+      }
+    ],
+    "title": "Why Business Data Science Irritates Me",
+    "url": "https://shakoist.substack.com/p/why-business-data-science-irritates?sd=pf"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://sive.rs/compensate&sz=64",
+    "last_update": 1674142200838,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674142200839,
+        "text": "<strong>To make a change, you have to be extreme.\n</strong>\n\tGo all the way the other way.\n"
+      }
+    ],
+    "title": "Overcompensate to compensate | Derek Sivers",
+    "url": "https://sive.rs/compensate"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2013/02/12/youre-probably-wondering-why-ive-called-you-here-today/&sz=64",
+    "last_update": 1676800539791,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676800539792,
+        "text": "<p>Absurdity is the natural human tendency to dismiss anything you disagree with as so stupid it doesn’t even deserve consideration. In fact, you are virtuous for not considering it, maybe even heroic! You’re refusing to dignify the evil peddlers of bunkum by acknowledging them as legitimate debate partners.</p>\n<p>Charity is the ability to override that response. To assume that if you don’t understand how someone could possibly believe something as stupid as they do, that this is more likely a failure of understanding on your part than a failure of reason on theirs.</p>"
+      }
+    ],
+    "title": "You’re probably wondering why I’ve called you here today",
+    "url": "https://slatestarcodex.com/2013/02/12/youre-probably-wondering-why-ive-called-you-here-today/"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2013/05/02/if-its-worth-doing-its-worth-doing-with-made-up-statistics/&sz=64",
+    "last_update": 1671117447233,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1671117447233,
+        "text": "<p>I generally support applying made-up models to pretty much any problem possible, just to notice where our intuitions are going wrong and to get a second opinion from a process that has no common sense but is also lacks systematic bias (or else has unpredictable, different systematic bias). </p>\n"
+      }
+    ],
+    "title": "If It’s Worth Doing, It’s Worth Doing With Made-Up Statistics",
+    "url": "https://slatestarcodex.com/2013/05/02/if-its-worth-doing-its-worth-doing-with-made-up-statistics/"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2014/02/23/in-favor-of-niceness-community-and-civilization/&sz=64",
+    "last_update": 1676805409767,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676805409767,
+        "text": "Hey, you do think I would ever have learned to write things this long and bombastic if I had never read Moldbug? 😛"
+      },
+      {
+        "comment": "",
+        "date": 1676805271306,
+        "text": "Liberalism does not conquer by fire and sword. Liberalism conquers by communities of people who agree to play by the rules, slowly growing until eventually an equilibrium is disturbed. Its battle cry is not “Death to the unbelievers!” but “If you’re nice, you can join our cuddle pile!”"
+      }
+    ],
+    "title": "In Favor of Niceness, Community, and Civilization",
+    "url": "https://slatestarcodex.com/2014/02/23/in-favor-of-niceness-community-and-civilization/"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2014/05/12/weak-men-are-superweapons/&sz=64",
+    "last_update": 1656755712206,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1656755712207,
+        "text": "Remember, people think in terms of categories with central and noncentral members – a sparrow is a central bird, an ostrich a noncentral one."
+      }
+    ],
+    "title": "Weak Men Are Superweapons",
+    "url": "https://slatestarcodex.com/2014/05/12/weak-men-are-superweapons/"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2014/07/30/meditations-on-moloch/&sz=64",
+    "last_update": 1671065575606,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1671065575606,
+        "text": "The libertarian-authoritarian axis on the Political Compass is a tradeoff between discoordination and tyranny. You can have everything perfectly coordinated by someone with a god’s-eye-view – but then you risk Stalin. And you can be totally free of all central authority – but then you’re stuck in every stupid multipolar trap Moloch can devise."
+      },
+      {
+        "comment": "",
+        "date": 1671065004395,
+        "text": "I know that “capitalists sometimes do bad things” isn’t exactly an original talking point. But I do want to stress how it’s not equivalent to “capitalists are greedy”. I mean, sometimes they are greedy. But other times they’re just in a sufficiently intense competition where anyone who doesn’t do it will be outcompeted and replaced by people who do. Business practices are set by Moloch, no one else has any choice in the matter."
+      },
+      {
+        "comment": "",
+        "date": 1671064457549,
+        "text": "Any human with above room temperature IQ can design a utopia."
+      }
+    ],
+    "title": "Meditations On Moloch",
+    "url": "https://slatestarcodex.com/2014/07/30/meditations-on-moloch/"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2014/09/30/i-can-tolerate-anything-except-the-outgroup/&sz=64",
+    "last_update": 1671053443838,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1671053443838,
+        "text": "If you think you’re criticizing your own tribe, and your blood is not at that temperature, consider the possibility that you aren’t."
+      },
+      {
+        "comment": "",
+        "date": 1671050881935,
+        "text": "I think it’s fair to say you only earn the right to call yourself ‘forgiving’ if you forgive things that genuinely hurt you."
+      }
+    ],
+    "title": "I Can Tolerate Anything Except The Outgroup",
+    "url": "https://slatestarcodex.com/2014/09/30/i-can-tolerate-anything-except-the-outgroup/"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2017/08/29/my-irb-nightmare/&sz=64",
+    "last_update": 1656757924720,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1656757924720,
+        "text": "Bureaucracy in science does the same thing: limit the field to big institutional actors with vested interests. No amount of hassle is going to prevent the Pfizer-Merck-Novartis Corporation from doing whatever study will raise their bottom line. But enough hassle will prevent a random psychiatrist at a small community hospital from pursuing his pet theory about bipolar diagnosis. The more hurdles we put up, the more the scientific conversation skews in favor of Pfizer-Merck-Novartis. And the less likely we are to hear little stuff, dissenting voices, and things that don’t make anybody any money."
+      }
+    ],
+    "title": "My IRB Nightmare",
+    "url": "https://slatestarcodex.com/2017/08/29/my-irb-nightmare/"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2017/09/27/against-individual-iq-worries/&sz=64",
+    "last_update": 1671485346830,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1671485346830,
+        "text": "<p>Sadly, the human brain really, really want to cast to boolean.</p>\n"
+      },
+      {
+        "comment": "",
+        "date": 1671484248708,
+        "text": "Statistics is what tells us that almost everybody feels stimulated on amphetamines. Reality is my patient who consistently goes to sleep every time she takes Adderall. Neither the statistics nor the lived experience are wrong – but if you use one when you need the other, you’re going to have a bad time."
+      }
+    ],
+    "title": "Against Individual IQ Worries",
+    "url": "https://slatestarcodex.com/2017/09/27/against-individual-iq-worries/"
+  },
+  {
+    "author": "@slatestarcodex",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://slatestarcodex.com/2018/01/24/conflict-vs-mistake/&sz=64",
+    "last_update": 1674671214987,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674671214987,
+        "text": "At the very least, if I want to convince other people to my position here, I actually have to convince them – instead of using the classic Easy Mistake Theorist tactic of “smh that people still believe this stuff in the Year Of Our Lord 2018”"
+      },
+      {
+        "comment": "",
+        "date": 1674670808401,
+        "text": "The best that can be said about the best of them is that they’re trying to protect their own neutrality, unaware that in the struggle between the powerful and the powerless neutrality always favors the powerful."
+      },
+      {
+        "comment": "",
+        "date": 1674670247377,
+        "text": "Communism is intellectually bankrupt since <a href=\"https://slatestarcodex.com/2014/09/13/book-review-singer-on-marx/\" target=\"_blank\" rel=\"noopener\">it has no good policy prescriptions</a> for a communist state. If it did have good policy prescriptions for a communist state, we could test and implement those policies now, without a revolution. Karl Marx could have saved everyone a lot of trouble by being Bernie Sanders instead."
+      }
+    ],
+    "title": "Conflict Vs. Mistake",
+    "url": "https://slatestarcodex.com/2018/01/24/conflict-vs-mistake/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://statmodeling.stat.columbia.edu/2017/06/08/lance-armstrong-principle/&sz=64",
+    "last_update": 1704620936034,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1704620936034,
+        "text": "<p>If you push people to promise more than they can deliver, they’re motivated to cheat.</p>\n\t\t\t\n\n\t"
+      }
+    ],
+    "title": "The (Lance) Armstrong Principle | Statistical Modeling, Causal Inference, and Social Science",
+    "url": "https://statmodeling.stat.columbia.edu/2017/06/08/lance-armstrong-principle/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://strategywiki.org/wiki/Star_Wars_Knights_of_the_Old_Republic_II:_The_Sith_Lords/G0-T0#Questions&sz=64",
+    "last_update": 1666044615400,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1666044615400,
+        "text": " Working for the Republic was... stifling. So many checks and balances, forms to fill out, well-laid plans destroyed through slow bureaucracy. In essence, working for the Republic was much like committing much slower, much more boring crimes. And it was more difficult to see those crimes being committed.\n"
+      }
+    ],
+    "title": "Star Wars Knights of the Old Republic II: The Sith Lords/G0-T0",
+    "url": "https://strategywiki.org/wiki/Star_Wars_Knights_of_the_Old_Republic_II:_The_Sith_Lords/G0-T0#Questions"
+  },
+  {
+    "author": "Substack",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://substack.com/home/post/p-140635538&sz=64",
+    "last_update": 1705828826163,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1705828826163,
+        "text": "“No ethical living under capitalism” does not exonerate, it indicts, in a way that paradoxically creates the space for us to live in a messy world. We’re all hypocrites either way. Some of us remain aware of that fact and some of us don’t."
+      }
+    ],
+    "title": "How to Quit Substack",
+    "url": "https://substack.com/home/post/p-140635538"
+  },
+  {
+    "author": "Substack",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://substack.com/inbox&sz=64",
+    "last_update": 1676656793307,
+    "quotes": [
+      {
+        "date": 1676656793307,
+        "text": "But if EA is going to remain a distinct force that has something new and significant to contribute to the future of humanity, rather than doing a bit of good on the margin, it’s going to have to figure out how to address the problems that have made other movements so stupid."
+      },
+      {
+        "date": 1676650190283,
+        "text": "The normie both worships rationality and is repulsed by it. He needs to believe that his views are consistent with reason, but knows that if he follows reason too far it will intrude on certain sacred values."
+      }
+    ],
+    "title": "Why EA Will Be Anti-Woke or Die",
+    "url": "https://substack.com/inbox"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://takeonrules.com/2022/02/26/note-taking-with-org-roam-and-transclusion/&sz=64",
+    "last_update": 1655063466546,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1655063466546,
+        "text": "<p>“Any sufficiently advanced hobby is indistinguishable from work.”</p>\n"
+      }
+    ],
+    "title": "Note Taking with Org Roam and Transclusion",
+    "url": "https://takeonrules.com/2022/02/26/note-taking-with-org-roam-and-transclusion/"
+  },
+  {
+    "author": "Julian Gough",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://theeggandtherock.substack.com/p/i-wrote-a-story-for-a-friend&sz=64",
+    "last_update": 1673181518951,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1673181518951,
+        "text": "<p><em>The universe loves you because you are love.</em></p>"
+      },
+      {
+        "comment": "",
+        "date": 1673181344722,
+        "text": "I think a lot of the flaws in my character would simply have been covered up by money, rather than fixed. So I ended up strangely happy about how it had all turned out."
+      },
+      {
+        "comment": "",
+        "date": 1673180064637,
+        "text": "They were simply obeying the rules of capitalism, the rules so many of us have internalised as though they are natural law, and were trying to maximise their economic return – which is a perfectly valid game to play."
+      },
+      {
+        "comment": "",
+        "date": 1673178585971,
+        "text": "Carl was indeed Markus’s friend, but that didn’t automatically make him <em>my</em> friend."
+      }
+    ],
+    "title": "I wrote a story for a friend",
+    "url": "https://theeggandtherock.substack.com/p/i-wrote-a-story-for-a-friend"
+  },
+  {
+    "author": "@thejesuitpost",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://thejesuitpost.org/2022/12/silence-is-not-an-option-in-matters-of-life-and-death/&sz=64",
+    "last_update": 1671489813053,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1671489813053,
+        "text": "There is tremendous freedom in knowing that truth is outside of us, and so an acceptance or rejection of truth by our interlocutors is unconnected to our reputation and self-worth."
+      }
+    ],
+    "title": "Silence Is Not an Option in Matters of Life and Death",
+    "url": "https://thejesuitpost.org/2022/12/silence-is-not-an-option-in-matters-of-life-and-death/"
+  },
+  {
+    "author": "John Halpin",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://theliberalpatriot.substack.com/p/6-habits-of-highly-effective-citizens&sz=64",
+    "last_update": 1650827051493,
+    "quotes": [
+      {
+        "date": 1650827051493,
+        "text": "Politics is too important to our economic well-being and legal rights not to pay attention. But politics is also too nuts to make it a focal point in life. The highly effective citizen will find a proper balance between engaging in politics and disengaging from politics to enjoy other aspects of life as the seasons move on."
+      }
+    ],
+    "title": "6 Habits of Highly Effective Citizens",
+    "url": "https://theliberalpatriot.substack.com/p/6-habits-of-highly-effective-citizens"
+  },
+  {
+    "author": "Ruy Teixeira",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://theliberalpatriot.substack.com/p/the-fox-news-fallacy&sz=64",
+    "last_update": 1650826800026,
+    "quotes": [
+      {
+        "date": 1650826800026,
+        "text": "The Fox News Fallacy is having a dire effect on many Democrats. This is the idea that if Fox News (substitute here the conservative bête noire of your choice if you prefer) criticizes the Democrats for X then there must be absolutely nothing to X and the job of Democrats is to assert that loudly and often. The problem is that an issue is not necessarily completely invalid just because Fox News mentions it. That depends on the issue. "
+      }
+    ],
+    "title": "The Fox News Fallacy",
+    "url": "https://theliberalpatriot.substack.com/p/the-fox-news-fallacy"
+  },
+  {
+    "author": "N.S. Lyons",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://theupheaval.substack.com/p/the-china-convergence&sz=64",
+    "last_update": 1706809659906,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1706809659906,
+        "text": "An ideology is just a narrative that’s been written down and codified. But an ideology that’s been mainly left as free-floating narrative in the cloud, so to speak, may in fact be even more all-encompassing and influential, precisely because it is more flexible and able to constantly update itself in a power-maximizing direction. This has perhaps been a real advantage for soft managerial systems over their more openly and rigidly ideological hard siblings."
+      },
+      {
+        "comment": "",
+        "date": 1706807424683,
+        "text": "unity -&gt; disunity -&gt; unity"
+      }
+    ],
+    "title": "The China Convergence",
+    "url": "https://theupheaval.substack.com/p/the-china-convergence"
+  },
+  {
+    "author": "N.S. Lyons",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://theupheaval.substack.com/p/the-power-latent-in-a-countercultural?isFreemail=true&sz=64",
+    "last_update": 1663846162214,
+    "quotes": [
+      {
+        "date": 1663846162214,
+        "text": "if the moment ever arrives when a critical mass of America’s young women begin to prefer right-wing reactionary bad boys over left-wing squares, just because they’ve become the hot transgressive pick, this will be the moment the outcome of this century’s whole culture war will have been essentially decided. Only a few decades of mop-up battles will remain."
+      }
+    ],
+    "title": "The Power Latent in a Countercultural Right",
+    "url": "https://theupheaval.substack.com/p/the-power-latent-in-a-countercultural?isFreemail=true"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/DRMacIver/status/1590838260225515541&sz=64",
+    "last_update": 1668212773213,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668212773213,
+        "text": "A thought that occurred to me recently and has been preoccupying me since is that basically that the thing people are trying to get out of philosophy of ethics is to never have to take responsibility for their ethical choices."
+      }
+    ],
+    "title": "David R. MacIver on Twitter",
+    "url": "https://twitter.com/DRMacIver/status/1590838260225515541"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/ESYudkowsky/status/1372276766308364290&sz=64",
+    "last_update": 1652574125455,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1652574125455,
+        "text": "\"Acknowledging\" the Overton Window helps enforce the Overton Window.  Loudly publicly helpfully warning somebody that their work is \"cringe\" is cringe enforcement. \nJournalists reporting \"gaffes\" create gaffes."
+      }
+    ],
+    "title": "Eliezer Yudkowsky on Twitter",
+    "url": "https://twitter.com/ESYudkowsky/status/1372276766308364290"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/IvanVendrov/status/1591818398358507523&sz=64",
+    "last_update": 1668500363268,
+    "quotes": [
+      {
+        "date": 1668500363268,
+        "text": "Von Neumann on existential risk: Progress is chaotic so investments in planning are much less useful than investments in better control systems. Don't build Maginot lines, develop better command structures. Shorten your OODA loop. Response speed is everything."
+      }
+    ],
+    "title": "Ivan Vendrov on Twitter",
+    "url": "https://twitter.com/IvanVendrov/status/1591818398358507523"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/SouthernWintrs/status/1588325884896886787&sz=64",
+    "last_update": 1667521714300,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1667521714300,
+        "text": "If there is an arbitrage opportunity from a stat, its likely fake."
+      }
+    ],
+    "title": "Will I Am - e/acc on Twitter",
+    "url": "https://twitter.com/SouthernWintrs/status/1588325884896886787"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/VividVoid_/status/1616160482636988416&sz=64",
+    "last_update": 1674157792778,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674157792778,
+        "text": "Periodic reminder that if someone is nice to you but cruel to their outgroup, they're not a nice person.\n\nIt doesn't matter whether the expression is currently socially acceptable. If they are hateful in public, they will eventually direct it at you. \n\nIt's only a matter of time."
+      }
+    ],
+    "title": "Vivid Void on Twitter",
+    "url": "https://twitter.com/VividVoid_/status/1616160482636988416"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/atroyn/status/1620968689523916800&sz=64",
+    "last_update": 1675304859892,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1675304859892,
+        "text": "- it’s not necessary and probably actively harmful to ‘stay informed’. ‘the news’ is just another entertainment medium, you don’t need it."
+      }
+    ],
+    "title": "anton 🏴‍☠️ on Twitter",
+    "url": "https://twitter.com/atroyn/status/1620968689523916800"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/brianluidog/status/1524652851544297474&sz=64",
+    "last_update": 1661440168043,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1661440168044,
+        "text": "In fundamental equities research, one of my secrets was was that I used the \"annoying face\" method to generate alpha. This method involves meeting management or seeing videos/PR of them, and seeing if their face was annoying or not"
+      }
+    ],
+    "title": "Brian Lui on Twitter",
+    "url": "https://twitter.com/brianluidog/status/1524652851544297474"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/eigenrobot/status/1186474781278781442&sz=64",
+    "last_update": 1694727983328,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1694727983329,
+        "text": "people live in their own stories. a deeply-felt compliment will be one that lets them tell a better story about themselves."
+      }
+    ],
+    "title": "eigenrobot on X",
+    "url": "https://twitter.com/eigenrobot/status/1186474781278781442"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/eigenrobot/status/1569337141192265729&sz=64",
+    "last_update": 1668205929939,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668205929939,
+        "text": "well we all have our little quirks and mine is giving people who want to be victims exactly what they want"
+      }
+    ],
+    "title": "eigenrobot on Twitter",
+    "url": "https://twitter.com/eigenrobot/status/1569337141192265729"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/eigenrobot/status/1757269041922613460&sz=64",
+    "last_update": 1707809079113,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1707809079113,
+        "text": "generally the people who speak most compulsively about a novel and supposedly prosocial communication norms are the least functionally prosocial"
+      }
+    ],
+    "title": "eigenrobot on X: \"a series of observations spurred by a collection of happenings from my adult life\n\n1. generally the people who speak most compulsively about a novel and supposedly prosocial communication norms are the least functionally prosocial\n\n2. they may be either incompetent or malignant\" / X",
+    "url": "https://twitter.com/eigenrobot/status/1757269041922613460"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/evilJBP/status/1590825086881337345&sz=64",
+    "last_update": 1668543129098,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668543129098,
+        "text": "Sluts are scabs in the union of women. Simps are scabs in the union of men."
+      }
+    ],
+    "title": "Ken the Cowboy on Twitter",
+    "url": "https://twitter.com/evilJBP/status/1590825086881337345"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/hamandcheese/status/1478850572677791749&sz=64",
+    "last_update": 1641443699049,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1641443699049,
+        "text": "The worlds most accomplished computer programmer would instantly become \"low skill\" if they time travelled to the 16th century."
+      }
+    ],
+    "title": "Samuel Hammond 🌐🏛 on Twitter",
+    "url": "https://twitter.com/hamandcheese/status/1478850572677791749"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/jacobwhiteAR/status/1594389355703025665&sz=64",
+    "last_update": 1668979052052,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668979052052,
+        "text": "Worst secret in the industry is that appraisals aren't worth the money they're printed on.  Appraisers get hired by the bank, and they won't get rehired if they screw up too many deals"
+      }
+    ],
+    "title": "Jacob White 🦃 on Twitter",
+    "url": "https://twitter.com/jacobwhiteAR/status/1594389355703025665"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/leaacta/status/1374328647163772934&sz=64",
+    "last_update": 1650921266236,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1650921266237,
+        "text": "life hack: you don't have to explain yourself or understand anything, you can just do stuff"
+      }
+    ],
+    "title": "🔪 on Twitter",
+    "url": "https://twitter.com/leaacta/status/1374328647163772934"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/literalbanana&sz=64",
+    "last_update": 1653292163979,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1653292163980,
+        "text": "abstractions are like glue: the stronger they are the more you end up needing solvents to clean up the inevitable mess"
+      }
+    ],
+    "title": "Science Banana (@literalbanana) / Twitter",
+    "url": "https://twitter.com/literalbanana"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/mattparlmer/status/1583973343245455360&sz=64",
+    "last_update": 1666483718537,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1666483718537,
+        "text": "Fannie Mae mortgages are just Section 8 for people with good jobs, the intent is the same"
+      }
+    ],
+    "title": "mattparlmer 🪐 🌷 on Twitter",
+    "url": "https://twitter.com/mattparlmer/status/1583973343245455360"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/mattyglesias/status/1607563980603531265&sz=64",
+    "last_update": 1672791923754,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1672791923754,
+        "text": "A lot of what passes for political arguments on here reminds me of how we used to talk about music — who’s a poseur, which bands are real punk, is it cringe to watch MTV blah blah blah"
+      }
+    ],
+    "title": "Matthew Yglesias on Twitter",
+    "url": "https://twitter.com/mattyglesias/status/1607563980603531265"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/nickcammarata/status/1486456943535222788&sz=64",
+    "last_update": 1643236451893,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1643236451893,
+        "text": "You are not running out of time nor too late for anything"
+      }
+    ],
+    "title": "Nick Cammarata on Twitter",
+    "url": "https://twitter.com/nickcammarata/status/1486456943535222788"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/patio11/status/1468917946995347459&sz=64",
+    "last_update": 1650781772728,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1650781772729,
+        "text": "In markets in everything news, apparently the culture that is Japanese golf somewhat encourages you to throw a party for all your friends at the golf club if you score a hole in one or albatross.\n\nIt's a big deal. Branded goods, lots of alcohol, etc. Costs about $10k."
+      }
+    ],
+    "title": "Patrick McKenzie on Twitter",
+    "url": "https://twitter.com/patio11/status/1468917946995347459"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/patio11/status/1618252983954976768&sz=64",
+    "last_update": 1674672239316,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674672239317,
+        "text": "A certain degree of mutual trust in the rules and in most people’s willingness to mind the rules is a necessary precondition for having nice things, and pervasively flouting the rules is advocacy for there being less nice things.\n\nI want to live in a society with nice things."
+      }
+    ],
+    "title": "Patrick McKenzie on Twitter",
+    "url": "https://twitter.com/patio11/status/1618252983954976768"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/pranesh/status/1470839095064678407&sz=64",
+    "last_update": 1651340576425,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1651340576425,
+        "text": "A core part of many forms of activism is to dial up the \"we're in danger\" level to 11. We have limited attention spans, limited activism energy, and there are tons of things that are going wrong with the world. This often leads to hyperbole."
+      }
+    ],
+    "title": "Pranesh Prakash on Twitter",
+    "url": "https://twitter.com/pranesh/status/1470839095064678407"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/rkylesmith/status/1585779406777163776&sz=64",
+    "last_update": 1666994474132,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1666994474132,
+        "text": "48 hours. That’s all it takes to ride out a Twitter storm."
+      }
+    ],
+    "title": "Kyle Smith on Twitter",
+    "url": "https://twitter.com/rkylesmith/status/1585779406777163776"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/robinhanson/status/1599802832315887618&sz=64",
+    "last_update": 1670257844264,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1670257844264,
+        "text": "“Political skill at work is one of the most powerful predictors of success in the workplace.… Yes, 35% of US employees said they’d forgo a substantial raise to see their supervisor fired but acting that way is not going to get you promoted.\""
+      }
+    ],
+    "title": "Robin Hanson on Twitter",
+    "url": "https://twitter.com/robinhanson/status/1599802832315887618"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/tszzl/status/1540117529754013698&sz=64",
+    "last_update": 1656028339928,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1656028339929,
+        "text": "lean startup is cringe you need be speedrunning into oblivion or success"
+      }
+    ],
+    "title": "roon on Twitter",
+    "url": "https://twitter.com/tszzl/status/1540117529754013698"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/vgr/status/1483895308551553024&sz=64",
+    "last_update": 1642623538670,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1642623538670,
+        "text": "the more actual freedom people have, the harder and less rewarding managing or leading people becomes, so fewer people want to do it, and of those who do, most only want to appear to be doing it because the rewards of the theater are almost as high as the rewards of doing it"
+      }
+    ],
+    "title": "Venkatesh Rao (7/100 animations ) on Twitter",
+    "url": "https://twitter.com/vgr/status/1483895308551553024"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/vgr/status/1592973125872136195&sz=64",
+    "last_update": 1668630032976,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668630032976,
+        "text": "A Roosevelt quote is not a get out of jail free card you scribble for yourself on a napkin that all must honor."
+      }
+    ],
+    "title": "Venkatesh Rao on Twitter",
+    "url": "https://twitter.com/vgr/status/1592973125872136195"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://twitter.com/visakanv/status/1471275450882478080&sz=64",
+    "last_update": 1656867917786,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1656867917786,
+        "text": "if you show up, don't die, and don't quit, almost every year of producing content is better than the last"
+      }
+    ],
+    "title": "visakan veerasamy on Twitter",
+    "url": "https://twitter.com/visakanv/status/1471275450882478080"
+  },
+  {
+    "author": "Curtis Yarvin",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://urbit.org/blog/a-founders-farewell&sz=64",
+    "last_update": 1676556054084,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676556054084,
+        "text": "There are three kinds of problems: problems you can't solve now, problems you don't have to solve now, and hard problems."
+      }
+    ],
+    "title": "A Founder's Farewell",
+    "url": "https://urbit.org/blog/a-founders-farewell"
+  },
+  {
+    "author": "Vadim Kravcenko",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://vadimkravcenko.com/shorts/contracts-you-should-never-sign/&sz=64",
+    "last_update": 1696291064799,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1696291064800,
+        "text": "Never sign anything you're not completely sure about."
+      }
+    ],
+    "title": "Contracts you should never sign",
+    "url": "https://vadimkravcenko.com/shorts/contracts-you-should-never-sign/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://web.archive.org/web/19981206063754/http%3A//www.mozilla.org/blue-sky/misc/199805/intertwingle.html&sz=64",
+    "last_update": 1655517092742,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1655517092742,
+        "text": "\n  \n    ``Intertwingularity is not generally acknowledged -- people\n      keep pretending they can make things deeply hierarchical, categorizable \n      and sequential when they can't.  Everything is deeply intertwingled.''\n  \n  \n \n \n  \n  -- Ted Nelson\n  "
+      }
+    ],
+    "title": "blue sky: miscellaneous",
+    "url": "https://web.archive.org/web/19981206063754/http%3A//www.mozilla.org/blue-sky/misc/199805/intertwingle.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://world.hey.com/dhh/kamal-1-0-5304ff9e&sz=64",
+    "last_update": 1717797677336,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1717797677336,
+        "text": "So many of the best opportunities in life only reveal themselves when the easy path is blocked."
+      }
+    ],
+    "title": "Kamal 1.0",
+    "url": "https://world.hey.com/dhh/kamal-1-0-5304ff9e"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/&sz=64",
+    "last_update": 1673361933599,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1673361933599,
+        "text": "ChatGPT does great at the “human-like parts”, where there isn’t a precise “right answer”. But when it’s “put on the spot” for something precise, it often falls down."
+      }
+    ],
+    "title": "Wolfram|Alpha as the Way to Bring Computational Knowledge Superpowers to ChatGPT",
+    "url": "https://writings.stephenwolfram.com/2023/01/wolframalpha-as-the-way-to-bring-computational-knowledge-superpowers-to-chatgpt/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.americamagazine.org/faith/2022/12/19/pope-resignation-letter-impairment-244374&sz=64",
+    "last_update": 1671491955906,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1671491955906,
+        "text": "“If their faith is faltering, it’s because it is alive. Otherwise, you would feel nothing at all.”"
+      }
+    ],
+    "title": "Pope Francis reveals he signed resignation letter in case of medical impairment",
+    "url": "https://www.americamagazine.org/faith/2022/12/19/pope-resignation-letter-impairment-244374"
+  },
+  {
+    "author": "@anime",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.animenewsnetwork.com/feature/2021-04-26/why-seven-seas-altered-its-light-novels/.171956&sz=64",
+    "last_update": 1704823688098,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1704823688099,
+        "text": "And if an editing choice can be <em>perceived</em> as censorship, then it ultimately doesn't matter what the rationalization for it was."
+      }
+    ],
+    "title": "Why Seven Seas Altered Its Light Novels",
+    "url": "https://www.animenewsnetwork.com/feature/2021-04-26/why-seven-seas-altered-its-light-novels/.171956"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.astralcodexten.com/p/my-left-kidney&sz=64",
+    "last_update": 1698408731982,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1698408731982,
+        "text": "I worry that people use suffering as a heuristic for goodness. Mother Teresa becomes a hero because living with lepers in the Calcutta slums sounds horrible - so anyone who does it must be really charitable (regardless of whether or not the lepers get helped). Owning a castle is the opposite of suffering - it sounds great - therefore it is fake charity (no matter how much good you do with the castle)."
+      }
+    ],
+    "title": "My Left Kidney",
+    "url": "https://www.astralcodexten.com/p/my-left-kidney"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.bartleby.com/229/5022.html&sz=64",
+    "last_update": 1674170657351,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674170657351,
+        "text": "Yet George Fox stands for something too—a thought—the thought that wakes in silent hours—perhaps the deepest, most eternal thought latent in the human soul. This is the thought of God, merged in the thoughts of moral right and the immortality of identity. Great, great is this thought—aye, greater than all else. "
+      }
+    ],
+    "title": "22. George Fox (and Shakspere). November Boughs. Whitman, Walt. 1892. Prose Works",
+    "url": "https://www.bartleby.com/229/5022.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.city-journal.org/html/washington%E2%80%99s-lost-black-aristocracy-12024.html&sz=64",
+    "last_update": 1661876704616,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1661876704616,
+        "text": "From the turn of the century until the race riots of 1968, Washington contained the largest black professional community in the United States. By 1920 a 40-block portion of the city, an area now known as the Shaw neighborhood, boasted more than 300 black-owned businesses"
+      }
+    ],
+    "title": "Washington’s Lost Black Aristocracy",
+    "url": "https://www.city-journal.org/html/washington%E2%80%99s-lost-black-aristocracy-12024.html"
+  },
+  {
+    "author": "Natasha Piñon",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.cnbc.com/2023/01/19/yale-researchers-how-highly-successful-people-argue.html&sz=64",
+    "last_update": 1674246172365,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674246172365,
+        "text": "<p>He recommends trying to hit four “primary W’s” in any argument:</p><ol><li>What’s your argument?</li><li>Why is it true?</li><li>When has it happened before?</li><li>Who cares?</li></ol>"
+      }
+    ],
+    "title": "Yale research: Highly successful people argue differently",
+    "url": "https://www.cnbc.com/2023/01/19/yale-researchers-how-highly-successful-people-argue.html"
+  },
+  {
+    "author": "@cracked",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.cracked.com/article_32268_chevy-chase-a-history-of-being-terrible.html&sz=64",
+    "last_update": 1667054686869,
+    "quotes": [
+      {
+        "comment": "Add Comment",
+        "date": 1667054686869,
+        "text": "“When you become famous, you’ve got like a year or two where you act like a real a--hole.&nbsp; You can’t help yourself. It happens to everybody. You’ve got like two years to pull it together— or it’s permanent.”&nbsp;"
+      }
+    ],
+    "title": "Chevy Chase: A History Of Being Terrible",
+    "url": "https://www.cracked.com/article_32268_chevy-chase-a-history-of-being-terrible.html"
+  },
+  {
+    "author": "@dominicanadhs",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.dominicanajournal.org/why-thomism/&sz=64",
+    "last_update": 1658433704630,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1658433704630,
+        "text": "In this regard, we can apply to St. Thomas what Sherlock Holmes said of his brother Mycroft: “All other men are specialists, but his specialism is omniscience.” Of course, Thomas himself would disapprove of such intemperate speech, but, admitting the hyperbole, we might say that a certain degree of “omniscience” is merely a corollary of the comprehensiveness we have just described."
+      }
+    ],
+    "title": "Why Thomism?",
+    "url": "https://www.dominicanajournal.org/why-thomism/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.dreamsongs.com/WorseIsBetter.html&sz=64",
+    "last_update": 1666661926860,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1666661926860,
+        "text": "\"risk-taking and a willingness to open one’s eyes to new possibilities and a rejection of worse-is-better make an environment where excellence is possible"
+      }
+    ],
+    "title": "Worse Is Better",
+    "url": "https://www.dreamsongs.com/WorseIsBetter.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.econlib.org/sanction-the-triumph-of-ayn-rands-worst-idea/&sz=64",
+    "last_update": 1674669661506,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674669661506,
+        "text": "Indiscriminate tolerance and indiscriminate condemnation are not two opposites: they are two variants of the same evasion."
+      },
+      {
+        "comment": "",
+        "date": 1674669582891,
+        "text": "<em>Every</em> group that deems itself clearly and thoroughly right is deeply wrong due to (a) <a href=\"https://www.econlib.org/archives/2015/10/superforecastin.html\" target=\"_blank\" rel=\"noopener\">their dogmatic methods</a> and (b)&nbsp;<a href=\"https://www.econlib.org/archives/2014/11/on_the_complexi.html\" target=\"_blank\" rel=\"noopener\">the complexity of the world</a>.&nbsp; <a href=\"https://www.econlib.org/archives/2014/10/dear_identity_p.html\" target=\"_blank\" rel=\"noopener\">Including yours.&nbsp; Including mine.</a>&nbsp; Talking&nbsp;<em>to</em> people who agree with you while talking&nbsp;<em>at</em> people who disagree with you is a blueprint for building a Tower of Error."
+      }
+    ],
+    "title": "\"Sanction\": The Triumph of Ayn Rand's Worst Idea - Econlib",
+    "url": "https://www.econlib.org/sanction-the-triumph-of-ayn-rands-worst-idea/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.facebook.com/100006735798590/posts/i-resigned-from-my-position-as-an-executive-consultant-for-vr-with-meta-my-inter/3467566940144465/&sz=64",
+    "last_update": 1671243144478,
+    "quotes": [
+      {
+        "date": 1671243144478,
+        "text": "If I am trying to sway others, I would say that an org that has only known inefficiency is ill prepared for the inevitable competition and/or belt tightening, but really, it is the more personal pain of seeing a 5% GPU utilization number in production. I am offended by it."
+      }
+    ],
+    "title": "John Carmack",
+    "url": "https://www.facebook.com/100006735798590/posts/i-resigned-from-my-position-as-an-executive-consultant-for-vr-with-meta-my-inter/3467566940144465/"
+  },
+  {
+    "author": "@leopoldasch",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.forourposterity.com/against-netflix/&sz=64",
+    "last_update": 1657464274959,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1657464274960,
+        "text": "But part of what makes America special is a certain harshness—first embodied in the Puritans and their quest to settle America’s unforgiving wilderness. Great achievements, new ideas, ingenious inventions emerge from a culture that prizes travail and perseverance, not one that prioritizes comfort and ephemeral satisfaction."
+      }
+    ],
+    "title": "Against Netflix",
+    "url": "https://www.forourposterity.com/against-netflix/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.google.com/search?q=WITCH+companies&sourceid=chrome&ie=UTF-8&sz=64",
+    "last_update": 1667694738429,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1667694738429,
+        "text": "In WITCH companies (<b>WIPRO, INFOSYS, TCS, COGNIZANT, HCL</b>) the image and impression the managers and clients have of you is more important than any objective work done."
+      }
+    ],
+    "title": "WITCH companies - Google Search",
+    "url": "https://www.google.com/search?q=WITCH+companies&sourceid=chrome&ie=UTF-8"
+  },
+  {
+    "author": "Condé Nast",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.gq.com/story/coal-mines-underground-economy&sz=64",
+    "last_update": 1674762220052,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674762220052,
+        "text": "<p>\"You're away from your kids,\" he said. \"You work all kinds of crazy hours. Now, what happens when you work those kinda hours?\"</p><p>I wasn't sure where he was going, so I didn't answer.</p><p>\"What happens is you come home and your kids say they love you. Now, they're not saying that because they <em>know</em> you. They're saying that because of what their mom instilled in them kids. She's instilled in them kids that this is a good man.\"</p><p>\"I guess so,\" I said.</p><p>\"Because my kids didn't know me. You know what I mean? I wasn't there. So why do my kids think so much of their dad? It's because of what their mom has instilled in them. Now, my portion of that is that everything she says about me, I have to make it more or less be true. That's my portion of the equation.</p><p>\"Do you see? Do you know what I mean? If I'm a good man, it's because of the people I got around me expecting <em>good</em> out of me.\"</p>"
+      }
+    ],
+    "title": "Underground Coal Economy - GQ May 2007",
+    "url": "https://www.gq.com/story/coal-mines-underground-economy"
+  },
+  {
+    "author": "@JeremyBrownTech",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.jeremybrown.tech/8-kubernetes-is-a-red-flag-signalling-premature-optimisation/&sz=64",
+    "last_update": 1657016930496,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1657016930496,
+        "text": "Solve problems as they arise, not in advance. The work we do should solve the user's issues. Ask yourself, <strong>what is the human behaviour I'm trying to impact with my work?</strong>"
+      },
+      {
+        "comment": "",
+        "date": 1657016882855,
+        "text": "We are all magpies distracted by the new shiny. "
+      }
+    ],
+    "title": "Kubernetes is a red flag signalling premature optimisation.",
+    "url": "https://www.jeremybrown.tech/8-kubernetes-is-a-red-flag-signalling-premature-optimisation/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.lesswrong.com/posts/9thqSN8HDLM3LTxK5/offense-versus-harm-minimization&sz=64",
+    "last_update": 1671072934090,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1671072934090,
+        "text": "<p id=\"block6\">Although people pretending to be offended for personal gain is a real problem, it is less common in reality than it is in people's imaginations. If a person appears to suffer from an action of yours which you find completely innocuous, you should consider the possibility that eir mind is different from yours before rejecting eir suffering as feigned.</p>\n"
+      }
+    ],
+    "title": "Offense versus harm minimization - LessWrong",
+    "url": "https://www.lesswrong.com/posts/9thqSN8HDLM3LTxK5/offense-versus-harm-minimization"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.lesswrong.com/posts/wCqfCLs8z5Qw4GbKS/the-importance-of-saying-oops&sz=64",
+    "last_update": 1659660484570,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1659660484570,
+        "text": "Do not indulge in drama and become proud of admitting errors. It is surely superior to get it right the first time. But if you do make an error, better by far to see it all at once. Even hedonically, it is better to take one large loss than many small ones. The alternative is stretching out the battle with yourself over years. The alternative is Enron."
+      },
+      {
+        "comment": "",
+        "date": 1659660245674,
+        "text": "Not every change is an improvement, but every improvement is necessarily a change. If we only admit small local errors, we will only make small local changes. The motivation for a <em>big</em> change comes from acknowledging a <em>big</em> mistake."
+      }
+    ],
+    "title": "The Importance of Saying \"Oops\" - LessWrong",
+    "url": "https://www.lesswrong.com/posts/wCqfCLs8z5Qw4GbKS/the-importance-of-saying-oops"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.linkedin.com/feed/&sz=64",
+    "last_update": 1661012516566,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1661012516567,
+        "text": "The three big statistical &amp; data science advances of the last half century were (1) the bootstrap, (2) Bayesian MCMC, and (3) large p small n regression.  This according to David Banks (statistician at Duke), in last night's Deming lecture at the Joint Statistical Meetings.  What's next?  Banks' opinion: nothing.  No great theoretical advances."
+      }
+    ],
+    "title": "Feed | LinkedIn",
+    "url": "https://www.linkedin.com/feed/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.marktarver.com/shenshen.html&sz=64",
+    "last_update": 1660958389715,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1660958389715,
+        "text": "There \n\t\t\t\tare two paths in programming; the path of power and the path of \n\t\t\t\tunderstanding. The path of power gives quick results and leads \n\t\t\t\tto stagnation. The path of understanding gives power."
+      }
+    ],
+    "title": "Biography",
+    "url": "https://www.marktarver.com/shenshen.html"
+  },
+  {
+    "author": "@McGillU",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.mcgill.ca/oss/article/critical-thinking/dunning-kruger-effect-probably-not-real&sz=64",
+    "last_update": 1669167665931,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1669167665931,
+        "text": "For an effect of human psychology to be real, it cannot be rigorously replicated using random noise."
+      },
+      {
+        "comment": "",
+        "date": 1669167193270,
+        "text": "The Dunning-Kruger effect was never about “dumb people not knowing they are dumb” or about “ignorant people being very arrogant and confident in their lack of knowledge.”"
+      }
+    ],
+    "title": "The Dunning-Kruger Effect Is Probably Not Real",
+    "url": "https://www.mcgill.ca/oss/article/critical-thinking/dunning-kruger-effect-probably-not-real"
+  },
+  {
+    "author": "Matthew Scroggs",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.mscroggs.co.uk/blog/101&sz=64",
+    "last_update": 1675733327255,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1675733327255,
+        "text": "Hopefully by now you agree with me that Anscombe was right: it's very important to plot data as well as looking at the summary statistics."
+      }
+    ],
+    "title": "The databet",
+    "url": "https://www.mscroggs.co.uk/blog/101"
+  },
+  {
+    "author": "John Gray",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.newstatesman.com/ideas/2024/01/john-gray-peter-thiel-discussion-post-modern-world&sz=64",
+    "last_update": 1706363533703,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1706363533703,
+        "text": "<p>In a way, we’ve progressed beyond the Soviets, because we’ve got to the point where no one really knows what the party line is, but everyone’s terrified from deviating from it. It’s the postmodern version of the party line.</p>\n\n\n\n"
+      },
+      {
+        "comment": "",
+        "date": 1706363326302,
+        "text": "You know, McKinsey was a real thing in 1985 in the United States. If you hired a consultant they actually helped you improve your company, because the companies were badly run. At this point McKinsey is a total racket, it’s just all fake. "
+      }
+    ],
+    "title": "John Gray and Peter Thiel: Life in a postmodern world",
+    "url": "https://www.newstatesman.com/ideas/2024/01/john-gray-peter-thiel-discussion-post-modern-world"
+  },
+  {
+    "author": "@nytimes",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.nytimes.com/1962/04/25/archives/washington-america-is-a-tune-it-must-be-sung-together-the-schools.html&sz=64",
+    "last_update": 1651135065296,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1651135065296,
+        "text": "-\"America is a tune,\" said Gerald Stanley Lee. \"It must be sung together.\""
+      }
+    ],
+    "title": "Washington; 'America Is a Tune. It Must Be Sung Together.' The Schools Forced Relocation No Legal Defense (Published 1962)",
+    "url": "https://www.nytimes.com/1962/04/25/archives/washington-america-is-a-tune-it-must-be-sung-together-the-schools.html"
+  },
+  {
+    "author": "@nytimes",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.nytimes.com/2022/03/15/opinion/truckers-surveillance.html&sz=64",
+    "last_update": 1661894798927,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1661894798928,
+        "text": "“It’s a lightweight straw,” Mr. Knope said, “but it’s also a very encumbered camel.”"
+      }
+    ],
+    "title": "Opinion | How Life as a Trucker Devolved Into a Dystopian Nightmare",
+    "url": "https://www.nytimes.com/2022/03/15/opinion/truckers-surveillance.html"
+  },
+  {
+    "author": "@nytimes",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.nytimes.com/2022/04/27/opinion/elon-musk-twitter.html&sz=64",
+    "last_update": 1651079303379,
+    "quotes": [
+      {
+        "date": 1651079303379,
+        "text": "Jack Dorsey, Twitter’s co-founder and former chief executive, always wanted it to be something else. Something it wasn’t, and couldn’t be. “The purpose of Twitter is to serve the public conversation,” he <a class=\"css-1g7m0tk\" href=\"https://www.intelligence.senate.gov/sites/default/files/documents/os-jdorsey-090518.pdf\" title=\"\" rel=\"noopener\" target=\"_blank\">said</a> in 2018. Twitter began “<a class=\"css-1g7m0tk\" href=\"https://blog.twitter.com/en_us/topics/company/2018/measuring_healthy_conversation\" title=\"\" rel=\"noopener\" target=\"_blank\">measuring conversational health</a>” and trying to tweak the platform to burnish it. Sincere as the effort was, it was like those <a class=\"css-1g7m0tk\" href=\"https://publichealth.jhu.edu/2014/drink-responsibly-messages-in-alcohol-ads-promote-products-not-public-health\" title=\"\" rel=\"noopener\" target=\"_blank\">liquor ads advising moderation</a>. You don’t get people to drink less by selling them whiskey."
+      }
+    ],
+    "title": "Opinion | Elon Musk Got Twitter Because He Gets Twitter",
+    "url": "https://www.nytimes.com/2022/04/27/opinion/elon-musk-twitter.html"
+  },
+  {
+    "author": "@nytimes",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.nytimes.com/2022/09/02/opinion/countering-prejudice.html&sz=64",
+    "last_update": 1662878021678,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1662878021678,
+        "text": "But the ordinary, vital, self-loving response to such a problem is to step up and learn how to show ourselves at our best."
+      }
+    ],
+    "title": "Opinion | Proving Racists Wrong Is Not a Trivial Pursuit",
+    "url": "https://www.nytimes.com/2022/09/02/opinion/countering-prejudice.html"
+  },
+  {
+    "author": "@nytimes",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.nytimes.com/2022/09/08/books/review/karen-armstrong-by-the-book-interview.html&sz=64",
+    "last_update": 1662866023167,
+    "quotes": [
+      {
+        "date": 1662866023167,
+        "text": "Less well known, but equally important and far more accessible, is “The Book of Zhuangzi,” written in the fourth century B.C., which also enables the reader to become aware of the Tao<em class=\"css-2fg4z9 e1gzwzxm0\">,</em> the sacred reality that permeates every aspect of life."
+      }
+    ],
+    "title": "The Novel That Made Karen Armstrong Quit Her Reading Group",
+    "url": "https://www.nytimes.com/2022/09/08/books/review/karen-armstrong-by-the-book-interview.html"
+  },
+  {
+    "author": "@nytimes",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.nytimes.com/2023/01/06/opinion/pope-benedict-legacy.html&sz=64",
+    "last_update": 1673012529427,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1673012529427,
+        "text": "For Benedict, this is the dazzling possibility that believers must share with their fellows: that all of us are the inheritors not of an ancient chaos but of something that despite the brokenness in our midst is fundamentally and recognizably good, a good we are invited to share for all eternity with a being who does not merely love but who is love itself."
+      }
+    ],
+    "title": "Opinion | Pope Benedict Wasn’t Conservative. He Was Something Much More Surprising.",
+    "url": "https://www.nytimes.com/2023/01/06/opinion/pope-benedict-legacy.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.orgroam.com/manual.html#A-Brief-Introduction-to-the-Zettelkasten-Method&sz=64",
+    "last_update": 1661132290526,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1661132290526,
+        "text": "Emacs outshines all other editing software in approximately the same way that\nthe noonday sun does the stars. It is not just bigger and brighter; it simply\nmakes everything else vanish. – Neal Stephenson, In the Beginning was the\nCommand Line (1998)\n"
+      }
+    ],
+    "title": "Org-roam User Manual",
+    "url": "https://www.orgroam.com/manual.html#A-Brief-Introduction-to-the-Zettelkasten-Method"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.overcomingbias.com/2023/02/why-is-everyone-so-boring.html&sz=64",
+    "last_update": 1675611092125,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1675611092125,
+        "text": "I see roughly three typical public stances: <em>boring</em>, <em>lively</em>, or <em>outraged</em>. Either you act boring, so the bandits will ignore you, you act lively, and invite bandit attacks, or you act outraged, and play a bandit yourself."
+      }
+    ],
+    "title": "Overcoming Bias : Why Is Everyone So Boring?",
+    "url": "https://www.overcomingbias.com/2023/02/why-is-everyone-so-boring.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.phoronix.com/forums/forum/linux-graphics-x-org-drivers/x-org-drm/1340093-asahi-linux-may-pursue-writing-apple-silicon-gpu-driver-in-rust&sz=64",
+    "last_update": 1660940843975,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1660940843975,
+        "text": "You can claim bad code all you want, but it is inevitable that humans will write flawed code.  No one, no matter how big their ego is, ever writes software more than \"Hello World!\" without errors. It's debatable that people can write a hello world program indefinitely over and over without any error without using copy/paste.  The less footguns the language has built in, the less likely you'll be shooting yourself in the foot.  That's the premise of langsec and it's borne out by decades of research, not to mention daily cybersecurity headlines."
+      }
+    ],
+    "title": "Asahi Linux May Pursue Writing Apple Silicon GPU Driver In Rust - Phoronix Forums",
+    "url": "https://www.phoronix.com/forums/forum/linux-graphics-x-org-drivers/x-org-drm/1340093-asahi-linux-may-pursue-writing-apple-silicon-gpu-driver-in-rust"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.poetryloverspage.com/poets/kipling/dane_geld.html&sz=64",
+    "last_update": 1689475318520,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1689475318520,
+        "text": "\"We never pay any-one Dane-geld,\n  No matter how trifling the cost;\nFor the end of that game is oppression and shame,\n  And the nation that pays it is lost!\""
+      }
+    ],
+    "title": "Poetry Lovers' Page - Rudyard Kipling: Dane-Geld",
+    "url": "https://www.poetryloverspage.com/poets/kipling/dane_geld.html"
+  },
+  {
+    "author": "Hirsh Chitkara",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.protocol.com/bulletins/peter-thiel-gop-masters&sz=64",
+    "last_update": 1666189183543,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1666189183543,
+        "text": "Thiel criticizes the party as it stands now for being too nihilistic — only defining itself in opposition to wokeism and the broader California model."
+      }
+    ],
+    "title": "Peter Thiel's gamble against the 'somewhat fake California thing'",
+    "url": "https://www.protocol.com/bulletins/peter-thiel-gop-masters"
+  },
+  {
+    "author": "@Quora",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.quora.com/What-is-the-meaning-of-the-Swahili-proverb-Asiyefunzwa-na-mamaye-hufunzwa-na-ulimwengu&sz=64",
+    "last_update": 1674499601162,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674499601162,
+        "text": "<p class=\"q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start\">Asiyefunzwa na mamaye = A person that is not taught by his/her mom</p> <p class=\"q-text qu-display--block qu-wordBreak--break-word qu-textAlign--start\">Hufunzwa na ulimwengu = is taught by the world</p>"
+      }
+    ],
+    "title": "What is the meaning of the Swahili proverb:''Asiyefunzwa na mamaye, hufunzwa na ulimwengu''?",
+    "url": "https://www.quora.com/What-is-the-meaning-of-the-Swahili-proverb-Asiyefunzwa-na-mamaye-hufunzwa-na-ulimwengu"
+  },
+  {
+    "author": "@raysan5",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.raylib.com/&sz=64",
+    "last_update": 1705680574439,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1705680574440,
+        "text": "Best way to learn to code is reading code."
+      }
+    ],
+    "title": "raylib",
+    "url": "https://www.raylib.com/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/DiscoElysium/comments/mzsuyf/anybody_else_think_joyce_messier_is_somehow/&sz=64",
+    "last_update": 1658719798316,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1658719798316,
+        "text": "<p class=\"_1qeIAgB0cPwnLhDF9XSiJM\">I think the point of Joyce is that she <em class=\"_7s4syPYtk5hfUIjySXcRE\">isn't</em> Margaret Thatcher.</p><p class=\"_1qeIAgB0cPwnLhDF9XSiJM\">Thatcher had something approaching anti-charisma. She was a deeply close-minded, cruel, and unpleasant person and she struggled to hide that part of herself in public interactions. Joyce is... not that. Joyce is urbane, witty, and friendly. She seems like a true citizen of the world, fascinated by all it has to offer, and freely admits she doesn't work for good people.</p><p class=\"_1qeIAgB0cPwnLhDF9XSiJM\">The point of Joyce in the game is to throw you off the scent. If you're a leftist coming into a game like this, you automatically have some sympathy for the union and mistrust of the corporation. But Joyce is charismatic and helpful, while Evrart is antagonistic and seemingly corrupt. If you're not a leftist, you take them at face value.</p><p class=\"_1qeIAgB0cPwnLhDF9XSiJM\">But this is a bait-and-switch. Evrart is only corrupt as a means to an end, and is secretly pursuing the far more moral and sympathetic goal: the economic freedom of Revachol from the Coalition. Joyce, meanwhile, is not a better person because she's aware she works for bad people. If anything, her awareness of it makes her <em class=\"_7s4syPYtk5hfUIjySXcRE\">worse</em>. The way she describes \"slumming it\" in Martinaise as a youth also shows that while she might be worldly and hip, she's also fundamentally predatory towards these communities, taking what she wants from them and moving on. She has literally sold her soul to her corporate masters, as the Pale may very well have eradicated who she was and you have no idea how much of the persona she presents to you is accurate to who she is, or if there even really is one \"Joyce.\"</p>"
+      }
+    ],
+    "title": "r/DiscoElysium - Anybody else think Joyce Messier is somehow connected to Margaret Thatcher?",
+    "url": "https://www.reddit.com/r/DiscoElysium/comments/mzsuyf/anybody_else_think_joyce_messier_is_somehow/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/emacs/comments/telo1i/issue_with_condael/&sz=64",
+    "last_update": 1655098872873,
+    "quotes": [
+      {
+        "date": 1655098872874,
+        "text": "<p class=\"_1qeIAgB0cPwnLhDF9XSiJM\">The biggest lie developers tell themselves and they actually believe: This time we will do it right.</p>"
+      }
+    ],
+    "title": "r/emacs - Issue with conda.el",
+    "url": "https://www.reddit.com/r/emacs/comments/telo1i/issue_with_condael/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/linuxmasterrace/comments/oome5r/me_10_seconds_after_i_get_my_steam_deck/&sz=64",
+    "last_update": 1652496620362,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1652496620363,
+        "text": "<p class=\"_1qeIAgB0cPwnLhDF9XSiJM\">arch is just a lightweight OS optimized for running neofetch</p>"
+      }
+    ],
+    "title": "r/linuxmasterrace - me, 10 seconds after i get my steam deck",
+    "url": "https://www.reddit.com/r/linuxmasterrace/comments/oome5r/me_10_seconds_after_i_get_my_steam_deck/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/news/comments/17ad81q/law_firm_rescinds_job_offers_to_harvard_students/&sz=64",
+    "last_update": 1697616170824,
+    "quotes": [
+      {
+        "date": 1697616170824,
+        "text": "As an associate at a biglaw firm you are <em>not</em> the main character. Your partner is <em>not</em> the main character. The client is the only main character"
+      }
+    ],
+    "title": "Law firm rescinds job offers to Harvard students who signed Israel...",
+    "url": "https://www.reddit.com/r/news/comments/17ad81q/law_firm_rescinds_job_offers_to_harvard_students/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/news/comments/xqu1i8/coolio_rapper_known_for_gangstas_paradise_dies_at/&sz=64",
+    "last_update": 1664480929057,
+    "quotes": [
+      {
+        "date": 1664480929057,
+        "text": "<p>I always imagined my midlife crisis would materialize in the form of sports cars, skydiving, and banging supermodels half my age. </p>\n\n<p>Instead, I got a paralyzing sense of existential dread that never goes away.</p>"
+      }
+    ],
+    "title": "Coolio, rapper known for 'Gangsta's Paradise,' dies at 59, TMZ reports",
+    "url": "https://www.reddit.com/r/news/comments/xqu1i8/coolio_rapper_known_for_gangstas_paradise_dies_at/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/news/comments/y6ajh0/more_us_companies_charging_employees_for_job/&sz=64",
+    "last_update": 1666030020319,
+    "quotes": [
+      {
+        "date": 1666030020320,
+        "text": "Training isn't training, it's liability avoidance."
+      }
+    ],
+    "title": "More U.S. companies charging employees for job training if they quit",
+    "url": "https://www.reddit.com/r/news/comments/y6ajh0/more_us_companies_charging_employees_for_job/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/news/comments/y7ntsx/a_high_school_artist_was_chosen_to_paint_a_mural/&sz=64",
+    "last_update": 1666176610225,
+    "quotes": [
+      {
+        "date": 1666176610225,
+        "text": "if you're an adult and harass a school aged child to the point they start crying, you are not the good guy. "
+      }
+    ],
+    "title": "A high school artist was chosen to paint a mural. Then came the...",
+    "url": "https://www.reddit.com/r/news/comments/y7ntsx/a_high_school_artist_was_chosen_to_paint_a_mural/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/news/comments/ym1skb/a_us_air_force_flight_spent_2_hours_drawing_a/&sz=64",
+    "last_update": 1667588937973,
+    "quotes": [
+      {
+        "date": 1667588937973,
+        "text": "It's an agreed social norm.  The fact that some people get offended by it is what makes it funny for the people drawing it.  Societies need these kinds of harmless \"rude\" norms as a basis of comedy and venting frustrations."
+      }
+    ],
+    "title": "A US Air Force flight spent 2 hours drawing a phallic pattern in...",
+    "url": "https://www.reddit.com/r/news/comments/ym1skb/a_us_air_force_flight_spent_2_hours_drawing_a/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/politics/comments/y7jhd3/kochbacked_think_tank_is_suing_bidens_studentloan/&sz=64",
+    "last_update": 1666187439487,
+    "quotes": [
+      {
+        "date": 1666187439488,
+        "text": "It's something a lot of people don't think about because family is a type of social safety net they take for granted."
+      }
+    ],
+    "title": "Koch-backed think tank is suing Biden's student-loan forgiveness,...",
+    "url": "https://www.reddit.com/r/politics/comments/y7jhd3/kochbacked_think_tank_is_suing_bidens_studentloan/"
+  },
+  {
+    "author": "@reddit",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.reddit.com/r/todayilearned/comments/y35b5d/til_sugar_does_not_cause_hyperactivity_in/&sz=64",
+    "last_update": 1665733073357,
+    "quotes": [
+      {
+        "date": 1665733073357,
+        "text": "A terrifying amount of commonly held beliefs can be traced to single studies that have never replicated."
+      }
+    ],
+    "title": "TIL Sugar does not cause hyperactivity in children. This myth is...",
+    "url": "https://www.reddit.com/r/todayilearned/comments/y35b5d/til_sugar_does_not_cause_hyperactivity_in/"
+  },
+  {
+    "author": "Matthew Yglesias",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.slowboring.com/p/the-best-way-to-end-mass-incarceration&sz=64",
+    "last_update": 1674056282641,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1674056282641,
+        "text": "But a period of rising crime has shown, I think, that anti-enforcement politics is completely doomed — it’s just going to hand the steering wheel over to the most braindead style of “lock ’em up” politics"
+      }
+    ],
+    "title": "The best way to end mass incarceration is to catch more criminals ",
+    "url": "https://www.slowboring.com/p/the-best-way-to-end-mass-incarceration"
+  },
+  {
+    "author": "Matthew Yglesias",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.slowboring.com/p/the-techno-optimists-fallacy/comment/42331049&sz=64",
+    "last_update": 1698148002330,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1698148002330,
+        "text": "The internet may not reduce isolation, but it does serve as a matching app for strawmen and people itching to torch them."
+      }
+    ],
+    "title": "Comment by dysphemistic treadmill on Slow Boring ",
+    "url": "https://www.slowboring.com/p/the-techno-optimists-fallacy/comment/42331049"
+  },
+  {
+    "author": "Matthew Yglesias",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.slowboring.com/p/why-you-cant-trust-the-media&sz=64",
+    "last_update": 1676464443433,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1676464443433,
+        "text": "most journalism isn’t written for people who have some actual stake in obtaining tedious-but-true facts about the world."
+      },
+      {
+        "comment": "",
+        "date": 1676464061353,
+        "text": "I think the basic story about declining trust in media is that the media industry became a lot more competitive to the point where it’s pretty hard to say what exactly people are referring to when they talk about “the media.”"
+      }
+    ],
+    "title": "Why you can't trust the media",
+    "url": "https://www.slowboring.com/p/why-you-cant-trust-the-media"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.strangestloop.io/essays/things-that-arent-doing-the-thing&sz=64",
+    "last_update": 1698162821858,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1698162821858,
+        "text": "The only thing that is doing the thing is doing the thing."
+      }
+    ],
+    "title": "Things That Aren't Doing the Thing",
+    "url": "https://www.strangestloop.io/essays/things-that-arent-doing-the-thing"
+  },
+  {
+    "author": "@tabletmag",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.tabletmag.com/sections/news/articles/guide-understanding-hoax-century-thirteen-ways-looking-disinformation&sz=64",
+    "last_update": 1715788650307,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1715788650308,
+        "text": "By aiming at the impossible, the elimination of all error and deviation from party orthodoxy, the ruling class ensures that it will always be able to point to a looming threat from extremists—a threat that justifies its own iron grip on power"
+      }
+    ],
+    "title": "A Guide to Understanding the Hoax of the Century",
+    "url": "https://www.tabletmag.com/sections/news/articles/guide-understanding-hoax-century-thirteen-ways-looking-disinformation"
+  },
+  {
+    "author": "@CircumlocutionO",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.thecircumlocutionoffice.com/bleakhouse/charles-dickens-telescopic-philanthropy/&sz=64",
+    "last_update": 1672099829859,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1672099829860,
+        "text": "<h3 class=\"wp-block-heading fusion-responsive-typography-calculated\" id=\"h-charity-begins-at-home\" data-fontsize=\"22\" data-lineheight=\"33px\">Charity begins at home.</h3>\n\n\n\n"
+      }
+    ],
+    "title": "Charles Dickens and the term Telescopic Philanthropy.",
+    "url": "https://www.thecircumlocutionoffice.com/bleakhouse/charles-dickens-telescopic-philanthropy/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.unqualified-reservations.org/2007/04/my-new-comments-policy/&sz=64",
+    "last_update": 1644332214638,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1644332214638,
+        "text": "One of the great things about the Internet is that it\nroutes packets, not sticks or stones."
+      }
+    ],
+    "title": "My new comments policy | Unqualified Reservations by Mencius Moldbug",
+    "url": "https://www.unqualified-reservations.org/2007/04/my-new-comments-policy/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.unqualified-reservations.org/2007/05/iron-polygon-power-in-united-states/&sz=64",
+    "last_update": 1644460832393,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1644460832393,
+        "text": "Every\nSauron considers himself a Boromir"
+      }
+    ],
+    "title": "The iron polygon: power in the United States | Unqualified Reservations by Mencius Moldbug",
+    "url": "https://www.unqualified-reservations.org/2007/05/iron-polygon-power-in-united-states/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.unqualified-reservations.org/2007/05/what-if-theres-no-such-thing-as-chaotic/&sz=64",
+    "last_update": 1644453868595,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1644453868595,
+        "text": "History provides no controlled\nexperiments, and expecting data from an uncontrolled experiment to tell\nyou something is the epistemic equivalent of barebacking."
+      }
+    ],
+    "title": "What if there’s no such thing as chaotic good? | Unqualified Reservations by Mencius Moldbug",
+    "url": "https://www.unqualified-reservations.org/2007/05/what-if-theres-no-such-thing-as-chaotic/"
+  },
+  {
+    "author": "@christianwiki",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.v-wiki.net/scream-test-meaning/&sz=64",
+    "last_update": 1668554887294,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1668554887294,
+        "text": "The Scream Test is simple –<strong>&nbsp;remove it and wait for the screams</strong>. If someone screams, put it back. The Scream Test can be applied to any product, service or capability – particularly when there is poor ownership or understanding of it’s importance."
+      }
+    ],
+    "title": "What is a Scream Test - Virtual Wiki",
+    "url": "https://www.v-wiki.net/scream-test-meaning/"
+  },
+  {
+    "author": "@arstechnica",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.wired.com/story/vice-society-ransomware-gang/&sz=64",
+    "last_update": 1666365296407,
+    "quotes": [
+      {
+        "date": 1666365296407,
+        "text": "This reminds me of a bit from Cliff Stoll's book \"The Cuckoo's Egg\", when he's discussing his experiences with OG hackers back in the mid-to-late '80s: The thing with criminals is that success for them isn't often gained by having extreme technical acumen.  For criminals, it's all about having the patience to try every single doorknob on the block, knowing that sooner or later, one will let you into someone's house."
+      },
+      {
+        "date": 1666365055353,
+        "text": "ransomware actors know that the more stressed people are, the more likely they are to make suboptimal decisions."
+      }
+    ],
+    "title": "How Vice Society got away with a global ransomware spree",
+    "url": "https://www.wired.com/story/vice-society-ransomware-gang/"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/channel/UCK-GxvzttTnNhq3JPYpXhqg&sz=64",
+    "last_update": 1666214517504,
+    "quotes": [
+      {
+        "date": 1666214517505,
+        "text": "To everyone who thinks doxxing West Elm Caleb was fair retribution, I ask you to consider:\n\nAre you currently defined by the worst thing you've ever done?"
+      }
+    ],
+    "title": "Sarah Z",
+    "url": "https://www.youtube.com/channel/UCK-GxvzttTnNhq3JPYpXhqg"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=5F3lZwG-BWk&sz=64",
+    "last_update": 1664106752826,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1664106752827,
+        "text": "If a city actually has a lot of space decided to freeways, the message that sends is the city itself is less valuable than the time it takes to drive though it."
+      }
+    ],
+    "title": "The Most Freeway-Light Cities in North America: The Top 10 Cities With No Freeways (Almost!) - YouTube",
+    "url": "https://www.youtube.com/watch?v=5F3lZwG-BWk"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=CWu38xPLMT8&sz=64",
+    "last_update": 1664557306799,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1664557306800,
+        "text": "Systemic racism in the legend of Zelda is a big issue."
+      }
+    ],
+    "title": "",
+    "url": "https://www.youtube.com/watch?v=CWu38xPLMT8"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=Dws2bppMo0E&sz=64",
+    "last_update": 1665181321868,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1665181321869,
+        "text": "True crime is the Fight Club for soccer moms."
+      }
+    ],
+    "title": "Dahmer re:View - Monster: The Review of Dahmer",
+    "url": "https://www.youtube.com/watch?v=Dws2bppMo0E"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=JOr4QeIjyW4&sz=64",
+    "last_update": 1642167217389,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1642167217390,
+        "text": "GitFlow is a methodology which works in a certain contexts, like actually having to support multiple versions of the product. This doesn't mean that you can't have continuous integration or even continuous deployment. \n\nCompared to this, trunk based development is easier - but it will not work when supporting multiple lines of product.\n\nUse trunk-based development whenever possible - it's easier on multitude of levels. But, as EVERY SINGLE THING IN THE INDUSTRY it's not a silver bullet."
+      }
+    ],
+    "title": "Git Flow Is A Bad Idea • Dave Farley • GOTO 2021 - YouTube",
+    "url": "https://www.youtube.com/watch?v=JOr4QeIjyW4"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=PN1pd3wCRxY&sz=64",
+    "last_update": 1711064937608,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1711064937608,
+        "text": "Comparison is the thief of joy"
+      }
+    ],
+    "title": "Why Aren't There Any Good MMORPGs? A Critique of Pure Power",
+    "url": "https://www.youtube.com/watch?v=PN1pd3wCRxY"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=_-u1Pjce4Lg&sz=64",
+    "last_update": 1677240608779,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1677240608780,
+        "text": "Imperialism used to come through tanks. Now it comes through banks"
+      }
+    ],
+    "title": "France secretly owns 14 countries - YouTube",
+    "url": "https://www.youtube.com/watch?v=_-u1Pjce4Lg"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=c3xSJuoUnN8&sz=64",
+    "last_update": 1658264987202,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1658264987203,
+        "text": "\"There is nothing wrong with you if other people don't pay attention to your art. That art is for you. That is enough. I promise.\" "
+      }
+    ],
+    "title": "Influencer Courses are Garbage: The Dark Side of Content Creation",
+    "url": "https://www.youtube.com/watch?v=c3xSJuoUnN8"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=gBE6glZNJuU&sz=64",
+    "last_update": 1657808258559,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1657808258559,
+        "text": "\"An idiot admires complexity, a genius admires simplicity ... An idiot, the more complicated something is, the more he will admire it. If you make something so clusterfucked he can't understand it, he's gonna think you're a god...\""
+      }
+    ],
+    "title": "Terry Davis' TempleOS Brutal Take Down of Linus Torvalds",
+    "url": "https://www.youtube.com/watch?v=gBE6glZNJuU"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=iavoSO6lOLQ&sz=64",
+    "last_update": 1664675513271,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1664675513272,
+        "text": "Every person is their own internal universe, and that's a universe we will only ever get the most fleeting glimpses of."
+      }
+    ],
+    "title": "What IS Nathan Fielder?",
+    "url": "https://www.youtube.com/watch?v=iavoSO6lOLQ"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=vYxdbFjCwoo&sz=64",
+    "last_update": 1669863279116,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1669863279118,
+        "text": "And then you realize that maybe there really aren't malevolent puppet masters and master plans. There's just greedy and stupid people bumbling through time and destroying entire communities with each misstep. Through this lens, things feel infinitely more tragic. There is nothing to be helped, there is only the ignorant nature of man and the cold indifference of the cosmos. It is an empty feeling that leaves one yearning for bad guys to defeat."
+      }
+    ],
+    "title": "Three Stories at the End of the World",
+    "url": "https://www.youtube.com/watch?v=vYxdbFjCwoo"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=xb-DtICmPTY&sz=64",
+    "last_update": 1708620150835,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1708620150836,
+        "text": "If you focus too much on the objective, you will lose yourself during the journey"
+      }
+    ],
+    "title": "ACTION BUTTON REVIEWS Tokimeki Memorial",
+    "url": "https://www.youtube.com/watch?v=xb-DtICmPTY"
+  }
+]

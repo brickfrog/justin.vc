@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Technology on justin.vc</title>
+    <link>https://justin.vc/categories/technology/</link>
+    <description>Recent content in Technology on justin.vc</description>
+    <image>
+      <url>https://justin.vc/</url>
+      <link>https://justin.vc/</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://justin.vc/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>YouTube &amp; elfeed</title>
+      <link>https://justin.vc/posts/youtube-elfeed-mpv/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://justin.vc/posts/youtube-elfeed-mpv/</guid>
+      <description>Update
+Amusingly I wrote this after a small delay in a ublock-origin update made things annoying but it seems like it&amp;rsquo;s relevant again considering their direct video injection (at least as of ~ 13/06 of 24)
+Realized I should probably just do more short-form stream of consciousness posts and things I&amp;rsquo;m tinkering with. This will be my first ox-hugo post of essentially tossing them into one giant .org file. Going to try use this method from now on unless it&amp;rsquo;s like some sort of mega-article.</description>
+      <content:encoded><![CDATA[<div class="alert-primary alert">
+<div class="alert-heading">
+<p>Update</p>
+</div>
+<p>Amusingly I wrote this after a small delay in a ublock-origin update made things
+annoying but it seems like it&rsquo;s relevant again considering their direct video
+injection (at least as of ~ 13/06 of 24)</p>
+</div>
+<p>Realized I should probably just do more short-form stream of consciousness posts
+and things I&rsquo;m tinkering with. This will be my first ox-hugo post of essentially
+tossing them into one giant .org file. Going to try use this method from now on
+unless it&rsquo;s like some sort of mega-article.</p>
+<section class="outline-1nil">
+<h2 id="background">Background</h2>
+<p>Okay, I&rsquo;m sure y&rsquo;all have notice Google/YouTube going full-on war on adblockers
+recently and while there&rsquo;s options such as simply using another browser (I&rsquo;ve
+noticed Firefox doesn&rsquo;t get hit as often) I&rsquo;ve decided to use this as an excuse
+to cut down on video consumption.</p>
+<div class="outline-2nil">
+<h3 id="yt-dlp">yt-dlp</h3>
+<p><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> is a neat fork of youtube-dlp which
+lets you download directly from youtube (and many other sites). Normally you
+could use it like thus:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yt-dlp -f mp4 https://www.youtube.com/watch<span class="se">\?</span>v<span class="se">\=</span>jNQXAC9IVRw
+</span></span></code></pre></div></div>
+<div class="outline-2nil">
+<h3 id="elfeed">elfeed</h3>
+<p>If you&rsquo;re familiar with emacs, you&rsquo;re probably familiar with <a href="https://github.com/skeeto/elfeed">elfeed</a>. The most
+popular (I think) feed reader for it. In addition to elfeed, I use
+<a href="https://github.com/remyhonig/elfeed-org">elfeed-org</a> which allows you to store
+your feeds in a normal .org file, which makes things a lot less of a hassle. For example, I export my <a href="https://justin.vc/elfeed">blog
+roll</a> and use that as a compendium of things to read.</p>
+</div>
+</section>
+<section class="outline-1nil">
+<h2 id="combining-elfeed-plus-yt-dlp">Combining Elfeed + yt-dlp</h2>
+<p>Okay, so the fun thing is in bash you could proceed to pipe yt-dlp to mpv and
+essentially just watch youtube in your video player. You can then chain this with elfeed
+because every youtube channel has an RSS feed behind it.</p>
+<p>For example this is <span class="sidenote">
+<label class="sidenote-label" for="f4">Xah Lee's</label>
+<input class="sidenote-checkbox" type="checkbox" id="f4"></input>
+<span class="sidenote-content
+sidenote-right">  Kind of a fun/weird emacs/keyboard streamer. Very &lsquo;un-PC&rsquo; as it were, as a warning. Why did I choose him for the example? Dunno! </span>
+</span>
+<a href="https://www.youtube.com/feeds/videos.xml?channel_id=UCXEJNKH9I4xsoyUNN3IL96A">feed</a>.</p>
+<div class="outline-2nil">
+<h3 id="getting-your-feed-list">Getting your feed list</h3>
+<p>You can export your youtube data by following the instructions
+<a href="https://support.google.com/accounts/answer/3024190?hl=en">here</a>. This gives you
+what is essentially a dump of all the channel ids, etc. that you&rsquo;re subscribed
+to. Then you can bash script / python script, etc. to make it into a list.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Load the CSV file</span>
+</span></span><span class="line"><span class="cl"><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/mnt/data/subscriptions.csv&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">subscriptions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Generating RSS links for each channel</span>
+</span></span><span class="line"><span class="cl"><span class="n">rss_links</span> <span class="o">=</span> <span class="n">subscriptions</span><span class="p">[</span><span class="s1">&#39;Channel Id&#39;</span><span class="p">]</span> \
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="nb">id</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&#34;https://www.youtube.com/feeds/videos.xml?channel_id=</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">subscriptions</span><span class="p">[</span><span class="s1">&#39;RSS Link&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rss_links</span>
+</span></span></code></pre></div></div>
+<div class="outline-2nil">
+<h3 id="importing-into-emacs">Importing into emacs</h3>
+<p>You can then use something like org-elfeed to add all your items into a list
+(using the aforementioned link as an example) or simply ask GPT or another LLM
+to format it in such a way as needed (you could even use a web-based RSS reader
+if you don&rsquo;t want to use emacs for some reason):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-org" data-lang="org"><span class="line"><span class="cl">Video :video:noexport:
+</span></span><span class="line"><span class="cl">YouTube :youtube:
+</span></span><span class="line"><span class="cl">https://www.youtube.com/feeds/videos.xml?channel_id=UCXEJNKH9I4xsoyUNN3IL96A
+</span></span></code></pre></div><p>This allows you to have all your subscriptions into your RSS reader.
+You can then add a command / shortcut into your config that pipes it into mpv
+as such (for example, in my case the <code>b</code> key would normally open it in a
+browser but now uses mpv). And adding a tag allows you to search only for
+videos.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">mpv-play-url</span> <span class="p">(</span><span class="nv">url</span> <span class="kp">&amp;rest</span> <span class="nv">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Play the given URL in MPV.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">start-process</span> <span class="s">&#34;my-process&#34;</span> <span class="no">nil</span> <span class="s">&#34;mpv&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="s">&#34;--speed=2.0&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="s">&#34;--pause&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="s">&#34;--cache=yes&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="s">&#34;demuxer-max-bytes=5000M&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="s">&#34;demuxer-max-back-bytes=3000M&#34;</span> <span class="nv">url</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">browse-url-handlers</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;youtu\\.?be.*\\.xml&#34;</span> <span class="o">.</span> <span class="nv">browse-url-default-browser</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s">&#34;youtu\\.?be&#34;</span> <span class="o">.</span> <span class="nv">mpv-play-url</span><span class="p">)))</span>
+</span></span></code></pre></div></div>
+</section>
+<section class="outline-1nil">
+<h2 id="conclusion">Conclusion</h2>
+<p>The only annoyances are that if you&rsquo;re constantly subscribing to new things
+or watching from the algorithm this isn&rsquo;t a good workflow. I&rsquo;m also sure pinging the RSS constantly isn&rsquo;t great
+efficiency-wise (the feeds only have the last 15 items although). I, however, only try to check once a day and I tend to watch the same people so
+I don&rsquo;t waste time. If nothing else this has lessened me mindlessly
+refreshing by adding a bit of friction.</p>
+</section>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

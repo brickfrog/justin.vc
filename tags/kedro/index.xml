@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kedro on justin.vc</title>
+    <link>https://justin.vc/tags/kedro/</link>
+    <description>Recent content in Kedro on justin.vc</description>
+    <image>
+      <url>https://justin.vc/</url>
+      <link>https://justin.vc/</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Jul 2022 01:43:00 -0400</lastBuildDate><atom:link href="https://justin.vc/tags/kedro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Literate Kedro: Using Org-mode for Data Science</title>
+      <link>https://justin.vc/posts/literate-kedro-spaceflight/</link>
+      <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/posts/literate-kedro-spaceflight/</guid>
+      <description>Summary This is both a general(ish) explainer and template(s) for usage in data science, specifically utilizing (formerly) Quantum Black&amp;rsquo;s now open-source (Linux Foundation) framework for creating reproducible, maintainable, and modular data science code. What does that mean? At its most simple it basically ties things into &amp;quot;nodes&amp;quot; and &amp;quot;pipelines&amp;quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated.</description>
+      <content:encoded><![CDATA[<h2 id="summary">Summary</h2>
+<p>This is both a general(ish) explainer and template(s) for usage in data science,
+specifically utilizing (formerly) Quantum Black&rsquo;s now open-source (Linux
+Foundation) framework for creating <span class="sidenote">
+<label class="sidenote-label" for="f1">reproducible, maintainable, and modular data science code.</label>
+<input class="sidenote-checkbox" type="checkbox" id="f1"></input>
+<span class="sidenote-content
+sidenote-right">  What does that mean? At its most simple it basically ties things into &quot;nodes&quot; and &quot;pipelines&quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated. DAGs, they&rsquo;re all the rage. </span>
+</span>
+Make sure to read their tutorial if you&rsquo;re not
+familiar with it, it&rsquo;s good (and I won&rsquo;t be covering nearly as much as there,
+it&rsquo;s under the assumption you&rsquo;ve skimmed it):</p>
+<p><a href="https://kedro.readthedocs.io/en/stable/tutorial/spaceflights_tutorial.html">https://kedro.readthedocs.io/en/stable/tutorial/spaceflights_tutorial.html</a></p>
+<p>Some benefits you get using it with org-mode and emacs, however:</p>
+<ul>
+<li>Single file navigation / no need-to bounce around VSCode haphazardly when you
+can jump between headers and tangle to the appropriate places.</li>
+<li>Transition to a presentation from inside Org-mode seamlessly</li>
+<li>Include data exploration and other documentation in the same file.</li>
+<li>Other languages with org-babel</li>
+</ul>
+<p>Kedro uses a <a href="https://kedro.readthedocs.io/en/stable/tutorial/spaceflights_tutorial.html#kedro-project-development-workflow">specific workflow</a> which I will follow for this template/tutorial.</p>
+<p>I&rsquo;m not entirely sure how useful this will be, but it allows me to get some
+practice with org-babel and a project excuse to tinker around with kedro some
+more in a use-case that I haven&rsquo;t seen.</p>
+<p>This will be more of a &ldquo;update as I come up with new ideas&rdquo; type of article,
+and, of course, if you see something that would be better served by a different
+method, feel free to leave a comment / issue.</p>
+<p><strong>Highlevel / TLDR</strong>: <em>This is for using org to config Kedro. Similar to using a monolithic org
+file for configing emacs. Geared towards people who already use emacs and use
+something like ivy/helm/vertico to traverse headings easily.</em></p>
+<h3 id="assumptions">Assumptions</h3>
+<ul>
+<li>I&rsquo;m using conda for environment management (conda.el / jupyter-python)</li>
+<li>You&rsquo;ve created the kedro project already since there&rsquo;s the y/n steps insofar
+as telemetry, etc.
+<ul>
+<li>TODO: maybe put the steps here? Probably not worth the timesink insofar as a
+template. The steps would 95% of the time be done in the command line but once.</li>
+</ul>
+</li>
+</ul>
+<h2 id="kedro-spaceflights-tutorial">Kedro Spaceflights Tutorial</h2>
+<p><strong>Scenario:</strong> It is 2160 and the space tourism industry is booming. Globally,
+thousands of space shuttle companies take tourists to the Moon and back. You
+have been able to source amenities offered in each space shuttle, customer
+reviews and company information.</p>
+<p><strong>Project:</strong> You want to construct a model that predicts the price for each trip to
+the Moon and the corresponding return flight.</p>
+<h3 id="setup">Setup</h3>
+<p>This is for environment setup, utility functions that you might not necessarily
+want to put in your <code>init.el</code> or other things not directly related to the core of
+the project.</p>
+<h4 id="emacs-and-shell">Emacs and Shell</h4>
+<!--list-separator-->
+<ul>
+<li>
+<p>Elisp</p>
+<p>Commands and utility functions that help reduce repeated code and make
+the process more seamless. <span class="underline">Run manually with <code>C-c</code>  <code>C-c</code>.</span> One could alternatively
+add this to their <code>init.el</code>.</p>
+<p>The following code is used to prevent org-mode from complaining about the
+variables. Otherwise you can set these as local variables in a real-life scenario.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">projdir</span> <span class="s">&#34;~/code/literate-kedro&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">projsub</span> <span class="s">&#34;/src/literate_kedro&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">print</span> <span class="nv">projdir</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Shell / Other</p>
+<p>If you plan on using the terminal for all shell commands, this isn&rsquo;t necessary.
+You can simply activate your conda environment with <code>conda-env-activate</code> under the
+assumption you&rsquo;re using <code>conda.el</code>. Because the session is set at the top level,
+it should persist through the following commands. See the echo commands below confirming.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">conda activate kedro-example
+</span></span></code></pre></div><p>Making sure I&rsquo;m in the correct directory / using the correct environment.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="k">$(</span>which pip<span class="k">)</span>
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="requirements-dot-txt">requirements.txt</h4>
+<p>The requirements for the kedro project in the form of a</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cfg" data-lang="cfg"><span class="line"><span class="cl"><span class="na">black~</span><span class="o">=</span><span class="s">22.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">flake8&gt;</span><span class="o">=</span><span class="s">3.7.9, &lt;4.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">ipython&gt;</span><span class="o">=</span><span class="s">7.31.1, &lt;8.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">isort~</span><span class="o">=</span><span class="s">5.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">jupyter~</span><span class="o">=</span><span class="s">1.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">jupyterlab~</span><span class="o">=</span><span class="s">3.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">kedro[pandas.CSVDataSet, pandas.ExcelDataSet, pandas.ParquetDataSet, plotly.PlotlyDataSet, plotly.JSONDataSet]</span><span class="o">=</span><span class="s">=0.18.2</span>
+</span></span><span class="line"><span class="cl"><span class="na">kedro-telemetry~</span><span class="o">=</span><span class="s">0.2.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">kedro-viz~</span><span class="o">=</span><span class="s">4.7</span>
+</span></span><span class="line"><span class="cl"><span class="na">nbstripout~</span><span class="o">=</span><span class="s">0.4</span>
+</span></span><span class="line"><span class="cl"><span class="na">pytest-cov~</span><span class="o">=</span><span class="s">3.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">pytest-mock&gt;</span><span class="o">=</span><span class="s">1.7.1, &lt;2.0</span>
+</span></span><span class="line"><span class="cl"><span class="na">pytest~</span><span class="o">=</span><span class="s">6.2</span>
+</span></span><span class="line"><span class="cl"><span class="na">scikit-learn~</span><span class="o">=</span><span class="s">1.0</span>
+</span></span></code></pre></div><h4 id="configuration">Configuration</h4>
+<p>The conf folder in kedro is for:</p>
+<ul>
+<li>Logging</li>
+<li>Credentials</li>
+<li>Other Sensitive/Personal content</li>
+</ul>
+<p>TODO: These are things that generally I would be more comfortable configuring outside
+of org. You could probably get fancy with piping things with keys back and forth
+but that remains outside of my scope for now.</p>
+<p>You could probably get away with safely configing your logging here without
+needing anything fancy.</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>data_science.yml</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">data_science</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">active_modelling_pipeline</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">model_options</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">test_size</span><span class="p">:</span><span class="w"> </span><span class="m">0.2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">random_state</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">features</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">engines</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">passenger_capacity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">crew</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">d_check_complete</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">moon_clearance_complete</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">iata_approved</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">company_rating</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">review_scores_rating</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">candidate_modelling_pipeline</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">model_options</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">test_size</span><span class="p">:</span><span class="w"> </span><span class="m">0.2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">random_state</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">features</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">engines</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">passenger_capacity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">crew</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">review_scores_rating</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">data_processing.companies_columns</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">tracking.JSONDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/09_tracking/companies_columns.json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">data_science.active_modelling_pipeline.metrics</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">tracking.MetricsDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/09_tracking/metrics.json</span><span class="w">
+</span></span></span></code></pre></div></li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>settings.py</p>
+<p>Normally you don&rsquo;t edit this, but there&rsquo;s some cases where it&rsquo;s necessary. This
+is for storing metrics in a sqlite database.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro_viz.integrations.kedro.sqlite_store</span> <span class="kn">import</span> <span class="n">SQLiteStore</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">SESSION_STORE_CLASS</span> <span class="o">=</span> <span class="n">SQLiteStore</span>
+</span></span><span class="line"><span class="cl"><span class="n">SESSION_STORE_ARGS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;path&#34;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="s2">&#34;data&#34;</span><span class="p">)}</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="data">Data</h3>
+<p>The second part of the kedro workflow is the data phase, which involves adding
+data to the <code>data</code> folder, and then referencing the datasets for the project in
+the <code>conf/base/catalog.yml</code> file.</p>
+<h4 id="preparation">Preparation</h4>
+<p>Steps involved in acquiring / registering the data to the appropriate
+catalog(s). You could explain the business case or variables also.</p>
+<!--list-separator-->
+<ul>
+<li>
+<p>Acquisition</p>
+<p>In some cases data is easily acquired with a curl/wget, specifically forone-off
+analyses. It can also be helpful to show where you downloaded your data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir -p <span class="nv">$directory</span>/
+</span></span><span class="line"><span class="cl"><span class="c1">#reviews</span>
+</span></span><span class="line"><span class="cl">curl -o <span class="s2">&#34;</span><span class="nv">$directory</span><span class="s2">/reviews.csv&#34;</span> https://kedro-org.github.io/kedro/reviews.csv
+</span></span><span class="line"><span class="cl"><span class="c1"># companies</span>
+</span></span><span class="line"><span class="cl">curl -o <span class="s2">&#34;</span><span class="nv">$directory</span><span class="s2">/companies.csv&#34;</span> https://kedro-org.github.io/kedro/companies.csv
+</span></span><span class="line"><span class="cl"><span class="c1"># shuttles</span>
+</span></span><span class="line"><span class="cl">curl -o <span class="s2">&#34;</span><span class="nv">$directory</span><span class="s2">/shuttles.xlsx&#34;</span> https://kedro-org.github.io/kedro/shuttles.xlsx
+</span></span></code></pre></div></li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>Data Registration</p>
+ <!--list-separator-->
+<ul>
+<li>
+<p>catalog.yml</p>
+<p>You now need to register the datasets so they can be loaded by Kedro. All Kedro
+projects have a <code>conf/base/catalog.yml</code>. file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">companies</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">pandas.CSVDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/01_raw/companies.csv</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l">raw</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">reviews</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">pandas.CSVDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/01_raw/reviews.csv</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l">raw</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">shuttles</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">pandas.ExcelDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/01_raw/shuttles.xlsx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l">raw</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">data_processing.preprocessed_companies</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">pandas.ParquetDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/02_intermediate/preprocessed_companies.pq</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l">intermediate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">data_processing.preprocessed_shuttles</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">pandas.ParquetDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/02_intermediate/preprocessed_shuttles.pq</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l">intermediate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">model_input_table</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">pandas.ParquetDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/03_primary/model_input_table.pq</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l">primary</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">data_science.active_modelling_pipeline.regressor</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">pickle.PickleDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/06_models/regressor_active.pickle</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">versioned</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l">models</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">data_science.candidate_modelling_pipeline.regressor</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">pickle.PickleDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/06_models/regressor_candidate.pickle</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">versioned</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layer</span><span class="p">:</span><span class="w"> </span><span class="l">models</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">data_science.active_modelling_pipeline.metrics</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">tracking.MetricsDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/09_tracking/metrics.json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">data_processing.companies_columns</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">tracking.JSONDataSet</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l">data/09_tracking/companies_columns.json</span><span class="w">
+</span></span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="pipelines">Pipelines</h3>
+<p>These are the node functions associated with the data_processing pipeline.</p>
+<blockquote>
+<p>In many typical Kedro projects, a single (“main”) pipeline
+increases in complexity as the project evolves. To keep your
+project fit for purpose, you can create modular pipelines, which
+are logically isolated and can be reused. Modular pipelines are
+easier to develop, test and maintain, and are portable so they can
+be copied and reused between projects.</p>
+</blockquote>
+<!--list-separator-->
+<ul>
+<li>
+<p>data_processing</p>
+<p>This pipeline is for processing the data.</p>
+ <!--list-separator-->
+<ul>
+<li>
+<p>nodes.py</p>
+<blockquote>
+<p>A Kedro node is a wrapper for a Python function that names the inputs
+and outputs of that function. It is the building block of a pipeline.
+Nodes can be linked when the output of one node is the input of another.</p>
+</blockquote>
+<p>NOTE: Could theoretically break this into seperate codeblocks (import, utility,
+preprocess, but might be a bit cumbersome. Input welcome for best practices.)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Dict</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_is_true</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&#34;t&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_parse_percentage</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;%&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">_parse_money</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;$&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">preprocess_companies</span><span class="p">(</span><span class="n">companies</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Preprocesses the data for companies.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        companies: Raw data.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Preprocessed data, with `company_rating` converted to a float and
+</span></span></span><span class="line"><span class="cl"><span class="s2">        `iata_approved` converted to boolean.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">companies</span><span class="p">[</span><span class="s2">&#34;iata_approved&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_is_true</span><span class="p">(</span><span class="n">companies</span><span class="p">[</span><span class="s2">&#34;iata_approved&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">companies</span><span class="p">[</span><span class="s2">&#34;company_rating&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_parse_percentage</span><span class="p">(</span><span class="n">companies</span><span class="p">[</span><span class="s2">&#34;company_rating&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">companies</span><span class="p">,</span> <span class="p">{</span><span class="s2">&#34;columns&#34;</span><span class="p">:</span> <span class="n">companies</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="s2">&#34;data_type&#34;</span><span class="p">:</span> <span class="s2">&#34;companies&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">preprocess_shuttles</span><span class="p">(</span><span class="n">shuttles</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Preprocesses the data for shuttles.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        shuttles: Raw data.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Preprocessed data, with `price` converted to a float and `d_check_complete`,
+</span></span></span><span class="line"><span class="cl"><span class="s2">        `moon_clearance_complete` converted to boolean.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">shuttles</span><span class="p">[</span><span class="s2">&#34;d_check_complete&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_is_true</span><span class="p">(</span><span class="n">shuttles</span><span class="p">[</span><span class="s2">&#34;d_check_complete&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">shuttles</span><span class="p">[</span><span class="s2">&#34;moon_clearance_complete&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_is_true</span><span class="p">(</span><span class="n">shuttles</span><span class="p">[</span><span class="s2">&#34;moon_clearance_complete&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">shuttles</span><span class="p">[</span><span class="s2">&#34;price&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_parse_money</span><span class="p">(</span><span class="n">shuttles</span><span class="p">[</span><span class="s2">&#34;price&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">shuttles</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_model_input_table</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">shuttles</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">companies</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">reviews</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Combines all data to create a model input table.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        shuttles: Preprocessed data for shuttles.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        companies: Preprocessed data for companies.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        reviews: Raw data for reviews.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        model input table.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rated_shuttles</span> <span class="o">=</span> <span class="n">shuttles</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">reviews</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&#34;id&#34;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s2">&#34;shuttle_id&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">model_input_table</span> <span class="o">=</span> <span class="n">rated_shuttles</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">companies</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&#34;company_id&#34;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s2">&#34;id&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">model_input_table</span> <span class="o">=</span> <span class="n">model_input_table</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">model_input_table</span>
+</span></span></code></pre></div></li>
+</ul>
+ <!--list-separator-->
+<ul>
+<li>
+<p>pipeline.py</p>
+<blockquote>
+<p>A Kedro pipeline organises the dependencies and execution order of a collection
+of nodes, and connects inputs and outputs. The pipeline determines the node
+execution order by resolving dependencies.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">node</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro.pipeline.modular_pipeline</span> <span class="kn">import</span> <span class="n">pipeline</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">.nodes</span> <span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">preprocess_companies</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">preprocess_shuttles</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">create_model_input_table</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_pipeline</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pipeline</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pipeline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="n">node</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="o">=</span><span class="n">preprocess_companies</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">inputs</span><span class="o">=</span><span class="s2">&#34;companies&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;preprocessed_companies&#34;</span><span class="p">,</span><span class="s2">&#34;companies_columns&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="n">name</span><span class="o">=</span><span class="s2">&#34;preprocess_companies_node&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">node</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="o">=</span><span class="n">preprocess_shuttles</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">inputs</span><span class="o">=</span><span class="s2">&#34;shuttles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">outputs</span><span class="o">=</span><span class="s2">&#34;preprocessed_shuttles&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">name</span><span class="o">=</span><span class="s2">&#34;preprocess_shuttles_node&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">node</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="o">=</span><span class="n">create_model_input_table</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;preprocessed_shuttles&#34;</span><span class="p">,</span> <span class="s2">&#34;preprocessed_companies&#34;</span><span class="p">,</span> <span class="s2">&#34;reviews&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="n">outputs</span><span class="o">=</span><span class="s2">&#34;model_input_table&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">name</span><span class="o">=</span><span class="s2">&#34;create_model_input_table_node&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">namespace</span><span class="o">=</span><span class="s2">&#34;data_processing&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;companies&#34;</span><span class="p">,</span> <span class="s2">&#34;shuttles&#34;</span><span class="p">,</span> <span class="s2">&#34;reviews&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">outputs</span><span class="o">=</span><span class="s2">&#34;model_input_table&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>data_science</p>
+<p>This pipeline is for performing data science on the data previously processed.</p>
+ <!--list-separator-->
+<ul>
+<li>
+<p>nodes.py</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">logging</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Tuple</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">max_error</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">split_data</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Splits data into features and targets training and test sets.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        data: Data containing features and target.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        parameters: Parameters defined in parameters/data_science.yml.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Split data.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">parameters</span><span class="p">[</span><span class="s2">&#34;features&#34;</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;price&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">parameters</span><span class="p">[</span><span class="s2">&#34;test_size&#34;</span><span class="p">],</span> <span class="n">random_state</span><span class="o">=</span><span class="n">parameters</span><span class="p">[</span><span class="s2">&#34;random_state&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">train_model</span><span class="p">(</span><span class="n">X_train</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">y_train</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LinearRegression</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Trains the linear regression model.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        X_train: Training data of independent features.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        y_train: Training data for price.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Trained model.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">regressor</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">regressor</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">evaluate_model</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">regressor</span><span class="p">:</span> <span class="n">LinearRegression</span><span class="p">,</span> <span class="n">X_test</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">y_test</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Calculates and logs the coefficient of determination.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        regressor: Trained model.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        X_test: Testing data of independent features.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        y_test: Testing data for price.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">regressor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">score</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">me</span> <span class="o">=</span> <span class="n">max_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Model has a coefficient R^2 of </span><span class="si">%.3f</span><span class="s2"> on test data.&#34;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span><span class="s2">&#34;r2_score&#34;</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span> <span class="s2">&#34;mae&#34;</span><span class="p">:</span> <span class="n">mae</span><span class="p">,</span> <span class="s2">&#34;max_error&#34;</span><span class="p">:</span> <span class="n">me</span><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+ <!--list-separator-->
+<ul>
+<li>
+<p>pipeline.py</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">node</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro.pipeline.modular_pipeline</span> <span class="kn">import</span> <span class="n">pipeline</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">.nodes</span> <span class="kn">import</span> <span class="n">evaluate_model</span><span class="p">,</span> <span class="n">split_data</span><span class="p">,</span> <span class="n">train_model</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_pipeline</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pipeline</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pipeline_instance</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="n">node</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="o">=</span><span class="n">split_data</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;model_input_table&#34;</span><span class="p">,</span> <span class="s2">&#34;params:model_options&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;X_train&#34;</span><span class="p">,</span> <span class="s2">&#34;X_test&#34;</span><span class="p">,</span> <span class="s2">&#34;y_train&#34;</span><span class="p">,</span> <span class="s2">&#34;y_test&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="n">name</span><span class="o">=</span><span class="s2">&#34;split_data_node&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">node</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="o">=</span><span class="n">train_model</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;X_train&#34;</span><span class="p">,</span> <span class="s2">&#34;y_train&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="n">outputs</span><span class="o">=</span><span class="s2">&#34;regressor&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">name</span><span class="o">=</span><span class="s2">&#34;train_model_node&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">node</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="o">=</span><span class="n">evaluate_model</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;regressor&#34;</span><span class="p">,</span> <span class="s2">&#34;X_test&#34;</span><span class="p">,</span> <span class="s2">&#34;y_test&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="n">outputs</span><span class="o">=</span><span class="s2">&#34;metrics&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">name</span><span class="o">=</span><span class="s2">&#34;evaluate_model_node&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ds_pipeline_1</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pipe</span><span class="o">=</span><span class="n">pipeline_instance</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">inputs</span><span class="o">=</span><span class="s2">&#34;model_input_table&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">namespace</span><span class="o">=</span><span class="s2">&#34;active_modelling_pipeline&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ds_pipeline_2</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pipe</span><span class="o">=</span><span class="n">pipeline_instance</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">inputs</span><span class="o">=</span><span class="s2">&#34;model_input_table&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">namespace</span><span class="o">=</span><span class="s2">&#34;candidate_modelling_pipeline&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pipeline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pipe</span><span class="o">=</span><span class="n">ds_pipeline_1</span> <span class="o">+</span> <span class="n">ds_pipeline_2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">inputs</span><span class="o">=</span><span class="s2">&#34;model_input_table&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">namespace</span><span class="o">=</span><span class="s2">&#34;data_science&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>pipeline_registry.py</p>
+<p>This is the pipeline registry, where you add the appropriate pipelines defined
+further down into the register function. This is how kedro recognizes which
+pipelines to run.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">literate_kedro.pipelines</span> <span class="kn">import</span> <span class="n">data_processing</span> <span class="k">as</span> <span class="n">dp</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">literate_kedro.pipelines</span> <span class="kn">import</span> <span class="n">data_science</span> <span class="k">as</span> <span class="n">ds</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">register_pipelines</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Pipeline</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Register the project&#39;s pipelines.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        A mapping from a pipeline name to a ``Pipeline`` object.
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data_processing_pipeline</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="n">create_pipeline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data_science_pipeline</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">create_pipeline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;__default__&#34;</span><span class="p">:</span> <span class="n">data_processing_pipeline</span> <span class="o">+</span> <span class="n">data_science_pipeline</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;dp&#34;</span><span class="p">:</span> <span class="n">data_processing_pipeline</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ds&#34;</span><span class="p">:</span> <span class="n">data_science_pipeline</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="conclusions">Conclusions</h2>
+<p>This is pretty much all you need to replicate the kedro tutorial from within a
+single org-file. I would be remiss to not mention that kedro itself has a pretty
+good alternative of simply using their jupyter plugin, but I tend to use emacs
+all the time anyways, so I figured, what the hey.</p>
+<p>There are still a couple things I&rsquo;d like to ponder over insofar as best
+practices and future articles like:</p>
+<ul>
+<li>Should you split up the nodes and pipelines further? Using literate
+programmign to basically make a utility, processing, etc. code block.</li>
+<li>Version control, only on the tangled files?</li>
+<li>Making use of transclusion from other files.</li>
+<li>Turning the &ldquo;relevant parts&rdquo;&rsquo;  into a presentation - slicing the org document
+into exploratory analysis that ignores the code depending on audience.</li>
+</ul>
+<p>I&rsquo;ll probably try to write an article doing a &ldquo;real&rdquo; analysis with this workflow
+in the future.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">cp ./literate-kedro-spaceflight.org ~/code/justin.vc/static/org/literate-kedro-spaceflight.org
+</span></span></code></pre></div><p>This copies the file when I export, which allows you to see the
+<a href="https://raw.githubusercontent.com/brickfrog/justin.vc/master/static/org/literate-kedro-spaceflight.org">original org file</a> if curious. That specifically includes how I tangled the files to the
+correct places. (And, once again, input welcome if I there&rsquo;s better ways to do it).</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

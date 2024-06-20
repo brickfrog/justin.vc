@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Title</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .img-container {
+            position: relative;
+        }
+        img {
+            max-width: 150%;
+            width: 500px;
+            height: auto;
+        }
+        .glitch-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.7;
+            pointer-events: none;
+            animation: glitch 1s infinite;
+        }
+        .fade-in {
+            opacity: 0;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transition: opacity 5s linear;
+        }
+        .smoll {
+            font-size: 0.8rem;
+        }
+        .didyou {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .meme {
+            font-size: 9rem;
+        }
+        .invert {
+            background-color: black;
+            color: white;
+        }
+        .glitch {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+        @keyframes glitch {
+            0% { top: -2px; left: -2px; }
+            25% { top: 2px; left: 0; }
+            50% { top: -1px; left: 2px; }
+            75% { top: 1px; left: -1px; }
+            100% { top: 1px; left: 1px; }
+        }
+        .footer {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          background-color: white;
+          text-align: center;
+      }
+      .footer.invert {
+        background-color: black;
+        color: white;
+    }
+    </style>
+    <script>
+        async function fetchIP() {
+            const response = await fetch('https://api.ipify.org?format=json');
+            const data = await response.json();
+            const ip = data.ip;
+            const deviceInfo = navigator.userAgent;
+
+            document.getElementById("ip-address").innerText = `IP Address: ${ip}`;
+            document.getElementById("device-info").innerText = `Device Info: ${deviceInfo}`;
+
+            // Add the 'show' class to initiate the transition
+            document.getElementById("ip-address").classList.add('show');
+            document.getElementById("device-info").classList.add('show');
+        }
+
+        function invertColors() {
+            document.body.classList.toggle('invert');
+            document.querySelector('.footer').classList.toggle('invert');
+        }
+
+        function glitchText() {
+          const textElements = document.querySelectorAll('p:not(.footer-text)');
+          textElements.forEach(el => el.classList.add('glitch'));
+      }      
+
+        function replaceContent() {
+          const container = document.querySelector(".container");
+          container.innerHTML = '<p class="meme">( ◜◡༎ຶ)⟡</p>';
+        }
+      function redirectToVideo() {
+          window.location.href = 'https://www.youtube.com/shorts/2oa5WCUpwD8'
+        }        
+    </script>
+</head>
+<body onload="fetchIP(); setTimeout(invertColors, 2500); setTimeout(glitchText, 2600); setTimeout(replaceContent, 5000); setTimeout(redirectToVideo, 5500);">
+    <div class="container">
+      <div class="img-container">
+          <img src="/whoishe.jpg" alt="Original Image">
+          <img src="/whoishe.jpg" class="glitch-img" alt="Glitch Image 1">
+          <img src="/whoishe.jpg" class="glitch-img" alt="Glitch Image 2">
+      </div>
+      <noscript>
+          <p class="smoll">Using noscript, eh? Good on you.</p>
+      </noscript>
+      <p class="didyou">Did you really just follow an untrusted link on your personal device?</p>
+      <p id="ip-address" class="fade-in smoll"></p>
+      <p id="device-info" class="fade-in smoll"></p>
+      <p class="didyou">你真的剛剛用你的個人設備點了一個不可信的鏈接嗎？</p>
+  </div>
+  <div class="footer">
+      <p class="footer-text">idea derived from yacine's <a href="https://yacine.ca/qr.html">site.</a></p>
+  </div>
+</body>
+</html>
