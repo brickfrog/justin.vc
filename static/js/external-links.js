@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
       link.hostname !== internalDomain &&
       !link.querySelector("svg") &&
       !link.classList.contains("no-external-icon") &&
-      !link.closest(".meta-item")
+      !link.closest(".meta-item") &&
+      !link.closest(".footer")
     ) {
       var iconClass = "fa-external-link-alt"; // default icon
       if (link.hostname.includes("wikipedia.org")) {
