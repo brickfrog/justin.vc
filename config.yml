@@ -46,7 +46,8 @@ params:
   ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   showModifiedDate: true
-
+  showsidelinks: true
+    
   UseHugoToc: false
   
   disableSpecial1stPost: true
@@ -62,8 +63,6 @@ params:
   
   showtoc: true
   tocopen: true
-  
-  showsidelinks: true
   
   single_template: "single.html"
 
@@ -170,10 +169,10 @@ menu:
       name: Now
       url: /now/
       weight: 3
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 4
+    - identifier: notes
+      name: Notes
+      url: https://notes.justin.vc
+      weight: 5
     - identifier: links
       name: Links
       url: /elfeed/

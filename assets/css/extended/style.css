@@ -158,6 +158,14 @@ p.timestamp-wrapper {
   font-size: 0.8em;
 }
 
+/* External Links */
+
+a.external-link:after {
+  content: "↗";
+  margin-left: 5px;
+  font-size: 0.8em;
+  color: inherit;
+}
 
 /* Backlink Details */
 
