@@ -20,7 +20,7 @@ root {
 /* Changing header indentation */
 
 section.outline-1nil p, summary {
-  margin-left: 0.5em;
+  margin-left: 0em;
 }
 
 div.outline-2nil p, summary {
