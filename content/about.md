@@ -1,17 +1,17 @@
-+++
-title = "About"
-author = ["Justin"]
-date = 2022-07-15T23:35:00-04:00
-lastmod = 2024-01-18T03:40:01-05:00
-draft = false
-ShowReadingTime = false
-ShowWordCount = false
-ShowShareButtons = false
-comments = false
-hideMeta = true
-ShowBreadCrumbs = false
-backlinks = false
-+++
+---
+title: "About"
+author: ["Justin"]
+date: 2022-07-15T23:35:00-04:00
+lastmod: 2024-01-18T03:40:01-05:00
+draft: false
+ShowReadingTime: false
+ShowWordCount: false
+ShowShareButtons: false
+comments: false
+hideMeta: true
+ShowBreadCrumbs: false
+backlinks: false
+---
 
 Hello! I'm Justin! I'm just a data scientist/software engineer who likes
 learning things in his free time. Specifically, my interests generally fall into
@@ -62,7 +62,7 @@ This site is created with a fork of [PaperModX](https://www.github.com/reorx/hug
 Almost everything is written as org-mode documents that I parse with ox-hugo. Hoping
 that having -everything- as org mode documents makes it easier to write in
 general, since I use org-mode for my agenda/todo lists, reading (org-noter +
-pdf-tools) and {{% sidenote "f4"  coding. %}}  Okay, sometimes I still use Jupyter and VSCode. Sue me. {{% /sidenote %}} There's also some usage of Google docs for things I need there to be
+pdf-tools) and {{% sidenote "f4"  coding. %}} Okay, sometimes I still use Jupyter and VSCode. Sue me. {{% /sidenote %}} There's also some usage of Google docs for things I need there to be
 less friction on (e.g. - what I'm doing)
 
 </div>
@@ -73,7 +73,7 @@ less friction on (e.g. - what I'm doing)
 
 I have my own little battlestation that I do my work on, I've never been a big
 laptop person. This is probably (one of the many reasons) I'd do poorly as a
-consultant. I like using Linux because {{% sidenote "f5"  "tiling window managers are neat." %}}  See my [dotfiles](https://github.com/brickfrog/.dotfiles). {{% /sidenote %}} Outside
+consultant. I like using Linux because {{% sidenote "f5"  "tiling window managers are neat." %}} See my [dotfiles](https://github.com/brickfrog/.dotfiles). {{% /sidenote %}} Outside
 of not being able to (easily) do VR, I don't particularly miss Windows, and I've
 never been a fan of MacOS. I'm just waiting for the day they put Asahi Linux on
 the ARM chips.
@@ -85,6 +85,7 @@ the ARM chips.
 Beep. Beep. Future TODO, show rig, details on toolings, etc.
 
 Still need to do this. Sorry.
+
 </div>
 </details>
 
