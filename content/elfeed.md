@@ -1,14 +1,14 @@
-+++
-title = "Links"
-author = ["Justin"]
-date = 2022-06-19
-lastmod = 2024-06-17T06:57:38-04:00
-draft = false
-ShowReadingTime = false
-ShowWordCount = false
-ShowShareButtons = false
-comments = false
-+++
+---
+title: "Links"
+author: ["Justin"]
+date: 2022-06-19
+lastmod: 2024-06-23T22:44:36-04:00
+draft: false
+ShowReadingTime: false
+ShowWordCount: false
+ShowShareButtons: false
+comments: false
+---
 
 Right now I am exporting this as my "blog roll" section of my main
 site. I could probably stand to clean this up, but still it shows the stuff I
@@ -20,7 +20,7 @@ context for why I added it. Because this is primarily for feed-reading, most of
 the links are to feeds that I tried to regex back into normal links.
 
 If for some reason you're interested in subsuming my feeds, I keep a copy of the
-[.opml file](<https://github.com/brickfrog/justin.vc/blob/master/static/feed.opml>) on github.
+[.opml file](<https://justin.vc/feed.opml>).
 
 <div class="outline-1nil">
 
@@ -168,6 +168,22 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
             -  <https://www.iliadforum.com>
 
                 -   Database of questions about Christianity.
+
+    <!--list-separator-->
+
+    -  Games
+
+        <!--list-separator-->
+
+        -  Video Games
+
+            <!--list-separator-->
+
+            -  <https://vengilikes.wordpress.com/feed/>
+
+                -   Visual novel blog. I forget how I found them (maybe I googled a review for one
+                    I was playing?). But visual novels are one of the few genres of games I play
+                    nowadays.
 
 <!--list-separator-->
 

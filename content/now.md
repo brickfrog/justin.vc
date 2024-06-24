@@ -1,16 +1,16 @@
-+++
-title = "Now"
-author = ["Justin"]
-lastmod = 2023-01-18T11:30:47-05:00
-draft = false
-ShowReadingTime = false
-ShowWordCount = false
-ShowShareButtons = false
-ShowBreadCrumbs = true
-comments = false
-hideMeta = true
-showtoc = true
-+++
+---
+title: "Now"
+author: ["Justin"]
+lastmod: 2023-01-18T11:30:47-05:00
+draft: false
+ShowReadingTime: false
+ShowWordCount: false
+ShowShareButtons: false
+ShowBreadCrumbs: true
+comments: false
+hideMeta: true
+showtoc: true
+---
 
 This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). Incidentally, there's some overlap with my .plan file, and I'm pondering how to reconcile it all. I still like this for keeping up with my reading/watching, etc. etc.
 
