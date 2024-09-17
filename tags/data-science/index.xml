@@ -17,7 +17,18 @@
       <pubDate>Mon, 25 Jul 2022 01:43:00 -0400</pubDate>
       
       <guid>https://justin.vc/posts/literate-kedro-spaceflight/</guid>
-      <description>Summary This is both a general(ish) explainer and template(s) for usage in data science, specifically utilizing (formerly) Quantum Black&amp;rsquo;s now open-source (Linux Foundation) framework for creating reproducible, maintainable, and modular data science code. What does that mean? At its most simple it basically ties things into &amp;quot;nodes&amp;quot; and &amp;quot;pipelines&amp;quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated.</description>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This is both a general(ish) explainer and template(s) for usage in data science,
+specifically utilizing (formerly) Quantum Black&amp;rsquo;s now open-source (Linux
+Foundation) framework for creating &lt;span class=&#34;sidenote&#34;&gt;
+&lt;label class=&#34;sidenote-label&#34; for=&#34;f1&#34;&gt;reproducible, maintainable, and modular data science code.&lt;/label&gt;
+&lt;input class=&#34;sidenote-checkbox&#34; type=&#34;checkbox&#34; id=&#34;f1&#34;&gt;&lt;/input&gt;
+&lt;span class=&#34;sidenote-content
+sidenote-right&#34;&gt;  What does that mean? At its most simple it basically ties things into &amp;quot;nodes&amp;quot; and &amp;quot;pipelines&amp;quot;, where nodes are utility functions and functions that tie things together, and pipelines chain together multiple nodes, allowing for steps to be easily repeated. DAGs, they&amp;rsquo;re all the rage. &lt;/span&gt;
+&lt;/span&gt;
+Make sure to read their tutorial if you&amp;rsquo;re not
+familiar with it, it&amp;rsquo;s good (and I won&amp;rsquo;t be covering nearly as much as there,
+it&amp;rsquo;s under the assumption you&amp;rsquo;ve skimmed it):&lt;/p&gt;</description>
       <content:encoded><![CDATA[<h2 id="summary">Summary</h2>
 <p>This is both a general(ish) explainer and template(s) for usage in data science,
 specifically utilizing (formerly) Quantum Black&rsquo;s now open-source (Linux

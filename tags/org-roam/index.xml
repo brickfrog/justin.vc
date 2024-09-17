@@ -17,9 +17,15 @@
       <pubDate>Sat, 16 Jul 2022 02:31:00 -0400</pubDate>
       
       <guid>https://justin.vc/posts/ox-hugo-and-org-roam/</guid>
-      <description>Do you like emacs and try to use it for as much as possible? Do you like static site generators? Then this post may be of relevance to you.
-If this all sounds greek to you, and you somehow wandered into here randomly, hoo-boy do I have a fun rabbit hole for you: Getting started with Emacs Doom.
-Okay, But Why? High-level: I really like emacs and writing notes in org-roam, and didn&amp;rsquo;t want to introduce mental overhead by writing things elsewhere.</description>
+      <description>&lt;p&gt;Do you like emacs and try to use it for as much as possible? Do you like static
+site generators? Then this post may be of relevance to you.&lt;/p&gt;
+&lt;p&gt;If this all sounds greek to you, and you somehow
+wandered into here randomly, hoo-boy do I have a fun rabbit hole for you:
+&lt;a href=&#34;https:www.youtube.com/watch?v=rCMh7srOqvw&#34;&gt;Getting started with Emacs Doom&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;okay-but-why&#34;&gt;Okay, But Why?&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;High-level: I really like emacs and writing notes in org-roam, and didn&amp;rsquo;t want
+to introduce mental overhead by writing things elsewhere. But I -also- don&amp;rsquo;t
+like how the default mode in ox-hugo is a monolithic org file.&lt;/em&gt;&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Do you like emacs and try to use it for as much as possible? Do you like static
 site generators? Then this post may be of relevance to you.</p>
 <p>If this all sounds greek to you, and you somehow

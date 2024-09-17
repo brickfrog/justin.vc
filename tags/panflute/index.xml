@@ -17,8 +17,14 @@
       <pubDate>Mon, 08 Aug 2022 15:30:00 -0400</pubDate>
       
       <guid>https://justin.vc/posts/brute-forcing-pandoc-with-panflute/</guid>
-      <description>Hello! This is a short post, more of a &amp;ldquo;here&amp;rsquo;s an intersting thing I wandered into&amp;rdquo; type of post. I originally wrote most of my posts on TiddlyWiki, which is where https://www.zk.justin.vc resides now. I decided to move this site to Hugo and was pondering: &amp;ldquo;Could I write all my notes in org-mode, and convert them?&amp;rdquo;
-I remembered pandoc and how simple it was to convert various LaTeX and markdown files back and forth.</description>
+      <description>&lt;p&gt;Hello! This is a short post, more of a &amp;ldquo;here&amp;rsquo;s an intersting thing I wandered
+into&amp;rdquo; type of post. I originally wrote most of my posts on TiddlyWiki, which is
+where &lt;a href=&#34;https://www.zk.justin.vc&#34;&gt;https://www.zk.justin.vc&lt;/a&gt; resides now. I decided to move this site to Hugo
+and was pondering: &amp;ldquo;Could I write all my notes in org-mode, and convert them?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;I remembered &lt;a href=&#34;https://pandoc.org&#34;&gt;pandoc&lt;/a&gt; and how simple it was to convert various LaTeX and markdown
+files back and forth. The problem was, there&amp;rsquo;s no converter for TiddlyWiki due
+to its dynamism. I found a couple Python2 githubs but they seemed a bit out of
+date. So I took it on myself to figure out how pandoc filters worked.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Hello! This is a short post, more of a &ldquo;here&rsquo;s an intersting thing I wandered
 into&rdquo; type of post. I originally wrote most of my posts on TiddlyWiki, which is
 where <a href="https://www.zk.justin.vc">https://www.zk.justin.vc</a> resides now. I decided to move this site to Hugo

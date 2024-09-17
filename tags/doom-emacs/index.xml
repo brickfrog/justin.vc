@@ -17,8 +17,28 @@
       <pubDate>Tue, 21 Feb 2023 12:33:00 -0500</pubDate>
       
       <guid>https://justin.vc/posts/reminder-check-doom-defaults-agenda/</guid>
-      <description>So, I&amp;rsquo;ve been trying to shuffle back into using emacs for more things. This week specifically I was looking to wean myself off todoist and get back into using org-mode for tasks/todo&amp;rsquo;s, etc. I remembered finding a blog post by &amp;ldquo;but she&amp;rsquo;s a girl&amp;hellip;&amp;rdquo; on her setup, relevant part repeated here for clarity:
-(def-package! org-super-agenda :after org-agenda :init (setq org-agenda-skip-scheduled-if-done t org-agenda-skip-deadline-if-done t org-agenda-include-deadlines t org-agenda-block-separator nil org-agenda-compact-blocks t org-agenda-start-day nil ;; i.</description>
+      <description>&lt;p&gt;So, I&amp;rsquo;ve been trying to shuffle back into using emacs for more things. This week
+specifically I was looking to wean myself off todoist and get back into using
+org-mode for tasks/todo&amp;rsquo;s, etc. I remembered finding a blog post by &lt;a href=&#34;https://www.rousette.org.uk/archives/doom-emacs-tweaks-org-journal-and-org-super-agenda/&#34;&gt;&amp;ldquo;but she&amp;rsquo;s a
+girl&amp;hellip;&amp;rdquo;&lt;/a&gt; on her setup, relevant part repeated here for clarity:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;def-package!&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-super-agenda&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:after&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-agenda&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:init&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-agenda-skip-scheduled-if-done&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nv&#34;&gt;org-agenda-skip-deadline-if-done&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nv&#34;&gt;org-agenda-include-deadlines&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nv&#34;&gt;org-agenda-block-separator&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nv&#34;&gt;org-agenda-compact-blocks&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nv&#34;&gt;org-agenda-start-day&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;;; i.e. today&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nv&#34;&gt;org-agenda-span&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nv&#34;&gt;org-agenda-start-on-weekday&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-agenda-custom-commands&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Super view&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-super-agenda-mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I thought, &amp;ldquo;oh, swell&amp;rdquo; someone else made a easy config that&amp;rsquo;s nicer than the one
+in the project github, this will be useful!&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>So, I&rsquo;ve been trying to shuffle back into using emacs for more things. This week
 specifically I was looking to wean myself off todoist and get back into using
 org-mode for tasks/todo&rsquo;s, etc. I remembered finding a blog post by <a href="https://www.rousette.org.uk/archives/doom-emacs-tweaks-org-journal-and-org-super-agenda/">&ldquo;but she&rsquo;s a

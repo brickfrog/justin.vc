@@ -17,9 +17,18 @@
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://justin.vc/posts/youtube-elfeed-mpv/</guid>
-      <description>Update
-Amusingly I wrote this after a small delay in a ublock-origin update made things annoying but it seems like it&amp;rsquo;s relevant again considering their direct video injection (at least as of ~ 13/06 of 24)
-Realized I should probably just do more short-form stream of consciousness posts and things I&amp;rsquo;m tinkering with. This will be my first ox-hugo post of essentially tossing them into one giant .org file. Going to try use this method from now on unless it&amp;rsquo;s like some sort of mega-article.</description>
+      <description>&lt;div class=&#34;alert-primary alert&#34;&gt;
+&lt;div class=&#34;alert-heading&#34;&gt;
+&lt;p&gt;Update&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Amusingly I wrote this after a small delay in a ublock-origin update made things
+annoying but it seems like it&amp;rsquo;s relevant again considering their direct video
+injection (at least as of ~ 13/06 of 24)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Realized I should probably just do more short-form stream of consciousness posts
+and things I&amp;rsquo;m tinkering with. This will be my first ox-hugo post of essentially
+tossing them into one giant .org file. Going to try use this method from now on
+unless it&amp;rsquo;s like some sort of mega-article.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<div class="alert-primary alert">
 <div class="alert-heading">
 <p>Update</p>
@@ -39,7 +48,7 @@ recently and while there&rsquo;s options such as simply using another browser (I
 noticed Firefox doesn&rsquo;t get hit as often) I&rsquo;ve decided to use this as an excuse
 to cut down on video consumption.</p>
 <div class="outline-2nil">
-<h3 id="yt-dlp">yt-dlp</h3>
+<h3 id="yt-dlp">yt-dlp <span class="tag"><span class="software">software</span></span></h3>
 <p><a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> is a neat fork of youtube-dlp which
 lets you download directly from youtube (and many other sites). Normally you
 could use it like thus:</p>
