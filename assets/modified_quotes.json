@@ -132,6 +132,34 @@
   },
   {
     "author": "@AniListco",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://anilist.co/review/13751&sz=64",
+    "last_update": 1722895556972,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1722895556972,
+        "text": "it's OK to not know everything"
+      }
+    ],
+    "title": "Sonny Boy Review",
+    "url": "https://anilist.co/review/13751"
+  },
+  {
+    "author": "@AniListco",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://anilist.co/review/16169&sz=64",
+    "last_update": 1719477024270,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1719477024270,
+        "text": " I recorded a funeral. The people around me lit lanterns and cast them into the sky. I promised to share it with everybody. My SD card broke on the drive home. Nobody ever asked me for a link.Maybe it should've ended with a big CGI explosion."
+      }
+    ],
+    "title": "Goodbye, Eri Review",
+    "url": "https://anilist.co/review/16169"
+  },
+  {
+    "author": "@AniListco",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://anilist.co/review/16550&sz=64",
     "last_update": 1712609914454,
     "quotes": [
@@ -157,6 +185,20 @@
     ],
     "title": "Neon Genesis Evangelion Review",
     "url": "https://anilist.co/review/16883"
+  },
+  {
+    "author": "@AniListco",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://anilist.co/review/16946&sz=64",
+    "last_update": 1723057602511,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1723057602511,
+        "text": "So everybody - at least try to make the right choices, and <strong>never</strong> let fear get the better of you"
+      }
+    ],
+    "title": "Mind Game Review",
+    "url": "https://anilist.co/review/16946"
   },
   {
     "author": "Scott Alexander",
@@ -368,6 +410,20 @@
     "url": "https://betonit.substack.com/p/law-is-hell?utm_medium=email"
   },
   {
+    "author": "@aaronbieber",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://blog.aaronbieber.com/2021/12/23/managers-stop-attending-sprint-meetings.html&sz=64",
+    "last_update": 1723777719438,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1723777719439,
+        "text": "Assuming that the team understands what success looks like, why are you, a\nmanager, attending their sprint meetings?"
+      }
+    ],
+    "title": "Managers, Stop Attending Sprint Meetings",
+    "url": "https://blog.aaronbieber.com/2021/12/23/managers-stop-attending-sprint-meetings.html"
+  },
+  {
     "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://blog.jfo.click/hello-hello-world/&sz=64",
     "last_update": 1652486376230,
@@ -574,6 +630,20 @@
     "url": "https://communitywiki.org/wiki/LimitsOfDemocracyOnline"
   },
   {
+    "author": "Daniel Szmulewicz",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://danielsz.github.io/20240718T060528--lisps-grandfather-paradox__clojure_lisp_scheme.html&sz=64",
+    "last_update": 1722426051309,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1722426051309,
+        "text": "In The Little Schemer, Daniel Friedman and Matthias Felleisen taught\nrecursion in Scheme through dialogue, arguing that the requirements\nto be a successful learner was not analytical reasoning but pattern\nrecognition."
+      }
+    ],
+    "title": "Lisp's grandfather paradox",
+    "url": "https://danielsz.github.io/20240718T060528--lisps-grandfather-paradox__clojure_lisp_scheme.html"
+  },
+  {
     "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://danluu.com/postmortem-lessons/&sz=64",
     "last_update": 1698071947530,
@@ -754,6 +824,20 @@
   },
   {
     "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/Pippa_Passes&sz=64",
+    "last_update": 1720908111632,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1720908111632,
+        "text": "<p>The year's at the spring<br>\nAnd day's at the morn;<br>\nMorning's at seven;<br>\nThe hill-side's dew-pearled;<br>\nThe lark's on the wing;<br>\nThe snail's on the thorn:<br>\nGod's in his heaven—<br>\nAll's right with the world!<a href=\"https://en.wikipedia.org/wiki/Pippa_Passes#cite_note-9\" target=\"_blank\" rel=\"noopener\">[9]</a>\n</p>\n\n— from Act I: Morning"
+      }
+    ],
+    "title": "Pippa Passes - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Pippa_Passes"
+  },
+  {
+    "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://en.wikipedia.org/wiki/The_Cock_and_the_Jewel&sz=64",
     "last_update": 1716125110785,
     "quotes": [
@@ -794,6 +878,73 @@
     "url": "https://en.wikiquote.org/wiki/Sid_Meier%27s_Alpha_Centauri"
   },
   {
+    "author": "@miriberkeley",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://equilibriabook.com/against-modest-epistemology/&sz=64",
+    "last_update": 1718651525890,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1718651525890,
+        "text": "<p>“There is not now, nor has there ever been, nor will there ever be, any programming language in which it is the least bit difficult to write bad code.”</p>\n<p>This is known as Flon’s Law.</p>\n<p>The lesson of Flon’s Law is that there is no point in trying to invent a programming language which can coerce programmers into writing code you approve of, because that is impossible.</p>\n<p>The deeper message of Flon’s Law is that this kind of defensive, adversarial, lock-down-all-the-doors, block-the-idiots-at-all-costs thinking doesn’t lead to the invention of good programming languages. And I would say much the same about epistemology for humans.</p>"
+      }
+    ],
+    "title": "Chapter 6: Against Modest Epistemology | Inadequate Equilibria",
+    "url": "https://equilibriabook.com/against-modest-epistemology/"
+  },
+  {
+    "author": "@miriberkeley",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://equilibriabook.com/an-equilibrium-of-no-free-energy/&sz=64",
+    "last_update": 1718400343992,
+    "quotes": [
+      {
+        "date": 1718400343992,
+        "text": "usually, when things suck, it’s because they suck in a way that’s a Nash equilibrium."
+      }
+    ],
+    "title": "Chapter 2: An Equilibrium of No Free Energy | Inadequate Equilibria",
+    "url": "https://equilibriabook.com/an-equilibrium-of-no-free-energy/"
+  },
+  {
+    "author": "@miriberkeley",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://equilibriabook.com/conclusion/&sz=64",
+    "last_update": 1718654818000,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1718654818000,
+        "text": "Better, I think, to not worry quite so much about how lowly or impressive you are. Better to meditate on the details of what you can do, what there is to be done, and how one might do it."
+      }
+    ],
+    "title": "Conclusion: Against Shooting Yourself in the Foot | Inadequate Equilibria",
+    "url": "https://equilibriabook.com/conclusion/"
+  },
+  {
+    "author": "@miriberkeley",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://equilibriabook.com/living-in-an-inadequate-world/&sz=64",
+    "last_update": 1718564688922,
+    "quotes": [
+      {
+        "date": 1718564688922,
+        "text": "When you’re thinking about large, messy phenomena like “the adequacy of human civilization at understanding nutrition,” it’s easy to get caught up in plausible-sounding stories and never quite get around to running the experiment. Run experiments; place bets; say <em>oops</em>. Anything less is an act of self-sabotage."
+      }
+    ],
+    "title": "Chapter 4: Living in an Inadequate World | Inadequate Equilibria",
+    "url": "https://equilibriabook.com/living-in-an-inadequate-world/"
+  },
+  {
+    "author": "@miriberkeley",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://equilibriabook.com/molochs-toolbox/&sz=64",
+    "last_update": 1718525653853,
+    "quotes": [
+      {
+        "date": 1718525653853,
+        "text": "“Lee Kuan Yew gained very strong individual power over a small country, and unlike the hundreds of times in the history of Earth when that went horribly wrong, Lee Kuan Yew happened to know some economics.”"
+      }
+    ],
+    "title": "Chapter 3: Moloch’s Toolbox | Inadequate Equilibria",
+    "url": "https://equilibriabook.com/molochs-toolbox/"
+  },
+  {
     "author": "Freddie deBoer",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/it-seems-like-the-reckoning-has-become&sz=64",
     "last_update": 1715689517674,
@@ -824,6 +975,20 @@
     ],
     "title": "It's All Grift, It's All Brands",
     "url": "https://freddiedeboer.substack.com/p/its-all-grift-its-all-brands"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/liberalism-cannot-produce-outcomes&sz=64",
+    "last_update": 1725696334418,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1725696334418,
+        "text": "<a href=\"https://www.marxists.org/archive/marx/works/1875/gotha/\" rel=\"noopener\" target=\"_blank\">Marx</a> and <a href=\"https://www.marxists.org/archive/marx/works/1877/anti-duhring/\" rel=\"noopener\" target=\"_blank\">Engels</a> independently described why equality is a nonsensical political goal."
+      }
+    ],
+    "title": "Liberalism Cannot Produce Outcomes Satisfactory to Liberals",
+    "url": "https://freddiedeboer.substack.com/p/liberalism-cannot-produce-outcomes"
   },
   {
     "author": "Freddie deBoer",
@@ -915,6 +1080,20 @@
     ],
     "title": "Of Course You Know What \"Woke\" Means",
     "url": "https://freddiedeboer.substack.com/p/of-course-you-know-what-woke-means"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/perhaps-if-youre-a-of-course-trans&sz=64",
+    "last_update": 1718306258255,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1718306258255,
+        "text": "<p>I’m asking for some of you to actually act like the initial “of course” is as important as the “but.”</p>"
+      }
+    ],
+    "title": "Perhaps If You're a \"Of Course Trans People Can Be Trans, But....\" Type, You Should Front the \"Of Course\" A Little More",
+    "url": "https://freddiedeboer.substack.com/p/perhaps-if-youre-a-of-course-trans"
   },
   {
     "author": "Freddie deBoer",
@@ -1061,6 +1240,20 @@
     ],
     "title": "The Tribe Still Comes First",
     "url": "https://freddiedeboer.substack.com/p/the-tribe-still-comes-first?publication_id=295937&isFreemail=true"
+  },
+  {
+    "author": "Freddie deBoer",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://freddiedeboer.substack.com/p/thermostats-go-up-or-they-go-down&sz=64",
+    "last_update": 1718072613980,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1718072613980,
+        "text": " The light of celebrity is also its glare; the fire that warms is the fire that burns. This has always been true and will always be true, and whether or not this is fair or good or right makes no difference"
+      }
+    ],
+    "title": "Thermostats Go Up or They Go Down",
+    "url": "https://freddiedeboer.substack.com/p/thermostats-go-up-or-they-go-down"
   },
   {
     "author": "Freddie deBoer",
@@ -1239,6 +1432,20 @@
     "url": "https://klauskinski.substack.com/p/data-analytics-in-the-world-of-bullshit?utm_source=substack"
   },
   {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://lars.ingebrigtsen.no/2024/06/17/a-super-simple-todo-package-for-emacs/&sz=64",
+    "last_update": 1719298571723,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1719298571723,
+        "text": "<p>Did you just tell me to go fuck myself, Mr. Todo Manual?  I think you just did.</p><p>I looked into a couple other projects, and they all seemed to be more geared towards facilitating further procrastination — by arranging todo items in all kinds of weird hierarchies, assigning priorities and so on.  So you can spend hours making The Perfectly Ranked Todo List instead of actually getting shit done.</p>"
+      }
+    ],
+    "title": "A Super Simple Todo Package For Emacs",
+    "url": "https://lars.ingebrigtsen.no/2024/06/17/a-super-simple-todo-package-for-emacs/"
+  },
+  {
     "author": "Arist",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://lparchive.org/Disco-Elysium/Update%2029/&sz=64",
     "last_update": 1677551033947,
@@ -1265,6 +1472,25 @@
     ],
     "title": "I Will Fucking Haymaker You If You Mention Agile Again — Ludicity",
     "url": "https://ludic.mataroa.blog/blog/i-will-fucking-haymaker-you-if-you-mention-agile-again/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://ludic.mataroa.blog/blog/i-will-fucking-piledrive-you-if-you-mention-ai-again/&sz=64",
+    "last_update": 1719303043777,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1719303043777,
+        "text": "How about you <em>remain competitive</em> by <em>fixing your shit</em>?"
+      },
+      {
+        "comment": "",
+        "date": 1719302927791,
+        "text": "You see, while hype is <em>nice</em>, it's only nice in small bursts for <em>practitioners</em>. We have a few key things that a grifter does not have, such as job stability, genuine friendships, and <em>souls</em>. What we do <em>not</em> have is the ability to trivially switch fields the moment the gold rush is over, due to the sad fact that we actually need to study things and build experience. Grifters, on the other hand, wield the omnitool that they self-aggrandizingly call 'politics'<a class=\"footnote-ref\" href=\"https://ludic.mataroa.blog/blog/i-will-fucking-piledrive-you-if-you-mention-ai-again/#fn:2\" target=\"_blank\" rel=\"noopener\">2</a>. That is to say, it turns out that the core competency of smiling and promising people things that you can't actually deliver is <em>highly transferable</em>."
+      }
+    ],
+    "title": "I Will Fucking Piledrive You If You Mention AI Again — Ludicity",
+    "url": "https://ludic.mataroa.blog/blog/i-will-fucking-piledrive-you-if-you-mention-ai-again/"
   },
   {
     "author": "",
@@ -1464,6 +1690,20 @@
     "url": "https://motherduck.com/blog/big-data-is-dead/"
   },
   {
+    "author": "Michael Lynch",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://mtlynch.io/notes/guis-are-antisocial/&sz=64",
+    "last_update": 1720916651089,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1720916651089,
+        "text": "<blockquote><p>I realized that — you know, that the mouse is antisocial. <strong>The GUI is antisocial</strong>. So what’s that mean? You have a problem to solve, and you solve it with the GUI. What do you have? A problem solved.</p><p>But <strong>when you solve it with a command line interface in a scripting environment, you have an artifact</strong>. And all of a sudden, that artifact can be shared with someone.</p></blockquote><blockquote><p>By the way, the way you did it can show cleverness. <strong>I’ve never seen anybody use a GUI in a clever way. Ever.</strong> There’s no cleverness to it. No, like, “Oh my god, you should see the way Adam clicked that mouse. Oh my god. Guys, guys, guys, guys, come on! Check it out: Adam’s going to click the button! Oh my god! That’s amazing!” It just doesn’t happen.</p></blockquote>"
+      }
+    ],
+    "title": "GUIs are Antisocial",
+    "url": "https://mtlynch.io/notes/guis-are-antisocial/"
+  },
+  {
     "author": "@fordhamnyc",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://news.fordham.edu/fordham-magazine/fordham-trustee-fellow-honored-by-the-vatican/&sz=64",
     "last_update": 1670249634247,
@@ -1520,6 +1760,20 @@
   },
   {
     "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://picolisp.com/wiki/?home&sz=64",
+    "last_update": 1720697302505,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1720697302505,
+        "text": "In programming, the ultimate purpose is to manipulate data, not functions. "
+      }
+    ],
+    "title": "PicoLisp Wiki: home",
+    "url": "https://picolisp.com/wiki/?home"
+  },
+  {
+    "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://prog21.dadgum.com/154.html&sz=64",
     "last_update": 1677861607132,
     "quotes": [
@@ -1547,6 +1801,20 @@
     "url": "https://prog21.dadgum.com/177.html"
   },
   {
+    "author": "Protesilaos Stavrou",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://protesilaos.com/about/&sz=64",
+    "last_update": 1720184622300,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1720184622300,
+        "text": "What I wrote in the past may not represent my current views.  I review,\nchange, refine my beliefs as part of a life of research and reflection.\nIf you are looking for consistency, a dogma to follow, a narcissist to\nidolise, you need to look elsewhere.  It is important to understand that\n<em>you should not follow me</em>, for I am not going anywhere in particular."
+      }
+    ],
+    "title": "About me",
+    "url": "https://protesilaos.com/about/"
+  },
+  {
     "author": "Rob Henderson",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://robkhenderson.substack.com/p/people-spend-too-much-time-on-decisions?utm_medium=reader2&sz=64",
     "last_update": 1660097733376,
@@ -1572,6 +1840,58 @@
     ],
     "title": "A portrait of the Person-Guy",
     "url": "https://samkriss.com/2015/10/18/a-portrait-of-the-person-guy/"
+  },
+  {
+    "author": "Sam Kriss",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://samkriss.substack.com/p/i-love-america-and-the-world&sz=64",
+    "last_update": 1721077424238,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1721077424238,
+        "text": "But there are no counterfactuals for great men. Napoleon could not have left Russia alone; Caesar could not have taken the Ides of March off. Like Avicenna’s God, all their predicates are necessary; they tear through history because they have no choice. In a way, great men are automata. Ruling-machines."
+      },
+      {
+        "comment": "",
+        "date": 1721076852081,
+        "text": "Grandly declaring that violence has no place in a democracy doesn’t make it true; sooner or later you have to contend with the real world. Whether it was invited or not, violence is what’s there. It can be on the surface, it can be buried deep, but nobody’s yet found a way of doing politics without it."
+      }
+    ],
+    "title": "I love America and the world",
+    "url": "https://samkriss.substack.com/p/i-love-america-and-the-world"
+  },
+  {
+    "author": "Sam Kriss",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://samkriss.substack.com/p/king-joe-forever&sz=64",
+    "last_update": 1719771968787,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1719771968787,
+        "text": "For thousands of years, your continent was ruled by the silent mountains and the blood-hungry sun, and they spoke a language only measurable in graves."
+      }
+    ],
+    "title": "King Joe forever",
+    "url": "https://samkriss.substack.com/p/king-joe-forever"
+  },
+  {
+    "author": "Sam Kriss",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://samkriss.substack.com/p/nobody-understands-nietzsche-except&sz=64",
+    "last_update": 1722833761352,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1722833761352,
+        "text": "Nietzsche said that every great philosophy is ‘the personal confession of its author, a kind of unintended and unwitting memoir.’ But I think that goes for readers as well. Nietzsche is a mirror. Tell me what you think of Nietzsche, and I’ll tell you who you are."
+      },
+      {
+        "comment": "",
+        "date": 1722833391437,
+        "text": "The fourteen-year-old Nietzsche reader is AJ Soprano upsetting his family by announcing the death of God: a deeply annoying little twerp."
+      }
+    ],
+    "title": "Nobody understands Nietzsche (except me)",
+    "url": "https://samkriss.substack.com/p/nobody-understands-nietzsche-except"
   },
   {
     "author": "shakoist",
@@ -1825,6 +2145,25 @@
     "url": "https://substack.com/inbox"
   },
   {
+    "author": "@tailscale",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://tailscale.com/blog/new-internet&sz=64",
+    "last_update": 1722406043433,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1722406043433,
+        "text": "The truth is, most things don’t scale, and never need to. "
+      },
+      {
+        "comment": "",
+        "date": 1722405908493,
+        "text": "<p>Programmers today are impatient for success. They start planning for a billion users before they write their first line of code. In fact, nowadays, we train them to do this without even knowing they’re doing it. Everything they’ve ever been taught revolves around scaling.</p><p>We’ve been falling into this trap all the way back to when computer scientists started teaching big-O notation. In big-O notation, if you use it wrong, a hash table is supposedly faster than an array, for virtually anything you want to do. But in reality, that’s not always true. When you have a billion entries, maybe a hash table is faster. But when you have 10 entries, it almost never is.</p>"
+      }
+    ],
+    "title": "The New Internet",
+    "url": "https://tailscale.com/blog/new-internet"
+  },
+  {
     "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://takeonrules.com/2022/02/26/note-taking-with-org-roam-and-transclusion/&sz=64",
     "last_update": 1655063466546,
@@ -1938,6 +2277,20 @@
     ],
     "title": "The Power Latent in a Countercultural Right",
     "url": "https://theupheaval.substack.com/p/the-power-latent-in-a-countercultural?isFreemail=true"
+  },
+  {
+    "author": "@tvtropes",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://tvtropes.org/pmwiki/pmwiki.php/Quotes/DiscoElysium&sz=64",
+    "last_update": 1720909785924,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1720909785925,
+        "text": "Subdue the regret. Dust yourself off, proceed. You'll get it in the next life, where you don't make mistakes. Do what you can with this one, while you're alive."
+      }
+    ],
+    "title": "Best Quotes for Disco Elysium - TV Tropes",
+    "url": "https://tvtropes.org/pmwiki/pmwiki.php/Quotes/DiscoElysium"
   },
   {
     "author": "",
@@ -2331,6 +2684,20 @@
     "url": "https://urbit.org/blog/a-founders-farewell"
   },
   {
+    "author": "@utaten",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://utaten.com/lyric/to16060309/&sz=64",
+    "last_update": 1719475369793,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1719475369793,
+        "text": "袖そでまくり たすきがけ\n鉢巻はちまきしめて がんばって<br>\n疲つかれたら お茶ちゃにして\n少すこしずつ良よくなるよ お勉強べんきょう"
+      }
+    ],
+    "title": "STUDY A GO!!GO!! 歌詞 GOLDEN GIRLS ふりがな付 - うたてん",
+    "url": "https://utaten.com/lyric/to16060309/"
+  },
+  {
     "author": "Vadim Kravcenko",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://vadimkravcenko.com/shorts/contracts-you-should-never-sign/&sz=64",
     "last_update": 1696291064799,
@@ -2343,6 +2710,20 @@
     ],
     "title": "Contracts you should never sign",
     "url": "https://vadimkravcenko.com/shorts/contracts-you-should-never-sign/"
+  },
+  {
+    "author": "Andy Baio",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://waxy.org/2024/01/the-quiet-death-of-ellos-big-dreams/&sz=64",
+    "last_update": 1725531752471,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1725531752471,
+        "text": "Haven’t we all seen enough to understand that taking over the world generally means being not only unscrupulous but “relentlessly mediocre”, as Jon Evans wrote of Facebook?"
+      }
+    ],
+    "title": "The Quiet Death of Ello's Big Dreams - Waxy.org",
+    "url": "https://waxy.org/2024/01/the-quiet-death-of-ellos-big-dreams/"
   },
   {
     "author": "",
@@ -2416,6 +2797,48 @@
   },
   {
     "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.astralcodexten.com/p/altruism-and-vitalism-as-fellow-travelers&sz=64",
+    "last_update": 1723035284823,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1723035284823,
+        "text": "I think it’s all signaling. People who want to validate an identity as kind and compassionate become altruists. People who want to validate an identity as tough and masculine and hard-headed become vitalists. This is why people bother hitching their star to <em>any</em> philosophy instead of just making money or playing video games or whatever."
+      }
+    ],
+    "title": "Altruism And Vitalism As Fellow Travelers",
+    "url": "https://www.astralcodexten.com/p/altruism-and-vitalism-as-fellow-travelers"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.astralcodexten.com/p/details-that-you-should-include-in&sz=64",
+    "last_update": 1720525257731,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1720525257731,
+        "text": "<p>If your plan is something else that will solve everything with no tradeoffs, then you owe it to your readers to explain what that is.</p><h3>Subscribe to Astral Codex Ten</h3><p class=\"end-cta-author-subs\">By Scott Alexander</p><p class=\"end-cta-hero-text\">P(A|B) = [P(A)*P(B|A)]/P(B), all the rest is commentary.</p><button tabindex=\"0\" type=\"submit\" class=\"button rightButton primary subscribe-btn _button_ocjfo_76\">Subscribe</button>"
+      }
+    ],
+    "title": "Details That You Should Include In Your Article On How We Should Do Something About Mentally Ill Homeless People",
+    "url": "https://www.astralcodexten.com/p/details-that-you-should-include-in"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.astralcodexten.com/p/matt-yglesias-considered-as-the-nietzschean&sz=64",
+    "last_update": 1722574114941,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1722574114942,
+        "text": "If your life goal is to be more like a dead person, that’s a red flag for being a guilty/anxious doormat who needs to gain some self-confidence."
+      }
+    ],
+    "title": "Matt Yglesias Considered As The Nietzschean Superman",
+    "url": "https://www.astralcodexten.com/p/matt-yglesias-considered-as-the-nietzschean"
+  },
+  {
+    "author": "Scott Alexander",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.astralcodexten.com/p/my-left-kidney&sz=64",
     "last_update": 1698408731982,
     "quotes": [
@@ -2427,6 +2850,20 @@
     ],
     "title": "My Left Kidney",
     "url": "https://www.astralcodexten.com/p/my-left-kidney"
+  },
+  {
+    "author": "Scott Alexander",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.astralcodexten.com/p/some-practical-considerations-before&sz=64",
+    "last_update": 1721787765126,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1721787765127,
+        "text": "<p>Cancellation isn’t just morally bad. It also screws over society. And it screws over your own institutions worst of all.</p><p>By society I mean: you want scientists to be producing good science, not producing the science least likely to get them cancelled. You want the Federal Reserve filled with the best economists, not the most politically pure economists. No matter how righteous your cause, if you cancel people who don’t agree with it, you end up with the kind of low-quality science and corrupt institutions we’ve grown used to recently. This is bad insofar as you care about things like truth, trust, or national flourishing.</p>"
+      }
+    ],
+    "title": "Some Practical Considerations Before Descending Into An Orgy Of Vengeance",
+    "url": "https://www.astralcodexten.com/p/some-practical-considerations-before"
   },
   {
     "author": "",
@@ -2441,6 +2878,20 @@
     ],
     "title": "22. George Fox (and Shakspere). November Boughs. Whitman, Walt. 1892. Prose Works",
     "url": "https://www.bartleby.com/229/5022.html"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.cam.fyi/conviviality/secrets/&sz=64",
+    "last_update": 1719182554378,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1719182554379,
+        "text": "People do not have a right to know everything about us. even the most beautiful things that we treasure most dearly."
+      }
+    ],
+    "title": "On secrets | cam.fyi",
+    "url": "https://www.cam.fyi/conviviality/secrets/"
   },
   {
     "author": "",
@@ -2557,6 +3008,20 @@
     ],
     "title": "Against Netflix",
     "url": "https://www.forourposterity.com/against-netflix/"
+  },
+  {
+    "author": "@goodreads",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.goodreads.com/quotes/6979441-237-no-one-should-be-praised-for-his-goodness-if-he&sz=64",
+    "last_update": 1723035511891,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1723035511891,
+        "text": "No one should be praised for his goodness if he has not strength enough to be wicked. All other goodness is but too often an idleness or powerlessness of will."
+      }
+    ],
+    "title": "A quote from Reflections; or Sentences and Moral Maxims",
+    "url": "https://www.goodreads.com/quotes/6979441-237-no-one-should-be-praised-for-his-goodness-if-he"
   },
   {
     "author": "",
@@ -2802,6 +3267,20 @@
   },
   {
     "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.orgroam.com/manual.html&sz=64",
+    "last_update": 1720030938635,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1720030938635,
+        "text": "Emacs outshines all other editing software in approximately the same way that\nthe noonday sun does the stars. It is not just bigger and brighter; it simply\nmakes everything else vanish. – Neal Stephenson, In the Beginning was the\nCommand Line (1998)"
+      }
+    ],
+    "title": "Org-roam User Manual",
+    "url": "https://www.orgroam.com/manual.html"
+  },
+  {
+    "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.orgroam.com/manual.html#A-Brief-Introduction-to-the-Zettelkasten-Method&sz=64",
     "last_update": 1661132290526,
     "quotes": [
@@ -3032,6 +3511,20 @@
   },
   {
     "author": "Matthew Yglesias",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.slowboring.com/p/high-pressure-youth-sports-is-bad&sz=64",
+    "last_update": 1719314895767,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1719314895767,
+        "text": "Have more kids.  Do less parenting.  It'll be fine."
+      }
+    ],
+    "title": "High-pressure youth sports is bad for America",
+    "url": "https://www.slowboring.com/p/high-pressure-youth-sports-is-bad"
+  },
+  {
+    "author": "Matthew Yglesias",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.slowboring.com/p/the-best-way-to-end-mass-incarceration&sz=64",
     "last_update": 1674056282641,
     "quotes": [
@@ -3120,6 +3613,20 @@
     "url": "https://www.thecircumlocutionoffice.com/bleakhouse/charles-dickens-telescopic-philanthropy/"
   },
   {
+    "author": "Erik Hoel",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.theintrinsicperspective.com/p/reasons-why-blogging-is-dumb&sz=64",
+    "last_update": 1724837356656,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1724837356656,
+        "text": "Now I realize that the most common sound you hear on the internet, if you lean close to the words, is the sound of someone typing quickly."
+      }
+    ],
+    "title": "Reasons why blogging is dumb",
+    "url": "https://www.theintrinsicperspective.com/p/reasons-why-blogging-is-dumb"
+  },
+  {
     "author": "",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.unqualified-reservations.org/2007/04/my-new-comments-policy/&sz=64",
     "last_update": 1644332214638,
@@ -3174,6 +3681,20 @@
     ],
     "title": "What is a Scream Test - Virtual Wiki",
     "url": "https://www.v-wiki.net/scream-test-meaning/"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.vaticannews.va/en/word-of-the-day/2024/08/14.html&sz=64",
+    "last_update": 1723676781858,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1723676781858,
+        "text": "Pointing the finger is not good; in fact, it often makes it more difficult for the wrongdoer to recognize his mistake."
+      }
+    ],
+    "title": "Gospel and Word of the Day - 14 August 2024 - Vatican News",
+    "url": "https://www.vaticannews.va/en/word-of-the-day/2024/08/14.html"
   },
   {
     "author": "@arstechnica",
@@ -3344,6 +3865,19 @@
     ],
     "title": "Three Stories at the End of the World",
     "url": "https://www.youtube.com/watch?v=vYxdbFjCwoo"
+  },
+  {
+    "author": "@youtube",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.youtube.com/watch?v=vcFBwt1nu2U&sz=64",
+    "last_update": 1719100609619,
+    "quotes": [
+      {
+        "date": 1719100609620,
+        "text": "\"There's nothing you can suggest that is so unutterably stupid that people won't waste their time attempting it\"\n\n\n\n  Show less\n\n\n  Read more\n\n\n\n    \n  \n\n    \n  \n  <a class=\"yt-spec-button-shape-next yt-spec-button-shape-next--text yt-spec-button-shape-next--mono yt-spec-button-shape-next--size-s yt-spec-button-shape-next--icon-button yt-spec-button-shape-next--override-small-size-icon\" aria-pressed=\"false\" aria-label=\"Like this comment along with 80 other people\" title=\"\" href=\"https://www.youtube.com/create_channel?upsell=comment\" rel=\"noopener\" target=\"_blank\" force-new-state=\"true\"><path d=\"M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z\"></path></a>"
+      }
+    ],
+    "title": "The Worst Programming Language Ever - Mark Rendle - NDC Oslo 2021",
+    "url": "https://www.youtube.com/watch?v=vcFBwt1nu2U"
   },
   {
     "author": "@youtube",

@@ -85,10 +85,6 @@ params:
       url: "https://rateyourmusic.com/~justinvc"
     - name: spotify
       url: "https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw"
-    - name: mastodon
-      url: "https://emacs.ch/@justin"
-    - name: discord
-      url: "https://discordapp.com/users/1077750615045836835"
     - name: anilist
       url: "https://anilist.co/user/brickfrog"
     - name: email
@@ -116,8 +112,8 @@ params:
     text: "justin.vc"
 
   profileMode:
-    enabled: false
-    subtitle: ""
+    enabled: true
+    subtitle: "实验代码和 emacs"
 
   homeInfoParams:
     Title: "technofutzin'"
@@ -161,13 +157,17 @@ params:
 
 menu:
   main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 1
     - identifier: about
       name: About
       url: /about/
       weight: 2
-    - identifier: now
-      name: Now
-      url: /now/
+    - identifier: quotes
+      name: Quotes
+      url: /quotes/
       weight: 3
     - identifier: notes
       name: Notes

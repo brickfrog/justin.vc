@@ -30,17 +30,19 @@
     <th onclick="sortTable(1)">Date</th>
     <th onclick="sortTable(2)">Quote</th>
   </tr>
-  {{ $quotes := getJSON "/static/modified_quotes.json" }}
-  {{ $quotes := (sort $quotes "last_update" "desc") }}
-  {{ range $quote := $quotes }}
-  {{ range $quote.quotes }}
-  {{ $title := $quote.title }}
-  <tr>
-    <td><a href="{{ $quote.url }}"><b class="url">{{ $quote.title }}</b></a></td>
-    <td class="date">{{ div .date 1000 | int | dateFormat "06/01/02" }}</td>
-    <td class="quote">{{ safeHTML .text }}</td>
-  </tr>
-  {{ end }}
+  {{ $quotesData := resources.Get "modified_quotes.json" }}
+  {{ if $quotesData }}
+    {{ $quotes := $quotesData.Content | unmarshal }}
+    {{ $quotes := sort $quotes "last_update" "desc" }}
+    {{ range $quote := $quotes }}
+      {{ range $quote.quotes }}
+        <tr>
+          <td><a href="{{ $quote.url }}"><b class="url">{{ $quote.title }}</b></a></td>
+          <td class="date">{{ div .date 1000 | int | dateFormat "06/01/02" }}</td>
+          <td class="quote">{{ safeHTML .text }}</td>
+        </tr>
+      {{ end }}
+    {{ end }}
   {{ end }}
 </table>
 </article>
