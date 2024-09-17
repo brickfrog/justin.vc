@@ -1,13 +1,13 @@
-+++
-title = "YouTube & elfeed"
-author = ["Justin"]
-date = 2024-01-18
-lastmod = 2024-06-15T19:33:45-04:00
-tags = ["youtube", "elfeed", "emacs"]
-categories = ["technology"]
-draft = false
-comments = false
-+++
+---
+title: "YouTube & elfeed"
+author: ["Justin"]
+date: 2024-01-18
+lastmod: 2024-07-02T04:53:30-04:00
+tags: ["youtube", "elfeed", "emacs"]
+categories: ["technology"]
+draft: false
+comments: false
+---
 
 <div class="alert-primary alert">
 
@@ -39,7 +39,7 @@ to cut down on video consumption.
 
 <div class="outline-2nil">
 
-### yt-dlp {#yt-dlp}
+### yt-dlp <span class="tag"><span class="software">software</span></span> {#yt-dlp}
 
 [yt-dlp](<https://github.com/yt-dlp/yt-dlp>) is a neat fork of youtube-dlp which
 lets you download directly from youtube (and many other sites). Normally you

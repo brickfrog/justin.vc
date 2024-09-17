@@ -2,7 +2,7 @@
 title: "Links"
 author: ["Justin"]
 date: 2022-06-19
-lastmod: 2024-06-23T22:44:36-04:00
+lastmod: 2024-06-28T13:48:39-04:00
 draft: false
 ShowReadingTime: false
 ShowWordCount: false
@@ -205,6 +205,7 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
 
         -   Cosma. I think I found via one of Rao's links. Physics professor. Good link
             jumping point due to recommended / not links.
+        -   Seems to mass throw notes at the RSS feed though.
 
     <!--list-separator-->
 
@@ -228,12 +229,6 @@ If for some reason you're interested in subsuming my feeds, I keep a copy of the
     <!--list-separator-->
 
     -  <https://borretti.me>
-
-    <!--list-separator-->
-
-    -  <https://cam.fyi>
-
-        -   Cam. I played on their minecraft server one time.
 
     <!--list-separator-->
 

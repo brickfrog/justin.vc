@@ -130,8 +130,6 @@ async function displayAniListCard() {
                     <a href="${animeUrl}"><img src="${lastAnime.coverImage.medium}" alt="${lastAnime.title.userPreferred}"></a>
                     <div class="media-details">
                         <h4>${lastAnime.title.userPreferred}</h4>
-                        <p>Average Score: ${lastAnime.averageScore}</p>
-                        <p>Popularity: ${lastAnime.popularity}</p>
                     </div>
                 </div>
             </div>
@@ -141,8 +139,6 @@ async function displayAniListCard() {
                     <a href="${mangaUrl}"><img src="${lastManga.coverImage.medium}" alt="${lastManga.title.userPreferred}"></a>
                     <div class="media-details">
                         <h4>${lastManga.title.userPreferred}</h4>
-                        <p>Average Score: ${lastManga.averageScore}</p>
-                        <p>Popularity: ${lastManga.popularity}</p>
                     </div>
                 </div>
             </div>

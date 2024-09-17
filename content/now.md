@@ -14,21 +14,8 @@ showtoc: true
 
 This is a now page, a page that I update every so often to let you know what I'm up to. It's inspired by Derek Sivers' [now page](https://sive.rs/nowff). Incidentally, there's some overlap with my .plan file, and I'm pondering how to reconcile it all. I still like this for keeping up with my reading/watching, etc. etc.
 
-<img src="https://discord.c99.nl/widget/theme-3/1077750615045836835.png"></img>
-
-<p style="font-size:12px;"> * I have more than one discord account but this is the one I use for programming language support, blah blah etc. @ me for others.</p>
-
-## Doing
-
-<hr class="now-divider">
-
-Copy of my dot plan from the homepage with the image removed. A google doc that I try to keep somewhat relevant.
-
-{{< injectPlan stripImages=true >}}
-
 ## Reading
 
-<hr class="now-divider">
 
 I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfrog). I know, evil Amazon, but the API is pretty good. I try to backup my data but I'm not sure what other good alternatives are. Feel free to suggest some.
 
@@ -38,13 +25,12 @@ I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfr
 
 ## Watching
 
-<hr class="now-divider">
 
 I last [watched](trakt.tv/users/justinvc) (show/movie respectively) via Trakt.tv:
 
-<div name="movie_container">
-<img width="175" height="325" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=episode" />
-<img width="175" height="325" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=movie" />
+<div class="movie_container">
+  <img alt="Only Murders in the Building" src="path_to_first_image.jpg" />
+  <img alt="Three Days of the Condor" src="path_to_second_image.jpg" />
 </div>
 
 I use [anilist](https://anilist.co/user/brickfrog/) for tracking anime/manga. I
@@ -56,7 +42,6 @@ once you get used to it. (read: salty that brickfrog was taken on MAL)
 
 ## Listening
 
-<hr class="now-divider">
 
 I don't listen to a lot of music, feel free to check my recently played tracks on [last.fm](https://www.last.fm/user/justinvc). The embed is a spotify playlist that I've been listening to recently on [spotify](https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw?si=9f1a873775c44bb6):
 
