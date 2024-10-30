@@ -4,7 +4,6 @@ theme: PaperModulo
 
 enableRobotsTXT: true
 paginate: 25 # main content
-paginate_notes: 3 # notes
 
 buildDrafts: false
 buildFuture: false
@@ -87,6 +86,8 @@ params:
       url: "https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw"
     - name: anilist
       url: "https://anilist.co/user/brickfrog"
+    - name: bluesky
+      url: "https://kaeru.bsky.social"
     - name: email
       url: "mailto:contact+home@justin.vc"
 

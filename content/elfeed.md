@@ -9,6 +9,7 @@ ShowReadingTime: false
 ShowWordCount: false
 ShowShareButtons: false
 comments: false
+ShowToC: false
 ---
 
 Right now I am exporting this as my "blog roll" section of my main
