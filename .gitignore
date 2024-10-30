@@ -13,7 +13,7 @@ hugo.linux
 .hugo_build.lock
 
 # Quote files
-/static/quotes.json
+/static/*quote*.json
 
 # Build Files
 build.ninja
