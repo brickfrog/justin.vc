@@ -113,7 +113,7 @@ params:
 
   profileMode:
     enabled: true
-    subtitle: "实验代码和 emacs"
+    subtitle: "This is a subtitle. I don't know what to put here. Oh."
 
   homeInfoParams:
     Title: "technofutzin'"
