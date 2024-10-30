@@ -21,6 +21,16 @@
             max-width: 150%;
             width: 500px;
             height: auto;
+            transition: transform 0.3s;
+        }
+        .img-container:hover img {
+            animation: shake 0.3s infinite;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(5px, -5px); }
+            50% { transform: translate(-5px, 5px); }
+            75% { transform: translate(5px, 5px); }
         }
         .glitch-img {
             position: absolute;
@@ -64,16 +74,16 @@
             100% { top: 1px; left: 1px; }
         }
         .footer {
-          position: fixed;
-          bottom: 0;
-          width: 100%;
-          background-color: white;
-          text-align: center;
-      }
-      .footer.invert {
-        background-color: black;
-        color: white;
-    }
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            text-align: center;
+        }
+        .footer.invert {
+            background-color: black;
+            color: white;
+        }
     </style>
     <script>
         async function fetchIP() {
@@ -85,7 +95,6 @@
             document.getElementById("ip-address").innerText = `IP Address: ${ip}`;
             document.getElementById("device-info").innerText = `Device Info: ${deviceInfo}`;
 
-            // Add the 'show' class to initiate the transition
             document.getElementById("ip-address").classList.add('show');
             document.getElementById("device-info").classList.add('show');
         }
@@ -96,36 +105,42 @@
         }
 
         function glitchText() {
-          const textElements = document.querySelectorAll('p:not(.footer-text)');
-          textElements.forEach(el => el.classList.add('glitch'));
-      }      
+            const textElements = document.querySelectorAll('p:not(.footer-text)');
+            textElements.forEach(el => el.classList.add('glitch'));
+        }
 
         function replaceContent() {
-          const container = document.querySelector(".container");
-          container.innerHTML = '<p class="meme">( ◜◡༎ຶ)⟡</p>';
+            const container = document.querySelector(".container");
+            container.innerHTML = '<p class="meme">( ◜◡༎ຶ)⟡</p>';        }
+
+        function randomRedirect() {
+            const urls = [
+                'https://www.youtube.com/shorts/2oa5WCUpwD8',
+            ];
+            window.location.href = urls[Math.floor(Math.random() * urls.length)];
         }
-      function redirectToVideo() {
-          window.location.href = 'https://www.youtube.com/shorts/2oa5WCUpwD8'
-        }        
     </script>
 </head>
-<body onload="fetchIP(); setTimeout(invertColors, 2500); setTimeout(glitchText, 2600); setTimeout(replaceContent, 5000); setTimeout(redirectToVideo, 5500);">
+<body onload="fetchIP(); setTimeout(invertColors, 2500); setTimeout(glitchText, 2600); setTimeout(replaceContent, 5000); setTimeout(randomRedirect, 5500);">
     <div class="container">
-      <div class="img-container">
-          <img src="/whoishe.jpg" alt="Original Image">
-          <img src="/whoishe.jpg" class="glitch-img" alt="Glitch Image 1">
-          <img src="/whoishe.jpg" class="glitch-img" alt="Glitch Image 2">
-      </div>
-      <noscript>
-          <p class="smoll">Using noscript, eh? Good on you.</p>
-      </noscript>
-      <p class="didyou">Did you really just follow an untrusted link on your personal device?</p>
-      <p id="ip-address" class="fade-in smoll"></p>
-      <p id="device-info" class="fade-in smoll"></p>
-      <p class="didyou">你真的剛剛用你的個人設備點了一個不可信的鏈接嗎？</p>
-  </div>
-  <div class="footer">
-      <p class="footer-text">idea derived from yacine's <a href="https://yacine.ca/qr.html">site.</a></p>
-  </div>
+        <div class="img-container">
+            <img src="/whoishe.jpg" alt="Original Image">
+            <img src="/whoishe.jpg" class="glitch-img" alt="Glitch Image 1">
+            <img src="/whoishe.jpg" class="glitch-img" alt="Glitch Image 2">
+        </div>
+        <noscript>
+            <p class="smoll">Using noscript, eh? Good on you.</p>
+        </noscript>
+        <p class="didyou">Did you really just follow an untrusted link on your personal device?</p>
+        <p class="didyou smoll">本当に個人のデバイスで信用できないリンクを開いたのですか？</p>
+        <p class="didyou smoll">你真的在个人设备上打开了不受信任的链接吗？</p>
+        <p class="didyou smoll">你真的在個人設備上打開了不受信任的鏈接嗎？</p>
+        <p class="didyou smoll">설마 개인 기기에서 신뢰할 수 없는 링크를 열었나요?</p>
+        <p id="ip-address" class="fade-in smoll"></p>
+        <p id="device-info" class="fade-in smoll"></p>
+    </div>
+    <div class="footer">
+        <p class="footer-text">idea derived from yacine's <a href="https://yacine.ca/qr.html">site.</a></p>
+    </div>
 </body>
 </html>
