@@ -18,3 +18,5 @@ hugo.linux
 # Build Files
 build.ninja
 .ninja_log
+
+.history

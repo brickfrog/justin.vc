@@ -1,11 +1,12 @@
-+++
-title = "A Reminder to Check on Doom Defaults: Org-Agenda"
-author = ["Justin"]
-date = 2023-02-21T12:33:00-05:00
-lastmod = 2023-03-05T22:48:18-05:00
-tags = ["emacs", "org-agenda", "org", "doom-emacs"]
-draft = false
-+++
+---
+title: "A Reminder to Check on Doom Defaults: Org-Agenda"
+author: ["Justin"]
+date: 2023-02-21T12:33:00-05:00
+lastmod: 2025-03-24T22:39:20-04:00
+tags: ["emacs", "org-agenda", "org", "doom-emacs"]
+draft: false
+creator: "Emacs 30.1 (Org mode 9.7.19 + ox-hugo)"
+---
 
 So, I've been trying to shuffle back into using emacs for more things. This week
 specifically I was looking to wean myself off todoist and get back into using
@@ -44,7 +45,7 @@ config.el, nothing seemed to work except for manually running the block which
 would set things correctly until I next restarted the emacs server / client.
 
 I ended up getting annoyed and asking for help on
-{{% sidenote "f1"  "Mastodon" %}}  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. {{% /sidenote %}}
+{{% sidenote "f1"  "Mastodon" %}}  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. (RIP emacs.ch - 2025) {{% /sidenote %}}
 (<https://emacs.ch>).
 where a helpful person by the name of Sylvain Soliman
 ([@soliman@pouet.chapril.org](https://pouet.chapril.org/@soliman)) pointed me in the direction of Doom's

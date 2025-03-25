@@ -128,3 +128,141 @@ main .pagination-loader-container {
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif)
 }
+
+/*!
+ * Cyberpunk theme for Giscus
+ */
+:root {
+    --color-prettylights-syntax-comment: #6272a4;
+    --color-prettylights-syntax-constant: #2bfff2;
+    --color-prettylights-syntax-entity: #00ffff;
+    --color-prettylights-syntax-storage-modifier-import: #2bfff2;
+    --color-prettylights-syntax-entity-tag: #00ffff;
+    --color-prettylights-syntax-keyword: #00ffff;
+    --color-prettylights-syntax-string: #2bfff2;
+    --color-prettylights-syntax-variable: #2bfff2;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #ff5555;
+    --color-prettylights-syntax-invalid-illegal-text: #f8f8f2;
+    --color-prettylights-syntax-invalid-illegal-bg: #ff5555;
+    --color-prettylights-syntax-carriage-return-text: #f8f8f2;
+    --color-prettylights-syntax-carriage-return-bg: #ff5555;
+    --color-prettylights-syntax-string-regexp: #2bfff2;
+    --color-prettylights-syntax-markup-list: #2bfff2;
+    --color-prettylights-syntax-markup-heading: #00ffff;
+    --color-prettylights-syntax-markup-italic: #f8f8f2;
+    --color-prettylights-syntax-markup-bold: #f8f8f2;
+    --color-prettylights-syntax-markup-deleted-text: #00ffff;
+    --color-prettylights-syntax-markup-deleted-bg: #1c1c1c;
+    --color-prettylights-syntax-markup-inserted-text: #2bfff2;
+    --color-prettylights-syntax-markup-inserted-bg: #1c1c1c;
+    --color-prettylights-syntax-markup-changed-text: #2bfff2;
+    --color-prettylights-syntax-markup-changed-bg: #1c1c1c;
+    --color-prettylights-syntax-markup-ignored-text: #f8f8f2;
+    --color-prettylights-syntax-markup-ignored-bg: #6272a4;
+    --color-prettylights-syntax-meta-diff-range: #2bfff2;
+    --color-prettylights-syntax-brackethighlighter-angle: #6272a4;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #6272a4;
+    --color-prettylights-syntax-constant-other-reference-link: #00ffff;
+    --color-btn-text: #f8f8f2;
+    --color-btn-bg: #1c1c1c;
+    --color-btn-border: #2bfff2;
+    --color-btn-shadow: 0 0 transparent;
+    --color-btn-inset-shadow: 0 0 transparent;
+    --color-btn-hover-bg: #141414;
+    --color-btn-hover-border: #00ffff;
+    --color-btn-active-bg: #1c1c1c;
+    --color-btn-active-border: #2bfff2;
+    --color-btn-selected-bg: #1c1c1c;
+    --color-btn-primary-text: #1c1c1c;
+    --color-btn-primary-bg: #2bfff2;
+    --color-btn-primary-border: #2bfff2;
+    --color-btn-primary-shadow: 0 0 transparent;
+    --color-btn-primary-inset-shadow: 0 0 transparent;
+    --color-btn-primary-hover-bg: #00ffff;
+    --color-btn-primary-hover-border: #00ffff;
+    --color-btn-primary-selected-bg: #2bfff2;
+    --color-btn-primary-selected-shadow: 0 0 transparent;
+    --color-btn-primary-disabled-text: #1c1c1c80;
+    --color-btn-primary-disabled-bg: #2bfff299;
+    --color-btn-primary-disabled-border: #2bfff2;
+    --color-fg-default: #f8f8f2;
+    --color-fg-muted: #6272a4;
+    --color-fg-subtle: #141414;
+    --color-canvas-default: #1c1c1c;
+    --color-canvas-overlay: #141414;
+    --color-canvas-inset: #141414;
+    --color-canvas-subtle: #1c1c1c;
+    --color-border-default: #2bfff2;
+    --color-border-muted: #141414;
+    --color-neutral-muted: #6272a466;
+    --color-accent-fg: #2bfff2;
+    --color-accent-emphasis: #00ffff;
+    --color-accent-muted: #2bfff266;
+    --color-accent-subtle: #2bfff21a;
+    --color-success-fg: #2bfff2;
+    --color-attention-fg: #2bfff2;
+    --color-attention-muted: #2bfff266;
+    --color-attention-subtle: #2bfff21a;
+    --color-danger-fg: #ff5555;
+    --color-danger-muted: #ff555566;
+    --color-danger-subtle: #ff55551a;
+    --color-primer-shadow-focus: 0 0 0 3px #2bfff21a;
+    --color-primer-shadow-inset: 0 0 transparent;
+    --color-scale-gray-7: #141414;
+    --color-scale-blue-8: #00ffff;
+}
+
+/* Additional Cyberpunk Styling */
+.gsc-comment-box {
+    font-family: 'Chakra Petch', sans-serif !important;
+}
+
+.gsc-comment-box-textarea {
+    background: var(--color-canvas-default) !important;
+    border: 1px solid var(--color-border-default) !important;
+    box-shadow: 0 0 10px rgba(43, 255, 242, 0.1) !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Chakra Petch', sans-serif !important;
+}
+
+.gsc-comment-box-textarea:focus {
+    border-color: var(--color-accent-emphasis) !important;
+    box-shadow: 0 0 15px rgba(43, 255, 242, 0.3) !important;
+}
+
+.gsc-comment {
+    border: 1px solid rgba(43, 255, 242, 0.1) !important;
+    background: var(--color-canvas-subtle) !important;
+    box-shadow: 0 0 10px rgba(43, 255, 242, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.gsc-comment:hover {
+    border-color: var(--color-accent-emphasis) !important;
+    box-shadow: 0 0 15px rgba(43, 255, 242, 0.2) !important;
+}
+
+.gsc-social-reaction-summary-item {
+    background: var(--color-canvas-subtle) !important;
+    border: 1px solid var(--color-border-default) !important;
+    transition: all 0.3s ease !important;
+}
+
+.gsc-social-reaction-summary-item:hover {
+    background: var(--color-canvas-overlay) !important;
+    border-color: var(--color-accent-emphasis) !important;
+    box-shadow: 0 0 10px rgba(43, 255, 242, 0.2) !important;
+}
+
+.gsc-timeline {
+    font-family: 'Chakra Petch', sans-serif !important;
+}
+
+.gsc-header {
+    font-family: 'Orbitron', sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Add font imports */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Chakra+Petch:wght@300;400;500;600&display=swap');

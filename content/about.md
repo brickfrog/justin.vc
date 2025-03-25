@@ -21,11 +21,22 @@ Open source/emacs, applied mathematics/statistics, Catholic/Chinese history + po
 
 ## Background {#background}
 
+
+<div class="outline-2nil">
+
+### Education {#education}
+
+I have degrees in business and decision sciences from Florida State University / St. Joseph's University respectively. Most of my work was in decision theory for optimization of education outcomes. 
+
+### Work {#work}
+
+I was a business intelligence engineer / production support engineer at ADM after I finished grad school. I occasionally do consulting work (not open / generally direct connections) and assist startups with full stack development. I like to pride myself on being able to ramp up on new technologies and business domains quickly. I think every employment review has had some variation on "intellectual curiosity" - if I can be a bit not-so-humble.
+
 <div class="outline-2nil">
 
 ### Technical {#technical}
 
-In my day-to-day when working I'm generally using Python. I use javascript when tinkering around with my various web apps. I know enough elisp to get by, but generally only use it for convenience functions in emacs. I've built a couple of things in Rust but my knowledge tends to atrophy due to lack of usage.
+In my day-to-day when working I'm generally using python. I use type/javascript when tinkering around with my various web apps. I know enough elisp to get by, but generally only use it for convenience functions in emacs. I've built a couple of things in Rust but my knowledge tends to atrophy due to lack of usage. Postgres is my favorite database and I like to use it for (most of) my projects. Other than that, I'm more of a "use what's best for the job" kind of guy, as long as it works and is maintainable.
 
 <div class="outline-3nil">
 
@@ -37,6 +48,8 @@ that having -everything- as org mode documents makes it easier to write in
 general, since I use org-mode for my agenda/todo lists, reading (org-noter +
 pdf-tools) and {{% sidenote "f4"  coding. %}} Okay, sometimes I still use Jupyter and VSCode. Sue me. {{% /sidenote %}} There's also some usage of Google docs for things I need there to be
 less friction on (e.g. - what I'm doing)
+
+Hugo's a bit crusty - I'm not sure how much legs it still has but...
 
 </div>
 
@@ -79,16 +92,16 @@ I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfr
 
 ### Watching {#watching}
 
-I last [watched](trakt.tv/users/justinvc) (show/movie respectively) via Trakt.tv:
+I last [watched](https://trakt.tv/users/justinvc) (show/movie respectively) via trakt.tv, I'd like to make a letterbox'd or somesuch but I think the API is closed down unless you can convince the devs, I don't like things that require manual updates because I forget to do them:
 
 <div class="movie_container">
   <img width="175" height="325" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=episode" />
   <img width="175" height="325" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=movie" />
-</div>
+</div><br>
 
 I use [anilist](https://anilist.co/user/brickfrog/) for tracking anime/manga. I
 know there's a debate on MAL vs. AL, but I like the interface and the GraphQL is nice
-once you get used to it. (read: salty that brickfrog was taken on MAL)
+once you get used to it (read: salty that brickfrog was taken on MAL). This is mostly programatically updated.
 
 <script src="/js/anilist-card.js"></script>
 <div id="anilist-card-container"></div>

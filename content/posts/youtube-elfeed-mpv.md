@@ -9,20 +9,6 @@ draft: false
 comments: false
 ---
 
-<div class="alert-primary alert">
-
-<div class="alert-heading">
-
-Update
-
-</div>
-
-Amusingly I wrote this after a small delay in a ublock-origin update made things
-annoying but it seems like it's relevant again considering their direct video
-injection (at least as of ~ 13/06 of 24)
-
-</div>
-
 Realized I should probably just do more short-form stream of consciousness posts
 and things I'm tinkering with. This will be my first ox-hugo post of essentially
 tossing them into one giant .org file. Going to try use this method from now on

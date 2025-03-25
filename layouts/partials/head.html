@@ -42,8 +42,8 @@
 {{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
 {{- $reset := (resources.Get "css/core/reset.css") }}
 {{- $media := (resources.Get "css/core/zmedia.css") }}
-{{- $sidenote := (resources.Get "css/common/sidenote.scss") | resources.ToCSS }}
-{{- $commonHighlight := (resources.Get "css/common/highlight.scss") | resources.ToCSS }}
+{{- $sidenote := (resources.Get "css/common/sidenote.scss") | css.Sass }}
+{{- $commonHighlight := (resources.Get "css/common/highlight.scss") | css.Sass }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
 
 {{- /* order is important */}}

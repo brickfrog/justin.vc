@@ -1,0 +1,642 @@
+/* Cyberpunk Theme Inspired by Doom */
+
+/* Import cyberpunk fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Chakra+Petch:wght@300;400;500;600&family=Share+Tech+Mono&display=swap');
+
+:root {
+    --neon-pink: #00ffff;
+    --neon-blue: #2bfff2;
+    --neon-purple: #00ffff;
+    --dark-bg: #1c1c1c;
+    --darker-bg: #141414;
+    --text: #c6c6c6;
+    --font-heading: 'Orbitron', sans-serif !important;
+    --font-body: 'Chakra Petch', sans-serif !important;
+    --font-mono: 'Share Tech Mono', monospace !important;
+}
+
+/* Base styles */
+html, body {
+    font-family: var(--font-body) !important;
+    letter-spacing: 0.03em !important;
+    font-weight: 300 !important;
+    text-shadow: 0 0 2px rgba(198, 198, 198, 0.3);
+}
+
+.post-content, 
+.post-content p,
+.post-content div,
+.post-content span,
+.entry-content,
+.post-entry,
+article {
+    font-family: var(--font-body) !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.entry-header h1,
+.entry-header h2,
+.entry-header h3 {
+    font-family: var(--font-heading) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+code, pre, 
+.highlight pre,
+.highlight code {
+    font-family: var(--font-mono) !important;
+}
+
+.logo a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.menu {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.paginav {
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+}
+
+main {
+    background: var(--dark-bg);
+}
+
+/* Dark mode enhancements */
+.dark {
+    background: var(--dark-bg);
+}
+
+.dark .post-content {
+    color: var(--text);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    border: 1px solid var(--neon-pink);
+    background: transparent;
+    color: var(--neon-pink);
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: var(--neon-pink);
+    color: var(--darker-bg);
+    box-shadow: 0 0 15px var(--neon-pink);
+}
+
+/* Hide the theme toggle button */
+.theme-toggle {
+    display: none !important;
+}
+
+/* Container styles */
+.container {
+    background: var(--dark-bg);
+}
+
+.wrapper {
+    background: var(--dark-bg);
+}
+
+#content {
+    background: var(--dark-bg);
+}
+
+article {
+    background: var(--dark-bg);
+}
+
+/* Main content area */
+.main {
+    background: var(--dark-bg);
+}
+
+.post-content {
+    background: var(--dark-bg);
+    color: var(--text);
+}
+
+.post-single {
+    background: var(--dark-bg);
+}
+
+.first-entry {
+    background: var(--dark-bg);
+}
+
+.entry-content {
+    background: var(--dark-bg);
+    color: var(--text);
+}
+
+.post-entry {
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/* Header and Navigation */
+.nav {
+    background: var(--darker-bg);
+    border-bottom: 1px solid var(--neon-blue);
+    box-shadow: 0 0 20px rgba(43, 255, 242, 0.1);
+}
+
+.logo a {
+    color: var(--neon-pink) !important;
+    text-shadow: 0 0 10px var(--neon-pink);
+    font-weight: bold;
+}
+
+.logo a:hover {
+    text-shadow: 0 0 20px var(--neon-pink);
+}
+
+.menu {
+    background: transparent;
+}
+
+.menu a {
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+/* Top navigation items */
+.top-link {
+    background: var(--darker-bg);
+    border: 1px solid var(--neon-purple);
+    color: var(--neon-purple);
+    transition: all 0.3s ease;
+}
+
+.top-link:hover {
+    background: var(--neon-purple);
+    color: var(--darker-bg);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+/* Social icons in header */
+.social-icons {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons:hover {
+    opacity: 1;
+}
+
+.social-icons a {
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--neon-blue);
+    transform: scale(1.1);
+}
+
+.social-icons svg {
+    filter: drop-shadow(0 0 2px rgba(43, 255, 242, 0.2));
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover svg {
+    filter: drop-shadow(0 0 8px rgba(43, 255, 242, 0.6));
+    color: var(--neon-blue);
+}
+
+/* Subtle scan lines effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        transparent 50%,
+        rgba(0, 0, 0, 0.05) 50%
+    );
+    background-size: 100% 4px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Text glow effects */
+.post-title {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+    transition: text-shadow 0.3s ease;
+}
+
+.post-title:hover {
+    text-shadow: 0 0 20px var(--neon-pink),
+                 0 0 30px var(--neon-pink);
+}
+
+/* Links with cyber effect */
+a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: var(--neon-blue);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Card styling */
+.post-entry {
+    border: 1px solid rgba(43, 255, 242, 0.1);
+    background: var(--darker-bg);
+    box-shadow: 0 0 10px rgba(43, 255, 242, 0.1);
+    transition: all 0.3s ease;
+}
+
+.post-entry:hover {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 20px rgba(43, 255, 242, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Code blocks */
+pre {
+    background: var(--darker-bg) !important;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+code {
+    color: var(--neon-purple) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neon-purple);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-pink);
+}
+
+/* Table styling */
+table {
+    border: 1px solid rgba(43, 255, 242, 0.2);
+    background: var(--darker-bg);
+}
+
+th {
+    border-bottom: 2px solid var(--neon-blue);
+}
+
+/* Images */
+img {
+    border: 1px solid rgba(43, 255, 242, 0.1);
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(43, 255, 242, 0.3);
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--darker-bg);
+    border-right: 1px solid rgba(43, 255, 242, 0.1);
+}
+
+.sidebar nav {
+    background: var(--darker-bg);
+}
+
+.sidebar-left {
+    background: var(--darker-bg);
+}
+
+/* Sidebar buttons and icons */
+.button {
+    background: var(--darker-bg);
+    border: 1px solid var(--neon-purple);
+    color: var(--neon-purple);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: var(--neon-purple);
+    color: var(--darker-bg);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+/* TOC */
+.toc {
+    background: var(--darker-bg);
+    border: 1px solid rgba(43, 255, 242, 0.1);
+    box-shadow: 0 0 10px rgba(43, 255, 242, 0.1);
+}
+
+.toc a {
+    color: var(--text);
+}
+
+.toc a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+/* Footer */
+footer {
+    background: var(--darker-bg);
+    border-top: 1px solid rgba(43, 255, 242, 0.1);
+    color: var(--text);
+    padding: 1rem 0;
+}
+
+footer a {
+    color: var(--neon-blue);
+}
+
+footer a:hover {
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+.powered-by {
+    color: var(--text);
+    opacity: 0.8;
+}
+
+/* Footer specific styles */
+.footer {
+    background: var(--darker-bg);
+    color: var(--text);
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(43, 255, 242, 0.1);
+}
+
+.footer span {
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.footer a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+/* The star/asterisk symbols */
+.footer span[style*="margin-left"] {
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+}
+
+/* Sidebar buttons */
+.top-link {
+    background: var(--darker-bg) !important;
+    border: 1px solid var(--neon-purple);
+    color: var(--neon-purple) !important;
+}
+
+.top-link:hover {
+    color: var(--darker-bg) !important;
+    background: var(--neon-purple) !important;
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+/* Right sidebar container */
+.right-container {
+    background: var(--darker-bg);
+    border-left: 1px solid rgba(43, 255, 242, 0.1);
+}
+
+.right-box {
+    background: var(--darker-bg);
+    margin: 0.5rem;
+}
+
+.right-box a, 
+.right-box button {
+    color: var(--text);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.right-box a:hover, 
+.right-box button:hover {
+    opacity: 1;
+    color: var(--neon-blue);
+}
+
+.right-box svg {
+    transition: all 0.3s ease;
+}
+
+.right-box:hover svg {
+    filter: drop-shadow(0 0 5px var(--neon-blue));
+}
+
+/* Reader mode buttons */
+#toggle-reader-on,
+#toggle-reader-off {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+#toggle-reader-on:hover,
+#toggle-reader-off:hover {
+    opacity: 1;
+    color: var(--neon-pink);
+}
+
+#toggle-reader-on:hover svg,
+#toggle-reader-off:hover svg {
+    filter: drop-shadow(0 0 5px var(--neon-pink));
+}
+
+/* Disabled state */
+#toggle-reader-off[disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Content visibility fixes */
+.entry-header h2 {
+    color: var(--neon-pink);
+}
+
+.post-meta {
+    color: var(--text);
+}
+
+.post-description {
+    color: var(--text);
+}
+
+.post-tags {
+    color: var(--text);
+}
+
+/* Sidenotes with cyberpunk styling */
+.sidenote-content {
+    color: var(--text);
+    background: var(--darker-bg);
+    border-width: 0.075rem;
+    border-style: ridge hidden groove hidden;
+    border-color: #bfbfbf;
+    padding: 0.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.4;
+}
+
+.sidenote-label {
+    color: var(--neon-blue);
+    border-bottom: 0.15rem dashed var(--neon-blue);
+}
+
+.sidenote-checkbox {
+    display: none;
+}
+
+/* Override any hover effects */
+.sidenote:hover .sidenote-label {
+    background-color: transparent;
+    color: var(--neon-blue);
+}
+
+.sidenote:hover .sidenote-content {
+    border: 1px solid var(--neon-blue);
+    box-shadow: 0 0 15px rgba(43, 255, 242, 0.15);
+}
+
+/* Hide the mobile-only elements by default */
+.sidenote-content {
+    display: block;
+}
+
+/* Override sidenote hover effects */
+.sidenote:hover .sidenote-label {
+    background-color: transparent;
+    color: var(--neon-blue);
+}
+
+.sidenote:hover .sidenote-content {
+    border-width: 0.075rem;
+    border-style: ridge hidden groove hidden;
+    padding: 0.5rem;
+    border-color: #bfbfbf;
+}
+
+.sidenote-label {
+    border-bottom: 0.15rem dashed var(--neon-blue);
+    color: var(--neon-blue);
+}
+
+/* Post footer navigation styling */
+.post-footer {
+    margin-top: 2rem;
+}
+
+.paginav {
+    display: flex;
+    align-items: center;
+    line-height: 1.6;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--darker-bg);
+    border-radius: 8px;
+    border: 1px solid rgba(43, 255, 242, 0.1);
+}
+
+.paginav .title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+}
+
+.paginav a {
+    color: var(--neon-blue);
+    font-weight: bold;
+}
+
+.paginav .next {
+    margin-left: auto;
+    text-align: right;
+}
+
+.paginav svg {
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+p {
+    margin-bottom: 1.2em;
+    line-height: 1.6;
+}
+
+strong, b {
+    font-weight: 600;
+    color: var(--neon-blue);
+    text-shadow: 0 0 4px rgba(43, 255, 242, 0.2);
+}
+
+em, i {
+    font-style: italic;
+    color: var(--neon-purple);
+    text-shadow: 0 0 4px rgba(0, 255, 255, 0.2);
+} 
