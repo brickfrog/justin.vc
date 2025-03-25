@@ -10,34 +10,84 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://justin.vc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Mar 2025 22:01:00 -0400</lastBuildDate><atom:link href="https://justin.vc/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vibe Coding in Early 2025</title>
+      <link>https://justin.vc/posts/vibe-coding-2025/</link>
+      <pubDate>Mon, 24 Mar 2025 22:01:00 -0400</pubDate>
+      
+      <guid>https://justin.vc/posts/vibe-coding-2025/</guid>
+      <description>&lt;p&gt;Honestly i haven&amp;rsquo;t had the urge to write as much bc pretty much most problems
+i&amp;rsquo;ve run into have been solvable by llms. i&amp;rsquo;ve been using cursor and other ai
+tools to build things and i think it&amp;rsquo;s pretty neat. i&amp;rsquo;m in awe and terrified at
+what I&amp;rsquo;m seeing people use these tools for.&lt;/p&gt;
+&lt;p&gt;it&amp;rsquo;s a bit of a dumb comparison, but i like to think of the current state of ai
+tools, particularly agentic code as &lt;span class=&#34;sidenote&#34;&gt;
+&lt;label class=&#34;sidenote-label&#34; for=&#34;f1&#34;&gt;mr. meseeks&lt;/label&gt;
+&lt;input class=&#34;sidenote-checkbox&#34; type=&#34;checkbox&#34; id=&#34;f1&#34;&gt;&lt;/input&gt;
+&lt;span class=&#34;sidenote-content
+sidenote-right&#34;&gt;  I am sure someone has made this comparison before but it just kind of popped into my mind when I watched claude flail around and panic suggest deleting my entire database. &lt;/span&gt;
+&lt;/span&gt; from &lt;a href=&#34;https://youtube.com/watch?v=qUYvIAP3qQk&#34;&gt;rick &amp;amp; morty&lt;/a&gt;, if it can&amp;rsquo;t
+figure it out it eventually will get &amp;lsquo;stressed out&amp;rsquo; and do insane things to try
+and finish the original task:&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Honestly i haven&rsquo;t had the urge to write as much bc pretty much most problems
+i&rsquo;ve run into have been solvable by llms. i&rsquo;ve been using cursor and other ai
+tools to build things and i think it&rsquo;s pretty neat. i&rsquo;m in awe and terrified at
+what I&rsquo;m seeing people use these tools for.</p>
+<p>it&rsquo;s a bit of a dumb comparison, but i like to think of the current state of ai
+tools, particularly agentic code as <span class="sidenote">
+<label class="sidenote-label" for="f1">mr. meseeks</label>
+<input class="sidenote-checkbox" type="checkbox" id="f1"></input>
+<span class="sidenote-content
+sidenote-right">  I am sure someone has made this comparison before but it just kind of popped into my mind when I watched claude flail around and panic suggest deleting my entire database. </span>
+</span> from <a href="https://youtube.com/watch?v=qUYvIAP3qQk">rick &amp; morty</a>, if it can&rsquo;t
+figure it out it eventually will get &lsquo;stressed out&rsquo; and do insane things to try
+and finish the original task:</p>
+<ul>
+<li>&ldquo;i can&rsquo;t finish this linter error&hellip; screw it, i&rsquo;m deleting it all!&rdquo;</li>
+<li>&ldquo;this table isn&rsquo;t working correctly, let&rsquo;s just drop it&rdquo;</li>
+<li>&ldquo;WHY WONT THIS DEV DOCKER CONTAINER BUILD ILL JUST READ YOUR .ENV AND HARDCODE A PRODUCTION KEY&rdquo;</li>
+<li>&ldquo;unit tests? lol. lmao. let&rsquo;s just edit the tests to conform to new code,
+it&rsquo;s fine - it&rsquo;s fine&rdquo;</li>
+</ul>
+<p>you can get past most of these things with proper prompting / knowing when to
+clear your history, etc. but i don&rsquo;t think most people will do that. -insert
+twitter/x meme image of old people at casino pulling slots here-</p>
+<p>this could probably usher in decentralization more than people think. the
+ability to go: &ldquo;i want a budgeting app that accounts for&hellip; -insert weird niche
+thing-&rdquo; and have it built in a day or two will probably help a lot of people.
+micro-apps where you don&rsquo;t really need to worry about network security is one of
+the biggest strengths of these things.</p>
+<p>on the other hand, we&rsquo;re going to get so&hellip; so much more slop, so much unsecure
+slop with people blindly hardcoding credentials, because some influencer told
+them they cant retire early by spamming out garbage sass products (same as it
+ever was).</p>
+<p>hell, maybe even more centralization with bad sass products promising to abstract away the pain - &ldquo;you don&rsquo;t need to
+know about sql injection if you blindly trust the ORM and some stupid online hosted db!&rdquo;</p>
+<p>eventually the tools will get good enough to self-correct, but by that point,
+quite a lot of people will find out their jobs aren&rsquo;t that useful anymore.</p>
+<p>i don&rsquo;t think i&rsquo;m cut out for waxing poetic on the state of technology.</p>
+<p>fun times. i wish i went into cybersecurity.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>YouTube &amp; elfeed</title>
       <link>https://justin.vc/posts/youtube-elfeed-mpv/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://justin.vc/posts/youtube-elfeed-mpv/</guid>
-      <description>&lt;div class=&#34;alert-primary alert&#34;&gt;
-&lt;div class=&#34;alert-heading&#34;&gt;
-&lt;p&gt;Update&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Amusingly I wrote this after a small delay in a ublock-origin update made things
-annoying but it seems like it&amp;rsquo;s relevant again considering their direct video
-injection (at least as of ~ 13/06 of 24)&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Realized I should probably just do more short-form stream of consciousness posts
+      <description>&lt;p&gt;Realized I should probably just do more short-form stream of consciousness posts
 and things I&amp;rsquo;m tinkering with. This will be my first ox-hugo post of essentially
 tossing them into one giant .org file. Going to try use this method from now on
-unless it&amp;rsquo;s like some sort of mega-article.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<div class="alert-primary alert">
-<div class="alert-heading">
-<p>Update</p>
-</div>
-<p>Amusingly I wrote this after a small delay in a ublock-origin update made things
-annoying but it seems like it&rsquo;s relevant again considering their direct video
-injection (at least as of ~ 13/06 of 24)</p>
-</div>
-<p>Realized I should probably just do more short-form stream of consciousness posts
+unless it&amp;rsquo;s like some sort of mega-article.&lt;/p&gt;
+&lt;section class=&#34;outline-1nil&#34;&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Okay, I&amp;rsquo;m sure y&amp;rsquo;all have notice Google/YouTube going full-on war on adblockers
+recently and while there&amp;rsquo;s options such as simply using another browser (I&amp;rsquo;ve
+noticed Firefox doesn&amp;rsquo;t get hit as often) I&amp;rsquo;ve decided to use this as an excuse
+to cut down on video consumption.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Realized I should probably just do more short-form stream of consciousness posts
 and things I&rsquo;m tinkering with. This will be my first ox-hugo post of essentially
 tossing them into one giant .org file. Going to try use this method from now on
 unless it&rsquo;s like some sort of mega-article.</p>
@@ -195,7 +245,7 @@ would set things correctly until I next restarted the emacs server / client.</p>
 <label class="sidenote-label" for="f1">Mastodon</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
 <span class="sidenote-content
-sidenote-right">  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. </span>
+sidenote-right">  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. (RIP emacs.ch - 2025) </span>
 </span>
 (<a href="https://emacs.ch">https://emacs.ch</a>).
 where a helpful person by the name of Sylvain Soliman
@@ -775,8 +825,7 @@ increases in complexity as the project evolves. To keep your
 project fit for purpose, you can create modular pipelines, which
 are logically isolated and can be reused. Modular pipelines are
 easier to develop, test and maintain, and are portable so they can
-be copied and reused between projects.</p>
-</blockquote>
+be copied and reused between projects.</p></blockquote>
 <!--list-separator-->
 <ul>
 <li>
@@ -789,8 +838,7 @@ be copied and reused between projects.</p>
 <blockquote>
 <p>A Kedro node is a wrapper for a Python function that names the inputs
 and outputs of that function. It is the building block of a pipeline.
-Nodes can be linked when the output of one node is the input of another.</p>
-</blockquote>
+Nodes can be linked when the output of one node is the input of another.</p></blockquote>
 <p>NOTE: Could theoretically break this into seperate codeblocks (import, utility,
 preprocess, but might be a bit cumbersome. Input welcome for best practices.)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Dict</span>
@@ -869,8 +917,7 @@ preprocess, but might be a bit cumbersome. Input welcome for best practices.)</p
 <blockquote>
 <p>A Kedro pipeline organises the dependencies and execution order of a collection
 of nodes, and connects inputs and outputs. The pipeline determines the node
-execution order by resolving dependencies.</p>
-</blockquote>
+execution order by resolving dependencies.</p></blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">node</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro.pipeline.modular_pipeline</span> <span class="kn">import</span> <span class="n">pipeline</span>
 </span></span><span class="line"><span class="cl">

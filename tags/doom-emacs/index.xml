@@ -74,7 +74,7 @@ would set things correctly until I next restarted the emacs server / client.</p>
 <label class="sidenote-label" for="f1">Mastodon</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
 <span class="sidenote-content
-sidenote-right">  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. </span>
+sidenote-right">  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. (RIP emacs.ch - 2025) </span>
 </span>
 (<a href="https://emacs.ch">https://emacs.ch</a>).
 where a helpful person by the name of Sylvain Soliman

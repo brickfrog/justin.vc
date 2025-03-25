@@ -17,27 +17,17 @@
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://justin.vc/posts/youtube-elfeed-mpv/</guid>
-      <description>&lt;div class=&#34;alert-primary alert&#34;&gt;
-&lt;div class=&#34;alert-heading&#34;&gt;
-&lt;p&gt;Update&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Amusingly I wrote this after a small delay in a ublock-origin update made things
-annoying but it seems like it&amp;rsquo;s relevant again considering their direct video
-injection (at least as of ~ 13/06 of 24)&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Realized I should probably just do more short-form stream of consciousness posts
+      <description>&lt;p&gt;Realized I should probably just do more short-form stream of consciousness posts
 and things I&amp;rsquo;m tinkering with. This will be my first ox-hugo post of essentially
 tossing them into one giant .org file. Going to try use this method from now on
-unless it&amp;rsquo;s like some sort of mega-article.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<div class="alert-primary alert">
-<div class="alert-heading">
-<p>Update</p>
-</div>
-<p>Amusingly I wrote this after a small delay in a ublock-origin update made things
-annoying but it seems like it&rsquo;s relevant again considering their direct video
-injection (at least as of ~ 13/06 of 24)</p>
-</div>
-<p>Realized I should probably just do more short-form stream of consciousness posts
+unless it&amp;rsquo;s like some sort of mega-article.&lt;/p&gt;
+&lt;section class=&#34;outline-1nil&#34;&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Okay, I&amp;rsquo;m sure y&amp;rsquo;all have notice Google/YouTube going full-on war on adblockers
+recently and while there&amp;rsquo;s options such as simply using another browser (I&amp;rsquo;ve
+noticed Firefox doesn&amp;rsquo;t get hit as often) I&amp;rsquo;ve decided to use this as an excuse
+to cut down on video consumption.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Realized I should probably just do more short-form stream of consciousness posts
 and things I&rsquo;m tinkering with. This will be my first ox-hugo post of essentially
 tossing them into one giant .org file. Going to try use this method from now on
 unless it&rsquo;s like some sort of mega-article.</p>
@@ -195,7 +185,7 @@ would set things correctly until I next restarted the emacs server / client.</p>
 <label class="sidenote-label" for="f1">Mastodon</label>
 <input class="sidenote-checkbox" type="checkbox" id="f1"></input>
 <span class="sidenote-content
-sidenote-right">  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. </span>
+sidenote-right">  I joined this particular instance cause it seemed pretty open, without mass fediblocking and such. (RIP emacs.ch - 2025) </span>
 </span>
 (<a href="https://emacs.ch">https://emacs.ch</a>).
 where a helpful person by the name of Sylvain Soliman
@@ -488,8 +478,7 @@ increases in complexity as the project evolves. To keep your
 project fit for purpose, you can create modular pipelines, which
 are logically isolated and can be reused. Modular pipelines are
 easier to develop, test and maintain, and are portable so they can
-be copied and reused between projects.</p>
-</blockquote>
+be copied and reused between projects.</p></blockquote>
 <!--list-separator-->
 <ul>
 <li>
@@ -502,8 +491,7 @@ be copied and reused between projects.</p>
 <blockquote>
 <p>A Kedro node is a wrapper for a Python function that names the inputs
 and outputs of that function. It is the building block of a pipeline.
-Nodes can be linked when the output of one node is the input of another.</p>
-</blockquote>
+Nodes can be linked when the output of one node is the input of another.</p></blockquote>
 <p>NOTE: Could theoretically break this into seperate codeblocks (import, utility,
 preprocess, but might be a bit cumbersome. Input welcome for best practices.)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Dict</span>
@@ -582,8 +570,7 @@ preprocess, but might be a bit cumbersome. Input welcome for best practices.)</p
 <blockquote>
 <p>A Kedro pipeline organises the dependencies and execution order of a collection
 of nodes, and connects inputs and outputs. The pipeline determines the node
-execution order by resolving dependencies.</p>
-</blockquote>
+execution order by resolving dependencies.</p></blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">node</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">kedro.pipeline.modular_pipeline</span> <span class="kn">import</span> <span class="n">pipeline</span>
 </span></span><span class="line"><span class="cl">
