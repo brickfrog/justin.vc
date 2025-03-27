@@ -116,8 +116,8 @@ params:
     text: "justin.vc"
 
   profileMode:
-    enabled: false
-    subtitle: "This is a subtitle. I don't know what to put here. Oh."
+    enabled: true
+    subtitle: "This is mostly just a landing page of sorts."
 
   homeInfoParams:
     Title: "technofutzin'"
@@ -160,16 +160,12 @@ params:
 
 menu:
   main:
-    - identifier: posts
-      name: Posts
-      url: /posts/
-      weight: 1
     - identifier: about
       name: About
       url: /about/
       weight: 2
     - identifier: quotes
-      name: Quotes
+      name: Quoteback
       url: /quotes/
       weight: 3
     - identifier: notes

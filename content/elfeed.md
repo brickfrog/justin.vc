@@ -12,17 +12,7 @@ comments: false
 ShowToC: false
 ---
 
-Right now I am exporting this as my "blog roll" section of my main
-site. I could probably stand to clean this up, but still it shows the stuff I
-watch in my reader. It exports when I save, so it should be pretty much to
-date.
-
-I'm also (trying to) put a blurb or such on how I found the blog or add the
-context for why I added it. Because this is primarily for feed-reading, most of
-the links are to feeds that I tried to regex back into normal links.
-
-If for some reason you're interested in subsuming my feeds, I keep a copy of the
-[.opml file](<https://justin.vc/feed.opml>).
+I keep a copy of the [.opml file](<https://justin.vc/feed.opml>) here. just RSS feeds I watch.
 
 <div class="outline-1nil">
 
