@@ -9,17 +9,6 @@
       <link>https://justin.vc/</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://justin.vc/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Technology</title>
-      <link>https://justin.vc/categories/technology/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://justin.vc/categories/technology/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
+    <language>en</language><atom:link href="https://justin.vc/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
