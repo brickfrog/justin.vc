@@ -13,9 +13,7 @@ ShowBreadCrumbs: false
 backlinks: false
 ---
 
-Hello! I'm Justin! I'm just a data scientist/software engineer who likes
-learning things in his free time. Specifically, my interests generally fall into
-Open source/emacs, applied mathematics/statistics, Catholic/Chinese history + poetry, & general media.
+I am justin. i do data + software. mostly interested in whatever is eating my brain at the time—usually something in the venn of open source, emacs, applied math/stats, catholic or chinese history (poetry too), and just... media in general.
 
 <section class="outline-1nil">
 
@@ -26,30 +24,25 @@ Open source/emacs, applied mathematics/statistics, Catholic/Chinese history + po
 
 ### Education {#education}
 
-I have degrees in business and decision sciences from Florida State University / St. Joseph's University respectively. Most of my work was in decision theory for optimization of education outcomes. 
+business undergrad (fsu), decision sciences grad (st. joe’s). most of my thesis-y brain cycles went to optimizing educational outcomes through decision theory. think: stats + apis for education admin & government.
 
 ### Work {#work}
 
-I was a business intelligence engineer / production support engineer at ADM after I finished grad school. I occasionally do consulting work (not open / generally direct connections) and assist startups with full stack development. I like to pride myself on being able to ramp up on new technologies and business domains quickly. I think every employment review has had some variation on "intellectual curiosity" - if I can be a bit not-so-humble.
+was doing BI + production support at ADM post-grad. now i ghostwrite code for startups, mostly via direct lines—no public consulting funnel or anything. i pick up new stacks and domains fast
 
 <div class="outline-2nil">
 
 ### Technical {#technical}
 
-In my day-to-day when working I'm generally using python. I use type/javascript when tinkering around with my various web apps. I know enough elisp to get by, but generally only use it for convenience functions in emacs. I've built a couple of things in Rust but my knowledge tends to atrophy due to lack of usage. Postgres is my favorite database and I like to use it for (most of) my projects. Other than that, I'm more of a "use what's best for the job" kind of guy, as long as it works and is maintainable.
+tools are tools. if it works, i’ll use it. i’ve aged out of tech tribalism. still, postgres supremacy. everything i spin up ends up back on it eventually.
 
 <div class="outline-3nil">
 
 #### This site {#this-site}
 
-This site is created with a fork of [PaperModX](https://www.github.com/reorx/hugo-PaperModX), which I'm calling [PaperModulo](https://www.github.com/brickfrog/hugo-PaperModulo).
-Almost everything is written as org-mode documents that I parse with ox-hugo. Hoping
-that having -everything- as org mode documents makes it easier to write in
-general, since I use org-mode for my agenda/todo lists, reading (org-noter +
-pdf-tools) and {{% sidenote "f4"  coding. %}} Okay, sometimes I still use Jupyter and VSCode. Sue me. {{% /sidenote %}} There's also some usage of Google docs for things I need there to be
-less friction on (e.g. - what I'm doing)
+glued together with my own fork of PaperModX—called it PaperModulo bc i like bad puns and functional metaphors. all the content is org-mode, bc my life already lives in emacs (org-agenda, org-noter, etc). the build process is ox-hugo. still cheating with jupyter + vscode when i don’t feel like fighting the editor war that day.
 
-Hugo's a bit crusty - I'm not sure how much legs it still has but...
+hugo’s mid, honestly. no idea how long i’ll stick with it.
 
 </div>
 
@@ -57,12 +50,8 @@ Hugo's a bit crusty - I'm not sure how much legs it still has but...
 
 #### Using {#using}
 
-I have my own little battlestation that I do my work on, I've never been a big
-laptop person. This is probably (one of the many reasons) I'd do poorly as a
-consultant. I like using Linux because {{% sidenote "f5"  "tiling window managers are neat." %}} See my [dotfiles](https://github.com/brickfrog/.dotfiles). {{% /sidenote %}} Outside
-of not being able to (easily) do VR, I don't particularly miss Windows, and I've
-never been a fan of MacOS. I'm just waiting for the day they put Asahi Linux on
-the ARM chips.
+desktop main. laptops feel like punishment. maybe i’d suck at consulting for that reason alone.
+linux user (duh). tiling WMs go hard. [dotfiles here.](https://github.com/brickfrog/.dotfiles).
 
 TODO: more details here.
 
@@ -80,7 +69,7 @@ TODO: more details here.
 
 ### Reading {#reading}
 
-I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfrog). I know, evil Amazon, but the API is pretty good. I try to backup my data but I'm not sure what other good alternatives are. Feel free to suggest some.
+i track books here [goodreads](https://www.goodreads.com/brickfrog).
 
 <div class="now-content-box">
 <script src="https://www.goodreads.com/review/grid_widget/46714580.Justin's%20bookshelf:%20currently-reading?cover_size=medium&hide_link=true&hide_title=true&num_books=25&order=d&shelf=currently-reading&sort=date_read&widget_id=1674169459" type="text/javascript"></script>
@@ -92,16 +81,14 @@ I try to do most of my tracking on [goodreads](https://www.goodreads.com/brickfr
 
 ### Watching {#watching}
 
-I last [watched](https://trakt.tv/users/justinvc) (show/movie respectively) via trakt.tv, I'd like to make a letterbox'd or somesuch but I think the API is closed down unless you can convince the devs, I don't like things that require manual updates because I forget to do them:
+tv + movies tracked via [trakt.tv](https://trakt.tv/users/justinvc) used to want letterboxd but the api’s a walled garden now. i forget to update things manually so that’s a no-go.
 
 <div class="movie_container">
   <img width="175" height="325" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=episode" />
   <img width="175" height="325" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=movie" />
 </div><br>
 
-I use [anilist](https://anilist.co/user/brickfrog/) for tracking anime/manga. I
-know there's a debate on MAL vs. AL, but I like the interface and the GraphQL is nice
-once you get used to it (read: salty that brickfrog was taken on MAL). This is mostly programatically updated.
+anime/manga on [anilist](https://anilist.co/user/brickfrog/)
 
 <script src="/js/anilist-card.js"></script>
 <div id="anilist-card-container"></div>
@@ -111,11 +98,11 @@ once you get used to it (read: salty that brickfrog was taken on MAL). This is m
 
 ### Listening {#listening}
 
-I don't listen to a lot of music, feel free to check my recently played tracks on [last.fm](https://www.last.fm/user/justinvc). The embed is a spotify playlist that I've been listening to recently on [spotify](https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw?si=9f1a873775c44bb6):
+music? not a ton. [last.fm](https://www.last.fm/user/justinvc). the embed is a spotify playlist,  [spotify](https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw?si=9f1a873775c44bb6):
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7B59KOR8L74iH5La7ZrntW?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-- [rateyourmusic.com](https://rateyourmusic.com/~justinvc) - I don't use this much, but I do use it to track my music collection. I'm not sure if I'll keep it up, but I do like the idea of having a collection of music I've listened to.
+- [rateyourmusic.com](https://rateyourmusic.com/~justinvc) - not used a ton.
 
 </div>
 </section>
