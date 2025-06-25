@@ -32,29 +32,6 @@ was doing BI + production support at ADM post-grad. now i ghostwrite code for st
 
 <div class="outline-2nil">
 
-### Technical {#technical}
-
-tools are tools. if it works, i’ll use it. i’ve aged out of tech tribalism.
-
-<div class="outline-3nil">
-
-#### This site {#this-site}
-
-glued together with my own fork of PaperModX—called it PaperModulo bc i like bad puns and functional metaphors. all the content is org-mode, bc my life already lives in emacs (org-agenda, org-noter, etc). the build process is ox-hugo. still cheating with jupyter + vscode when i don’t feel like fighting the editor war that day.
-
-hugo’s mid, honestly. no idea how long i’ll stick with it.
-
-</div>
-
-<div class="outline-3nil">
-
-#### Using {#using}
-
-desktop main. laptops feel like punishment. maybe i’d suck at consulting for that reason alone.
-linux user (duh). tiling WMs go hard. [dotfiles here.](https://github.com/brickfrog/.dotfiles).
-
-TODO: more details here.
-
 </div>
 
 </div>
