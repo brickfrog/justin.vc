@@ -83,6 +83,14 @@
         </div>
         {{- end }}
         {{- $currentPage := . }}
+        
+        <!-- Mobile menu toggle button -->
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
         <ul id="menu">
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absURL }}
@@ -159,5 +167,28 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Display the selected ASCII art
     asciiArts[randomIndex].style.display = "block";
+    
+    // Mobile menu toggle functionality
+    var mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('menu');
+    
+    if (mobileMenuToggle && menu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            // Toggle active class on button (for animation)
+            mobileMenuToggle.classList.toggle('active');
+            
+            // Toggle active class on menu (to show/hide)
+            menu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a menu item
+        var menuItems = menu.querySelectorAll('a');
+        menuItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    }
 });
 </script>

@@ -117,7 +117,7 @@ params:
 
   profileMode:
     enabled: true
-    subtitle: "This is mostly just a landing page of sorts."
+    subtitle: "I don't even know, man"
 
   homeInfoParams:
     Title: "technofutzin'"
@@ -180,10 +180,6 @@ menu:
 assets:
   disableHLJS: true
   favicon: "earthbound-globe.png"
-#     favicon16x16: "<link / abs url>"
-#     favicon32x32: "<link / abs url>"
-#     apple_touch_icon: "<link / abs url>"
-#     safari_pinned_tab: "<link / abs url>"
 
 markup:
   goldmark:

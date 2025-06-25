@@ -34,7 +34,7 @@ was doing BI + production support at ADM post-grad. now i ghostwrite code for st
 
 ### Technical {#technical}
 
-tools are tools. if it works, i’ll use it. i’ve aged out of tech tribalism. still, postgres supremacy. everything i spin up ends up back on it eventually.
+tools are tools. if it works, i’ll use it. i’ve aged out of tech tribalism.
 
 <div class="outline-3nil">
 
