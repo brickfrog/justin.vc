@@ -471,6 +471,20 @@
     "url": "https://blog.samaltman.com/the-strength-of-being-misunderstood"
   },
   {
+    "author": "Vaxry's Blog",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://blog.vaxry.net/articles/2024-on-cosmic&sz=64",
+    "last_update": 1732985298479,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1732985298480,
+        "text": "A project <em>needs</em>, <em>absolutely needs</em> a clear and catchy goal. NEEDS. Without it, you're just another nobody in a sea of alternatives."
+      }
+    ],
+    "title": "Vaxry's Blog",
+    "url": "https://blog.vaxry.net/articles/2024-on-cosmic"
+  },
+  {
     "author": "Fernando Borretti",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://borretti.me/article/youre-not-going-anywhere&sz=64",
     "last_update": 1671499818344,
@@ -2235,6 +2249,20 @@
     "url": "https://thejesuitpost.org/2022/12/silence-is-not-an-option-in-matters-of-life-and-death/"
   },
   {
+    "author": "Erin Kast, SJ",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://thejesuitpost.org/2024/11/why-christian-forgiveness-requires-every-christian-to-be-a-priest/&sz=64",
+    "last_update": 1731985401104,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1731985401104,
+        "text": "So, the next time you’re challenged to “forgive from your heart” (cf. Mt. 18:35) your brother or sister (mother or father, son-in-law or daughter-in-law, friend or stranger), rest assured that from a Christian perspective, you are doing far more than just a good deed. Rather, you are living out your baptismal promises by mediating God’s grace as priest, proclaiming God’s power as prophet, and announcing God’s reign as king."
+      }
+    ],
+    "title": "Why Christian Forgiveness Requires Every Christian to be a Priest - The Jesuit Post",
+    "url": "https://thejesuitpost.org/2024/11/why-christian-forgiveness-requires-every-christian-to-be-a-priest/"
+  },
+  {
     "author": "John Halpin",
     "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://theliberalpatriot.substack.com/p/6-habits-of-highly-effective-citizens&sz=64",
     "last_update": 1650827051493,
@@ -2710,6 +2738,20 @@
     ],
     "title": "STUDY A GO!!GO!! 歌詞 GOLDEN GIRLS ふりがな付 - うたてん",
     "url": "https://utaten.com/lyric/to16060309/"
+  },
+  {
+    "author": "Chris Krycho",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://v5.chriskrycho.com/essays/jj-init/#revisions-and-revsets&sz=64",
+    "last_update": 1753450730466,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1753450730466,
+        "text": "No one should have to understand the internals of the system to use it well, though; that is a simple failure of software design."
+      }
+    ],
+    "title": "jj init — Sympolymathesy, by Chris Krycho",
+    "url": "https://v5.chriskrycho.com/essays/jj-init/#revisions-and-revsets"
   },
   {
     "author": "Vadim Kravcenko",
@@ -3920,5 +3962,19 @@
     ],
     "title": "ACTION BUTTON REVIEWS Tokimeki Memorial",
     "url": "https://www.youtube.com/watch?v=xb-DtICmPTY"
+  },
+  {
+    "author": "",
+    "favicon": "https://s2.googleusercontent.com/s2/favicons?domain_url=https://x.com/patio11/status/1952979691536826811&sz=64",
+    "last_update": 1754492708935,
+    "quotes": [
+      {
+        "comment": "",
+        "date": 1754492708935,
+        "text": "“Anything sufficiently interesting is not fungible in money.” is both a great line and a potential postmortem of so much in society."
+      }
+    ],
+    "title": "Patrick McKenzie on X: \"“Anything sufficiently interesting is not fungible in money.” is both a great line and a potential postmortem of so much in society.\" / X",
+    "url": "https://x.com/patio11/status/1952979691536826811"
   }
 ]
