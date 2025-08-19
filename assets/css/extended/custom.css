@@ -3,6 +3,7 @@
 /* Import cyberpunk fonts with better loading strategy */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Chakra+Petch:wght@300;400;500;600&family=Share+Tech+Mono&display=swap');
 
+/* Root variables (fix selector for Firefox compatibility) */
 :root {
     --neon-pink: #00ffff;
     --neon-blue: #2bfff2;
@@ -10,18 +11,32 @@
     --dark-bg: #1c1c1c;
     --darker-bg: #141414;
     --text: #c6c6c6;
-    /* Better font fallbacks for mobile devices */
-    --font-heading: 'Orbitron', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif !important;
-    --font-body: 'Chakra Petch', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
-    --font-mono: 'Share Tech Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+    /* Prefer locally hosted fonts first; keep Google fonts as fallbacks */
+    --font-heading: 'JosefinSans Bold', 'Orbitron', 'Helvetica Neue', Arial, -apple-system, BlinkMacSystemFont, sans-serif !important;
+    --font-body: 'Geist', 'Chakra Petch', 'Segoe UI', Roboto, Arial, -apple-system, BlinkMacSystemFont, sans-serif !important;
+    --font-mono: 'Geist Mono', 'Share Tech Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+
+    /* Force dark theme variables to avoid unreadable text if the `.dark` class is ignored */
+    --theme: #1c1c1c !important;
+    --entry: #1c1c1c !important;
+    --primary: rgb(218, 218, 219) !important;   /* main text color */
+    --secondary: rgb(182, 183, 184) !important; /* secondary text */
+    --content: #ffffff !important;               /* article text */
+    --code-bg: #1e1e1e !important;
+    --border: #333333 !important;
 }
 
 /* Base styles */
 html, body {
     font-family: var(--font-body) !important;
     letter-spacing: 0.03em !important;
-    font-weight: 300 !important;
+    font-weight: 400; /* avoid overriding heading weights */
     text-shadow: 0 0 2px rgba(198, 198, 198, 0.3);
+    /* Improve baseline rendering across browsers */
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: var(--theme) !important;
+    color: var(--primary) !important;
 }
 
 .post-content, 
@@ -34,6 +49,16 @@ article {
     font-family: var(--font-body) !important;
 }
 
+/* Firefox-specific tuning to avoid overly thin, blurry text */
+@supports (-moz-appearance:none) {
+    html, body,
+    .post-content, .entry-content, article {
+        text-shadow: none !important;
+        font-weight: 400 !important;
+        letter-spacing: 0.01em !important;
+    }
+}
+
 h1, h2, h3, h4, h5, h6,
 .post-title,
 .entry-header h1,
@@ -42,6 +67,7 @@ h1, h2, h3, h4, h5, h6,
     font-family: var(--font-heading) !important;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    font-weight: 700;
 }
 
 code, pre, 
