@@ -116,8 +116,7 @@ params:
     text: "justin.vc"
 
   profileMode:
-    enabled: true
-    subtitle: "I don't even know, man"
+    enabled: true 
 
   homeInfoParams:
     Title: "technofutzin'"

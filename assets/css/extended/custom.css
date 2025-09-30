@@ -232,18 +232,75 @@ article {
 }
 
 .social-icons a:hover {
-    color: var(--neon-blue);
     transform: scale(1.1);
 }
 
-.social-icons svg {
+.social-icons a svg {
+    height: 32px !important;
+    width: 32px !important;
     filter: drop-shadow(0 0 2px rgba(43, 255, 242, 0.2));
     transition: all 0.3s ease;
 }
 
-.social-icons a:hover svg {
-    filter: drop-shadow(0 0 8px rgba(43, 255, 242, 0.6));
-    color: var(--neon-blue);
+/* Distinct neon colors for each social icon */
+.social-icons a[title="Rss"]:hover,
+.social-icons a[title="Rss"]:hover svg {
+    color: #ff6b35;
+    filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.8));
+}
+
+.social-icons a[title="Github"]:hover,
+.social-icons a[title="Github"]:hover svg {
+    color: #bd93f9;
+    filter: drop-shadow(0 0 8px rgba(189, 147, 249, 0.8));
+}
+
+.social-icons a[title="Goodreads"]:hover,
+.social-icons a[title="Goodreads"]:hover svg {
+    color: #fbbf24;
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.8));
+}
+
+.social-icons a[title="Lastfm"]:hover,
+.social-icons a[title="Lastfm"]:hover svg {
+    color: #ff5555;
+    filter: drop-shadow(0 0 8px rgba(255, 85, 85, 0.8));
+}
+
+.social-icons a[title="Rateyourmusic"]:hover,
+.social-icons a[title="Rateyourmusic"]:hover svg {
+    color: #8be9fd;
+    filter: drop-shadow(0 0 8px rgba(139, 233, 253, 0.8));
+}
+
+.social-icons a[title="Spotify"]:hover,
+.social-icons a[title="Spotify"]:hover svg {
+    color: #1ed760;
+    filter: drop-shadow(0 0 8px rgba(30, 215, 96, 0.8));
+}
+
+.social-icons a[title="Anilist"]:hover,
+.social-icons a[title="Anilist"]:hover svg {
+    color: #02a9ff;
+    filter: drop-shadow(0 0 8px rgba(2, 169, 255, 0.8));
+}
+
+.social-icons a[title="Bluesky"]:hover,
+.social-icons a[title="Bluesky"]:hover svg {
+    color: #1da1f2;
+    filter: drop-shadow(0 0 8px rgba(29, 161, 242, 0.8));
+}
+
+.social-icons a[title="Wechat"]:hover,
+.social-icons a[title="Wechat"]:hover svg {
+    color: #7ee787;
+    filter: drop-shadow(0 0 8px rgba(126, 231, 135, 0.8));
+}
+
+.social-icons a[title="Email"]:hover,
+.social-icons a[title="Email"]:hover svg {
+    color: #ffff00;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 0, 0.8));
 }
 
 /* Subtle scan lines effect */
