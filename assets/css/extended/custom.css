@@ -152,6 +152,57 @@ article {
     background: transparent;
 }
 
+/* Profile Section with Full-Width Scanline Effect */
+.main .profile {
+    position: relative;
+}
+
+/* Animated scanline effect - full page width - only on home page */
+body.list::after {
+    content: "";
+    position: fixed;
+    top: -10%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent,
+        transparent 10%,
+        rgba(43, 255, 242, 0.8) 40%,
+        rgba(43, 255, 242, 1) 50%,
+        rgba(43, 255, 242, 0.8) 60%,
+        transparent 90%,
+        transparent);
+    box-shadow: 0 0 20px rgba(43, 255, 242, 0.8),
+                0 0 40px rgba(43, 255, 242, 0.4);
+    animation: scanline 15s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes scanline {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 110%;
+    }
+}
+
+/* Profile subtitle/subsubtitle hover effects */
+.profile_inner h5,
+.profile_inner h6 {
+    transition: all 0.3s ease;
+}
+
+.profile_inner h5:hover,
+.profile_inner h6:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px rgba(43, 255, 242, 0.6);
+    transform: scale(1.02);
+}
+
 .post-content {
     background: transparent;
     color: var(--text);
@@ -180,6 +231,13 @@ article {
     background: var(--darker-bg);
     border-bottom: 1px solid var(--neon-blue);
     box-shadow: 0 0 20px rgba(43, 255, 242, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.header {
+    position: relative;
+    z-index: 1000;
 }
 
 .logo a {
@@ -224,15 +282,41 @@ article {
 .social-icons {
     opacity: 0.8;
     transition: opacity 0.3s ease;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .social-icons:hover {
     opacity: 1;
 }
 
+/* Scanline hit effect on social icons */
+.social-icons a svg {
+    height: 32px !important;
+    width: 32px !important;
+    filter: drop-shadow(0 0 2px rgba(43, 255, 242, 0.2));
+    transition: all 0.3s ease;
+    animation: scanlineHit 15s ease-in-out infinite;
+}
+
+@keyframes scanlineHit {
+    0%, 48%, 52%, 100% {
+        filter: drop-shadow(0 0 2px rgba(43, 255, 242, 0.2));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(43, 255, 242, 1))
+                drop-shadow(0 0 40px rgba(43, 255, 242, 0.8))
+                brightness(1.5);
+        transform: scale(1.1);
+    }
+}
+
 .social-icons a {
     color: var(--text);
     transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
 }
 
 .social-icons a::before {
@@ -243,11 +327,31 @@ article {
     transform: scale(1.1);
 }
 
-.social-icons a svg {
-    height: 32px !important;
-    width: 32px !important;
-    filter: drop-shadow(0 0 2px rgba(43, 255, 242, 0.2));
-    transition: all 0.3s ease;
+/* Tooltip styling */
+.social-icons a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--darker-bg);
+    color: var(--text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: 1px solid rgba(43, 255, 242, 0.3);
+    box-shadow: 0 0 10px rgba(43, 255, 242, 0.2);
+    z-index: 1000;
+}
+
+.social-icons a:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-3px);
 }
 
 /* Distinct neon colors for each social icon */
@@ -257,10 +361,20 @@ article {
     filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.8));
 }
 
+.social-icons a[title="Rss"]:hover::after {
+    border-color: #ff6b35;
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
+}
+
 .social-icons a[title="Github"]:hover,
 .social-icons a[title="Github"]:hover svg {
     color: #bd93f9;
     filter: drop-shadow(0 0 8px rgba(189, 147, 249, 0.8));
+}
+
+.social-icons a[title="Github"]:hover::after {
+    border-color: #bd93f9;
+    box-shadow: 0 0 10px rgba(189, 147, 249, 0.4);
 }
 
 .social-icons a[title="Goodreads"]:hover,
@@ -269,10 +383,20 @@ article {
     filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.8));
 }
 
+.social-icons a[title="Goodreads"]:hover::after {
+    border-color: #fbbf24;
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+}
+
 .social-icons a[title="Lastfm"]:hover,
 .social-icons a[title="Lastfm"]:hover svg {
     color: #ff5555;
     filter: drop-shadow(0 0 8px rgba(255, 85, 85, 0.8));
+}
+
+.social-icons a[title="Lastfm"]:hover::after {
+    border-color: #ff5555;
+    box-shadow: 0 0 10px rgba(255, 85, 85, 0.4);
 }
 
 .social-icons a[title="Rateyourmusic"]:hover,
@@ -281,10 +405,20 @@ article {
     filter: drop-shadow(0 0 8px rgba(139, 233, 253, 0.8));
 }
 
+.social-icons a[title="Rateyourmusic"]:hover::after {
+    border-color: #8be9fd;
+    box-shadow: 0 0 10px rgba(139, 233, 253, 0.4);
+}
+
 .social-icons a[title="Spotify"]:hover,
 .social-icons a[title="Spotify"]:hover svg {
     color: #1ed760;
     filter: drop-shadow(0 0 8px rgba(30, 215, 96, 0.8));
+}
+
+.social-icons a[title="Spotify"]:hover::after {
+    border-color: #1ed760;
+    box-shadow: 0 0 10px rgba(30, 215, 96, 0.4);
 }
 
 .social-icons a[title="Anilist"]:hover,
@@ -293,10 +427,20 @@ article {
     filter: drop-shadow(0 0 8px rgba(2, 169, 255, 0.8));
 }
 
+.social-icons a[title="Anilist"]:hover::after {
+    border-color: #02a9ff;
+    box-shadow: 0 0 10px rgba(2, 169, 255, 0.4);
+}
+
 .social-icons a[title="Bluesky"]:hover,
 .social-icons a[title="Bluesky"]:hover svg {
     color: #1da1f2;
     filter: drop-shadow(0 0 8px rgba(29, 161, 242, 0.8));
+}
+
+.social-icons a[title="Bluesky"]:hover::after {
+    border-color: #1da1f2;
+    box-shadow: 0 0 10px rgba(29, 161, 242, 0.4);
 }
 
 .social-icons a[title="Wechat"]:hover,
@@ -305,10 +449,20 @@ article {
     filter: drop-shadow(0 0 8px rgba(126, 231, 135, 0.8));
 }
 
+.social-icons a[title="Wechat"]:hover::after {
+    border-color: #7ee787;
+    box-shadow: 0 0 10px rgba(126, 231, 135, 0.4);
+}
+
 .social-icons a[title="Email"]:hover,
 .social-icons a[title="Email"]:hover svg {
     color: #ffff00;
     filter: drop-shadow(0 0 8px rgba(255, 255, 0, 0.8));
+}
+
+.social-icons a[title="Email"]:hover::after {
+    border-color: #ffff00;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.4);
 }
 
 /* Subtle scan lines effect */
@@ -452,31 +606,162 @@ img:hover {
 /* Sidebar buttons and icons */
 .button {
     background: var(--darker-bg);
-    border: 1px solid var(--neon-purple);
+    border: 2px solid var(--neon-purple);
     color: var(--neon-purple);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Charging fill animation */
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(189, 147, 249, 0.3),
+        transparent);
+    transition: left 0.6s ease;
+}
+
+.button:hover::before {
+    left: 100%;
 }
 
 .button:hover {
     background: var(--neon-purple);
     color: var(--darker-bg);
-    box-shadow: 0 0 15px var(--neon-purple);
+    box-shadow: 0 0 20px var(--neon-purple),
+                0 0 40px rgba(189, 147, 249, 0.4),
+                inset 0 0 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px) scale(1.05);
+    border-color: var(--neon-pink);
 }
 
-/* TOC */
+.button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 10px var(--neon-purple);
+}
+
+/* TOC - Enhanced Cyberpunk Styling */
 .toc {
     background: var(--darker-bg);
-    border: 1px solid rgba(43, 255, 242, 0.1);
-    box-shadow: 0 0 10px rgba(43, 255, 242, 0.1);
+    border: 2px solid rgba(43, 255, 242, 0.3);
+    box-shadow: 0 0 20px rgba(43, 255, 242, 0.2),
+                inset 0 0 30px rgba(43, 255, 242, 0.05);
+    position: relative;
+    animation: tocPulse 3s ease-in-out infinite;
+}
+
+@keyframes tocPulse {
+    0%, 100% {
+        border-color: rgba(43, 255, 242, 0.3);
+        box-shadow: 0 0 20px rgba(43, 255, 242, 0.2),
+                    inset 0 0 30px rgba(43, 255, 242, 0.05);
+    }
+    50% {
+        border-color: rgba(43, 255, 242, 0.5);
+        box-shadow: 0 0 30px rgba(43, 255, 242, 0.3),
+                    inset 0 0 40px rgba(43, 255, 242, 0.08);
+    }
+}
+
+/* Grid pattern background */
+.toc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(43, 255, 242, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(43, 255, 242, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .toc a {
     color: var(--text);
+    position: relative;
+    transition: all 0.3s ease;
+    display: block;
+    padding-left: 10px;
+}
+
+/* Animated underline on hover */
+.toc a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .toc a:hover {
     color: var(--neon-blue);
     text-shadow: 0 0 8px var(--neon-blue);
+    padding-left: 15px;
+}
+
+.toc a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Active item with glowing indicator */
+.toc li a.active {
+    color: var(--neon-purple);
+    background-color: rgba(189, 147, 249, 0.1);
+    border-left: 3px solid var(--neon-purple);
+    padding-left: 12px;
+    box-shadow: -5px 0 10px rgba(189, 147, 249, 0.3);
+}
+
+/* Nested items with progressive markers */
+.toc li ul li a {
+    padding-left: 20px;
+}
+
+.toc li ul li a::before {
+    content: "▸";
+    position: absolute;
+    left: 10px;
+    color: var(--neon-blue);
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.toc li ul li ul li a {
+    padding-left: 30px;
+}
+
+/* Custom scrollbar for TOC */
+.toc::-webkit-scrollbar {
+    width: 8px;
+}
+
+.toc::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+}
+
+.toc::-webkit-scrollbar-thumb {
+    background: var(--neon-purple);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(189, 147, 249, 0.5);
+}
+
+.toc::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-pink);
+    box-shadow: 0 0 8px rgba(255, 107, 53, 0.6);
 }
 
 /* Footer */
@@ -485,6 +770,8 @@ footer {
     border-top: 1px solid rgba(43, 255, 242, 0.1);
     color: var(--text);
     padding: 1rem 0;
+    position: relative;
+    z-index: 1000;
 }
 
 footer a {
@@ -619,6 +906,105 @@ footer a:hover {
 
 .post-tags {
     color: var(--text);
+}
+
+/* Links Page - Hierarchical Heading Styling */
+.outline-2nil h3 {
+    color: var(--neon-pink);
+    position: relative;
+    padding-left: 12px;
+    border-left: 3px solid var(--neon-pink);
+    margin-left: 0;
+}
+
+.outline-3nil h4 {
+    color: var(--neon-blue);
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.outline-3nil h4::before {
+    content: "▸";
+    position: absolute;
+    left: 8px;
+    color: var(--neon-blue);
+    font-size: 12px;
+}
+
+.outline-4nil h5 {
+    color: var(--neon-purple);
+    position: relative;
+    padding-left: 28px;
+    margin-left: 20px;
+}
+
+.outline-4nil h5::before {
+    content: "›";
+    position: absolute;
+    left: 16px;
+    color: var(--neon-purple);
+    font-size: 14px;
+}
+
+.outline-5nil h6 {
+    color: var(--text);
+    position: relative;
+    padding-left: 36px;
+    margin-left: 30px;
+    font-size: 0.9em;
+}
+
+.outline-5nil h6::before {
+    content: "·";
+    position: absolute;
+    left: 26px;
+    color: rgba(43, 255, 242, 0.5);
+}
+
+/* Links page - URL link styling */
+.outline-3nil a,
+.outline-4nil a,
+.outline-5nil a {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.outline-3nil a:hover,
+.outline-4nil a:hover,
+.outline-5nil a:hover {
+    background: rgba(43, 255, 242, 0.1);
+    text-shadow: 0 0 8px currentColor;
+    padding-left: 8px;
+}
+
+/* Category-specific colors */
+.outline-3nil:has(h4:contains("Dev")) a,
+.outline-3nil:has(h4:contains("Software")) a,
+.outline-3nil:has(h4:contains("Tech")) a {
+    color: var(--neon-purple);
+}
+
+.outline-3nil:has(h4:contains("Geopolitics")) a,
+.outline-3nil:has(h4:contains("Government")) a {
+    color: var(--neon-blue);
+}
+
+.outline-3nil:has(h4:contains("Religion")) a {
+    color: #fbbf24;
+}
+
+.outline-3nil:has(h4:contains("Games")) a {
+    color: #ff6b35;
+}
+
+/* Recommended sections highlighting */
+h6:contains("Recommended") {
+    color: var(--neon-pink) !important;
+    text-shadow: 0 0 10px var(--neon-pink);
+    font-weight: bold;
 }
 
 /* Sidenotes with cyberpunk styling */
@@ -789,6 +1175,11 @@ em, i {
 
 /* Mobile fixes - KEEP ASCII ART visible and add collapsible menu */
 @media screen and (max-width: 768px) {
+    /* Hide social icon tooltips on mobile (no hover state) */
+    .social-icons a::after {
+        display: none !important;
+    }
+
     /* Clean mobile header layout */
     .nav {
         display: block !important;

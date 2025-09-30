@@ -75,24 +75,34 @@ params:
   socialIcons:
     - name: rss
       url: "index.xml"
+      description: "subscribe via rss feed"
     - name: github
       url: "https://www.github.com/brickfrog"
+      description: "code repositories & projects"
     - name: goodreads
       url: "https://www.goodreads.com/user/show/46714580-justin"
+      description: "book tracking & reviews"
     - name: lastfm
       url: "https://www.last.fm/user/justinvc"
+      description: "music scrobbling & history"
     - name: rateyourmusic
       url: "https://rateyourmusic.com/~justinvc"
+      description: "album ratings & charts"
     - name: spotify
       url: "https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw"
+      description: "playlists & listening"
     - name: anilist
       url: "https://anilist.co/user/brickfrog"
+      description: "anime & manga tracking"
     - name: bluesky
       url: "https://kaeru.bsky.social"
+      description: "microblogging & updates"
     - name: wechat
       url: "/wechat/"
+      description: "wechat qr code"
     - name: email
       url: "mailto:contact+home@justin.vc"
+      description: "send me an email"
 
   defaultCommentSystems:
     giscus: true
