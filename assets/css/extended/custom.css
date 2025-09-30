@@ -35,7 +35,11 @@ html, body {
     /* Improve baseline rendering across browsers */
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    background-color: var(--theme) !important;
+    background: linear-gradient(to right,
+        var(--theme) 0%,
+        var(--darker-bg) 20%,
+        var(--darker-bg) 80%,
+        var(--theme) 100%) !important;
     color: var(--primary) !important;
 }
 
@@ -128,33 +132,24 @@ main {
 
 /* Container styles */
 .container {
-    background: var(--dark-bg);
+    background: transparent;
 }
 
 .wrapper {
-    background: var(--dark-bg);
+    background: transparent;
 }
 
 #content {
-    background: var(--dark-bg);
+    background: transparent;
 }
 
 article {
-    background: var(--dark-bg);
+    background: transparent;
 }
 
 /* Main content area */
 .main {
     background: transparent;
-}
-
-/* Profile section with horizontal gradient bleed */
-.main .profile {
-    background: linear-gradient(to right,
-        var(--theme) 0%,
-        var(--darker-bg) 20%,
-        var(--darker-bg) 80%,
-        var(--theme) 100%);
 }
 
 .post-content {
@@ -238,6 +233,10 @@ article {
 .social-icons a {
     color: var(--text);
     transition: all 0.3s ease;
+}
+
+.social-icons a::before {
+    display: none;
 }
 
 .social-icons a:hover {
