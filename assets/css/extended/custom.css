@@ -145,24 +145,33 @@ article {
 
 /* Main content area */
 .main {
-    background: var(--dark-bg);
+    background: transparent;
+}
+
+/* Profile section with horizontal gradient bleed */
+.main .profile {
+    background: linear-gradient(to right,
+        var(--theme) 0%,
+        var(--darker-bg) 20%,
+        var(--darker-bg) 80%,
+        var(--theme) 100%);
 }
 
 .post-content {
-    background: var(--dark-bg);
+    background: transparent;
     color: var(--text);
 }
 
 .post-single {
-    background: var(--dark-bg);
+    background: transparent;
 }
 
 .first-entry {
-    background: var(--dark-bg);
+    background: transparent;
 }
 
 .entry-content {
-    background: var(--dark-bg);
+    background: transparent;
     color: var(--text);
 }
 
