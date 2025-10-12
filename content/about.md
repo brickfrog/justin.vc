@@ -13,12 +13,13 @@ ShowBreadCrumbs: false
 backlinks: false
 ---
 
-I am justin. i do data + software. mostly interested in whatever is eating my brain at the time. usually something in the venn of open source, emacs, applied math/stats, history (catholic europe, french revolution, zhou dynasty), and just... media in general (russian lit + anime)
+I am justin. i do data + software. mostly interested in whatever is eating my brain at the time. i kind of like everything and switch hobbies on a whim.
+
+current interests: LLMs + affective computing / agentic systems + weightlifting + sci-fi + kdramas
 
 <section class="outline-1nil">
 
 ## Background {#background}
-
 
 <div class="outline-2nil">
 
@@ -28,7 +29,7 @@ business undergrad (fsu) - originally wanted to be a tax/fraud analyst - after t
 
 ### Work {#work}
 
-was doing BI + production support at ADM post-grad. now i ghostwrite code for startups, mostly via direct lines—no public consulting funnel or anything. i pick up new stacks and domains fast. currently at [io.net](https://io.net) - doing agentic LLM stuff.
+was doing BI + production support at ADM post-grad. now i ghostwrite code for startups, mostly via direct lines—no public consulting funnel or anything. i pick up new stacks and domains fast. ~~currently at [io.net](https://io.net) - doing agentic LLM stuff.~~ (note to self: grill harder about company profitability when joining places)
 
 <div class="outline-2nil">
 
@@ -58,14 +59,9 @@ i track books here [goodreads](https://www.goodreads.com/brickfrog).
 
 ### Watching {#watching}
 
-tv + movies tracked via [trakt.tv](https://trakt.tv/users/justinvc) used to want letterboxd but the api’s a walled garden now. i forget to update things manually so that’s a no-go. trakt doubled their prices, so most of my media now is jellyfin + self-hosted tracker.
+should make a letterboxd but the api’s a walled garden now. i forget to update things manually. trakt doubled their prices, so most of my media now is jellyfin + self-hosted tracker - rip things, watch, ezpz. TODO: figure out a good way to track - webhooks + PDS?
 
-<div class="movie_container">
-  <img width="175" height="325" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=episode" />
-  <img width="175" height="325" alt="JustinVC" src="https://widgets.trakt.tv/users/8eddcd2112f27c92ab4c9835efb9c787/watched/poster@2x.jpg?type=movie" />
-</div><br>
-
-anime/manga on [anilist](https://anilist.co/user/brickfrog/) - most of this is programatically tracked
+anime/manga on [anilist](https://anilist.co/user/brickfrog/) - most of this is tracked automatically. might want to mirror to MAL sometime.
 
 <script src="/js/anilist-card.js"></script>
 <div id="anilist-card-container"></div>
@@ -75,7 +71,7 @@ anime/manga on [anilist](https://anilist.co/user/brickfrog/) - most of this is p
 
 ### Listening {#listening}
 
-music? not a ton. [last.fm](https://www.last.fm/user/justinvc). the embed is a [spotify](https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw?si=9f1a873775c44bb6) playlist - I'm not sure if the embedded weekly playlists change or not:
+[last.fm](https://www.last.fm/user/justinvc). the embed is a [spotify](https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw?si=9f1a873775c44bb6) playlist - I'm not sure if the embedded weekly playlists change or not:
 
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXcW4K5CdbofIl?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
