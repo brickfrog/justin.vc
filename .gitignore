@@ -1,0 +1,16 @@
+# Tool/agent artifacts
+.agent-notes/
+.workspace/
+.history/
+.playwright-mcp/
+.serena/
+*.png
+!public/earthbound-globe.png
+
+# Astro / Node
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example

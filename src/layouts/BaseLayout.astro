@@ -1,0 +1,70 @@
+---
+import '../styles/site.css';
+import SharedChrome from '../components/SharedChrome.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogType?: string;
+  canonical?: string;
+}
+const {
+  title,
+  description = 'justin.vc — data + software',
+  ogType = 'website',
+  canonical,
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  {canonical && <link rel="canonical" href={canonical} />}
+  <link rel="alternate" type="application/rss+xml" title="justin.vc" href="/rss.xml" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content="https://justin.vc" />
+  <link rel="icon" href="/earthbound-globe.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <script is:inline>
+    // Apply stored theme/scan/bg/density before first paint so refreshed
+    // non-default themes don't flash phosphor first.
+    (function () {
+      try {
+        const s = JSON.parse(localStorage.getItem('justinvc.tweaks') || '{}');
+        document.body.dataset.theme = s.theme || 'phosphor';
+        document.body.dataset.scan = s.scan || 'subtle';
+        document.body.dataset.bg = s.bg || 'on';
+        document.body.dataset.density = s.density || 'comfy';
+      } catch (e) {
+        document.body.dataset.theme = 'phosphor';
+        document.body.dataset.scan = 'subtle';
+        document.body.dataset.bg = 'on';
+        document.body.dataset.density = 'comfy';
+      }
+    })();
+  </script>
+  <slot />
+  <SharedChrome />
+
+  <script is:inline>
+    window.TWEAK_DEFAULTS = {
+      theme: 'phosphor',
+      scan: 'subtle',
+      bg: 'on',
+      density: 'comfy',
+      'banner-idx': 'random'
+    };
+  </script>
+  <script is:inline src="/site.js" data-root="/"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+---
+// cmd palette + tweaks panel — shared across every page
+---
+<div class="cmd-hint">
+  press <kbd>/</kbd> for cmd
+  <span class="sep">·</span>
+  <button id="tweaks-toggle" class="cmd-hint-btn" type="button"><kbd>,</kbd> tweaks</button>
+</div>
+<div class="cmd" id="cmd">
+  <div class="log" id="cmd-log"></div>
+  <span class="carat">$</span>
+  <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" placeholder="help, theme amber, scan off, density compact, banner 1, home ..." />
+</div>
+
+<div class="tweaks" id="tweaks">
+  <div class="tweaks-head">tweaks <span class="x" id="tweaks-close">×</span></div>
+  <div class="tweaks-body">
+    <div class="tweak-row">
+      <div class="tweak-label">theme</div>
+      <div class="tweak-opts" data-key="theme">
+        <button class="tweak-opt" data-val="phosphor">phosphor</button>
+        <button class="tweak-opt" data-val="amber">amber</button>
+        <button class="tweak-opt" data-val="ice">ice</button>
+        <button class="tweak-opt" data-val="paper">paper</button>
+      </div>
+    </div>
+    <div class="tweak-row">
+      <div class="tweak-label">scanlines</div>
+      <div class="tweak-opts" data-key="scan">
+        <button class="tweak-opt" data-val="off">off</button>
+        <button class="tweak-opt" data-val="subtle">subtle</button>
+        <button class="tweak-opt" data-val="heavy">heavy</button>
+      </div>
+    </div>
+    <div class="tweak-row">
+      <div class="tweak-label">background image</div>
+      <div class="tweak-opts" data-key="bg">
+        <button class="tweak-opt" data-val="on">on</button>
+        <button class="tweak-opt" data-val="off">off</button>
+      </div>
+    </div>
+    <div class="tweak-row">
+      <div class="tweak-label">density</div>
+      <div class="tweak-opts" data-key="density">
+        <button class="tweak-opt" data-val="comfy">comfy</button>
+        <button class="tweak-opt" data-val="compact">compact</button>
+      </div>
+    </div>
+    <div class="tweak-row">
+      <div class="tweak-label">banner</div>
+      <div class="tweak-opts" data-key="banner-idx">
+        <button class="tweak-opt" data-val="0">[1]</button>
+        <button class="tweak-opt" data-val="1">[2]</button>
+        <button class="tweak-opt" data-val="2">[3]</button>
+        <button class="tweak-opt" data-val="3">[4]</button>
+        <button class="tweak-opt" data-val="random">rand</button>
+      </div>
+    </div>
+  </div>
+</div>

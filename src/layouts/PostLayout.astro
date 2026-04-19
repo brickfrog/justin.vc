@@ -1,0 +1,318 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+interface Heading {
+  depth: number;
+  text: string;
+  slug: string;
+}
+
+interface Props {
+  frontmatter: {
+    title: string;
+    date: Date;
+    summary: string;
+    tags: string[];
+    lastEdited?: Date;
+    license: string;
+  };
+  slug: string;
+  headings: Heading[];
+  readingTime?: string;
+  wordCount?: number;
+}
+const { frontmatter, slug, headings, readingTime, wordCount } = Astro.props;
+const tocHeadings = headings.filter((h) => h.depth === 2 && h.slug !== 'footnote-label');
+
+const all = (await getCollection('writing', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const idx = all.findIndex((p) => p.id === slug);
+const prev = idx < all.length - 1 ? all[idx + 1] : null;
+const next = idx > 0 ? all[idx - 1] : null;
+const iso = (d: Date) => d.toISOString().slice(0, 10);
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+<BaseLayout
+  title={`${frontmatter.title} · justin.vc`}
+  description={frontmatter.summary}
+  ogType="article"
+  canonical={`https://justin.vc/writing/${slug}/`}
+>
+  <div class="wrap post-wrap">
+    <nav class="crumb">
+      <a href="/">~/</a>
+      <span class="sep">/</span>
+      <a href="/#post-list">writing</a>
+      <span class="sep">/</span>
+      <span class="here">{slug}</span>
+      <span class="spacer"></span>
+      <span class="meta">§02 · {pad(idx + 1)} / {pad(all.length)}</span>
+    </nav>
+
+    <div class="file-head">
+      <div class="path-line"><span class="op">$</span> cat writing/{slug}.md</div>
+      <div class="kv">
+        <span class="k">date</span><span class="v">{iso(frontmatter.date)}</span>
+        {readingTime && (
+          <>
+            <span class="k">words</span>
+            <span class="v">{wordCount ? `~${wordCount} words · ${readingTime}` : readingTime}</span>
+          </>
+        )}
+        <span class="k">tags</span>
+        <span class="v tags">
+          {frontmatter.tags.map((t) => (
+            <a class="tag-pill" href={`/tags/#${t}`}>{t}</a>
+          ))}
+        </span>
+        <span class="k">status</span><span class="v" style="color:var(--accent)">published</span>
+      </div>
+    </div>
+
+    <h1 class="title">{frontmatter.title}</h1>
+    <p class="subtitle">{frontmatter.summary}</p>
+
+    {tocHeadings.length > 0 && (
+      <nav class="toc">
+        <div class="toc-label">// contents</div>
+        <ol>
+          {tocHeadings.map((h) => (
+            <li><a href={`#${h.slug}`}>{h.text}</a></li>
+          ))}
+        </ol>
+      </nav>
+    )}
+
+    <article>
+      <slot />
+    </article>
+
+    <div class="art-end">
+      <div class="end-meta">
+        {frontmatter.lastEdited && <span><b>last edited</b> {iso(frontmatter.lastEdited)}</span>}
+        <span><b>license</b> {frontmatter.license}</span>
+      </div>
+      <div class="nav-row">
+        {prev ? (
+          <a class="nav-card prev" href={`/writing/${prev.id}/`}>
+            <div class="dir">← prev</div>
+            <div class="t">{prev.data.title}</div>
+          </a>
+        ) : (
+          <div class="nav-card prev empty">
+            <div class="dir">← prev</div>
+            <div class="t">nothing earlier</div>
+          </div>
+        )}
+        {next ? (
+          <a class="nav-card next" href={`/writing/${next.id}/`}>
+            <div class="dir">next →</div>
+            <div class="t">{next.data.title}</div>
+          </a>
+        ) : (
+          <div class="nav-card next empty">
+            <div class="dir">next →</div>
+            <div class="t">you're caught up</div>
+          </div>
+        )}
+      </div>
+      <div class="backlink"><a href="/#post-list">cd ../writing</a></div>
+    </div>
+  </div>
+
+  <script is:inline>
+    // page-local cmd extras
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!window.jvc) return;
+      window.jvc.on('tag', (arg) => {
+        if (!arg) return 'tag: usage — tag <name>';
+        window.location.href = '/tags/#' + arg;
+      });
+      window.jvc.on('back', () => { window.location.href = '/#post-list'; });
+      window.jvc.on('writing', () => { window.location.href = '/#post-list'; });
+    });
+  </script>
+</BaseLayout>
+
+<style is:global>
+  :root { --bg-image: url('/bg.avif'); }
+  .post-wrap {
+    position: relative; z-index: 2;
+    max-width: 720px; margin: 0 auto;
+    padding: 2.5rem 1.75rem 8rem;
+  }
+
+  .crumb {
+    font-size: 0.78rem; color: var(--fg-mute);
+    border-bottom: 1px solid var(--rule-dim);
+    padding-bottom: 0.75rem; margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+  }
+  .crumb a { color: var(--link); text-decoration: none; }
+  .crumb a:hover { color: var(--hot); }
+  .crumb .sep { color: var(--fg-dim); }
+  .crumb .here { color: var(--fg); }
+  .crumb .spacer { flex: 1; }
+  .crumb .meta { color: var(--fg-dim); font-variant-numeric: tabular-nums; }
+
+  .file-head {
+    border: 1px solid var(--rule-dim);
+    padding: 0.9rem 1rem; margin-bottom: 2rem;
+    background: var(--bg-elev); font-size: 0.78rem; color: var(--fg-mute);
+  }
+  .file-head .path-line { color: var(--accent); font-weight: 500; margin-bottom: 0.4rem; }
+  .file-head .path-line .op { color: var(--fg-dim); }
+  .file-head .kv {
+    display: grid; grid-template-columns: 80px 1fr;
+    gap: 0.2rem 0.75rem; font-size: 0.78rem;
+  }
+  .file-head .kv .k { color: var(--fg-dim); }
+  .file-head .kv .v { color: var(--fg); }
+  .file-head .kv .v.tags { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+
+  h1.title {
+    font-family: 'Literata', Georgia, serif;
+    font-weight: 500; font-size: 2.1rem; line-height: 1.15;
+    letter-spacing: -0.01em; color: var(--fg);
+    margin: 0.5rem 0 0.6rem; text-wrap: balance;
+  }
+  [data-theme="phosphor"] h1.title,
+  [data-theme="amber"] h1.title,
+  [data-theme="ice"] h1.title { text-shadow: var(--glow); }
+
+  .subtitle {
+    color: var(--fg-mute); font-size: 0.95rem; line-height: 1.5;
+    max-width: 58ch; font-style: italic; margin-bottom: 1.5rem; text-wrap: pretty;
+  }
+
+  article {
+    font-family: 'Literata', Georgia, 'Iowan Old Style', serif;
+    font-size: 1.02rem; line-height: 1.65;
+    color: var(--fg); max-width: 62ch;
+  }
+  article p { margin-bottom: 1.1rem; text-wrap: pretty; }
+  article p:first-of-type::first-line { font-variant: small-caps; letter-spacing: 0.04em; }
+  article h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent); margin: 2.5rem 0 0.9rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  article h2::before { content: '##'; color: var(--fg-dim); font-weight: 400; letter-spacing: 0; }
+  article h2::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--rule), transparent); }
+  article h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent-soft); margin: 1.6rem 0 0.6rem;
+  }
+  article h3::before { content: '### '; color: var(--fg-dim); font-weight: 400; }
+
+  article a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--rule); transition: color 0.15s, border-color 0.15s; }
+  article a:hover { color: var(--hot); border-bottom-color: var(--hot); }
+  article blockquote {
+    border-left: 2px solid var(--accent-soft);
+    padding: 0.2rem 0 0.2rem 1.1rem; margin: 1.4rem 0;
+    color: var(--fg-mute); font-style: italic;
+  }
+  article blockquote cite { display: block; margin-top: 0.4rem; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-style: normal; color: var(--fg-dim); }
+  article blockquote cite::before { content: '— '; }
+
+  article ul, article ol { margin: 0.3rem 0 1.1rem 0; padding-left: 1.5rem; }
+  article ul li { list-style: none; position: relative; margin-bottom: 0.35rem; }
+  article ul li::before { content: '→'; position: absolute; left: -1.3rem; color: var(--accent-soft); }
+  article ol li { margin-bottom: 0.35rem; }
+  article ol li::marker { color: var(--fg-dim); font-family: 'JetBrains Mono', monospace; }
+
+  /* inline code only — fenced code is owned by astro-expressive-code */
+  article :not(pre) > code {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.88em;
+    color: var(--hot); background: var(--bg-elev);
+    padding: 0 4px; border: 1px solid var(--rule-dim); border-radius: 2px;
+  }
+  /* let expressive-code frames breathe in the article flow */
+  article .expressive-code { margin: 1.4rem 0; font-size: 0.82rem; }
+
+  /* github-style callouts via remark-github-blockquote-alert */
+  article .markdown-alert {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; line-height: 1.55;
+    border: 1px dashed var(--rule); padding: 0.7rem 0.9rem;
+    margin: 1.4rem 0; color: var(--fg-mute); background: var(--bg-elev);
+  }
+  article .markdown-alert-title {
+    color: var(--accent); font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; font-size: 0.72rem;
+    margin-bottom: 0.4rem;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  article .markdown-alert-title svg { display: none; }
+  article .markdown-alert p { margin: 0; color: var(--fg-mute); }
+  article .markdown-alert p + p { margin-top: 0.4rem; }
+  article .markdown-alert-note .markdown-alert-title { color: var(--link); }
+  article .markdown-alert-tip .markdown-alert-title { color: var(--accent); }
+  article .markdown-alert-important .markdown-alert-title { color: var(--magenta); }
+  article .markdown-alert-warning .markdown-alert-title,
+  article .markdown-alert-caution .markdown-alert-title { color: var(--red); }
+
+  /* table of contents (rendered between subtitle and article) */
+  .toc {
+    font-size: 0.78rem; color: var(--fg-mute);
+    border-left: 1px solid var(--rule-dim);
+    padding: 0.3rem 0 0.3rem 0.85rem; margin-bottom: 2rem;
+  }
+  .toc-label { color: var(--fg-dim); letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.7rem; margin-bottom: 0.3rem; }
+  .toc ol { list-style: none; counter-reset: toc; padding-left: 0; margin: 0; }
+  .toc li { counter-increment: toc; padding: 0.12rem 0; margin: 0; }
+  .toc li::before { content: counter(toc, decimal-leading-zero) ". "; color: var(--fg-dim); font-variant-numeric: tabular-nums; }
+  .toc a { color: var(--link); text-decoration: none; border: none; }
+  .toc a:hover { color: var(--hot); }
+
+  article hr { border: none; text-align: center; margin: 2.2rem 0; color: var(--fg-dim); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; }
+  article hr::before { content: '· · ·'; letter-spacing: 0.6em; }
+
+  /* footnotes (astro remark-gfm renders .footnotes section) */
+  article .footnotes, article section.footnotes {
+    margin-top: 3rem; padding-top: 1rem;
+    border-top: 1px dashed var(--rule-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem; color: var(--fg-mute); max-width: none;
+  }
+  article .footnotes h2 { font-size: 0.7rem; margin: 0 0 0.6rem; color: var(--fg-dim); }
+  article .footnotes h2::before { content: '//'; }
+  article .footnotes h2::after { display: none; }
+  article .footnotes ol { padding-left: 1.75rem; }
+  article .footnotes li { padding: 0.25rem 0; }
+  article .footnotes li::marker { color: var(--fg-dim); }
+  article .footnotes li::before { content: none; }
+  article .footnotes a { font-size: 0.75em; }
+
+  .art-end { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule-dim); }
+  .art-end .end-meta { font-size: 0.78rem; color: var(--fg-dim); margin-bottom: 1.2rem; display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .art-end .end-meta b { color: var(--fg-mute); font-weight: 400; }
+  .art-end .nav-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .nav-card {
+    border: 1px solid var(--rule-dim); padding: 0.75rem 0.9rem;
+    text-decoration: none; color: var(--fg);
+    transition: border-color 0.15s, background 0.15s; min-height: 4.5rem;
+  }
+  .nav-card:hover { border-color: var(--rule); background: var(--bg-elev); }
+  .nav-card.empty { opacity: 0.35; pointer-events: none; }
+  .nav-card .dir { font-size: 0.7rem; color: var(--fg-dim); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .nav-card .t { font-size: 0.88rem; color: var(--fg); }
+  .nav-card.next { text-align: right; }
+
+  .backlink { margin-top: 1.5rem; font-size: 0.82rem; color: var(--fg-mute); }
+  .backlink a { color: var(--link); text-decoration: none; }
+  .backlink a:hover { color: var(--hot); }
+  .backlink::before { content: '$ '; color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .post-wrap { padding: 1.25rem 1rem 6rem; }
+    h1.title { font-size: 1.6rem; }
+    article { font-size: 0.98rem; }
+    .art-end .nav-row { grid-template-columns: 1fr; }
+    .file-head .kv { grid-template-columns: 70px 1fr; }
+  }
+</style>
