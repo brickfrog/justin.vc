@@ -72,20 +72,6 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
       <div class="sec-head"><span class="ticks">──</span> about <span class="rule"></span> <span class="num">§01</span></div>
       <p>i do data + software. mostly interested in whatever is eating my brain at the time. i kind of like everything and switch hobbies on a whim.</p>
       <p class="tagline-inline">current: <code>llms + affective computing</code> <code>agentic systems</code> <code>weightlifting</code> <code>sci-fi</code> <code>kdramas</code></p>
-      <details class="col" style="margin-top:1rem">
-        <summary>background</summary>
-        <div class="col-body">
-          <p><span class="key">education:</span></p>
-          <p>&nbsp;&nbsp;business undergrad <span class="val">(fsu)</span> — originally wanted to be a tax/fraud analyst.</p>
-          <p>&nbsp;&nbsp;after a database class, pivoted to information systems.</p>
-          <p>&nbsp;&nbsp;decision sciences grad <span class="val">(st. joe's)</span> — thesis work on optimizing educational outcomes through decision theory. stats + apis for education admin &amp; government.</p>
-          <p style="margin-top:0.7rem"><span class="key">work:</span></p>
-          <p>&nbsp;&nbsp;was doing BI + production support at ADM post-grad.</p>
-          <p>&nbsp;&nbsp;now ghostwriting code for startups, mostly via direct lines.</p>
-          <p>&nbsp;&nbsp;pick up new stacks and domains fast.</p>
-          <p>&nbsp;&nbsp;<span class="comment"># note to self: grill harder about company profitability</span></p>
-        </div>
-      </details>
     </section>
 
     <section class="sec">
@@ -117,7 +103,52 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     <section class="sec">
       <div class="sec-head"><span class="ticks">──</span> projects <span class="rule"></span> <span class="num">§03</span></div>
       <div class="proj-list">
-        <p style="color:var(--fg-dim);font-size:0.85rem">// nothing shipping</p>
+
+        <div class="proj">
+          <div class="proj-top">
+            <span class="proj-name">dere <span class="proj-flag">private</span></span>
+            <span class="proj-status active">active</span>
+          </div>
+          <p class="proj-blurb">persona-layered claude code wrapper with a daemon for sessions, emotions, and a knowledge graph. plugins bolt on workflow-specific behavior (code, taskwarrior, vault).</p>
+          <div class="proj-stack"><span>typescript</span><span>bun</span><span>postgres</span><span>falkordb</span><span>hono</span><span>trpc</span></div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top">
+            <a class="proj-name" href="https://github.com/brickfrog/choir" target="_blank" rel="noopener">choir</a>
+            <span class="proj-status active">active</span>
+          </div>
+          <p class="proj-blurb">local agent orchestrator in moonbit. expensive model plans (claude as team lead), cheap models implement in parallel git worktrees and file PRs upward. scaffold → fork → converge.</p>
+          <div class="proj-stack"><span>moonbit</span><span>git</span><span>gh</span><span>zellij</span></div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top">
+            <a class="proj-name" href="https://github.com/brickfrog/moonsorter" target="_blank" rel="noopener">moonsorter</a>
+            <span class="proj-status active">active</span>
+          </div>
+          <p class="proj-blurb">browser ranking via the plackett-luce model. full rankings + pairwise comparisons, MM fitting, bootstrap confidence intervals, k-means tier clustering. moonbit compiled to wasm.</p>
+          <div class="proj-stack"><span>moonbit</span><span>wasm</span><span>astro</span></div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top">
+            <a class="proj-name" href="https://github.com/brickfrog/verbum-diei" target="_blank" rel="noopener">verbum-diei</a>
+            <span class="proj-status active">active</span>
+          </div>
+          <p class="proj-blurb">daily lectionary site. pulls vatican news rss, renders the reading from a local douay-rheims, glues in liturgical calendar (romcal), hours of prayer (breviarium), and optional llm marginalia. static, regenerated nightly.</p>
+          <div class="proj-stack"><span>typescript</span><span>purescript</span><span>bun</span></div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top">
+            <span class="proj-name">moonbit ecosystem</span>
+            <span class="proj-status active">active</span>
+          </div>
+          <p class="proj-blurb">moonbit libraries pulled out of choir / moonsorter as standalone tools: <a href="https://github.com/brickfrog/moontrace" target="_blank" rel="noopener">moontrace</a> (structured tracing with otlp export), <a href="https://github.com/brickfrog/tempo" target="_blank" rel="noopener">tempo</a> (utc datetime + rfc 3339), <a href="https://github.com/brickfrog/pippa" target="_blank" rel="noopener">pippa</a> (terminal ui framework, bubbletea-style model-update-view).</p>
+          <div class="proj-stack"><span>moonbit</span><span>wasm</span></div>
+        </div>
+
       </div>
     </section>
 
@@ -301,15 +332,19 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   .tag-cloud .tag-pill .count { color: var(--fg-dim); margin-left: 0.3rem; font-variant-numeric: tabular-nums; }
 
   /* projects */
-  .proj-list { display: grid; gap: 0.9rem; }
-  .proj {
-    border: 1px solid var(--rule-dim);
-    padding: 0.9rem 1rem; background: transparent;
-    transition: border-color 0.15s, background 0.15s;
-  }
-  .proj:hover { border-color: var(--rule); background: var(--bg-elev); }
+  .proj-list { display: grid; gap: 1.2rem; }
   .proj-top { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; }
   .proj-name { color: var(--accent-soft); font-weight: 700; font-size: 0.95rem; }
+  a.proj-name { text-decoration: none; transition: color 0.15s, text-shadow 0.15s; }
+  a.proj-name:hover { color: var(--hot); text-shadow: var(--glow); }
+  .proj-flag {
+    color: var(--fg-dim); font-weight: 400; font-size: 0.68rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    border: 1px solid var(--rule-dim); padding: 1px 5px;
+    border-radius: 2px; margin-left: 0.4rem;
+  }
+  .proj-blurb a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--rule); }
+  .proj-blurb a:hover { color: var(--hot); border-bottom-color: var(--hot); }
   .proj-year { color: var(--fg-dim); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
   .proj-status {
     font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;

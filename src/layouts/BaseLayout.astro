@@ -43,12 +43,12 @@ const {
         const s = JSON.parse(localStorage.getItem('justinvc.tweaks') || '{}');
         document.body.dataset.theme = s.theme || 'phosphor';
         document.body.dataset.scan = s.scan || 'subtle';
-        document.body.dataset.bg = s.bg || 'on';
+        document.body.dataset.bg = s.bg || 'off';
         document.body.dataset.density = s.density || 'comfy';
       } catch (e) {
         document.body.dataset.theme = 'phosphor';
         document.body.dataset.scan = 'subtle';
-        document.body.dataset.bg = 'on';
+        document.body.dataset.bg = 'off';
         document.body.dataset.density = 'comfy';
       }
     })();
@@ -60,7 +60,7 @@ const {
     window.TWEAK_DEFAULTS = {
       theme: 'phosphor',
       scan: 'subtle',
-      bg: 'on',
+      bg: 'off',
       density: 'comfy',
       'banner-idx': 'random'
     };

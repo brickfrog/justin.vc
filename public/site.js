@@ -10,7 +10,7 @@
   const DEFAULTS = (window.TWEAK_DEFAULTS || {
     theme: 'phosphor',
     scan: 'subtle',
-    bg: 'on',
+    bg: 'off',
     density: 'comfy',
     'banner-idx': 'random'
   });
