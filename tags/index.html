@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>tags · justin.vc</title><meta name="description" content="writing by tag"><meta name="robots" content="index, follow"><link rel="canonical" href="https://justin.vc/tags/"><link rel="alternate" type="application/rss+xml" title="justin.vc" href="/rss.xml"><meta property="og:title" content="tags · justin.vc"><meta property="og:description" content="writing by tag"><meta property="og:type" content="website"><meta property="og:url" content="https://justin.vc"><link rel="icon" href="/earthbound-globe.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/BaseLayout.CHSNi6rt.css">
+<style>:root{--bg-image: url(/bg.avif)}.tags-wrap{position:relative;z-index:2;max-width:720px;margin:0 auto;padding:2.5rem 1.75rem 8rem}.crumb{font-size:.78rem;color:var(--fg-mute);border-bottom:1px solid var(--rule-dim);padding-bottom:.75rem;margin-bottom:2rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}.crumb a{color:var(--link);text-decoration:none}.crumb a:hover{color:var(--hot)}.crumb .sep{color:var(--fg-dim)}.crumb .here{color:var(--fg)}.crumb .spacer{flex:1}.crumb .meta{color:var(--fg-dim);font-variant-numeric:tabular-nums}h1.tags-title{font-family:JetBrains Mono,monospace;font-weight:700;font-size:1.25rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}h1.tags-title:before{content:"$ ls ";color:var(--fg-dim);font-weight:400;letter-spacing:0}.tags-subtitle{color:var(--fg-mute);font-size:.88rem;margin-bottom:2rem}.filter-bar{display:flex;flex-wrap:wrap;gap:.4rem;padding:.75rem .9rem;margin-bottom:1.75rem;border:1px solid var(--rule-dim);background:var(--bg-elev)}.filter-label{font-size:.72rem;color:var(--fg-dim);letter-spacing:.12em;text-transform:uppercase;margin-right:.3rem;align-self:center}.filter-clear{margin-left:auto;font-size:.72rem;color:var(--fg-mute);background:transparent;border:1px solid var(--rule-dim);padding:2px 7px;border-radius:2px;cursor:pointer;font-family:inherit}.filter-clear:hover{color:var(--hot);border-color:var(--hot)}.tag-group{margin-bottom:2rem}.tag-group-head{display:flex;align-items:center;gap:.5rem;font-family:JetBrains Mono,monospace;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem;scroll-margin-top:1rem}.tag-group-head:before{content:"##";color:var(--fg-dim);font-weight:400}.tag-group-head .count{color:var(--fg-dim);font-weight:400;letter-spacing:0;font-size:.75rem}.tag-group-head .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--rule),transparent)}.post-list{list-style:none}.post{display:grid;grid-template-columns:90px 1fr auto;gap:1rem;align-items:baseline;padding:.5rem 0;border-bottom:1px dashed var(--rule-dim);color:var(--fg);text-decoration:none;transition:color .15s,padding-left .15s}.post:last-child{border-bottom:none}.post:hover{color:var(--hot);padding-left:.5rem}.post:hover .post-date,.post:hover .post-meta{color:var(--hot)}.post-date{font-variant-numeric:tabular-nums;color:var(--fg-dim);font-size:.82rem}.post-title{font-size:.92rem}.post-meta{color:var(--fg-dim);font-size:.78rem}.empty-msg{color:var(--fg-dim);font-size:.85rem;padding:1rem 0}@media(max-width:640px){.tags-wrap{padding:1.25rem 1rem 6rem}.post{grid-template-columns:80px 1fr}.post-meta{display:none}}
+</style></head> <body> <script>
+    // Apply stored theme/scan/bg/density before first paint so refreshed
+    // non-default themes don't flash phosphor first.
+    (function () {
+      try {
+        const s = JSON.parse(localStorage.getItem('justinvc.tweaks') || '{}');
+        document.body.dataset.theme = s.theme || 'phosphor';
+        document.body.dataset.scan = s.scan || 'subtle';
+        document.body.dataset.bg = s.bg || 'off';
+        document.body.dataset.density = s.density || 'comfy';
+      } catch (e) {
+        document.body.dataset.theme = 'phosphor';
+        document.body.dataset.scan = 'subtle';
+        document.body.dataset.bg = 'off';
+        document.body.dataset.density = 'comfy';
+      }
+    })();
+  </script>  <div class="wrap tags-wrap"> <nav class="crumb"> <a href="/">~/</a> <span class="sep">/</span> <span class="here">tags</span> <span class="spacer"></span> <span class="meta" id="crumb-count">—</span> </nav> <h1 class="tags-title">tags</h1> <p class="tags-subtitle">// writing grouped by tag. click a pill to filter.</p> <div class="filter-bar" id="filter-bar"> <span class="filter-label">filter</span> <span id="filter-tags"></span> <button class="filter-clear" id="filter-clear">clear ×</button> </div> <div id="groups"></div> </div> <script>(function(){const posts = [];
+const byTag = {};
+const allTags = [];
+
+    window.__TAGS__ = { posts, byTag, allTags };
+  })();</script> <script>
+    (() => {
+      const { posts, byTag, allTags } = window.__TAGS__;
+      let active = new Set();
+
+      const readHash = () => {
+        active = new Set(decodeURIComponent((location.hash || '').slice(1)).split(',').filter(Boolean));
+      };
+      readHash();
+
+      function renderFilter() {
+        const el = document.getElementById('filter-tags');
+        el.innerHTML = allTags.map(t => {
+          const count = (byTag[t] || []).length;
+          const on = active.has(t) ? ' on' : '';
+          return `<a class="tag-pill${on}" data-tag="${t}" href="#">${t}<span style="color:var(--fg-dim);margin-left:0.3rem">${count}</span></a>`;
+        }).join('');
+        document.getElementById('filter-clear').style.display = active.size ? '' : 'none';
+      }
+
+      function matches(post) {
+        if (!active.size) return true;
+        return (post.tags || []).some(t => active.has(t));
+      }
+
+      function renderGroups() {
+        const el = document.getElementById('groups');
+        const tagsToShow = active.size ? [...active].filter(t => byTag[t]) : allTags;
+        if (!tagsToShow.length) {
+          el.innerHTML = '<p class="empty-msg">// no posts match that filter.</p>';
+          document.getElementById('crumb-count').textContent = '0 posts';
+          return;
+        }
+        let postCount = 0;
+        el.innerHTML = tagsToShow.map(t => {
+          const ps = (byTag[t] || []).filter(matches);
+          postCount += ps.length;
+          if (!ps.length) return '';
+          return `
+            <section class="tag-group">
+              <h2 class="tag-group-head" id="${t}">
+                <span>${t}</span>
+                <span class="count">${ps.length}</span>
+                <span class="rule"></span>
+              </h2>
+              <ul class="post-list">
+                ${ps.map(p => `
+                  <li><a class="post" href="/writing/${p.slug}/">
+                    <span class="post-date">${p.date}</span>
+                    <span class="post-title">${p.title}</span>
+                    <span class="post-meta">${(p.tags || []).join(' · ')}</span>
+                  </a></li>
+                `).join('')}
+              </ul>
+            </section>`;
+        }).join('');
+        const total = active.size ? postCount : posts.length;
+        document.getElementById('crumb-count').textContent = `${total} post${total === 1 ? '' : 's'}${active.size ? ' · filtered' : ''}`;
+      }
+
+      function rerender() { renderFilter(); renderGroups(); }
+      rerender();
+
+      document.getElementById('filter-bar').addEventListener('click', e => {
+        const pill = e.target.closest('.tag-pill');
+        if (!pill) return;
+        e.preventDefault();
+        const t = pill.dataset.tag;
+        if (active.has(t)) active.delete(t); else active.add(t);
+        location.hash = [...active].join(',');
+        rerender();
+      });
+      document.getElementById('filter-clear').addEventListener('click', () => {
+        active.clear(); location.hash = ''; rerender();
+      });
+      window.addEventListener('hashchange', () => { readHash(); rerender(); });
+
+      // cmd extras
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!window.jvc) return;
+        window.jvc.on('tag', (arg) => {
+          if (!arg) return 'tag: usage — tag <name>';
+          if (!byTag[arg]) return `tag: no '${arg}'. available: ${allTags.join(', ')}`;
+          active = new Set([arg]); location.hash = arg; rerender();
+          const el = document.getElementById(arg);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+          window.jvc.closeCmd();
+        });
+        window.jvc.on('clear-filter', () => { active.clear(); location.hash = ''; rerender(); });
+        window.jvc.on('writing', () => { window.location.href = '/#post-list'; });
+      });
+    })();
+  </script>  <div class="cmd-hint">
+press <kbd>/</kbd> for cmd
+<span class="sep">·</span> <button id="tweaks-toggle" class="cmd-hint-btn" type="button"><kbd>,</kbd> tweaks</button> </div> <div class="cmd" id="cmd"> <div class="log" id="cmd-log"></div> <span class="carat">$</span> <input id="cmd-input" type="text" autocomplete="off" spellcheck="false" placeholder="help, theme amber, scan off, density compact, banner 1, home ..."> </div> <div class="tweaks" id="tweaks"> <div class="tweaks-head">tweaks <span class="x" id="tweaks-close">×</span></div> <div class="tweaks-body"> <div class="tweak-row"> <div class="tweak-label">theme</div> <div class="tweak-opts" data-key="theme"> <button class="tweak-opt" data-val="phosphor">phosphor</button> <button class="tweak-opt" data-val="amber">amber</button> <button class="tweak-opt" data-val="ice">ice</button> <button class="tweak-opt" data-val="paper">paper</button> </div> </div> <div class="tweak-row"> <div class="tweak-label">scanlines</div> <div class="tweak-opts" data-key="scan"> <button class="tweak-opt" data-val="off">off</button> <button class="tweak-opt" data-val="subtle">subtle</button> <button class="tweak-opt" data-val="heavy">heavy</button> </div> </div> <div class="tweak-row"> <div class="tweak-label">background image</div> <div class="tweak-opts" data-key="bg"> <button class="tweak-opt" data-val="on">on</button> <button class="tweak-opt" data-val="off">off</button> </div> </div> <div class="tweak-row"> <div class="tweak-label">density</div> <div class="tweak-opts" data-key="density"> <button class="tweak-opt" data-val="comfy">comfy</button> <button class="tweak-opt" data-val="compact">compact</button> </div> </div> <div class="tweak-row"> <div class="tweak-label">banner</div> <div class="tweak-opts" data-key="banner-idx"> <button class="tweak-opt" data-val="0">[1]</button> <button class="tweak-opt" data-val="1">[2]</button> <button class="tweak-opt" data-val="2">[3]</button> <button class="tweak-opt" data-val="3">[4]</button> <button class="tweak-opt" data-val="random">rand</button> </div> </div> </div> </div> <script>
+    window.TWEAK_DEFAULTS = {
+      theme: 'phosphor',
+      scan: 'subtle',
+      bg: 'off',
+      density: 'comfy',
+      'banner-idx': 'random'
+    };
+  </script> <script src="/site.js" data-root="/"></script> </body> </html>
