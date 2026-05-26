@@ -249,10 +249,26 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
       if (np) {
         dot.classList.remove('np-idle');
         dot.classList.add('np-live');
-        const link = np.url
-          ? '<a href="' + np.url + '" target="_blank" rel="noopener">' + np.track + '</a>'
-          : np.track;
-        npShell.innerHTML = '♪ <span class="np-track">' + link + '</span> <span class="np-artist">— ' + np.artist + '</span>';
+
+        // Build DOM with textContent/explicit element creation — never innerHTML on third-party data.
+        // np.* originates from Last.fm and could in principle carry markup.
+        const safeUrl = (typeof np.url === 'string' && /^https?:\/\//i.test(np.url)) ? np.url : null;
+        const trackEl = safeUrl ? document.createElement('a') : document.createElement('span');
+        trackEl.className = 'np-track';
+        if (safeUrl) {
+          trackEl.href = safeUrl;
+          trackEl.target = '_blank';
+          trackEl.rel = 'noopener noreferrer';
+        }
+        trackEl.textContent = String(np.track ?? '');
+
+        const artistEl = document.createElement('span');
+        artistEl.className = 'np-artist';
+        artistEl.textContent = ' — ' + String(np.artist ?? '');
+
+        npShell.textContent = '♪ ';
+        npShell.appendChild(trackEl);
+        npShell.appendChild(artistEl);
         npShell.hidden = false;
       }
     }).catch(() => {});
