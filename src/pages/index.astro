@@ -182,6 +182,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
           </div>
           <div class="media-widget">
             <div class="media-widget-label">// listening</div>
+            <div id="np" class="np"></div>
             <iframe style="border-radius:6px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXcW4K5CdbofIl?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
         </div>
@@ -213,9 +214,28 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   <script is:inline src="/anilist-card.js"></script>
   <script is:inline>
     // shell meta + banner rotator hook for site.js
-    const statuses = ['available', 'shipping', 'reading', 'lifting', 'idle'];
-    document.getElementById('status-word').textContent = statuses[Math.floor(Math.random() * statuses.length)];
+    const fallbackStatuses = ['available', 'shipping', 'reading', 'lifting', 'idle'];
+    const statusEl = document.getElementById('status-word');
+    statusEl.textContent = fallbackStatuses[Math.floor(Math.random() * fallbackStatuses.length)];
     document.getElementById('rev').textContent = Array.from({length: 7}, () => '0123456789abcdef'[Math.floor(Math.random() * 16)]).join('');
+
+    // live status + now-playing from api.justin.vc
+    fetch('https://api.justin.vc/api/state').then(r => r.ok ? r.json() : null).then(data => {
+      if (!data) return;
+      if (data.status && data.status.text) {
+        statusEl.textContent = data.status.text;
+        statusEl.title = 'updated ' + new Date(data.status.at).toLocaleString();
+      }
+      const np = data.np;
+      const npEl = document.getElementById('np');
+      if (np && npEl) {
+        const link = np.url
+          ? '<a href="' + np.url + '" target="_blank" rel="noopener">' + np.track + '</a>'
+          : np.track;
+        npEl.innerHTML = '▸ <span class="np-track">' + link + '</span> <span class="np-artist">— ' + np.artist + '</span>';
+        npEl.classList.add('np-active');
+      }
+    }).catch(() => {});
 
     const arts = document.querySelectorAll('.banner .art');
     window.__setBanner = (idx) => {
@@ -405,6 +425,19 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   #gr_grid_widget a { display: inline-block; flex-shrink: 0; }
   #gr_grid_widget img { border-radius: 2px; border: 1px solid var(--rule) !important; height: 62px !important; width: auto !important; }
   #gr_grid_widget br, #gr_grid_widget .gr_grid_br498, #gr_grid_widget noscript { display: none !important; }
+
+  /* now-playing */
+  .np {
+    display: none;
+    font-size: 0.82rem;
+    color: var(--fg-mute);
+    padding: 0.2rem 0 0.55rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .np.np-active { display: block; }
+  .np .np-track a { color: var(--accent-soft); text-decoration: none; border-bottom: 1px dotted var(--rule); }
+  .np .np-track a:hover { color: var(--hot); border-bottom-color: var(--hot); }
+  .np .np-artist { color: var(--fg-dim); }
 
   /* webring + footer */
   .webring { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; font-size: 0.82rem; color: var(--fg-mute); }
