@@ -14,9 +14,10 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 <BaseLayout title="justin.vc" canonical="https://justin.vc/">
   <div class="wrap">
     <div class="shell">
-      <span class="dot"></span>
+      <span class="dot" id="np-dot"></span>
       <span class="prompt">justin@vc:~$</span>
       <span class="path">./whoami</span>
+      <span class="np-shell" id="np-shell"></span>
       <span class="meta">
         <span><b>loc</b> cvg → dc</span>
         <span><b>status</b> <span id="status-word">available</span></span>
@@ -182,7 +183,6 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
           </div>
           <div class="media-widget">
             <div class="media-widget-label">// listening</div>
-            <div id="np" class="np"></div>
             <iframe style="border-radius:6px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXcW4K5CdbofIl?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
         </div>
@@ -220,6 +220,9 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     document.getElementById('rev').textContent = Array.from({length: 7}, () => '0123456789abcdef'[Math.floor(Math.random() * 16)]).join('');
 
     // live status + now-playing from api.justin.vc
+    const dot = document.getElementById('np-dot');
+    const npShell = document.getElementById('np-shell');
+    dot.classList.add('np-idle'); // default: red until we know otherwise
     fetch('https://api.justin.vc/api/state').then(r => r.ok ? r.json() : null).then(data => {
       if (!data) return;
       if (data.status && data.status.text) {
@@ -227,13 +230,13 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
         statusEl.title = 'updated ' + new Date(data.status.at).toLocaleString();
       }
       const np = data.np;
-      const npEl = document.getElementById('np');
-      if (np && npEl) {
+      if (np) {
+        dot.classList.remove('np-idle');
+        dot.classList.add('np-live');
         const link = np.url
           ? '<a href="' + np.url + '" target="_blank" rel="noopener">' + np.track + '</a>'
           : np.track;
-        npEl.innerHTML = '▸ <span class="np-track">' + link + '</span> <span class="np-artist">— ' + np.artist + '</span>';
-        npEl.classList.add('np-active');
+        npShell.innerHTML = '♪ <span class="np-track">' + link + '</span> <span class="np-artist">— ' + np.artist + '</span>';
       }
     }).catch(() => {});
 
@@ -426,18 +429,28 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   #gr_grid_widget img { border-radius: 2px; border: 1px solid var(--rule) !important; height: 62px !important; width: auto !important; }
   #gr_grid_widget br, #gr_grid_widget .gr_grid_br498, #gr_grid_widget noscript { display: none !important; }
 
-  /* now-playing */
-  .np {
-    display: none;
-    font-size: 0.82rem;
-    color: var(--fg-mute);
-    padding: 0.2rem 0 0.55rem;
-    font-variant-numeric: tabular-nums;
+  /* now-playing in shell header */
+  .shell .dot.np-idle {
+    background: var(--hot);
+    box-shadow: 0 0 6px var(--hot);
+    animation: none;
+    opacity: 0.7;
   }
-  .np.np-active { display: block; }
-  .np .np-track a { color: var(--accent-soft); text-decoration: none; border-bottom: 1px dotted var(--rule); }
-  .np .np-track a:hover { color: var(--hot); border-bottom-color: var(--hot); }
-  .np .np-artist { color: var(--fg-dim); }
+  .shell .dot.np-live {
+    background: var(--accent);
+    box-shadow: var(--glow);
+  }
+  .np-shell {
+    color: var(--fg-mute);
+    font-size: 0.78rem;
+    max-width: 32ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .np-shell .np-track a { color: var(--accent-soft); text-decoration: none; border-bottom: 1px dotted var(--rule); }
+  .np-shell .np-track a:hover { color: var(--hot); border-bottom-color: var(--hot); }
+  .np-shell .np-artist { color: var(--fg-dim); }
 
   /* webring + footer */
   .webring { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; font-size: 0.82rem; color: var(--fg-mute); }
