@@ -512,8 +512,9 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     max-width: 100%;
   }
   body[data-density="compact"] .np-line { margin: -1.25rem 0 1.25rem; }
-  .np-line .np-track a { color: var(--accent-soft); text-decoration: none; border-bottom: 1px dotted var(--rule); }
-  .np-line .np-track a:hover { color: var(--hot); border-bottom-color: var(--hot); }
+  .np-line .np-track { color: var(--fg); text-decoration: none; }
+  .np-line a.np-track { border-bottom: 1px dotted var(--rule-dim); }
+  .np-line a.np-track:hover { color: var(--hot); border-bottom-color: var(--hot); }
   .np-line .np-artist { color: var(--fg-dim); }
 
   /* webring + footer */
