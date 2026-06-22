@@ -18,7 +18,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
       <span class="prompt">justin@vc:~$</span>
       <span class="path">./whoami</span>
       <span class="meta">
-        <span><b>loc</b> cvg → dc</span>
+        <span><b>loc</b> cvg → pty → dca</span>
         <span><b>rev</b> <span id="rev">·</span></span>
       </span>
     </div>
@@ -66,7 +66,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
         } catch (e) {}
       })();
     </script>
-    <div class="tagline">data + software · cvg → dc · 2026</div>
+    <div class="tagline">data + software · cvg → pty → dca · 2026</div>
 
     <aside class="status-msg" id="status-msg" hidden>
       <div class="status-msg-head">
@@ -168,6 +168,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
         <div class="link-row"><span class="link-label">anilist</span><span class="link-leader"></span><a href="https://anilist.co/user/brickfrog" target="_blank" rel="noopener">brickfrog</a></div>
         <div class="link-row"><span class="link-label">goodreads</span><span class="link-leader"></span><a href="https://www.goodreads.com/user/show/46714580-justin" target="_blank" rel="noopener">justin</a></div>
         <div class="link-row"><span class="link-label">lastfm</span><span class="link-leader"></span><a href="https://www.last.fm/user/justinvc" target="_blank" rel="noopener">justinvc</a></div>
+        <div class="link-row"><span class="link-label">letterboxd</span><span class="link-leader"></span><a href="https://letterboxd.com/k8ru/" target="_blank" rel="noopener">k8ru</a></div>
         <div class="link-row"><span class="link-label">rym</span><span class="link-leader"></span><a href="https://rateyourmusic.com/~justinvc" target="_blank" rel="noopener">justinvc</a></div>
         <div class="link-row"><span class="link-label">spotify</span><span class="link-leader"></span><a href="https://open.spotify.com/user/1cvou29st17ac3qu1hzhnq7fw" target="_blank" rel="noopener">justinvc</a></div>
         <div class="link-row"><span class="link-label">email</span><span class="link-leader"></span><a href="mailto:contact+home@justin.vc">contact@justin.vc</a></div>
@@ -177,13 +178,17 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     <section class="sec">
       <div class="sec-head"><span class="ticks">──</span> media <span class="rule"></span> <span class="num">§05</span></div>
       <div class="media-row">
-        <div class="media-widget flex-shrink">
+        <div class="media-widget flex-shrink" id="anilist-widget" hidden>
           <div class="media-widget-label">// watching + reading</div>
           <div id="anilist-card-container"></div>
         </div>
-        <div class="media-widget flex-grow" id="gr_grid_widget">
-          <div class="media-widget-label">// books</div>
+        <div class="media-widget flex-grow gr-grid">
+          <div class="media-widget-label">// in progress</div>
           <script is:inline src="https://www.goodreads.com/review/grid_widget/46714580.Justin's%20bookshelf:%20currently-reading?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=currently-reading&sort=date_read&widget_id=1674169459"></script>
+        </div>
+        <div class="media-widget flex-grow gr-grid">
+          <div class="media-widget-label">// finished {new Date().getFullYear()}</div>
+          <script is:inline src="https://www.goodreads.com/review/grid_widget/46714580.Justin's%20bookshelf:%20read?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=read&sort=date_read&widget_id=1674169460"></script>
         </div>
       </div>
       <div class="media-widget">
@@ -272,6 +277,21 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
         npShell.hidden = false;
       }
     }).catch(() => {});
+
+    // AniList widget reveals itself only once anilist-card.js actually
+    // populates the container — keeps it hidden when the profile is private.
+    const anilistWidget = document.getElementById('anilist-widget');
+    const anilistContainer = document.getElementById('anilist-card-container');
+    if (anilistWidget && anilistContainer) {
+      const obs = new MutationObserver(() => {
+        if (anilistContainer.childElementCount > 0) {
+          anilistWidget.hidden = false;
+          obs.disconnect();
+        }
+      });
+      obs.observe(anilistContainer, { childList: true });
+      setTimeout(() => obs.disconnect(), 6000);
+    }
 
     const arts = document.querySelectorAll('.banner .art');
     window.__setBanner = (idx) => {
@@ -456,11 +476,12 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   .media-entry { display: flex; gap: 0.5rem; align-items: flex-start; }
   .media-entry img { width: 42px; border-radius: 2px; border: 1px solid var(--rule); }
   .media-details h4 { color: var(--fg); font-size: 0.72rem; font-weight: 400; }
-  #gr_grid_widget { display: flex !important; flex-wrap: wrap !important; flex-direction: row !important; gap: 0.35rem; }
-  #gr_grid_widget > div { display: flex !important; flex-wrap: wrap !important; gap: 0.35rem; }
-  #gr_grid_widget a { display: inline-block; flex-shrink: 0; }
-  #gr_grid_widget img { border-radius: 2px; border: 1px solid var(--rule) !important; height: 62px !important; width: auto !important; }
-  #gr_grid_widget br, #gr_grid_widget .gr_grid_br498, #gr_grid_widget noscript { display: none !important; }
+  .gr-grid { display: flex !important; flex-wrap: wrap !important; flex-direction: row !important; gap: 0.35rem; align-content: flex-start; }
+  .gr-grid > div { display: flex !important; flex-wrap: wrap !important; gap: 0.35rem; }
+  .gr-grid a { display: inline-block; flex-shrink: 0; }
+  .gr-grid img { border-radius: 2px; border: 1px solid var(--rule) !important; height: 62px !important; width: auto !important; }
+  .gr-grid br, .gr-grid .gr_grid_br498, .gr-grid noscript { display: none !important; }
+  .gr-grid .media-widget-label { flex-basis: 100%; }
 
   /* status message block — between tagline and about */
   .status-msg {
