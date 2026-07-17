@@ -152,4 +152,10 @@ async function displayAniListCard() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => displayAniListCard());
+// Gated: profile is private and AniList's public API is intermittently 403ing.
+// Flip window.ANILIST_ENABLED = true (see index.astro) to re-enable the card
+// when the profile goes public again — nothing fetches until then.
+document.addEventListener("DOMContentLoaded", () => {
+  if (!window.ANILIST_ENABLED) return;
+  displayAniListCard();
+});
