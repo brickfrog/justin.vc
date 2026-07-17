@@ -3,6 +3,30 @@
    tokens · themes · scanlines · bg · cmd palette · settings
    ───────────────────────────────────────────────────────────── */
 
+/* Self-hosted, latin-subset variable fonts — no third-party font CDN.
+   JetBrains Mono (UI/body, everywhere) + Literata (post prose only). */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/fonts/jetbrainsmono.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/literata.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Literata';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/literata-italic.woff2') format('woff2');
+}
+
 :root, [data-theme="phosphor"] {
   --bg: #0a120e; --bg-elev: #0d1812;
   --rule: #1f3128; --rule-dim: #142019;

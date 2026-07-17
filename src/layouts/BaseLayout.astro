@@ -16,12 +16,6 @@ const {
   canonical,
   serif = false,
 } = Astro.props;
-
-// Only long-form posts render prose in Literata; the index/tags pages are
-// entirely JetBrains Mono, so don't make them pay for a second font family.
-const fontHref = serif
-  ? 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,700;1,7..72,400&display=swap'
-  : 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,9 +32,8 @@ const fontHref = serif
   <meta property="og:type" content={ogType} />
   <meta property="og:url" content="https://justin.vc" />
   <link rel="icon" href="/earthbound-globe.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href={fontHref} rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/jetbrainsmono.woff2" crossorigin />
+  {serif && <link rel="preload" as="font" type="font/woff2" href="/fonts/literata.woff2" crossorigin />}
 </head>
 <body>
   <script is:inline>

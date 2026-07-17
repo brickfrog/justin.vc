@@ -15,7 +15,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   <main class="wrap">
     <h1 class="sr-only">justin.vc — data + software</h1>
     <div class="shell">
-      <span class="dot" id="np-dot"></span>
+      <span class="dot" id="np-dot" role="img" aria-label="idle"></span>
       <span class="prompt">justin@justin.vc:~$</span>
       <span class="path">./whoami</span>
       <span class="meta">
@@ -115,48 +115,28 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
       <div class="proj-list">
 
         <div class="proj">
-          <div class="proj-top">
-            <span class="proj-name">dere <span class="proj-flag">private</span></span>
-            <span class="proj-status active">active</span>
-          </div>
-          <p class="proj-blurb">persona-layered claude code wrapper with a daemon for sessions, emotions, and a knowledge graph. plugins bolt on workflow-specific behavior (code, taskwarrior, vault).</p>
-          <div class="proj-stack"><span>typescript</span><span>bun</span><span>postgres</span><span>falkordb</span><span>hono</span><span>trpc</span></div>
+          <span class="proj-name">dere <span class="proj-flag">private</span></span>
+          <p class="proj-blurb">persona-layered claude code wrapper with a daemon for sessions, emotions, and a knowledge graph. plugins bolt on workflow-specific behavior (code, taskwarrior, vault). <span class="proj-stack">typescript · bun · postgres · falkordb · hono · trpc</span></p>
         </div>
 
         <div class="proj">
-          <div class="proj-top">
-            <a class="proj-name" href="https://github.com/brickfrog/choir" target="_blank" rel="noopener">choir</a>
-            <span class="proj-status active">active</span>
-          </div>
-          <p class="proj-blurb">local agent orchestrator in moonbit. expensive model plans (claude as team lead), cheap models implement in parallel git worktrees and file PRs upward. scaffold → fork → converge.</p>
-          <div class="proj-stack"><span>moonbit</span><span>git</span><span>gh</span><span>zellij</span></div>
+          <a class="proj-name" href="https://github.com/brickfrog/choir" target="_blank" rel="noopener">choir</a>
+          <p class="proj-blurb">local agent orchestrator in moonbit. expensive model plans (claude as team lead), cheap models implement in parallel git worktrees and file PRs upward. scaffold → fork → converge. <span class="proj-stack">moonbit · git · gh · zellij</span></p>
         </div>
 
         <div class="proj">
-          <div class="proj-top">
-            <a class="proj-name" href="https://github.com/brickfrog/moonsorter" target="_blank" rel="noopener">moonsorter</a>
-            <span class="proj-status active">active</span>
-          </div>
-          <p class="proj-blurb">browser ranking via the plackett-luce model. full rankings + pairwise comparisons, MM fitting, bootstrap confidence intervals, k-means tier clustering. moonbit compiled to wasm.</p>
-          <div class="proj-stack"><span>moonbit</span><span>wasm</span><span>astro</span></div>
+          <a class="proj-name" href="https://github.com/brickfrog/moonsorter" target="_blank" rel="noopener">moonsorter</a>
+          <p class="proj-blurb">browser ranking via the plackett-luce model. full rankings + pairwise comparisons, MM fitting, bootstrap confidence intervals, k-means tier clustering. moonbit compiled to wasm. <span class="proj-stack">moonbit · wasm · astro</span></p>
         </div>
 
         <div class="proj">
-          <div class="proj-top">
-            <a class="proj-name" href="https://github.com/brickfrog/verbum-diei" target="_blank" rel="noopener">verbum-diei</a>
-            <span class="proj-status active">active</span>
-          </div>
-          <p class="proj-blurb">daily lectionary site. pulls vatican news rss, renders the reading from a local douay-rheims, glues in liturgical calendar (romcal), hours of prayer (breviarium), and optional llm marginalia. static, regenerated nightly.</p>
-          <div class="proj-stack"><span>typescript</span><span>purescript</span><span>bun</span></div>
+          <a class="proj-name" href="https://github.com/brickfrog/verbum-diei" target="_blank" rel="noopener">verbum-diei</a>
+          <p class="proj-blurb">daily lectionary site. pulls vatican news rss, renders the reading from a local douay-rheims, glues in liturgical calendar (romcal), hours of prayer (breviarium), and optional llm marginalia. static, regenerated nightly. <span class="proj-stack">typescript · purescript · bun</span></p>
         </div>
 
         <div class="proj">
-          <div class="proj-top">
-            <span class="proj-name">moonbit ecosystem</span>
-            <span class="proj-status active">active</span>
-          </div>
-          <p class="proj-blurb">moonbit libraries pulled out of choir / moonsorter as standalone tools: <a href="https://github.com/brickfrog/moontrace" target="_blank" rel="noopener">moontrace</a> (structured tracing with otlp export), <a href="https://github.com/brickfrog/tempo" target="_blank" rel="noopener">tempo</a> (utc datetime + rfc 3339), <a href="https://github.com/brickfrog/pippa" target="_blank" rel="noopener">pippa</a> (terminal ui framework, bubbletea-style model-update-view).</p>
-          <div class="proj-stack"><span>moonbit</span><span>wasm</span></div>
+          <span class="proj-name">moonbit ecosystem</span>
+          <p class="proj-blurb">moonbit libraries pulled out of choir / moonsorter as standalone tools: <a href="https://github.com/brickfrog/moontrace" target="_blank" rel="noopener">moontrace</a> (structured tracing with otlp export), <a href="https://github.com/brickfrog/tempo" target="_blank" rel="noopener">tempo</a> (utc datetime + rfc 3339), <a href="https://github.com/brickfrog/pippa" target="_blank" rel="noopener">pippa</a> (terminal ui framework, bubbletea-style model-update-view). <span class="proj-stack">moonbit · wasm</span></p>
         </div>
 
       </div>
@@ -240,7 +220,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
       return d + 'd ago';
     }
 
-    fetch('https://api.justin.vc/api/state').then(r => r.ok ? r.json() : null).then(data => {
+    function renderState(data) {
       if (!data) return;
       if (data.status && data.status.text) {
         msgBody.textContent = data.status.text;
@@ -252,6 +232,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
       if (np) {
         dot.classList.remove('np-idle');
         dot.classList.add('np-live');
+        dot.setAttribute('aria-label', 'listening now');
 
         // Build DOM with textContent/explicit element creation — never innerHTML on third-party data.
         // np.* originates from Last.fm and could in principle carry markup.
@@ -273,8 +254,24 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
         npShell.appendChild(trackEl);
         npShell.appendChild(artistEl);
         npShell.hidden = false;
+      } else {
+        // playback stopped since the last poll — fall back to idle
+        dot.classList.remove('np-live');
+        dot.classList.add('np-idle');
+        dot.setAttribute('aria-label', 'idle');
+        npShell.hidden = true;
+        npShell.textContent = '';
       }
-    }).catch(() => {});
+    }
+
+    function loadState() {
+      fetch('https://api.justin.vc/api/state').then(r => r.ok ? r.json() : null).then(renderState).catch(() => {});
+    }
+    loadState();
+    // keep "now playing" live while the tab is open; skip polling a hidden tab,
+    // and refresh immediately when the visitor returns to it.
+    setInterval(() => { if (!document.hidden) loadState(); }, 90000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) loadState(); });
 
     // AniList widget reveals itself only once anilist-card.js actually
     // populates the container — keeps it hidden when the profile is private.
@@ -404,32 +401,29 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.35rem; }
   .tag-cloud .tag-pill .count { color: var(--fg-dim); margin-left: 0.3rem; font-variant-numeric: tabular-nums; }
 
-  /* projects */
-  .proj-list { display: grid; gap: 1.2rem; }
-  .proj-top { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; }
-  .proj-name { color: var(--accent-soft); font-weight: 700; font-size: 0.95rem; }
+  /* projects — compact name → blurb rows */
+  .proj-list { display: grid; gap: 0.85rem; }
+  .proj {
+    display: grid; grid-template-columns: 148px 1fr;
+    gap: 1rem; align-items: baseline;
+  }
+  .proj-name {
+    color: var(--accent-soft); font-weight: 700; font-size: 0.82rem;
+    line-height: 1.5;
+  }
   a.proj-name { text-decoration: none; transition: color 0.15s, text-shadow 0.15s; }
   a.proj-name:hover { color: var(--hot); text-shadow: var(--glow); }
   .proj-flag {
-    color: var(--fg-dim); font-weight: 400; font-size: 0.68rem;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    border: 1px solid var(--rule-dim); padding: 1px 5px;
-    border-radius: 2px; margin-left: 0.4rem;
+    display: inline-block;
+    color: var(--fg-dim); font-weight: 400; font-size: 0.62rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    border: 1px solid var(--rule-dim); padding: 0 4px;
+    border-radius: 2px; margin-left: 0.3rem; vertical-align: 1px;
   }
+  .proj-blurb { color: var(--fg-mute); font-size: 0.8rem; line-height: 1.5; margin: 0; }
   .proj-blurb a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--rule); }
   .proj-blurb a:hover { color: var(--hot); border-bottom-color: var(--hot); }
-  .proj-year { color: var(--fg-dim); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
-  .proj-status {
-    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
-    padding: 1px 6px; border: 1px solid var(--rule);
-    border-radius: 2px; margin-left: auto;
-  }
-  .proj-status.active { color: var(--accent); border-color: var(--accent); }
-  .proj-status.shipped { color: var(--link); border-color: var(--rule); }
-  .proj-status.archived { color: var(--fg-dim); border-color: var(--rule-dim); }
-  .proj-blurb { color: var(--fg-mute); font-size: 0.85rem; margin-top: 0.4rem; }
-  .proj-stack { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; font-size: 0.72rem; color: var(--fg-dim); }
-  .proj-stack span + span::before { content: '·'; margin-right: 0.4rem; color: var(--fg-dim); }
+  .proj-stack { color: var(--fg-dim); font-size: 0.72rem; white-space: nowrap; }
 
   /* links */
   .link-row {
@@ -560,5 +554,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     .post-meta { display: none; }
     .link-row { grid-template-columns: 90px 1fr auto; }
     .media-row { flex-direction: column; }
+    .proj { grid-template-columns: 1fr; gap: 0.2rem; }
+    .proj-stack { white-space: normal; }
   }
 </style>
