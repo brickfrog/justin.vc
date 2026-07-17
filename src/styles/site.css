@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────
    justin.vc — shared chrome
-   tokens · themes · scanlines · bg · cmd palette · tweaks
+   tokens · themes · scanlines · bg · cmd palette · settings
    ───────────────────────────────────────────────────────────── */
 
 :root, [data-theme="phosphor"] {
@@ -116,14 +116,26 @@ body[data-scan="heavy"]::after {
   border: 1px solid var(--rule);
   padding: 0 5px; border-radius: 2px; font-size: 0.7rem;
 }
-.cmd-hint .sep { color: var(--fg-dim); }
-.cmd-hint-btn {
-  font: inherit; color: inherit;
-  background: transparent; border: none;
-  padding: 0; cursor: pointer;
-  display: inline-flex; align-items: center; gap: 0.3rem;
+/* ── settings toggle (top right, wikipedia-appearance style) ── */
+.settings-btn {
+  position: fixed; right: 16px; top: 16px;
+  font-family: inherit; font-size: 0.7rem;
+  color: var(--fg-mute);
+  background: var(--bg-elev);
+  border: 1px solid var(--rule-dim);
+  padding: 4px 8px; border-radius: 3px;
+  z-index: 201; cursor: pointer; user-select: none;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  transition: color 0.15s, border-color 0.15s;
 }
-.cmd-hint-btn:hover { color: var(--fg); }
+.settings-btn kbd {
+  font-family: inherit;
+  color: var(--accent-soft);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  padding: 0 5px; border-radius: 2px; font-size: 0.7rem;
+}
+.settings-btn:hover { color: var(--fg); border-color: var(--rule); }
 .cmd {
   position: fixed; inset: auto 0 0 0;
   background: var(--bg);
@@ -151,41 +163,41 @@ body[data-scan="heavy"]::after {
 .cmd .log .line b { color: var(--accent-soft); font-weight: 400; }
 .cmd .log .err { color: var(--red); }
 
-/* ── tweaks panel ── */
-.tweaks {
-  position: fixed; right: 16px; top: 16px;
+/* ── settings panel ── */
+.settings-panel {
+  position: fixed; right: 16px; top: 52px; /* clears the toggle button */
   width: 260px;
   background: var(--bg-elev);
   border: 1px solid var(--rule);
   font-size: 0.78rem; z-index: 200; display: none;
 }
-.tweaks.on { display: block; }
-.tweaks-head {
+.settings-panel.on { display: block; }
+.settings-head {
   padding: 0.5rem 0.75rem;
   border-bottom: 1px solid var(--rule-dim);
   color: var(--accent);
   font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
   display: flex; align-items: center; gap: 0.5rem;
 }
-.tweaks-head .x { margin-left: auto; color: var(--fg-dim); cursor: pointer; font-weight: 400; }
-.tweaks-body { padding: 0.6rem 0.75rem 0.8rem; }
-.tweak-row { margin: 0.55rem 0; }
-.tweak-row:first-child { margin-top: 0; }
-.tweak-label {
+.settings-head .x { margin-left: auto; color: var(--fg-dim); cursor: pointer; font-weight: 400; }
+.settings-body { padding: 0.6rem 0.75rem 0.8rem; }
+.setting-row { margin: 0.55rem 0; }
+.setting-row:first-child { margin-top: 0; }
+.setting-label {
   color: var(--fg-mute); font-size: 0.72rem;
   letter-spacing: 0.08em; text-transform: uppercase;
   margin-bottom: 0.3rem;
 }
-.tweak-opts { display: flex; gap: 0.25rem; flex-wrap: wrap; }
-.tweak-opt {
+.setting-opts { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+.setting-opt {
   font-family: inherit; font-size: 0.75rem;
   background: transparent; color: var(--fg-mute);
   border: 1px solid var(--rule-dim);
   padding: 3px 7px; cursor: pointer; border-radius: 2px;
   transition: all 0.15s;
 }
-.tweak-opt:hover { color: var(--fg); border-color: var(--rule); }
-.tweak-opt.on { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+.setting-opt:hover { color: var(--fg); border-color: var(--rule); }
+.setting-opt.on { color: var(--bg); background: var(--accent); border-color: var(--accent); }
 
 /* ── tag pills (shared) ── */
 .tag-pill {
@@ -228,5 +240,6 @@ body[data-scan="heavy"]::after {
 
 @media (max-width: 640px) {
   .cmd-hint { display: none; }
-  .tweaks { right: 8px; left: 8px; width: auto; }
+  .settings-btn { right: 8px; top: 8px; }
+  .settings-panel { right: 8px; left: 8px; top: 44px; width: auto; }
 }

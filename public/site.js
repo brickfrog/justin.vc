@@ -1,11 +1,11 @@
 /* ─────────────────────────────────────────────────────────────
    justin.vc — shared chrome behavior
-   themes · scanlines · bg · density · cmd palette · tweaks
+   themes · scanlines · bg · density · cmd palette · settings
    Exposes: window.jvc = { state, applyState, openCmd, closeCmd, on(cmd, fn) }
    ───────────────────────────────────────────────────────────── */
 (function () {
   const TWEAK_KEYS = ['theme', 'scan', 'bg', 'density', 'banner-idx'];
-  const STORAGE_KEY = 'justinvc.tweaks';
+  const STORAGE_KEY = 'justinvc.tweaks'; // legacy key name — keeps stored prefs across the tweaks→settings rename
 
   const DEFAULTS = (window.TWEAK_DEFAULTS || {
     theme: 'phosphor',
@@ -32,9 +32,9 @@
     document.body.dataset.density = state.density || 'comfy';
     if (banner && window.__setBanner) window.__setBanner(state['banner-idx']);
     // sync UI
-    document.querySelectorAll('.tweak-opts').forEach(grp => {
+    document.querySelectorAll('.setting-opts').forEach(grp => {
       const key = grp.dataset.key;
-      grp.querySelectorAll('.tweak-opt').forEach(btn => {
+      grp.querySelectorAll('.setting-opt').forEach(btn => {
         btn.classList.toggle('on', String(state[key]) === btn.dataset.val);
       });
     });
@@ -59,20 +59,20 @@
     postEdit();
   }
 
-  // ── tweaks panel wiring ──
-  function wireTweaks() {
-    const panel = document.getElementById('tweaks');
+  // ── settings panel wiring ──
+  function wireSettings() {
+    const panel = document.getElementById('settings');
     if (!panel) return;
-    panel.querySelectorAll('.tweak-opts').forEach(grp => {
+    panel.querySelectorAll('.setting-opts').forEach(grp => {
       grp.addEventListener('click', e => {
-        const btn = e.target.closest('.tweak-opt');
+        const btn = e.target.closest('.setting-opt');
         if (!btn) return;
         set(grp.dataset.key, btn.dataset.val);
       });
     });
-    const x = document.getElementById('tweaks-close');
+    const x = document.getElementById('settings-close');
     if (x) x.addEventListener('click', () => panel.classList.remove('on'));
-    const toggle = document.getElementById('tweaks-toggle');
+    const toggle = document.getElementById('settings-toggle');
     if (toggle) toggle.addEventListener('click', () => panel.classList.toggle('on'));
     // `,` keybind — outside inputs, mirrors the `/` handler
     document.addEventListener('keydown', e => {
@@ -87,7 +87,7 @@
   // ── host edit-mode wiring ──
   window.addEventListener('message', e => {
     if (!e.data) return;
-    const panel = document.getElementById('tweaks');
+    const panel = document.getElementById('settings');
     if (e.data.type === '__activate_edit_mode' && panel) panel.classList.add('on');
     else if (e.data.type === '__deactivate_edit_mode' && panel) panel.classList.remove('on');
   });
@@ -191,7 +191,7 @@
 
   // ── boot ──
   function boot() {
-    wireTweaks();
+    wireSettings();
     wireCmd();
     applyState();
   }
