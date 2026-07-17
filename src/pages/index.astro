@@ -164,11 +164,11 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
         </div>
         <div class="media-widget flex-grow gr-grid">
           <div class="media-widget-label">// in progress</div>
-          <script is:inline src="https://www.goodreads.com/review/grid_widget/46714580.Justin's%20bookshelf:%20currently-reading?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=currently-reading&sort=date_read&widget_id=1674169459"></script>
+          <div class="shelf" data-shelf="currently-reading" data-limit="20"></div>
         </div>
         <div class="media-widget flex-grow gr-grid">
           <div class="media-widget-label">// finished</div>
-          <script is:inline src="https://www.goodreads.com/review/grid_widget/46714580.Justin's%20bookshelf:%20read?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=read&sort=date_read&widget_id=1674169460"></script>
+          <div class="shelf" data-shelf="read" data-limit="30"></div>
         </div>
       </div>
     </section>
@@ -287,6 +287,37 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
       obs.observe(anilistContainer, { childList: true });
       setTimeout(() => obs.disconnect(), 6000);
     }
+
+    // Book shelves — rendered from our own API (api.justin.vc/api/shelf), which
+    // scrapes Goodreads server-side and proxies the covers. No third-party script
+    // or image request touches the visitor's browser.
+    function renderShelf(el, books) {
+      const frag = document.createDocumentFragment();
+      books.forEach((b) => {
+        if (!b || typeof b.cover !== 'string') return;
+        // covers must come from our own proxy origin — reject anything else
+        if (!/^https:\/\/api\.justin\.vc\/api\/cover\?/.test(b.cover)) return;
+        const safeUrl = (typeof b.url === 'string' && /^https?:\/\//i.test(b.url)) ? b.url : null;
+        const wrap = document.createElement(safeUrl ? 'a' : 'span');
+        if (safeUrl) { wrap.href = safeUrl; wrap.target = '_blank'; wrap.rel = 'noopener noreferrer'; }
+        const img = document.createElement('img');
+        img.src = b.cover;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.alt = String(b.title || '') + (b.author ? ' — ' + String(b.author) : '');
+        wrap.appendChild(img);
+        frag.appendChild(wrap);
+      });
+      el.appendChild(frag);
+    }
+    document.querySelectorAll('.shelf').forEach((el) => {
+      const shelf = el.dataset.shelf === 'read' ? 'read' : 'currently-reading';
+      const limit = parseInt(el.dataset.limit, 10) || 20;
+      fetch(`https://api.justin.vc/api/shelf?name=${shelf}&limit=${limit}`)
+        .then((r) => r.ok ? r.json() : null)
+        .then((d) => { if (d && Array.isArray(d.books)) renderShelf(el, d.books); })
+        .catch(() => {});
+    });
 
     const arts = document.querySelectorAll('.banner .art');
     window.__setBanner = (idx) => {
@@ -470,10 +501,10 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   .media-details h4 { color: var(--fg); font-size: 0.72rem; font-weight: 400; }
   .gr-grid { display: flex !important; flex-wrap: wrap !important; flex-direction: row !important; gap: 0.35rem; align-content: flex-start; }
   .gr-grid > div { display: flex !important; flex-wrap: wrap !important; gap: 0.35rem; }
-  .gr-grid a { display: inline-block; flex-shrink: 0; }
+  .gr-grid a, .gr-grid .shelf > * { display: inline-block; flex-shrink: 0; line-height: 0; }
   .gr-grid img { border-radius: 2px; border: 1px solid var(--rule) !important; height: 62px !important; width: auto !important; }
-  .gr-grid br, .gr-grid .gr_grid_br498, .gr-grid noscript { display: none !important; }
   .gr-grid .media-widget-label { flex-basis: 100%; }
+  .shelf:empty::after { content: '// nothing here yet'; color: var(--fg-dim); font-size: 0.72rem; line-height: 1.4; }
 
   /* status message block — between tagline and about */
   .status-msg {
