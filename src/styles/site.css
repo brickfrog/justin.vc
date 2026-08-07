@@ -75,9 +75,11 @@ body {
 }
 
 /* ── background field + scrim ──
-   Two layers under the content. #bgfield is a full-bleed contour field painted
-   by bg-field.js at one pixel per ~5 css px; #bgveil is a radial scrim in --bg
-   that sits over it and cuts the hole the page is read through.
+   Two layers under the content. #bgfield is a full-bleed character grid painted
+   by bg-field.js — the page is monospace cells and box rules throughout, so the
+   background is made of the same material rather than a picture behind glass.
+   #bgveil is a radial scrim in --bg that sits over it and cuts the hole the
+   page is read through.
 
    The scrim is the whole trick. A mask baked into the canvas can only be some
    f(x) times some g(y), which is a soft rectangle however it is tuned — hence
@@ -85,11 +87,7 @@ body {
    is a joint function of x and y, so it actually rounds off, and being CSS it
    retints with the theme for free.
 
-   Layer order: field 0, scrim 1, .wrap 2, scanlines 1000.
-
-   Note this canvas wants the browser's default smoothing, not pixelated. The
-   coarse buffer blown up bilinearly is exactly what makes the contours read as
-   glow rather than stair-steps. */
+   Layer order: field 0, scrim 1, .wrap 2, scanlines 1000. */
 #bgfield,
 #bgveil {
   position: fixed; inset: 0;
@@ -104,8 +102,9 @@ body {
 /* .ready lands after the first painted frame, so the field fades in instead of
    popping — an empty canvas would otherwise flash at full opacity on load. */
 #bgfield.ready { opacity: var(--field-strength, 0.65); }
-/* dark ink on cream reads much heavier than glow on black — same field, less of it */
-[data-theme="paper"] #bgfield { --field-strength: 0.2; }
+/* Dark ink on cream reads heavier than glow on black, but a sparse character
+   grid is far less ink than the contour lines this was first tuned for. */
+[data-theme="paper"] #bgfield { --field-strength: 0.5; }
 
 #bgveil {
   z-index: 1;

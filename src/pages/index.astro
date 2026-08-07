@@ -1,8 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import ProjectGlyph from '../components/ProjectGlyph.astro';
-import { assignGlyphs } from '../glyph';
 
 const posts = (await getCollection('writing', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -15,70 +13,57 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 
 // Projects, as data rather than a wall of near-identical hand-written blocks.
 // `blurb` is authored HTML so an entry can carry inline links; it is my own
-// copy, never anything upstream, so set:html is safe here.
-// `tone` names a theme token rather than a literal colour, so each row keeps a
-// distinct identity that still recolours with the theme instead of fighting it.
-// Tones repeat once the list outgrows the palette; only keep neighbours apart.
-// NOTE: a row with `href` becomes one big anchor, so its blurb must not contain
-// links — nested anchors are invalid. The row with inline links has no href.
+// copy, never anything upstream, so set:html is safe here. Only the name is a
+// link, so a blurb is free to carry its own without nesting anchors.
 const projects = [
   {
     name: 'dere',
     flag: 'private',
-    tone: 'magenta',
     blurb: 'persona-layered claude code wrapper. a daemon holds sessions, emotions, and a knowledge graph; plugins add workflow-specific behavior.',
     stack: ['typescript', 'bun', 'postgres', 'falkordb'],
   },
   {
     name: 'choir',
     href: 'https://github.com/brickfrog/choir',
-    tone: 'accent',
     blurb: 'runs one coding task n ways in parallel, each in its own nsjail sandbox, then tests every patch and prints a table.',
     stack: ['rust', 'nsjail'],
   },
   {
     name: 'moonsorter',
     href: 'https://github.com/brickfrog/moonsorter',
-    tone: 'hot',
     blurb: 'browser ranking via the plackett-luce model. pairwise comparisons, MM fitting, k-means tiers.',
     stack: ['moonbit', 'wasm', 'astro'],
   },
   {
     name: 'verbum-diei',
     href: 'https://github.com/brickfrog/verbum-diei',
-    tone: 'link',
     blurb: 'daily lectionary site. vatican rss, a local douay-rheims, and the liturgical calendar, regenerated nightly.',
     stack: ['typescript', 'purescript', 'bun'],
   },
   {
     name: 'bewaur',
     href: 'https://github.com/brickfrog/bewaur',
-    tone: 'red',
     blurb: 'alpm hook that trust-scores an AUR package before pacman commits — pkgbuild, sources, maintainer and git history.',
     stack: ['rust', 'alpm', 'arch'],
   },
   {
     name: 'lector',
     href: 'https://github.com/brickfrog/lector',
-    tone: 'accent-soft',
     blurb: 'turns an epub or pdf into a read-along audiobook — chaptered m4b plus word-synced subtitles, timed off the synthesis model.',
     stack: ['rust', 'onnx', 'kokoro', 'ffmpeg'],
   },
   {
     name: 'benkyou-yaro',
     href: 'https://github.com/brickfrog/benkyou-yaro',
-    tone: 'magenta',
     blurb: 'builds a prerequisite graph for a new domain, then splits practice into cards for facts and graded exercises for skills.',
     stack: ['rust', 'anki'],
   },
   {
     name: 'moonbit ecosystem',
-    tone: 'accent',
     blurb: 'standalone moonbit libraries: <a href="https://github.com/brickfrog/moontrace" target="_blank" rel="noopener">moontrace</a> (structured tracing with otlp export) and <a href="https://github.com/brickfrog/tempo" target="_blank" rel="noopener">tempo</a> (utc datetime + rfc 3339).',
     stack: ['moonbit', 'wasm'],
   },
 ];
-const glyphs = assignGlyphs(projects.map((p) => p.name));
 ---
 <BaseLayout title="justin.vc" canonical="https://justin.vc/">
   <main class="wrap">
@@ -178,29 +163,20 @@ const glyphs = assignGlyphs(projects.map((p) => p.name));
     <section class="sec">
       <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> projects <span class="rule" aria-hidden="true"></span> <span class="num">§03</span></h2>
       <div class="proj-list">
-        {projects.map((p, i) => {
-          const Row = p.href ? 'a' : 'div';
-          return (
-            <Row
-              class="proj"
-              data-tone={p.tone}
-              href={p.href}
-              target={p.href ? '_blank' : undefined}
-              rel={p.href ? 'noopener' : undefined}
-            >
-              <span class="proj-glyph"><ProjectGlyph seed={p.name} shape={glyphs[i]} /></span>
-              <div class="proj-body">
-                <span class="proj-head">
-                  <span class="proj-name">{p.name}</span>
-                  {p.flag && <span class="proj-flag">{p.flag}</span>}
-                </span>
-                <p class="proj-blurb" set:html={p.blurb} />
-                <ul class="proj-stack">{p.stack.map((s) => <li>{s}</li>)}</ul>
-              </div>
-              {p.href && <span class="proj-go" aria-hidden="true">›</span>}
-            </Row>
-          );
-        })}
+        {projects.map((p) => (
+          <div class="proj">
+            <span class="proj-name">
+              {p.href
+                ? <a href={p.href} target="_blank" rel="noopener">{p.name}</a>
+                : p.name}
+              {p.flag && <span class="proj-flag">{p.flag}</span>}
+            </span>
+            <p class="proj-desc">
+              <Fragment set:html={p.blurb} />
+              <span class="proj-stack">{p.stack.join(' · ')}</span>
+            </p>
+          </div>
+        ))}
       </div>
     </section>
 
@@ -521,68 +497,40 @@ const glyphs = assignGlyphs(projects.map((p) => p.name));
   .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.35rem; }
   .tag-cloud .tag-pill .count { color: var(--fg-dim); margin-left: 0.3rem; font-variant-numeric: tabular-nums; }
 
-  /* projects — glyph badge + body card rows.
-     --tone names a theme token per row, so each project reads as its own thing
-     while still recolouring with the theme; the badge is the only element that
-     spends the colour, which keeps a long list from turning into a fruit salad. */
-  .proj-list { display: grid; gap: 0.55rem; }
-  .proj[data-tone="accent"] { --tone: var(--accent); }
-  .proj[data-tone="accent-soft"] { --tone: var(--accent-soft); }
-  .proj[data-tone="link"] { --tone: var(--link); }
-  .proj[data-tone="magenta"] { --tone: var(--magenta); }
-  .proj[data-tone="hot"] { --tone: var(--hot); }
-  .proj[data-tone="red"] { --tone: var(--red); }
-  .proj {
-    display: grid; grid-template-columns: auto 1fr auto;
-    gap: 0.9rem; align-items: start;
-    padding: 0.8rem 0.95rem;
-    border: 1px solid var(--rule-dim); border-radius: 3px;
-    background: var(--bg-elev);
-    color: inherit; text-decoration: none;
-    transition: border-color 0.15s, background 0.15s;
+  /* projects — aligned name/description rows, same rhythm as .link-row below.
+     Cards with badges cost 116px a row and 35% of the page for eight of them;
+     this is the same information at roughly a third of the height. Only the
+     name is a link, so the blurb can carry its own without nesting anchors. */
+  /* One grid for the whole list, not one per row: each .proj is display:contents
+     so every name lands in a single shared column that sizes itself to the
+     longest one. A per-row grid would resolve max-content independently and the
+     descriptions would come out ragged. */
+  .proj-list {
+    display: grid; grid-template-columns: max-content 1fr;
+    gap: 0.75rem 1.1rem; align-items: baseline;
   }
-  a.proj:hover { border-color: color-mix(in srgb, var(--tone) 50%, var(--rule-dim)); }
-  a.proj:hover .proj-name { color: var(--hot); text-shadow: var(--glow); }
-  a.proj:hover .proj-go { color: var(--tone); transform: translateX(2px); }
-
-  .proj-glyph {
-    display: grid; place-items: center;
-    width: 56px; height: 56px; border-radius: 50%;
-    color: var(--tone);
-    border: 1px solid color-mix(in srgb, var(--tone) 40%, transparent);
-    background: color-mix(in srgb, var(--tone) 8%, transparent);
-  }
-  .proj-glyph svg { display: block; width: 38px; height: 38px; }
-  [data-theme="paper"] .proj-glyph { background: color-mix(in srgb, var(--tone) 12%, transparent); }
-
-  .proj-head { display: flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap; }
+  .proj { display: contents; }
   .proj-name {
-    color: var(--accent-soft); font-weight: 700; font-size: 0.9rem;
-    transition: color 0.15s, text-shadow 0.15s;
+    color: var(--accent-soft); font-weight: 700; font-size: 0.82rem;
+    display: flex; align-items: baseline; gap: 0.35rem;
+    white-space: nowrap;
   }
+  .proj-name a { color: inherit; text-decoration: none; transition: color 0.15s, text-shadow 0.15s; }
+  .proj-name a:hover { color: var(--hot); text-shadow: var(--glow); }
   .proj-flag {
-    display: inline-block;
-    color: var(--fg-dim); font-weight: 400; font-size: 0.62rem;
+    color: var(--fg-dim); font-weight: 400; font-size: 0.6rem;
     letter-spacing: 0.08em; text-transform: uppercase;
-    border: 1px solid var(--rule-dim); padding: 0 4px;
-    border-radius: 2px; vertical-align: 1px;
+    border: 1px solid var(--rule-dim); padding: 0 3px; border-radius: 2px;
   }
-  .proj-blurb {
-    color: var(--fg-mute); font-size: 0.8rem; line-height: 1.5;
-    margin: 0.25rem 0 0; max-width: 68ch;
+  .proj-desc {
+    color: var(--fg-mute); font-size: 0.78rem; line-height: 1.5;
+    margin: 0; max-width: 68ch;
   }
-  .proj-blurb a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--rule); }
-  .proj-blurb a:hover { color: var(--hot); border-bottom-color: var(--hot); }
-  .proj-stack {
-    list-style: none; display: flex; flex-wrap: wrap;
-    gap: 0 0.8rem; margin-top: 0.4rem;
-    font-size: 0.7rem; color: var(--fg-dim);
-  }
-  .proj-stack li::before { content: '· '; opacity: 0.55; }
-  .proj-go {
-    align-self: center; color: var(--fg-dim); font-size: 1.15rem; line-height: 1;
-    transition: color 0.15s, transform 0.15s;
-  }
+  .proj-desc a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--rule); }
+  .proj-desc a:hover { color: var(--hot); border-bottom-color: var(--hot); }
+  /* Trails the blurb on the same line when there's room, so a stack costs no
+     extra row of its own. */
+  .proj-stack { color: var(--fg-dim); font-size: 0.7rem; white-space: nowrap; margin-left: 0.3rem; }
 
   /* links */
   .link-row {
@@ -725,11 +673,9 @@ const glyphs = assignGlyphs(projects.map((p) => p.name));
     .post-meta { display: none; }
     .link-row { grid-template-columns: 90px 1fr auto; }
     .media-row { flex-direction: column; }
-    /* keep the badge — it is the row's identity — but drop the chevron, which
-       has no hover state to reveal on touch and only steals width */
-    .proj { grid-template-columns: auto 1fr; gap: 0.7rem; padding: 0.7rem 0.8rem; }
-    .proj-glyph { width: 38px; height: 38px; }
-    .proj-glyph svg { width: 25px; height: 25px; }
-    .proj-go { display: none; }
+    /* a shared name column leaves too little for the blurb here, so the list
+       collapses to one column and each name gets its own line */
+    .proj-list { grid-template-columns: 1fr; gap: 0.15rem; }
+    .proj + .proj .proj-name { margin-top: 0.7rem; }
   }
 </style>
