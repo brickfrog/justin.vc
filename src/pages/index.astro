@@ -84,11 +84,11 @@ const glyphs = assignGlyphs(projects.map((p) => p.name));
   <main class="wrap">
     <h1 class="sr-only">justin.vc — data + software</h1>
     <div class="shell">
-      <span class="dot" id="presence-dot" role="img" aria-label="presence unknown"></span>
+      <span class="dot np-idle" id="np-dot" role="img" aria-label="idle"></span>
       <span class="prompt">justin@justin.vc:~$</span>
       <span class="path">./whoami</span>
       <span class="meta">
-        <span id="seen-field" hidden><b>seen</b> <span id="seen">·</span></span>
+        <span id="canary-field" hidden></span>
         <span><b>loc</b> cvg → pty → dca</span>
         <span><b>rev</b> <span id="rev">·</span></span>
       </span>
@@ -264,22 +264,23 @@ const glyphs = assignGlyphs(projects.map((p) => p.name));
     document.getElementById('rev').textContent = Array.from({length: 7}, () => '0123456789abcdef'[Math.floor(Math.random() * 16)]).join('');
 
     // live presence + status + now-playing from api.justin.vc
-    const dot = document.getElementById('presence-dot');
-    const seenField = document.getElementById('seen-field');
-    const seenEl = document.getElementById('seen');
+    const dot = document.getElementById('np-dot');
+    const canaryField = document.getElementById('canary-field');
     const npShell = document.getElementById('np-shell');
     const msgEl = document.getElementById('status-msg');
     const msgBody = document.getElementById('status-msg-body');
     const msgTime = document.getElementById('status-msg-time');
 
-    // Presence tiers. The dot used to track Last.fm playback, so it read "dead"
-    // every time the music stopped. It now runs off `seen` from the API — the
-    // newest of a scrobble, a GitHub push, or a status write — which makes it a
-    // canary: green while there are signs of life, red once they stop.
-    // Thresholds live here rather than in the worker so the API publishes one
-    // timestamp and the site owns what counts as away.
-    const ACTIVE_MS = 15 * 60 * 1000;
-    const DARK_MS = 72 * 60 * 60 * 1000;
+    // The dot is a now-playing light: green while a scrobble is live, quiet
+    // otherwise. That asymmetry is the point — its silence means "no music",
+    // never "away", so it cannot be read as an occupancy signal. A tiered
+    // presence dot has the opposite property: grey *means* gone.
+    //
+    // The canary is separate, and rare. The worker publishes it only after 14
+    // days of total silence and never publishes a last-seen timestamp, so there
+    // is no threshold policy here to speak of and nothing to infer below it —
+    // a visitor cannot tell five minutes from nine days. See canary() in the
+    // worker for why that resolution is enforced server-side.
 
     function relAge(at) {
       const sec = Math.max(1, Math.round((Date.now() - at) / 1000));
@@ -292,35 +293,22 @@ const glyphs = assignGlyphs(projects.map((p) => p.name));
       return d + 'd ago';
     }
 
-    function renderPresence(seen) {
-      const age = typeof seen === 'number' && isFinite(seen) ? Date.now() - seen : null;
-      // A clock-skewed future timestamp still means "just now", so clamp at 0.
-      const tier = age === null ? 'unknown'
-        : age < ACTIVE_MS ? 'active'
-        : age < DARK_MS ? 'away'
-        : 'dark';
-      dot.className = 'dot dot-' + tier;
-      if (tier === 'unknown') {
-        dot.setAttribute('aria-label', 'presence unknown');
-        seenField.hidden = true;
-        return;
-      }
-      const rel = relAge(Math.min(seen, Date.now()));
-      dot.setAttribute('aria-label', tier === 'active' ? 'active now' : 'last seen ' + rel);
-      dot.title = new Date(seen).toLocaleString();
-      // Only worth the shell real estate once the answer isn't "right now".
-      seenField.hidden = tier === 'active';
-      seenEl.textContent = rel;
+    function renderDot(np, canary) {
+      const days = canary && Number.isFinite(canary.silentDays) ? canary.silentDays : null;
+      const text = days === null ? null : 'no signal for ' + days + ' days';
+      dot.className = 'dot' + (text ? ' canary-lit' : np ? '' : ' np-idle');
+      dot.setAttribute('aria-label', text || (np ? 'now playing' : 'idle'));
+      canaryField.hidden = !text;
+      if (text) canaryField.textContent = '!! ' + text;
     }
-    renderPresence(null);
+    renderDot(null, null);
 
     function renderState(data) {
       if (!data) return;
-      renderPresence(data.seen);
+      renderDot(data.np, data.canary);
       if (data.status && data.status.text) {
         msgBody.textContent = data.status.text;
-        // bare age, not "seen": the shell's seen field is presence, this is
-        // just when the note was written, and two "seen"s read as a conflict
+        // Age of the note itself, not a presence claim — see renderDot().
         msgTime.textContent = relAge(data.status.at);
         msgTime.title = new Date(data.status.at).toLocaleString();
         msgEl.hidden = false;
@@ -348,7 +336,7 @@ const glyphs = assignGlyphs(projects.map((p) => p.name));
         npShell.appendChild(artistEl);
         npShell.hidden = false;
       } else {
-        // playback stopped since the last poll — the line goes, the dot does not
+        // playback stopped since the last poll — line goes, dot goes quiet
         npShell.hidden = true;
         npShell.textContent = '';
       }
@@ -674,31 +662,27 @@ const glyphs = assignGlyphs(projects.map((p) => p.name));
     white-space: pre-wrap; word-wrap: break-word;
   }
 
-  /* presence dot in shell header — see renderPresence() for the tier thresholds.
-     The base .dot in site.css is already accent + glow + pulse, which is exactly
-     the active state, so only the quieter tiers need to override it. */
-  .shell .dot.dot-away {
-    background: var(--hot);
-    box-shadow: 0 0 6px var(--hot);
-    animation: none;
-    opacity: 0.7;
-  }
-  .shell .dot.dot-dark {
-    background: var(--red);
-    box-shadow: 0 0 8px var(--red);
-    animation: blink 2.6s infinite;
-  }
-  .shell .dot.dot-unknown {
+  /* Shell dot — see renderDot(). The base .dot in site.css is accent + glow +
+     pulse, which is the "music is playing" state, so only the quiet and fired
+     states override it. There is deliberately no away/last-seen tier: a dot
+     that dims with inactivity broadcasts when the desk is empty. */
+  .shell .dot.np-idle {
     background: var(--fg-dim);
     box-shadow: none;
     animation: none;
     opacity: 0.6;
   }
-  /* the field only shows when the answer isn't "right now", so it always reads
-     as a warning; the dot's tier class upgrades it to red once we're past 72h */
-  .shell .meta #seen-field { color: var(--hot); }
-  .shell .dot.dot-dark ~ .meta #seen-field { color: var(--red); }
-  #seen-field b { color: inherit; opacity: 0.75; }
+  .shell .dot.canary-lit {
+    background: var(--red);
+    box-shadow: 0 0 8px var(--red);
+    animation: blink 2.6s infinite;
+  }
+  /* Only ever rendered once the switch has fired, so it can afford to shout. */
+  .shell .meta #canary-field {
+    color: var(--red);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
   .np-line {
     color: var(--fg-mute);
     font-size: 0.78rem;
