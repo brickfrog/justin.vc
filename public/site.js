@@ -4,12 +4,13 @@
    Exposes: window.jvc = { state, applyState, openCmd, closeCmd, on(cmd, fn) }
    ───────────────────────────────────────────────────────────── */
 (function () {
-  const TWEAK_KEYS = ['theme', 'scan', 'density', 'banner-idx'];
+  const TWEAK_KEYS = ['theme', 'scan', 'bg', 'density', 'banner-idx'];
   const STORAGE_KEY = 'justinvc.tweaks'; // legacy key name — keeps stored prefs across the tweaks→settings rename
 
   const DEFAULTS = (window.TWEAK_DEFAULTS || {
     theme: 'phosphor',
     scan: 'subtle',
+    bg: 'on',
     density: 'comfy',
     'banner-idx': 'random'
   });
@@ -27,6 +28,7 @@
   function applyState(banner) {
     document.body.dataset.theme = state.theme;
     document.body.dataset.scan = state.scan;
+    document.body.dataset.bg = state.bg;
     document.body.dataset.density = state.density || 'comfy';
     if (banner && window.__setBanner) window.__setBanner(state['banner-idx']);
     // sync UI
@@ -137,7 +139,7 @@
       // built-ins
       switch (c) {
         case 'help':
-          logLine('commands: help, theme &lt;phosphor|amber|ice|paper&gt;, scan &lt;off|subtle|heavy&gt;, density &lt;comfy|compact&gt;, banner &lt;0-2|random&gt;, clear, close, home' + (Object.keys(extraCommands).length ? ', ' + Object.keys(extraCommands).join(', ') : ''));
+          logLine('commands: help, theme &lt;phosphor|amber|ice|paper&gt;, scan &lt;off|subtle|heavy&gt;, bg &lt;on|off&gt;, density &lt;comfy|compact&gt;, banner &lt;0-2|random&gt;, clear, close, home' + (Object.keys(extraCommands).length ? ', ' + Object.keys(extraCommands).join(', ') : ''));
           return;
         case 'theme':
           if (['phosphor','amber','ice','paper'].includes(arg)) { set('theme', arg); logLine(`theme → ${arg}`); }
@@ -146,6 +148,10 @@
         case 'scan':
           if (['off','subtle','heavy'].includes(arg)) { set('scan', arg); logLine(`scan → ${arg}`); }
           else logLine('scan: off | subtle | heavy', 'err');
+          return;
+        case 'bg':
+          if (['on','off'].includes(arg)) { set('bg', arg); logLine(`bg → ${arg}`); }
+          else logLine('bg: on | off', 'err');
           return;
         case 'density':
           if (['comfy','compact'].includes(arg)) { set('density', arg); logLine(`density → ${arg}`); }

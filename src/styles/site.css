@@ -34,6 +34,7 @@
   --accent: #5ecc80; --accent-soft: #5ebd8a;
   --hot: #c4a55a; --link: #7abf9a; --magenta: #b07aaa; --red: #cc5555;
   --glow: 0 0 10px rgba(94, 204, 128, 0.35);
+  --rail-strength: 0.62;
 }
 [data-theme="amber"] {
   --bg: #120b05; --bg-elev: #1a1208;
@@ -58,6 +59,14 @@
   --accent: #3a6b42; --accent-soft: #4f7a56;
   --hot: #8a6a1e; --link: #2d5a8a; --magenta: #7a3a6a; --red: #9a3030;
   --glow: none;
+  --rail-strength: 0.8;
+}
+
+/* Layout tokens. `--col` is the reading column every page centres on, and
+   the one number the margin traces need in order to stay out of it. */
+:root {
+  --col: 760px;
+  --rail-gap: 1.5rem;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -76,6 +85,35 @@ body {
 
 /* Every page's content column. Owned here rather than duplicated per page. */
 .wrap { position: relative; z-index: 2; }
+
+/* ── margin traces ──
+   #rails is a fixed three-track grid: gutter, reading column, gutter. The
+   middle track is the column plus a gap, so the canvases in the outer tracks
+   cannot overlap the text — at any width, at any scroll position. There is no
+   scrim and nothing to keep in sync with the page.
+
+   Three earlier backgrounds were full-bleed canvases masked by a radial
+   gradient. That gradient was fully opaque across 43.7% of the column and was
+   fixed while the content scrolled, so it never actually cleared the text. A
+   mask cannot track a scrolling column; layout can.
+
+   Below roughly 1100px the outer tracks fall under rails.js's minimum width
+   and go unpainted rather than becoming a stripe beside the words. */
+#rails {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 1fr calc(min(100%, var(--col)) + 2 * var(--rail-gap)) 1fr;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+/* Set by rails.js once it has a gutter worth painting, so an empty canvas
+   never fades in over nothing. */
+#rails[data-on="1"] { opacity: var(--rail-strength); }
+#rails canvas { display: block; width: 100%; height: 100%; }
+body[data-bg="off"] #rails { display: none; }
 
 /* ── scanlines ── */
 body[data-scan="subtle"]::after,
@@ -280,11 +318,15 @@ body[data-scan="heavy"]::after {
    The 720–760px column and 15px root are tuned for a laptop; on a large monitor
    the page reads as a narrow ribbon marooned in the middle. Scale the type and
    the column together so the measure in characters barely moves and the whole
-   thing simply gets bigger. `body .wrap` outranks the per-page `.wrap`,
+   thing simply gets bigger. These move `--col` rather than restating a width:
+   #rails derives the gutters from it, and a second copy would put the traces
+   back over the text on exactly the displays that have room to spare.
+   `body .wrap` outranks the per-page `.wrap`,
    `.tags-wrap` and `.post-wrap` widths, so one rule covers every page. */
 @media (min-width: 1400px) {
+  :root { --col: 860px; }
   html { font-size: 16px; }
-  body .wrap { max-width: 860px; }
+  body .wrap { max-width: var(--col); }
   /* same reason for the body prefix: the page stylesheet also declares --max */
   body .banner { --max: 12px; }
 }
@@ -292,6 +334,7 @@ body[data-scan="heavy"]::after {
 /* Prose is capped at 62ch, so past this point a wider column does nothing for
    the reading measure — only the root size makes the text physically larger. */
 @media (min-width: 2000px) {
+  :root { --col: 920px; }
   html { font-size: 17px; }
-  body .wrap { max-width: 920px; }
+  body .wrap { max-width: var(--col); }
 }

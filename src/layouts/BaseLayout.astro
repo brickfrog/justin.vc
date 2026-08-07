@@ -37,7 +37,7 @@ const {
 </head>
 <body>
   <script is:inline>
-    // Apply stored theme/scan/density before first paint so refreshed
+    // Apply stored theme/scan/bg/density before first paint so refreshed
     // non-default themes don't flash phosphor first.
     (function () {
       try {
@@ -45,14 +45,24 @@ const {
         document.body.dataset.theme = s.theme || 'phosphor';
         document.body.dataset.scan = s.scan || 'subtle';
         document.body.dataset.density = s.density || 'comfy';
+        document.body.dataset.bg = s.bg || 'on';
       } catch (e) {
         document.body.dataset.theme = 'phosphor';
         document.body.dataset.scan = 'subtle';
         document.body.dataset.density = 'comfy';
+        document.body.dataset.bg = 'on';
       }
     })();
   </script>
   <slot />
+  <!-- Margin traces: gutter, reading column, gutter. The middle track is a
+       spacer the width of .wrap, which is the whole reason this can never
+       paint over the text. See rails.js. -->
+  <div id="rails" aria-hidden="true">
+    <canvas></canvas>
+    <div></div>
+    <canvas></canvas>
+  </div>
   <SharedChrome />
 
   <script is:inline>
@@ -60,9 +70,11 @@ const {
       theme: 'phosphor',
       scan: 'subtle',
       density: 'comfy',
+      bg: 'on',
       'banner-idx': 'random'
     };
   </script>
   <script is:inline src="/site.js" data-root="/"></script>
+  <script is:inline src="/rails.js"></script>
 </body>
 </html>
