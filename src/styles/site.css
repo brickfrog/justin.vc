@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────
    justin.vc — shared chrome
-   tokens · themes · scanlines · bg · cmd palette · settings
+   tokens · themes · scanlines · bg field · cmd palette · settings
    ───────────────────────────────────────────────────────────── */
 
 /* Self-hosted, latin-subset variable fonts — no third-party font CDN.
@@ -74,16 +74,66 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-/* ── bg image ── */
-body[data-bg="on"]::before {
-  content: '';
+/* ── background field + scrim ──
+   Two layers under the content. #bgfield is a full-bleed contour field painted
+   by bg-field.js at one pixel per ~5 css px; #bgveil is a radial scrim in --bg
+   that sits over it and cuts the hole the page is read through.
+
+   The scrim is the whole trick. A mask baked into the canvas can only be some
+   f(x) times some g(y), which is a soft rectangle however it is tuned — hence
+   two earlier attempts that stubbornly looked like curtains. A radial gradient
+   is a joint function of x and y, so it actually rounds off, and being CSS it
+   retints with the theme for free.
+
+   Layer order: field 0, scrim 1, .wrap 2, scanlines 1000.
+
+   Note this canvas wants the browser's default smoothing, not pixelated. The
+   coarse buffer blown up bilinearly is exactly what makes the contours read as
+   glow rather than stair-steps. */
+#bgfield,
+#bgveil {
   position: fixed; inset: 0;
-  background-image: var(--bg-image, url('/bg.avif'));
-  background-size: cover; background-position: center;
-  opacity: 0.16;
-  z-index: 0; pointer-events: none;
+  pointer-events: none;
 }
-[data-theme="paper"][data-bg="on"]::before { opacity: 0.08; filter: invert(1); }
+#bgfield {
+  z-index: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+/* .ready lands after the first painted frame, so the field fades in instead of
+   popping — an empty canvas would otherwise flash at full opacity on load. */
+#bgfield.ready { opacity: var(--field-strength, 0.65); }
+/* dark ink on cream reads much heavier than glow on black — same field, less of it */
+[data-theme="paper"] #bgfield { --field-strength: 0.2; }
+
+#bgveil {
+  z-index: 1;
+  background: radial-gradient(
+    ellipse 60% 72% at 50% 42%,
+    var(--bg) 0%,
+    var(--bg) 40%,
+    color-mix(in srgb, var(--bg) 90%, transparent) 56%,
+    color-mix(in srgb, var(--bg) 62%, transparent) 72%,
+    color-mix(in srgb, var(--bg) 24%, transparent) 88%,
+    transparent 100%
+  );
+}
+
+/* --field-on is the single source of truth for "is there room for this at all",
+   read by bg-field.js so the breakpoint is not duplicated in JS. Below it the
+   reading column is the whole viewport and there is nowhere for a field to go,
+   so both layers come out and the paint loop never starts. */
+body { --field-on: 1; }
+@media (max-width: 1100px) {
+  body { --field-on: 0; }
+  #bgfield, #bgveil { display: none; }
+}
+body[data-bg="off"] #bgfield,
+body[data-bg="off"] #bgveil { display: none; }
+
+/* Every page's content column. Owned here rather than duplicated per page. */
+.wrap { position: relative; z-index: 2; }
 
 /* ── scanlines ── */
 body[data-scan="subtle"]::after,
@@ -282,4 +332,24 @@ body[data-scan="heavy"]::after {
   .cmd-hint { display: none; }
   .settings-btn { right: 8px; top: 8px; }
   .settings-panel { right: 8px; left: 8px; top: 44px; width: auto; }
+}
+
+/* ── wide displays ──
+   The 720–760px column and 15px root are tuned for a laptop; on a large monitor
+   the page reads as a narrow ribbon marooned in the middle. Scale the type and
+   the column together so the measure in characters barely moves and the whole
+   thing simply gets bigger. `body .wrap` outranks the per-page `.wrap`,
+   `.tags-wrap` and `.post-wrap` widths, so one rule covers every page. */
+@media (min-width: 1400px) {
+  html { font-size: 16px; }
+  body .wrap { max-width: 860px; }
+  /* same reason for the body prefix: the page stylesheet also declares --max */
+  body .banner { --max: 12px; }
+}
+
+/* Prose is capped at 62ch, so past this point a wider column does nothing for
+   the reading measure — only the root size makes the text physically larger. */
+@media (min-width: 2000px) {
+  html { font-size: 17px; }
+  body .wrap { max-width: 920px; }
 }

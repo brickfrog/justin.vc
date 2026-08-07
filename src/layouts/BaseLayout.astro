@@ -44,28 +44,31 @@ const {
         const s = JSON.parse(localStorage.getItem('justinvc.tweaks') || '{}');
         document.body.dataset.theme = s.theme || 'phosphor';
         document.body.dataset.scan = s.scan || 'subtle';
-        document.body.dataset.bg = s.bg || 'off';
+        document.body.dataset.bg = s.bg || 'on';
         document.body.dataset.density = s.density || 'comfy';
       } catch (e) {
         document.body.dataset.theme = 'phosphor';
         document.body.dataset.scan = 'subtle';
-        document.body.dataset.bg = 'off';
         document.body.dataset.density = 'comfy';
+        document.body.dataset.bg = 'on';
       }
     })();
   </script>
   <slot />
+  <canvas id="bgfield" aria-hidden="true"></canvas>
+  <div id="bgveil" aria-hidden="true"></div>
   <SharedChrome />
 
   <script is:inline>
     window.TWEAK_DEFAULTS = {
       theme: 'phosphor',
       scan: 'subtle',
-      bg: 'off',
+      bg: 'on',
       density: 'comfy',
       'banner-idx': 'random'
     };
   </script>
   <script is:inline src="/site.js" data-root="/"></script>
+  <script is:inline src="/bg-field.js"></script>
 </body>
 </html>

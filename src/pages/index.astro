@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import ProjectGlyph from '../components/ProjectGlyph.astro';
+import { assignGlyphs } from '../glyph';
 
 const posts = (await getCollection('writing', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -10,15 +12,83 @@ for (const p of posts) for (const t of p.data.tags) tagCounts[t] = (tagCounts[t]
 const tagCloud = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
 
 const iso = (d: Date) => d.toISOString().slice(0, 10);
+
+// Projects, as data rather than a wall of near-identical hand-written blocks.
+// `blurb` is authored HTML so an entry can carry inline links; it is my own
+// copy, never anything upstream, so set:html is safe here.
+// `tone` names a theme token rather than a literal colour, so each row keeps a
+// distinct identity that still recolours with the theme instead of fighting it.
+// Tones repeat once the list outgrows the palette; only keep neighbours apart.
+// NOTE: a row with `href` becomes one big anchor, so its blurb must not contain
+// links — nested anchors are invalid. The row with inline links has no href.
+const projects = [
+  {
+    name: 'dere',
+    flag: 'private',
+    tone: 'magenta',
+    blurb: 'persona-layered claude code wrapper. a daemon holds sessions, emotions, and a knowledge graph; plugins add workflow-specific behavior.',
+    stack: ['typescript', 'bun', 'postgres', 'falkordb'],
+  },
+  {
+    name: 'choir',
+    href: 'https://github.com/brickfrog/choir',
+    tone: 'accent',
+    blurb: 'runs one coding task n ways in parallel, each in its own nsjail sandbox, then tests every patch and prints a table.',
+    stack: ['rust', 'nsjail'],
+  },
+  {
+    name: 'moonsorter',
+    href: 'https://github.com/brickfrog/moonsorter',
+    tone: 'hot',
+    blurb: 'browser ranking via the plackett-luce model. pairwise comparisons, MM fitting, k-means tiers.',
+    stack: ['moonbit', 'wasm', 'astro'],
+  },
+  {
+    name: 'verbum-diei',
+    href: 'https://github.com/brickfrog/verbum-diei',
+    tone: 'link',
+    blurb: 'daily lectionary site. vatican rss, a local douay-rheims, and the liturgical calendar, regenerated nightly.',
+    stack: ['typescript', 'purescript', 'bun'],
+  },
+  {
+    name: 'bewaur',
+    href: 'https://github.com/brickfrog/bewaur',
+    tone: 'red',
+    blurb: 'alpm hook that trust-scores an AUR package before pacman commits — pkgbuild, sources, maintainer and git history.',
+    stack: ['rust', 'alpm', 'arch'],
+  },
+  {
+    name: 'lector',
+    href: 'https://github.com/brickfrog/lector',
+    tone: 'accent-soft',
+    blurb: 'turns an epub or pdf into a read-along audiobook — chaptered m4b plus word-synced subtitles, timed off the synthesis model.',
+    stack: ['rust', 'onnx', 'kokoro', 'ffmpeg'],
+  },
+  {
+    name: 'benkyou-yaro',
+    href: 'https://github.com/brickfrog/benkyou-yaro',
+    tone: 'magenta',
+    blurb: 'builds a prerequisite graph for a new domain, then splits practice into cards for facts and graded exercises for skills.',
+    stack: ['rust', 'anki'],
+  },
+  {
+    name: 'moonbit ecosystem',
+    tone: 'accent',
+    blurb: 'standalone moonbit libraries: <a href="https://github.com/brickfrog/moontrace" target="_blank" rel="noopener">moontrace</a> (structured tracing with otlp export) and <a href="https://github.com/brickfrog/tempo" target="_blank" rel="noopener">tempo</a> (utc datetime + rfc 3339).',
+    stack: ['moonbit', 'wasm'],
+  },
+];
+const glyphs = assignGlyphs(projects.map((p) => p.name));
 ---
 <BaseLayout title="justin.vc" canonical="https://justin.vc/">
   <main class="wrap">
     <h1 class="sr-only">justin.vc — data + software</h1>
     <div class="shell">
-      <span class="dot" id="np-dot" role="img" aria-label="idle"></span>
+      <span class="dot" id="presence-dot" role="img" aria-label="presence unknown"></span>
       <span class="prompt">justin@justin.vc:~$</span>
       <span class="path">./whoami</span>
       <span class="meta">
+        <span id="seen-field" hidden><b>seen</b> <span id="seen">·</span></span>
         <span><b>loc</b> cvg → pty → dca</span>
         <span><b>rev</b> <span id="rev">·</span></span>
       </span>
@@ -43,11 +113,6 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     | | |_| \\__ \\ |_| | | | | \\ V / (__
    _/ |\\__,_|___/\\__|_|_| |_<span class="vc">(_)</span>_/ \\___|
    |__/`} /></div>
-      <div class="art" data-art="3"><pre set:html={`  _ _   _ ___ _____ _ _  _    _   _ ___
- (_) | | / __|_   _(_) \\| |  | | | / __|
- | | |_| \\__ \\ | | | | .\` |  \\ V / (__
- _/ |\\___/|___/ |_| |_|_|\\_|<span class="vc">.</span> \\_/ \\___|
-|__/`} /></div>
     </div>
     <script is:inline>
       // pick banner synchronously so the SSR'd default (art 0) doesn't flicker
@@ -113,32 +178,29 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     <section class="sec">
       <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> projects <span class="rule" aria-hidden="true"></span> <span class="num">§03</span></h2>
       <div class="proj-list">
-
-        <div class="proj">
-          <span class="proj-name">dere <span class="proj-flag">private</span></span>
-          <p class="proj-blurb">persona-layered claude code wrapper with a daemon for sessions, emotions, and a knowledge graph. plugins bolt on workflow-specific behavior (code, taskwarrior, vault). <span class="proj-stack">typescript · bun · postgres · falkordb · hono · trpc</span></p>
-        </div>
-
-        <div class="proj">
-          <a class="proj-name" href="https://github.com/brickfrog/choir" target="_blank" rel="noopener">choir</a>
-          <p class="proj-blurb">local agent orchestrator in moonbit. expensive model plans (claude as team lead), cheap models implement in parallel git worktrees and file PRs upward. scaffold → fork → converge. <span class="proj-stack">moonbit · git · gh · zellij</span></p>
-        </div>
-
-        <div class="proj">
-          <a class="proj-name" href="https://github.com/brickfrog/moonsorter" target="_blank" rel="noopener">moonsorter</a>
-          <p class="proj-blurb">browser ranking via the plackett-luce model. full rankings + pairwise comparisons, MM fitting, bootstrap confidence intervals, k-means tier clustering. moonbit compiled to wasm. <span class="proj-stack">moonbit · wasm · astro</span></p>
-        </div>
-
-        <div class="proj">
-          <a class="proj-name" href="https://github.com/brickfrog/verbum-diei" target="_blank" rel="noopener">verbum-diei</a>
-          <p class="proj-blurb">daily lectionary site. pulls vatican news rss, renders the reading from a local douay-rheims, glues in liturgical calendar (romcal), hours of prayer (breviarium), and optional llm marginalia. static, regenerated nightly. <span class="proj-stack">typescript · purescript · bun</span></p>
-        </div>
-
-        <div class="proj">
-          <span class="proj-name">moonbit ecosystem</span>
-          <p class="proj-blurb">moonbit libraries pulled out of choir / moonsorter as standalone tools: <a href="https://github.com/brickfrog/moontrace" target="_blank" rel="noopener">moontrace</a> (structured tracing with otlp export), <a href="https://github.com/brickfrog/tempo" target="_blank" rel="noopener">tempo</a> (utc datetime + rfc 3339), <a href="https://github.com/brickfrog/pippa" target="_blank" rel="noopener">pippa</a> (terminal ui framework, bubbletea-style model-update-view). <span class="proj-stack">moonbit · wasm</span></p>
-        </div>
-
+        {projects.map((p, i) => {
+          const Row = p.href ? 'a' : 'div';
+          return (
+            <Row
+              class="proj"
+              data-tone={p.tone}
+              href={p.href}
+              target={p.href ? '_blank' : undefined}
+              rel={p.href ? 'noopener' : undefined}
+            >
+              <span class="proj-glyph"><ProjectGlyph seed={p.name} shape={glyphs[i]} /></span>
+              <div class="proj-body">
+                <span class="proj-head">
+                  <span class="proj-name">{p.name}</span>
+                  {p.flag && <span class="proj-flag">{p.flag}</span>}
+                </span>
+                <p class="proj-blurb" set:html={p.blurb} />
+                <ul class="proj-stack">{p.stack.map((s) => <li>{s}</li>)}</ul>
+              </div>
+              {p.href && <span class="proj-go" aria-hidden="true">›</span>}
+            </Row>
+          );
+        })}
       </div>
     </section>
 
@@ -201,13 +263,23 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     // shell meta + banner rotator hook for site.js
     document.getElementById('rev').textContent = Array.from({length: 7}, () => '0123456789abcdef'[Math.floor(Math.random() * 16)]).join('');
 
-    // live status + now-playing from api.justin.vc
-    const dot = document.getElementById('np-dot');
+    // live presence + status + now-playing from api.justin.vc
+    const dot = document.getElementById('presence-dot');
+    const seenField = document.getElementById('seen-field');
+    const seenEl = document.getElementById('seen');
     const npShell = document.getElementById('np-shell');
     const msgEl = document.getElementById('status-msg');
     const msgBody = document.getElementById('status-msg-body');
     const msgTime = document.getElementById('status-msg-time');
-    dot.classList.add('np-idle'); // default: red until we know otherwise
+
+    // Presence tiers. The dot used to track Last.fm playback, so it read "dead"
+    // every time the music stopped. It now runs off `seen` from the API — the
+    // newest of a scrobble, a GitHub push, or a status write — which makes it a
+    // canary: green while there are signs of life, red once they stop.
+    // Thresholds live here rather than in the worker so the API publishes one
+    // timestamp and the site owns what counts as away.
+    const ACTIVE_MS = 15 * 60 * 1000;
+    const DARK_MS = 72 * 60 * 60 * 1000;
 
     function relAge(at) {
       const sec = Math.max(1, Math.round((Date.now() - at) / 1000));
@@ -220,20 +292,41 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
       return d + 'd ago';
     }
 
+    function renderPresence(seen) {
+      const age = typeof seen === 'number' && isFinite(seen) ? Date.now() - seen : null;
+      // A clock-skewed future timestamp still means "just now", so clamp at 0.
+      const tier = age === null ? 'unknown'
+        : age < ACTIVE_MS ? 'active'
+        : age < DARK_MS ? 'away'
+        : 'dark';
+      dot.className = 'dot dot-' + tier;
+      if (tier === 'unknown') {
+        dot.setAttribute('aria-label', 'presence unknown');
+        seenField.hidden = true;
+        return;
+      }
+      const rel = relAge(Math.min(seen, Date.now()));
+      dot.setAttribute('aria-label', tier === 'active' ? 'active now' : 'last seen ' + rel);
+      dot.title = new Date(seen).toLocaleString();
+      // Only worth the shell real estate once the answer isn't "right now".
+      seenField.hidden = tier === 'active';
+      seenEl.textContent = rel;
+    }
+    renderPresence(null);
+
     function renderState(data) {
       if (!data) return;
+      renderPresence(data.seen);
       if (data.status && data.status.text) {
         msgBody.textContent = data.status.text;
-        msgTime.textContent = 'seen ' + relAge(data.status.at);
+        // bare age, not "seen": the shell's seen field is presence, this is
+        // just when the note was written, and two "seen"s read as a conflict
+        msgTime.textContent = relAge(data.status.at);
         msgTime.title = new Date(data.status.at).toLocaleString();
         msgEl.hidden = false;
       }
       const np = data.np;
       if (np) {
-        dot.classList.remove('np-idle');
-        dot.classList.add('np-live');
-        dot.setAttribute('aria-label', 'listening now');
-
         // Build DOM with textContent/explicit element creation — never innerHTML on third-party data.
         // np.* originates from Last.fm and could in principle carry markup.
         const safeUrl = (typeof np.url === 'string' && /^https?:\/\//i.test(np.url)) ? np.url : null;
@@ -255,10 +348,7 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
         npShell.appendChild(artistEl);
         npShell.hidden = false;
       } else {
-        // playback stopped since the last poll — fall back to idle
-        dot.classList.remove('np-live');
-        dot.classList.add('np-idle');
-        dot.setAttribute('aria-label', 'idle');
+        // playback stopped since the last poll — the line goes, the dot does not
         npShell.hidden = true;
         npShell.textContent = '';
       }
@@ -356,16 +446,27 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 </BaseLayout>
 
 <style is:global>
-  :root { --bg-image: url('/bg.avif'); }
-
-  .wrap { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; padding: 2.5rem 1.75rem 8rem; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.75rem 8rem; }
   body[data-density="compact"] .wrap { padding: 1.5rem 1.25rem 6rem; }
 
-  /* banner */
-  .banner { margin-bottom: 1.25rem; overflow-x: auto; scrollbar-width: none; }
+  /* banner — arts shrink to fit their column instead of being clipped.
+     Every glyph in these arts advances 0.6em in JetBrains Mono, so an art of
+     N columns is exactly N * 0.6 * font-size wide. Solving that against the
+     container's inline size gives the largest size that still fits; --max holds
+     it at the intended 10px once there is room, so only narrow viewports shrink.
+     Keep --cols in sync if an art is ever re-cut. */
+  .banner {
+    container-type: inline-size;
+    --max: 10px;
+    margin-bottom: 1.25rem; overflow-x: auto; scrollbar-width: none;
+  }
   .banner::-webkit-scrollbar { display: none; }
+  .banner .art[data-art="0"] { --cols: 71; }
+  .banner .art[data-art="1"] { --cols: 70; }
+  .banner .art[data-art="2"] { --cols: 39; }
   .banner pre {
-    display: inline-block; font-family: inherit; font-size: 10px; line-height: 1.1;
+    display: inline-block; font-family: inherit; line-height: 1.1;
+    font-size: min(var(--max), 100cqw / (var(--cols) * 0.6));
     color: var(--accent); text-shadow: var(--glow); white-space: pre;
     animation: flicker 6s infinite;
   }
@@ -432,29 +533,68 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.35rem; }
   .tag-cloud .tag-pill .count { color: var(--fg-dim); margin-left: 0.3rem; font-variant-numeric: tabular-nums; }
 
-  /* projects — compact name → blurb rows */
-  .proj-list { display: grid; gap: 0.85rem; }
+  /* projects — glyph badge + body card rows.
+     --tone names a theme token per row, so each project reads as its own thing
+     while still recolouring with the theme; the badge is the only element that
+     spends the colour, which keeps a long list from turning into a fruit salad. */
+  .proj-list { display: grid; gap: 0.55rem; }
+  .proj[data-tone="accent"] { --tone: var(--accent); }
+  .proj[data-tone="accent-soft"] { --tone: var(--accent-soft); }
+  .proj[data-tone="link"] { --tone: var(--link); }
+  .proj[data-tone="magenta"] { --tone: var(--magenta); }
+  .proj[data-tone="hot"] { --tone: var(--hot); }
+  .proj[data-tone="red"] { --tone: var(--red); }
   .proj {
-    display: grid; grid-template-columns: 148px 1fr;
-    gap: 1rem; align-items: baseline;
+    display: grid; grid-template-columns: auto 1fr auto;
+    gap: 0.9rem; align-items: start;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid var(--rule-dim); border-radius: 3px;
+    background: var(--bg-elev);
+    color: inherit; text-decoration: none;
+    transition: border-color 0.15s, background 0.15s;
   }
+  a.proj:hover { border-color: color-mix(in srgb, var(--tone) 50%, var(--rule-dim)); }
+  a.proj:hover .proj-name { color: var(--hot); text-shadow: var(--glow); }
+  a.proj:hover .proj-go { color: var(--tone); transform: translateX(2px); }
+
+  .proj-glyph {
+    display: grid; place-items: center;
+    width: 56px; height: 56px; border-radius: 50%;
+    color: var(--tone);
+    border: 1px solid color-mix(in srgb, var(--tone) 40%, transparent);
+    background: color-mix(in srgb, var(--tone) 8%, transparent);
+  }
+  .proj-glyph svg { display: block; width: 38px; height: 38px; }
+  [data-theme="paper"] .proj-glyph { background: color-mix(in srgb, var(--tone) 12%, transparent); }
+
+  .proj-head { display: flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap; }
   .proj-name {
-    color: var(--accent-soft); font-weight: 700; font-size: 0.82rem;
-    line-height: 1.5;
+    color: var(--accent-soft); font-weight: 700; font-size: 0.9rem;
+    transition: color 0.15s, text-shadow 0.15s;
   }
-  a.proj-name { text-decoration: none; transition: color 0.15s, text-shadow 0.15s; }
-  a.proj-name:hover { color: var(--hot); text-shadow: var(--glow); }
   .proj-flag {
     display: inline-block;
     color: var(--fg-dim); font-weight: 400; font-size: 0.62rem;
     letter-spacing: 0.08em; text-transform: uppercase;
     border: 1px solid var(--rule-dim); padding: 0 4px;
-    border-radius: 2px; margin-left: 0.3rem; vertical-align: 1px;
+    border-radius: 2px; vertical-align: 1px;
   }
-  .proj-blurb { color: var(--fg-mute); font-size: 0.8rem; line-height: 1.5; margin: 0; }
+  .proj-blurb {
+    color: var(--fg-mute); font-size: 0.8rem; line-height: 1.5;
+    margin: 0.25rem 0 0; max-width: 68ch;
+  }
   .proj-blurb a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--rule); }
   .proj-blurb a:hover { color: var(--hot); border-bottom-color: var(--hot); }
-  .proj-stack { color: var(--fg-dim); font-size: 0.72rem; white-space: nowrap; }
+  .proj-stack {
+    list-style: none; display: flex; flex-wrap: wrap;
+    gap: 0 0.8rem; margin-top: 0.4rem;
+    font-size: 0.7rem; color: var(--fg-dim);
+  }
+  .proj-stack li::before { content: '· '; opacity: 0.55; }
+  .proj-go {
+    align-self: center; color: var(--fg-dim); font-size: 1.15rem; line-height: 1;
+    transition: color 0.15s, transform 0.15s;
+  }
 
   /* links */
   .link-row {
@@ -534,17 +674,31 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
     white-space: pre-wrap; word-wrap: break-word;
   }
 
-  /* now-playing in shell header */
-  .shell .dot.np-idle {
+  /* presence dot in shell header — see renderPresence() for the tier thresholds.
+     The base .dot in site.css is already accent + glow + pulse, which is exactly
+     the active state, so only the quieter tiers need to override it. */
+  .shell .dot.dot-away {
     background: var(--hot);
     box-shadow: 0 0 6px var(--hot);
     animation: none;
     opacity: 0.7;
   }
-  .shell .dot.np-live {
-    background: var(--accent);
-    box-shadow: var(--glow);
+  .shell .dot.dot-dark {
+    background: var(--red);
+    box-shadow: 0 0 8px var(--red);
+    animation: blink 2.6s infinite;
   }
+  .shell .dot.dot-unknown {
+    background: var(--fg-dim);
+    box-shadow: none;
+    animation: none;
+    opacity: 0.6;
+  }
+  /* the field only shows when the answer isn't "right now", so it always reads
+     as a warning; the dot's tier class upgrades it to red once we're past 72h */
+  .shell .meta #seen-field { color: var(--hot); }
+  .shell .dot.dot-dark ~ .meta #seen-field { color: var(--red); }
+  #seen-field b { color: inherit; opacity: 0.75; }
   .np-line {
     color: var(--fg-mute);
     font-size: 0.78rem;
@@ -578,14 +732,20 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
   footer .spacer { flex: 1; }
 
   @media (max-width: 640px) {
-    .wrap { padding: 1.25rem 1rem 6rem; }
-    .banner pre { font-size: 7px; }
+    /* top padding clears the fixed settings button (top: 8px) so the shell
+       prompt is not overlapped on narrow screens */
+    .wrap,
+    body[data-density="compact"] .wrap { padding: 2.75rem 1rem 6rem; }
     .shell .meta { margin-left: 0; width: 100%; }
     .post { grid-template-columns: 80px 1fr; }
     .post-meta { display: none; }
     .link-row { grid-template-columns: 90px 1fr auto; }
     .media-row { flex-direction: column; }
-    .proj { grid-template-columns: 1fr; gap: 0.2rem; }
-    .proj-stack { white-space: normal; }
+    /* keep the badge — it is the row's identity — but drop the chevron, which
+       has no hover state to reveal on touch and only steals width */
+    .proj { grid-template-columns: auto 1fr; gap: 0.7rem; padding: 0.7rem 0.8rem; }
+    .proj-glyph { width: 38px; height: 38px; }
+    .proj-glyph svg { width: 25px; height: 25px; }
+    .proj-go { display: none; }
   }
 </style>

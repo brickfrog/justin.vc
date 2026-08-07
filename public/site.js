@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────
    justin.vc — shared chrome behavior
-   themes · scanlines · bg · density · cmd palette · settings
+   themes · scanlines · bg field · density · cmd palette · settings
    Exposes: window.jvc = { state, applyState, openCmd, closeCmd, on(cmd, fn) }
    ───────────────────────────────────────────────────────────── */
 (function () {
@@ -10,7 +10,7 @@
   const DEFAULTS = (window.TWEAK_DEFAULTS || {
     theme: 'phosphor',
     scan: 'subtle',
-    bg: 'off',
+    bg: 'on',
     density: 'comfy',
     'banner-idx': 'random'
   });
@@ -139,7 +139,7 @@
       // built-ins
       switch (c) {
         case 'help':
-          logLine('commands: help, theme &lt;phosphor|amber|ice|paper&gt;, scan &lt;off|subtle|heavy&gt;, bg &lt;on|off&gt;, density &lt;comfy|compact&gt;, banner &lt;0-3|random&gt;, clear, close, home' + (Object.keys(extraCommands).length ? ', ' + Object.keys(extraCommands).join(', ') : ''));
+          logLine('commands: help, theme &lt;phosphor|amber|ice|paper&gt;, scan &lt;off|subtle|heavy&gt;, bg &lt;on|off&gt;, density &lt;comfy|compact&gt;, banner &lt;0-2|random&gt;, clear, close, home' + (Object.keys(extraCommands).length ? ', ' + Object.keys(extraCommands).join(', ') : ''));
           return;
         case 'theme':
           if (['phosphor','amber','ice','paper'].includes(arg)) { set('theme', arg); logLine(`theme → ${arg}`); }
@@ -158,8 +158,8 @@
           else logLine('density: comfy | compact', 'err');
           return;
         case 'banner':
-          if (arg === 'random' || /^[0-3]$/.test(arg)) { set('banner-idx', arg); logLine(`banner → ${arg}`); }
-          else logLine('banner: 0 | 1 | 2 | 3 | random', 'err');
+          if (arg === 'random' || /^[0-2]$/.test(arg)) { set('banner-idx', arg); logLine(`banner → ${arg}`); }
+          else logLine('banner: 0 | 1 | 2 | random', 'err');
           return;
         case 'clear':
           log.innerHTML = ''; return;
