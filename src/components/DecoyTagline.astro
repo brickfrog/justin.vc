@@ -1,0 +1,144 @@
+---
+/*
+ * Hybrid-image tagline. Two messages share one line at two spatial
+ * frequencies: a bold blurred layer you read from across the room, and a thin
+ * concentric-outline layer you read at nose distance — which is also the one
+ * OCR and vision models lock onto, because it is the sharply defined edge.
+ *
+ * Technique from mixfont's Decoy Font, but not its constants. Theirs assume
+ * 54px display type: the outline's visible ink is only the 0.0075em gap
+ * between each ink pass and the page-coloured pass knocking it back, which is
+ * 0.40px at 54px. This line renders at em 34 as a subheader, where 0.40px is
+ * proportionally a fat ring — it bleeds into the blurred layer and muddies
+ * the across-the-room read instead of hiding under it.
+ *
+ * Hence --decoy-ring: the ring is a fraction of the em, set from CSS, so the
+ * geometry retunes for the size actually rendered without regenerating the
+ * markup. Shipped at 0.0035, which is 0.12px at em 34.
+ *
+ * Every cell goes through the identical stack, and the guards below refuse a
+ * pair that would let any cell out of it. An earlier version drew agreeing
+ * cells once and crisp, which is cheaper — it leaves sharp islands at the ends
+ * of a ghosted middle, and that contrast is what tells a reader something is
+ * hidden. Uniform texture is the whole disguise.
+ */
+interface Props {
+  real: string;
+  decoy: string;
+  /** cell advance, in em — monospace, so this is the whole layout */
+  advance?: number;
+}
+const { real, decoy, advance = 0.68 } = Astro.props;
+
+// The pair has to survive being read twice, and the ways it fails are all
+// structural rather than matters of taste — so they are rejected at build.
+if (real.length !== decoy.length) {
+  throw new Error(`decoy tagline: "${real}" (${real.length}) and "${decoy}" (${decoy.length}) must be the same number of cells`);
+}
+// A-Z and spaces. Punctuation is small and radially symmetrical, so it blurs
+// to a featureless blob that survives into both readings instead of resolving
+// into either — and a glyph that reads the same at both distances is a cell
+// doing no work.
+const bad = [real, decoy].flatMap((s) => [...s]).filter((c) => !/[A-Z ]/.test(c));
+if (bad.length) {
+  throw new Error(`decoy tagline: "${real}"/"${decoy}" must be A-Z and spaces only — found ${JSON.stringify([...new Set(bad)].join(''))}`);
+}
+// Word breaks have to fall on the same cells in both layers. A space opposite
+// a letter leaves that letter with nothing behind it, so it renders at half
+// the ink of every other cell — the line looks damaged rather than deep.
+const spaces = (s: string) => [...s].flatMap((c, i) => (c === ' ' ? [i] : []));
+if (String(spaces(real)) !== String(spaces(decoy))) {
+  throw new Error(`decoy tagline: "${real}"/"${decoy}" break words at different cells — [${spaces(real)}] vs [${spaces(decoy)}]`);
+}
+// Any cell where both layers agree draws the same glyph twice and comes out
+// crisper than its neighbours, which is exactly the tell that gives the trick
+// away, so every letter cell must differ.
+const shared = [...real].map((c, i) => (c !== ' ' && c === decoy[i] ? `${i}:${c}` : null)).filter(Boolean);
+if (shared.length) {
+  throw new Error(`decoy tagline: "${real}"/"${decoy}" share cells ${shared.join(' ')} — every letter cell must differ`);
+}
+
+// Internal units. The SVG scales, so these are only ever ratios.
+const EM = 54;
+const ADV = advance * EM;
+const PAD = 14;                       // room for the blur to bleed at the ends
+const BASELINE = 68;
+const W = real.length * ADV + PAD * 2;
+const H = 96;
+
+const cx = (i: number) => (PAD + i * ADV + ADV / 2).toFixed(2);
+const allX = Array.from({ length: real.length }, (_, i) => cx(i)).join(' ');
+
+// Filter ids have to be unique per instance but must not depend on render
+// order, or two instances swap filters when one moves. Hash the content.
+const fid = `decoy-blur-${[...(real + decoy)].reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7).toString(36).replace('-', 'x')}`;
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// Every cell goes through the same stack, including the ones where the two
+// strings happen to agree. Drawing those crisp instead — which is cheaper and
+// was the first thing I tried — leaves sharp islands at each end of a ghosted
+// middle, and that contrast is what announces to the reader that something is
+// being hidden. Uniform texture is the whole disguise.
+const pass = (cls: string, colour: string) =>
+  `<text class="${cls}" x="${allX}" y="${BASELINE}" fill="none" stroke="${colour}" stroke-linejoin="round">${esc(decoy)}</text>`;
+
+const layers =
+  // Outline layer: alternating ink and page-colour passes leave two hairlines
+  // that average back to the page colour at any distance. Widths live in CSS.
+  pass('d-ink1', 'var(--fg-mute)') +
+  pass('d-paper1', 'var(--bg)') +
+  pass('d-ink2', 'var(--fg-mute)') +
+  pass('d-paper2', 'var(--bg)') +
+  `<text x="${allX}" y="${BASELINE}" fill="var(--decoy-far, var(--fg-mute))" font-weight="700" filter="url(#${fid})">${esc(real)}</text>`;
+---
+<svg
+  class="decoy-tagline"
+  viewBox={`0 0 ${W} ${H}`}
+  role="img"
+  aria-label={real}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <filter id={fid} x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation={(0.07 * EM).toFixed(2)} />
+      <feComponentTransfer><feFuncA type="linear" slope="0.8" /></feComponentTransfer>
+    </filter>
+  </defs>
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size={EM} text-anchor="middle" set:html={layers} />
+</svg>
+
+<style is:global>
+  /* Defaults are fallbacks at the point of use, never declarations on the
+     element. A `--decoy-width` declared on .decoy-tagline would shadow any
+     value set on an ancestor, so a page could not retune it — custom
+     properties resolve on the element before they inherit.
+
+     --decoy-width  rendered width. Not a percentage: the illusion is a
+                    function of the size it actually paints at, so that size
+                    has to be the thing being set. 26rem over 18 cells puts
+                    the em at 34px, whose cap height is 35% of the wordmark's.
+     --decoy-ring   visible hairline as a fraction of the em. 0.0035 renders
+                    0.12px at em 34. Mixfont's 0.0075 assumes 54px display
+                    type, where it works out to 0.40px; this line is a
+                    subheader, and at this size 0.40px is a fat ring that
+                    survives into the blurred read and muddies it. */
+  .decoy-tagline {
+    display: block;
+    width: min(100%, var(--decoy-width, 26rem));
+    height: auto;
+    margin-bottom: 2.25rem;
+  }
+
+  /* One em in the SVG's own user units. */
+  .decoy-tagline .d-ink1,
+  .decoy-tagline .d-paper1,
+  .decoy-tagline .d-ink2,
+  .decoy-tagline .d-paper2 { --decoy-unit: 54px; }
+
+  /* Outer and inner ink radii are fixed; the page-coloured passes sit one ring
+     inside each, so --decoy-ring alone controls how much ink survives. */
+  .decoy-tagline .d-ink1   { stroke-width: calc(0.125 * var(--decoy-unit)); }
+  .decoy-tagline .d-paper1 { stroke-width: calc((0.125 - 2 * var(--decoy-ring, 0.0035)) * var(--decoy-unit)); }
+  .decoy-tagline .d-ink2   { stroke-width: calc(0.05 * var(--decoy-unit)); }
+  .decoy-tagline .d-paper2 { stroke-width: calc((0.05 - 2 * var(--decoy-ring, 0.0035)) * var(--decoy-unit)); }
+</style>

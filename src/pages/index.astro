@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import DecoyTagline from '../components/DecoyTagline.astro';
+
 
 const posts = (await getCollection('writing', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -110,7 +112,7 @@ const projects = [
         } catch (e) {}
       })();
     </script>
-    <div class="tagline">data + software · 2026</div>
+    <DecoyTagline real="CURIOUS NOT CLEVER" decoy="FEEDING THE MODELS" />
 
     <aside class="status-msg" id="status-msg" hidden>
       <div class="status-msg-head">
@@ -433,13 +435,6 @@ const projects = [
   .banner pre .vc { color: var(--hot); }
   .banner .art { display: none; }
   .banner .art.active { display: block; }
-
-  .tagline {
-    color: var(--fg-mute); font-size: 0.82rem;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    margin-bottom: 2.25rem;
-  }
-  .tagline::before { content: '// '; color: var(--fg-dim); }
 
   /* section head */
   .sec { margin-top: 2.75rem; }
