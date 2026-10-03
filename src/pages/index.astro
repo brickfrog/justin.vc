@@ -25,6 +25,42 @@ const projects = [
     stack: ['typescript', 'bun', 'postgres', 'falkordb'],
   },
   {
+    name: 'magi',
+    href: 'https://github.com/brickfrog/magi',
+    blurb: 'a compiled language for business-data reconciliation. source contracts, type checking and a plan, executed on an embedded duckdb; exports excel, parquet, or a power bi semantic model.',
+    stack: ['rust', 'duckdb', 'lsp'],
+  },
+  {
+    name: 'sql2m',
+    href: 'https://github.com/brickfrog/sql2m',
+    blurb: 'turns a duckdb SELECT into a power query M step chain, one named step per operation. runs the query against deliberately nasty fake data so join fan-out is visible. no backend.',
+    stack: ['moonbit', 'wasm', 'duckdb'],
+  },
+  {
+    name: 'sql-grind',
+    href: 'https://github.com/brickfrog/sql-grind',
+    blurb: '65 sql challenges over 13 skills, including measured plan labs and reconciliation drills. duckdb-wasm, so the whole desk runs in the browser.',
+    stack: ['svelte', 'typescript', 'duckdb'],
+  },
+  {
+    name: 'moongate',
+    href: 'https://github.com/brickfrog/moongate',
+    blurb: 'ci gate for the rules a linter cannot see — "never log credentials", "migrations must be reversible" — scored against a pr diff and posted as annotations.',
+    stack: ['moonbit', 'jev', 'actions'],
+  },
+  {
+    name: 'factorio-buddy',
+    href: 'https://github.com/brickfrog/factorio-buddy',
+    blurb: 'one autonomous npc that plays factorio beside you: observes, walks, mines, crafts, builds, and answers messages from an in-game panel.',
+    stack: ['rust', 'lua', 'rcon'],
+  },
+  {
+    name: 'wf-recorder-control',
+    href: 'https://github.com/brickfrog/wf-recorder-control',
+    blurb: 'gtk4 front end for wf-recorder on wayland. on niri it records a chosen window through the screencast portal, following it as it moves or gets covered.',
+    stack: ['c', 'gtk4', 'pipewire'],
+  },
+  {
     name: 'moonsorter',
     href: 'https://github.com/brickfrog/moonsorter',
     blurb: 'browser ranking via the plackett-luce model. pairwise comparisons, MM fitting, k-means tiers.',
