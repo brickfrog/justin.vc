@@ -15,26 +15,33 @@ const byTag: Record<string, typeof posts> = {};
 for (const p of posts) for (const t of p.tags) (byTag[t] = byTag[t] || []).push(p);
 const allTags = Object.keys(byTag).sort();
 ---
-<BaseLayout title="tags · justin.vc" description="writing by tag" canonical="https://justin.vc/tags/">
+<BaseLayout title="tags · justin.vc" description="writing by tag" canonical="https://justin.vc/tags/" noindex={allTags.length === 0}>
   <div class="wrap tags-wrap">
     <nav class="crumb">
       <a href="/">~/</a>
       <span class="sep">/</span>
       <span class="here">tags</span>
       <span class="spacer"></span>
-      <span class="meta" id="crumb-count">—</span>
+      {allTags.length > 0 && <span class="meta" id="crumb-count">—</span>}
     </nav>
 
     <h1 class="tags-title">tags</h1>
-    <p class="tags-subtitle">// writing grouped by tag. click a pill to filter.</p>
 
-    <div class="filter-bar" id="filter-bar">
-      <span class="filter-label">filter</span>
-      <span id="filter-tags"></span>
-      <button class="filter-clear" id="filter-clear">clear ×</button>
-    </div>
+    {allTags.length === 0 ? (
+      <p class="tags-subtitle">// no posts yet, so no tags yet.</p>
+    ) : (
+      <>
+        <p class="tags-subtitle">// writing grouped by tag. click a pill to filter.</p>
 
-    <div id="groups"></div>
+        <div class="filter-bar" id="filter-bar">
+          <span class="filter-label">filter</span>
+          <span id="filter-tags"></span>
+          <button class="filter-clear" id="filter-clear">clear ×</button>
+        </div>
+
+        <div id="groups"></div>
+      </>
+    )}
   </div>
 
   <script is:inline define:vars={{ posts, byTag, allTags }}>
@@ -43,6 +50,8 @@ const allTags = Object.keys(byTag).sort();
   <script is:inline>
     (() => {
       const { posts, byTag, allTags } = window.__TAGS__;
+      // No posts means the filter bar and groups container were never rendered.
+      if (!allTags.length) return;
       let active = new Set();
 
       const readHash = () => {

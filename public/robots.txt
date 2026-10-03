@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://justin.vc/sitemap.xml
+Sitemap: https://justin.vc/sitemap-index.xml

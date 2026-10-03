@@ -8,13 +8,15 @@ interface Props {
   ogType?: string;
   canonical?: string;
   serif?: boolean;
+  noindex?: boolean;
 }
 const {
   title,
-  description = 'justin.vc — data + software',
+  description = 'data + software. notes on llms, agentic systems, moonbit, and whatever is eating my brain this month.',
   ogType = 'website',
   canonical,
   serif = false,
+  noindex = false,
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -24,7 +26,7 @@ const {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
   {canonical && <link rel="canonical" href={canonical} />}
   <link rel="alternate" type="application/rss+xml" title="justin.vc" href="/rss.xml" />
   <meta property="og:title" content={title} />
