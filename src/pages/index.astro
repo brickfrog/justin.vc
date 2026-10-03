@@ -13,6 +13,11 @@ const tagCloud = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
 
 const iso = (d: Date) => d.toISOString().slice(0, 10);
 
+// Section numbers are issued in render order so a hidden section does not
+// leave a gap. Call once per section head, left to right, top to bottom.
+let secNo = 0;
+const sec = () => `§${String(++secNo).padStart(2, '0')}`;
+
 // Projects, as data rather than a wall of near-identical hand-written blocks.
 // `blurb` is authored HTML so an entry can carry inline links; it is my own
 // copy, never anything upstream, so set:html is safe here. Only the name is a
@@ -160,15 +165,15 @@ const projects = [
     </aside>
 
     <section class="sec prose">
-      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> about <span class="rule" aria-hidden="true"></span> <span class="num">§01</span></h2>
+      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> about <span class="rule" aria-hidden="true"></span> <span class="num">{sec()}</span></h2>
       <p>i do data + software. mostly interested in whatever is eating my brain at the time. i kind of like everything and switch hobbies on a whim.</p>
       <p class="tagline-inline">current: <code>llms + affective computing</code> <code>agentic systems</code> <code>weightlifting</code> <code>sci-fi</code> <code>kdramas</code></p>
     </section>
 
+    {posts.length > 0 && (
     <section class="sec">
-      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> writing <span class="rule" aria-hidden="true"></span> <span class="num">§02 · <a href="/rss.xml">rss</a> · <a href="/tags/">tags</a></span></h2>
+      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> writing <span class="rule" aria-hidden="true"></span> <span class="num">{sec()} · <a href="/rss.xml">rss</a> · <a href="/tags/">tags</a></span></h2>
       <ul class="post-list" id="post-list">
-        {posts.length === 0 && <li style="color:var(--fg-dim);font-size:0.85rem;list-style:none">// no posts yet</li>}
         {posts.slice(0, 10).map((p) => (
           <li>
             <a class="post" href={`/writing/${p.id}/`}>
@@ -190,9 +195,10 @@ const projects = [
         </div>
       )}
     </section>
+    )}
 
     <section class="sec">
-      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> projects <span class="rule" aria-hidden="true"></span> <span class="num">§03</span></h2>
+      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> projects <span class="rule" aria-hidden="true"></span> <span class="num">{sec()}</span></h2>
       <div class="proj-list">
         {projects.map((p) => (
           <div class="proj">
@@ -212,7 +218,7 @@ const projects = [
     </section>
 
     <section class="sec">
-      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> links <span class="rule" aria-hidden="true"></span> <span class="num">§04</span></h2>
+      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> links <span class="rule" aria-hidden="true"></span> <span class="num">{sec()}</span></h2>
       <div class="links">
         <div class="link-row"><span class="link-label">github</span><span class="link-leader"></span><a href="https://github.com/brickfrog" target="_blank" rel="noopener">brickfrog</a></div>
         <div class="link-row"><span class="link-label">goodreads</span><span class="link-leader"></span><a href="https://www.goodreads.com/user/show/46714580-justin" target="_blank" rel="noopener">justin</a></div>
@@ -225,7 +231,7 @@ const projects = [
     </section>
 
     <section class="sec">
-      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> media <span class="rule" aria-hidden="true"></span> <span class="num">§05</span></h2>
+      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> media <span class="rule" aria-hidden="true"></span> <span class="num">{sec()}</span></h2>
       <div class="media-row">
         <div class="media-widget flex-shrink" id="anilist-widget" hidden>
           <div class="media-widget-label">// watching + reading</div>
@@ -243,7 +249,7 @@ const projects = [
     </section>
 
     <section class="sec">
-      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> elsewhere <span class="rule" aria-hidden="true"></span> <span class="num">§06</span></h2>
+      <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> elsewhere <span class="rule" aria-hidden="true"></span> <span class="num">{sec()}</span></h2>
       <div class="webring">
         <span>~webring/friends-of-the-phosphor</span>
         <span class="sep">·</span>
@@ -422,7 +428,11 @@ const projects = [
         elsewhere: '.webring',
         tags: '.tag-cloud',
       };
-      Object.keys(sections).forEach((name) => {
+      // Only register jumps for sections that actually rendered; with no posts
+      // the writing section and its tag cloud are absent, so `writing`/`tags`
+      // should not appear in `ls` or silently do nothing.
+      const present = Object.keys(sections).filter((name) => document.querySelector(sections[name]));
+      present.forEach((name) => {
         window.jvc.on(name, () => {
           const el = document.querySelector(sections[name]);
           const holder = el && el.closest('.sec');
@@ -434,7 +444,7 @@ const projects = [
         if (!arg) return 'tag: usage — tag <name>';
         window.location.href = '/tags/#' + arg;
       });
-      window.jvc.on('ls', () => 'about/  writing/  projects/  links/  media/  elsewhere/  tags/');
+      window.jvc.on('ls', () => present.map((n) => n + '/').join('  '));
       window.jvc.on('whoami', () => 'justin — data + software. mostly curious, occasionally productive.');
     });
   </script>
