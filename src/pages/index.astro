@@ -17,6 +17,11 @@ const iso = (d: Date) => d.toISOString().slice(0, 10);
 let secNo = 0;
 const sec = () => `§${String(++secNo).padStart(2, '0')}`;
 
+// AniList card is gated: the profile is private and AniList's public API is
+// intermittently 403ing. Flip to true when the profile is public again; the
+// media section only renders while this is on.
+const anilistEnabled = false;
+
 // Projects, as data rather than a wall of near-identical hand-written blocks.
 // `blurb` is authored HTML so an entry can carry inline links; it is my own
 // copy, never anything upstream, so set:html is safe here. Only the name is a
@@ -105,15 +110,13 @@ const projects = [
   <main class="wrap">
     <h1 class="sr-only">justin.vc — data + software</h1>
     <div class="shell">
-      <span class="dot np-idle" id="np-dot" role="img" aria-label="idle"></span>
+      <span class="dot np-idle"></span>
       <span class="prompt">justin@justin.vc:~$</span>
       <span class="path">./whoami</span>
       <span class="meta">
-        <span id="canary-field" hidden></span>
         <span><b>rev</b> <span id="rev">·</span></span>
       </span>
     </div>
-    <div class="np-line" id="np-shell" hidden></div>
 
     <div class="banner" id="banner" aria-hidden="true">
       <div class="art active" data-art="0"><pre set:html={`          ▄▄▄▄▄      ▄     ▄▄▄▄▄      ▄▄▄▄▀ ▄█    ▄          ▄   ▄█▄
@@ -152,14 +155,6 @@ const projects = [
         } catch (e) {}
       })();
     </script>
-    <aside class="status-msg" id="status-msg" hidden>
-      <div class="status-msg-head">
-        <span class="status-msg-from">justin</span>
-        <span class="status-msg-sep">·</span>
-        <span class="status-msg-time" id="status-msg-time"></span>
-      </div>
-      <p class="status-msg-body" id="status-msg-body"></p>
-    </aside>
 
     <section class="sec prose">
       <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> about <span class="rule" aria-hidden="true"></span> <span class="num">{sec()}</span></h2>
@@ -226,6 +221,7 @@ const projects = [
       </div>
     </section>
 
+    {anilistEnabled && (
     <section class="sec">
       <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> media <span class="rule" aria-hidden="true"></span> <span class="num">{sec()}</span></h2>
       <div class="media-row">
@@ -233,16 +229,9 @@ const projects = [
           <div class="media-widget-label">// watching + reading</div>
           <div id="anilist-card-container"></div>
         </div>
-        <div class="media-widget flex-grow gr-grid">
-          <div class="media-widget-label">// in progress</div>
-          <div class="shelf" data-shelf="currently-reading" data-limit="20"></div>
-        </div>
-        <div class="media-widget flex-grow gr-grid">
-          <div class="media-widget-label">// finished</div>
-          <div class="shelf" data-shelf="read" data-limit="30"></div>
-        </div>
       </div>
     </section>
+    )}
 
     <section class="sec">
       <h2 class="sec-head"><span class="ticks" aria-hidden="true">──</span> elsewhere <span class="rule" aria-hidden="true"></span> <span class="num">{sec()}</span></h2>
@@ -266,99 +255,11 @@ const projects = [
     </p>
   </main>
 
-  <script is:inline>window.ANILIST_ENABLED = false; /* flip to true when the anilist profile is public again */</script>
+  <script define:vars={{ anilistEnabled }}>window.ANILIST_ENABLED = anilistEnabled;</script>
   <script is:inline src="/anilist-card.js"></script>
   <script is:inline>
     // shell meta + banner rotator hook for site.js
     document.getElementById('rev').textContent = Array.from({length: 7}, () => '0123456789abcdef'[Math.floor(Math.random() * 16)]).join('');
-
-    // live presence + status + now-playing from api.justin.vc
-    const dot = document.getElementById('np-dot');
-    const canaryField = document.getElementById('canary-field');
-    const npShell = document.getElementById('np-shell');
-    const msgEl = document.getElementById('status-msg');
-    const msgBody = document.getElementById('status-msg-body');
-    const msgTime = document.getElementById('status-msg-time');
-
-    // The dot is a now-playing light: green while a scrobble is live, quiet
-    // otherwise. That asymmetry is the point — its silence means "no music",
-    // never "away", so it cannot be read as an occupancy signal. A tiered
-    // presence dot has the opposite property: grey *means* gone.
-    //
-    // The canary is separate, and rare. The worker publishes it only after 14
-    // days of total silence and never publishes a last-seen timestamp, so there
-    // is no threshold policy here to speak of and nothing to infer below it —
-    // a visitor cannot tell five minutes from nine days. See canary() in the
-    // worker for why that resolution is enforced server-side.
-
-    function relAge(at) {
-      const sec = Math.max(1, Math.round((Date.now() - at) / 1000));
-      if (sec < 60) return sec + 's ago';
-      const m = Math.round(sec / 60);
-      if (m < 60) return m + 'm ago';
-      const h = Math.round(m / 60);
-      if (h < 24) return h + 'h ago';
-      const d = Math.round(h / 24);
-      return d + 'd ago';
-    }
-
-    function renderDot(np, canary) {
-      const days = canary && Number.isFinite(canary.silentDays) ? canary.silentDays : null;
-      const text = days === null ? null : 'no signal for ' + days + ' days';
-      dot.className = 'dot' + (text ? ' canary-lit' : np ? '' : ' np-idle');
-      dot.setAttribute('aria-label', text || (np ? 'now playing' : 'idle'));
-      canaryField.hidden = !text;
-      if (text) canaryField.textContent = '!! ' + text;
-    }
-    renderDot(null, null);
-
-    function renderState(data) {
-      if (!data) return;
-      renderDot(data.np, data.canary);
-      if (data.status && data.status.text) {
-        msgBody.textContent = data.status.text;
-        // Age of the note itself, not a presence claim — see renderDot().
-        msgTime.textContent = relAge(data.status.at);
-        msgTime.title = new Date(data.status.at).toLocaleString();
-        msgEl.hidden = false;
-      }
-      const np = data.np;
-      if (np) {
-        // Build DOM with textContent/explicit element creation — never innerHTML on third-party data.
-        // np.* originates from Last.fm and could in principle carry markup.
-        const safeUrl = (typeof np.url === 'string' && /^https?:\/\//i.test(np.url)) ? np.url : null;
-        const trackEl = safeUrl ? document.createElement('a') : document.createElement('span');
-        trackEl.className = 'np-track';
-        if (safeUrl) {
-          trackEl.href = safeUrl;
-          trackEl.target = '_blank';
-          trackEl.rel = 'noopener noreferrer';
-        }
-        trackEl.textContent = String(np.track ?? '');
-
-        const artistEl = document.createElement('span');
-        artistEl.className = 'np-artist';
-        artistEl.textContent = ' — ' + String(np.artist ?? '');
-
-        npShell.textContent = '♪ ';
-        npShell.appendChild(trackEl);
-        npShell.appendChild(artistEl);
-        npShell.hidden = false;
-      } else {
-        // playback stopped since the last poll — line goes, dot goes quiet
-        npShell.hidden = true;
-        npShell.textContent = '';
-      }
-    }
-
-    function loadState() {
-      fetch('https://api.justin.vc/api/state').then(r => r.ok ? r.json() : null).then(renderState).catch(() => {});
-    }
-    loadState();
-    // keep "now playing" live while the tab is open; skip polling a hidden tab,
-    // and refresh immediately when the visitor returns to it.
-    setInterval(() => { if (!document.hidden) loadState(); }, 90000);
-    document.addEventListener('visibilitychange', () => { if (!document.hidden) loadState(); });
 
     // AniList widget reveals itself only once anilist-card.js actually
     // populates the container — keeps it hidden when the profile is private.
@@ -374,37 +275,6 @@ const projects = [
       obs.observe(anilistContainer, { childList: true });
       setTimeout(() => obs.disconnect(), 6000);
     }
-
-    // Book shelves — rendered from our own API (api.justin.vc/api/shelf), which
-    // scrapes Goodreads server-side and proxies the covers. No third-party script
-    // or image request touches the visitor's browser.
-    function renderShelf(el, books) {
-      const frag = document.createDocumentFragment();
-      books.forEach((b) => {
-        if (!b || typeof b.cover !== 'string') return;
-        // covers must come from our own proxy origin — reject anything else
-        if (!/^https:\/\/api\.justin\.vc\/api\/cover\?/.test(b.cover)) return;
-        const safeUrl = (typeof b.url === 'string' && /^https?:\/\//i.test(b.url)) ? b.url : null;
-        const wrap = document.createElement(safeUrl ? 'a' : 'span');
-        if (safeUrl) { wrap.href = safeUrl; wrap.target = '_blank'; wrap.rel = 'noopener noreferrer'; }
-        const img = document.createElement('img');
-        img.src = b.cover;
-        img.loading = 'lazy';
-        img.decoding = 'async';
-        img.alt = String(b.title || '') + (b.author ? ' — ' + String(b.author) : '');
-        wrap.appendChild(img);
-        frag.appendChild(wrap);
-      });
-      el.appendChild(frag);
-    }
-    document.querySelectorAll('.shelf').forEach((el) => {
-      const shelf = el.dataset.shelf === 'read' ? 'read' : 'currently-reading';
-      const limit = parseInt(el.dataset.limit, 10) || 20;
-      fetch(`https://api.justin.vc/api/shelf?name=${shelf}&limit=${limit}`)
-        .then((r) => r.ok ? r.json() : null)
-        .then((d) => { if (d && Array.isArray(d.books)) renderShelf(el, d.books); })
-        .catch(() => {});
-    });
 
     const arts = document.querySelectorAll('.banner .art');
     window.__setBanner = (idx) => {
@@ -599,7 +469,6 @@ const projects = [
   .media-row { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; }
   .media-widget { border: 1px solid var(--rule-dim); padding: 0.6rem; min-width: 0; background: var(--bg-elev); }
   .media-widget.flex-shrink { flex-shrink: 0; }
-  .media-widget.flex-grow { flex: 1; min-width: 0; }
   .media-widget-label { color: var(--fg-dim); font-size: 0.72rem; margin-bottom: 0.4rem; }
   .media-widget iframe { display: block; border-radius: 6px; }
   .media-container { display: flex; flex-direction: column; gap: 0.6rem; }
@@ -607,77 +476,15 @@ const projects = [
   .media-entry { display: flex; gap: 0.5rem; align-items: flex-start; }
   .media-entry img { width: 42px; border-radius: 2px; border: 1px solid var(--rule); }
   .media-details h4 { color: var(--fg); font-size: 0.72rem; font-weight: 400; }
-  .gr-grid { display: flex !important; flex-wrap: wrap !important; flex-direction: row !important; gap: 0.35rem; align-content: flex-start; }
-  .gr-grid > div { display: flex !important; flex-wrap: wrap !important; gap: 0.35rem; }
-  .gr-grid a, .gr-grid .shelf > * { display: inline-block; flex-shrink: 0; line-height: 0; }
-  .gr-grid img { border-radius: 2px; border: 1px solid var(--rule) !important; height: 62px !important; width: auto !important; }
-  .gr-grid .media-widget-label { flex-basis: 100%; }
-  .shelf:empty::after { content: '// nothing here yet'; color: var(--fg-dim); font-size: 0.72rem; line-height: 1.4; }
 
-  /* status message block — between tagline and about */
-  .status-msg {
-    margin: 0 0 2rem;
-    padding: 0.7rem 0.9rem 0.75rem;
-    border-left: 2px solid var(--accent);
-    background: var(--bg-elev);
-    font-size: 0.88rem;
-    line-height: 1.55;
-    position: relative;
-  }
-  .status-msg::before {
-    content: '> '; position: absolute; left: -0.05rem; top: 0.7rem;
-    color: var(--accent); font-weight: 700; opacity: 0; /* visual is the left border */
-  }
-  .status-msg-head {
-    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--fg-dim); margin-bottom: 0.3rem;
-    display: flex; align-items: baseline; gap: 0.45rem;
-  }
-  .status-msg-from { color: var(--accent-soft); font-weight: 700; }
-  .status-msg-sep { color: var(--fg-dim); }
-  .status-msg-time { color: var(--fg-mute); font-variant-numeric: tabular-nums; }
-  .status-msg-body {
-    color: var(--fg); margin: 0;
-    max-width: 62ch;
-    white-space: pre-wrap; word-wrap: break-word;
-  }
-
-  /* Shell dot — see renderDot(). The base .dot in site.css is accent + glow +
-     pulse, which is the "music is playing" state, so only the quiet and fired
-     states override it. There is deliberately no away/last-seen tier: a dot
-     that dims with inactivity broadcasts when the desk is empty. */
+  /* Shell dot is decorative. The base .dot in site.css is accent + glow +
+     pulse; quiet it here so it doesn't read as a live signal. */
   .shell .dot.np-idle {
     background: var(--fg-dim);
     box-shadow: none;
     animation: none;
     opacity: 0.6;
   }
-  .shell .dot.canary-lit {
-    background: var(--red);
-    box-shadow: 0 0 8px var(--red);
-    animation: blink 2.6s infinite;
-  }
-  /* Only ever rendered once the switch has fired, so it can afford to shout. */
-  .shell .meta #canary-field {
-    color: var(--red);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
-  .np-line {
-    color: var(--fg-mute);
-    font-size: 0.78rem;
-    margin: -1.5rem 0 1.75rem;        /* tuck up under the shell baseline, then breathing room */
-    padding-left: 1.55rem;             /* indent past the dot to align under ./whoami */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 100%;
-  }
-  body[data-density="compact"] .np-line { margin: -1.25rem 0 1.25rem; }
-  .np-line .np-track { color: var(--fg); text-decoration: none; }
-  .np-line a.np-track { border-bottom: 1px dotted var(--rule-dim); }
-  .np-line a.np-track:hover { color: var(--hot); border-bottom-color: var(--hot); }
-  .np-line .np-artist { color: var(--fg-dim); }
 
   /* webring + footer */
   .webring { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; font-size: 0.82rem; color: var(--fg-mute); }
